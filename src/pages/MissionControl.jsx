@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const STATUS_COLORS = {
@@ -14,13 +15,117 @@ function StatusDot({ status }) {
   return <span className="status-dot" style={{ background: color }} />
 }
 
+function CardContent({ id, d, navigate }) {
+  switch (id) {
+    case 'deals':
+      return d.deals.map(deal => (
+        <div key={deal.id} className="mc-deal-row" onClick={() => navigate(`/article/${deal.id}`)}>
+          <StatusDot status={deal.status} />
+          <span className="mc-deal-name">{deal.name}</span>
+          <span className="mc-deal-status">{deal.status}</span>
+        </div>
+      ))
+    case 'team':
+      return (
+        <div className="mc-card-center">
+          <span className="mc-big-number">{d.team.count}</span>
+          <span className="mc-big-label">people</span>
+        </div>
+      )
+    case 'ventures':
+      return d.ventures.map(v => (
+        <div key={v.id} className="mc-venture-row" onClick={() => navigate(`/article/${v.id}`)}>
+          <StatusDot status={v.status} />
+          <span className="mc-venture-name">{v.name}</span>
+          <span className="mc-venture-status">{v.status}</span>
+        </div>
+      ))
+    case 'roadmap':
+      return (
+        <>
+          <div className="mc-roadmap-section">
+            <span className="mc-roadmap-label mc-roadmap-now">Now</span>
+            <ul>{d.roadmap.now.map((item, i) => <li key={i}>{item}</li>)}</ul>
+          </div>
+          <div className="mc-roadmap-section">
+            <span className="mc-roadmap-label mc-roadmap-next">Next</span>
+            <ul>{d.roadmap.next.map((item, i) => <li key={i}>{item}</li>)}</ul>
+          </div>
+          <div className="mc-roadmap-section">
+            <span className="mc-roadmap-label mc-roadmap-later">Later</span>
+            <ul>{d.roadmap.later.map((item, i) => <li key={i}>{item}</li>)}</ul>
+          </div>
+        </>
+      )
+    case 'advisors':
+      return d.advisors.map((a, i) => (
+        <div key={i} className="mc-advisor-row">
+          <span className="mc-advisor-name">{a.name}</span>
+          <span className="mc-advisor-domain">{a.domain}</span>
+        </div>
+      ))
+    case 'academy':
+      return (
+        <>
+          <div className="mc-academy-stat">
+            <span className="mc-academy-label">Website</span>
+            <span className="mc-academy-value">academy.krackeddevs.com</span>
+          </div>
+          <div className="mc-academy-stat">
+            <span className="mc-academy-label">TVET</span>
+            <span className="mc-academy-value">Slides ready, 2nd meeting pending</span>
+          </div>
+          <div className="mc-academy-stat">
+            <span className="mc-academy-label">Ambassadors</span>
+            <span className="mc-academy-value">4 onboarded, KPIs tracking</span>
+          </div>
+        </>
+      )
+    case 'graph':
+      return (
+        <div className="mc-card-center">
+          <span className="mc-big-number">{d.graph.total}</span>
+          <span className="mc-big-label">nodes</span>
+        </div>
+      )
+    case 'revenue':
+      return (
+        <div className="mc-card-center">
+          <span className="mc-big-label">Next milestone</span>
+          <span className="mc-revenue-milestone">Marketplace feature</span>
+          <span className="mc-big-label" style={{ marginTop: 8 }}>on Kracked Devs</span>
+        </div>
+      )
+    default:
+      return null
+  }
+}
+
+const CARDS = [
+  { id: 'deals', title: 'Active Deals', span: 2, badge: d => d.deals.length },
+  { id: 'team', title: 'Team', footer: ['3 advisors', '3 ambassadors', '5 interns'] },
+  { id: 'ventures', title: 'Ventures', span: 2, badge: d => d.ventures.length },
+  { id: 'roadmap', title: 'Roadmap', span: 2 },
+  { id: 'advisors', title: 'Advisory Board', badge: d => d.advisors.length },
+  { id: 'academy', title: 'KD Academy' },
+  { id: 'graph', title: 'Knowledge Graph', footer: d => [`${d.graph.mission} mission`, `${d.graph.research} research`] },
+  { id: 'revenue', title: 'Revenue' },
+]
+
 export default function MissionControl({ graph }) {
   const navigate = useNavigate()
+  const [expanded, setExpanded] = useState(null)
   const d = graph.dashboard
   if (!d) return null
 
-  const liveVentures = d.ventures.filter(v => v.status === 'Live').length
-  const devVentures = d.ventures.filter(v => v.status !== 'Live').length
+  const handleCardClick = (cardId, e) => {
+    if (e.target.closest('.mc-deal-row') || e.target.closest('.mc-venture-row')) return
+    if (cardId === 'graph' && expanded !== 'graph') {
+      navigate('/graph')
+      return
+    }
+    setExpanded(expanded === cardId ? null : cardId)
+  }
 
   return (
     <div className="mc">
@@ -29,141 +134,43 @@ export default function MissionControl({ graph }) {
         <span className="mc-sync">Last sync: {new Date(graph.meta.syncedAt).toLocaleDateString()}</span>
       </div>
 
-      <div className="mc-grid">
-        {/* Active Deals */}
-        <div className="mc-card mc-card-deals">
-          <div className="mc-card-header">
-            <h3>Active Deals</h3>
-            <span className="mc-badge">{d.deals.length}</span>
-          </div>
-          <div className="mc-card-body">
-            {d.deals.map(deal => (
-              <div key={deal.id} className="mc-deal-row" onClick={() => navigate(`/article/${deal.id}`)}>
-                <StatusDot status={deal.status} />
-                <span className="mc-deal-name">{deal.name}</span>
-                <span className="mc-deal-status">{deal.status}</span>
+      {expanded && <div className="mc-backdrop" onClick={() => setExpanded(null)} />}
+
+      <div className={`mc-grid ${expanded ? 'mc-grid-has-expanded' : ''}`}>
+        {CARDS.map(card => {
+          const isExpanded = expanded === card.id
+          const badge = typeof card.badge === 'function' ? card.badge(d) : card.badge
+          const footer = typeof card.footer === 'function' ? card.footer(d) : card.footer
+
+          return (
+            <div
+              key={card.id}
+              className={`mc-card mc-card-${card.id} ${isExpanded ? 'mc-card-expanded' : ''} ${expanded && !isExpanded ? 'mc-card-dimmed' : ''}`}
+              style={!isExpanded && card.span ? { gridColumn: `span ${card.span}` } : undefined}
+              onClick={(e) => handleCardClick(card.id, e)}
+            >
+              <div className="mc-card-header">
+                <h3>{card.title}</h3>
+                <div className="mc-card-header-actions">
+                  {badge && <span className="mc-badge">{badge}</span>}
+                  {isExpanded && (
+                    <button className="mc-card-close" onClick={(e) => { e.stopPropagation(); setExpanded(null) }}>
+                      &times;
+                    </button>
+                  )}
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Team */}
-        <div className="mc-card mc-card-team">
-          <div className="mc-card-header">
-            <h3>Team</h3>
-          </div>
-          <div className="mc-card-body mc-card-center">
-            <span className="mc-big-number">{d.team.count}</span>
-            <span className="mc-big-label">people</span>
-          </div>
-          <div className="mc-card-footer">
-            <span>3 advisors</span>
-            <span>3 ambassadors</span>
-            <span>5 interns</span>
-          </div>
-        </div>
-
-        {/* Ventures */}
-        <div className="mc-card mc-card-ventures">
-          <div className="mc-card-header">
-            <h3>Ventures</h3>
-            <span className="mc-badge">{d.ventures.length}</span>
-          </div>
-          <div className="mc-card-body">
-            {d.ventures.map(v => (
-              <div key={v.id} className="mc-venture-row" onClick={() => navigate(`/article/${v.id}`)}>
-                <StatusDot status={v.status} />
-                <span className="mc-venture-name">{v.name}</span>
-                <span className="mc-venture-status">{v.status}</span>
+              <div className="mc-card-body">
+                <CardContent id={card.id} d={d} navigate={navigate} />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Roadmap */}
-        <div className="mc-card mc-card-roadmap">
-          <div className="mc-card-header">
-            <h3>Roadmap</h3>
-          </div>
-          <div className="mc-card-body">
-            <div className="mc-roadmap-section">
-              <span className="mc-roadmap-label mc-roadmap-now">Now</span>
-              <ul>{d.roadmap.now.map((item, i) => <li key={i}>{item}</li>)}</ul>
+              {footer && (
+                <div className="mc-card-footer">
+                  {footer.map((item, i) => <span key={i}>{item}</span>)}
+                </div>
+              )}
             </div>
-            <div className="mc-roadmap-section">
-              <span className="mc-roadmap-label mc-roadmap-next">Next</span>
-              <ul>{d.roadmap.next.map((item, i) => <li key={i}>{item}</li>)}</ul>
-            </div>
-            <div className="mc-roadmap-section">
-              <span className="mc-roadmap-label mc-roadmap-later">Later</span>
-              <ul>{d.roadmap.later.map((item, i) => <li key={i}>{item}</li>)}</ul>
-            </div>
-          </div>
-        </div>
-
-        {/* Advisors */}
-        <div className="mc-card mc-card-advisors">
-          <div className="mc-card-header">
-            <h3>Advisory Board</h3>
-            <span className="mc-badge">{d.advisors.length}</span>
-          </div>
-          <div className="mc-card-body">
-            {d.advisors.map((a, i) => (
-              <div key={i} className="mc-advisor-row">
-                <span className="mc-advisor-name">{a.name}</span>
-                <span className="mc-advisor-domain">{a.domain}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* KD Academy */}
-        <div className="mc-card mc-card-academy">
-          <div className="mc-card-header">
-            <h3>KD Academy</h3>
-          </div>
-          <div className="mc-card-body">
-            <div className="mc-academy-stat">
-              <span className="mc-academy-label">Website</span>
-              <span className="mc-academy-value">academy.krackeddevs.com</span>
-            </div>
-            <div className="mc-academy-stat">
-              <span className="mc-academy-label">TVET</span>
-              <span className="mc-academy-value">Slides ready, 2nd meeting pending</span>
-            </div>
-            <div className="mc-academy-stat">
-              <span className="mc-academy-label">Ambassadors</span>
-              <span className="mc-academy-value">4 onboarded, KPIs tracking</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Graph link */}
-        <div className="mc-card mc-card-graph" onClick={() => navigate('/graph')}>
-          <div className="mc-card-header">
-            <h3>Knowledge Graph</h3>
-          </div>
-          <div className="mc-card-body mc-card-center">
-            <span className="mc-big-number">{d.graph.total}</span>
-            <span className="mc-big-label">nodes</span>
-          </div>
-          <div className="mc-card-footer">
-            <span>{d.graph.mission} mission</span>
-            <span>{d.graph.research} research</span>
-          </div>
-        </div>
-
-        {/* Revenue */}
-        <div className="mc-card mc-card-revenue" onClick={() => navigate('/article/revenue-model')}>
-          <div className="mc-card-header">
-            <h3>Revenue</h3>
-          </div>
-          <div className="mc-card-body mc-card-center">
-            <span className="mc-big-label">Next milestone</span>
-            <span className="mc-revenue-milestone">Marketplace feature</span>
-            <span className="mc-big-label" style={{ marginTop: 8 }}>on Kracked Devs</span>
-          </div>
-        </div>
+          )
+        })}
       </div>
     </div>
   )

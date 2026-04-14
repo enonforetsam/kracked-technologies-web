@@ -1634,6 +1634,19 @@ a:hover {
   gap: 20px;
 }
 
+.mc-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 90;
+  animation: mc-fade-in 0.2s ease;
+}
+
+@keyframes mc-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .mc-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -1641,11 +1654,47 @@ a:hover {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  transition: border-color 0.15s;
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .mc-card:hover {
   border-color: var(--blue);
+}
+
+.mc-card-dimmed {
+  opacity: 0.15;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.mc-card-expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 90%;
+  max-width: 640px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: var(--bg);
+  border-color: var(--blue);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.15);
+  padding: 32px;
+  cursor: default;
+  animation: mc-expand 0.25s ease;
+}
+
+@keyframes mc-expand {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .mc-card-header {
@@ -1653,6 +1702,33 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.mc-card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mc-card-close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.mc-card-close:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: white;
 }
 
 .mc-card-header h3 {
