@@ -445,14 +445,20 @@ a:hover {
   to { opacity: 1; transform: translateX(0); }
 }
 
-.article-panel-close {
+.article-panel-actions {
   position: sticky;
   top: 0;
   float: right;
-  margin-bottom: -40px;
+  display: flex;
+  gap: 4px;
+  margin-bottom: -36px;
+  z-index: 5;
+}
+
+.article-panel-action-btn {
   background: var(--bg);
   border: 1px solid var(--border);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--text-secondary);
   cursor: pointer;
   width: 32px;
@@ -462,14 +468,35 @@ a:hover {
   justify-content: center;
   border-radius: var(--radius-sm);
   transition: all 0.15s;
-  z-index: 5;
-  z-index: 51;
+  font-family: inherit;
 }
 
-.article-panel-close:hover {
+.article-panel-action-btn:hover {
   background: var(--blue);
   border-color: var(--blue);
   color: white;
+}
+
+.article-panel-action-btn:hover svg {
+  stroke: white;
+}
+
+/* Fullscreen panel */
+.article-panel-fullscreen {
+  width: 100% !important;
+  max-width: 800px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  border-left: none;
+  box-shadow: none;
+}
+
+.article-panel-fullscreen.wiki-article-panel {
+  max-width: 800px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 /* Breadcrumbs */

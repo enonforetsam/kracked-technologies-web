@@ -56,6 +56,7 @@ export default function GraphPage({ graph }) {
   const [search, setSearch] = useState('')
   const [showResults, setShowResults] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
+  const [panelFullscreen, setPanelFullscreen] = useState(false)
   const [hovered, setHovered] = useState(null)
   const panelRef = useRef(null)
   const gridRef = useRef(null)
@@ -364,6 +365,7 @@ export default function GraphPage({ graph }) {
 
   const closePanel = useCallback(() => {
     setSelected(null)
+    setPanelFullscreen(false)
 
     // Zoom back out in 3D mode
     if (settings.mode3d && fgRef.current && fgRef.current.cameraPosition) {
@@ -554,10 +556,23 @@ export default function GraphPage({ graph }) {
 
         {/* Article panel */}
         {selected && (
-          <div className="article-panel" ref={panelRef} onClick={handleContentClick}>
-            <button className="article-panel-close" onClick={(e) => { e.stopPropagation(); closePanel() }}>
-              &times;
-            </button>
+          <div className={`article-panel ${panelFullscreen ? 'article-panel-fullscreen' : ''}`} ref={panelRef} onClick={handleContentClick}>
+            <div className="article-panel-actions">
+              <button className="article-panel-action-btn" onClick={(e) => { e.stopPropagation(); setPanelFullscreen(f => !f) }} title={panelFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
+                {panelFullscreen ? (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/>
+                  </svg>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
+                  </svg>
+                )}
+              </button>
+              <button className="article-panel-action-btn" onClick={(e) => { e.stopPropagation(); closePanel() }} title="Close">
+                &times;
+              </button>
+            </div>
 
             <nav className="article-panel-breadcrumb">
               <span className="breadcrumb-link" style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); closePanel() }}>Graph</span>
