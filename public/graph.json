@@ -23,7 +23,8 @@
         "Roadmap"
       ],
       "path": "Kracked Technologies.md",
-      "connections": 17
+      "connections": 17,
+      "dataset": "mission"
     },
     {
       "id": "sea-expansion",
@@ -68,7 +69,8 @@
         "Growth & Marketing"
       ],
       "path": "Research/SEA Expansion.md",
-      "connections": 17
+      "connections": 17,
+      "dataset": "mission"
     },
     {
       "id": "research",
@@ -109,7 +111,8 @@
         "Kracked Labs"
       ],
       "path": "Research/Research.md",
-      "connections": 13
+      "connections": 13,
+      "dataset": "mission"
     },
     {
       "id": "open-source-strategy",
@@ -156,7 +159,8 @@
         "Growth & Marketing"
       ],
       "path": "Research/Open Source Strategy.md",
-      "connections": 18
+      "connections": 18,
+      "dataset": "mission"
     },
     {
       "id": "malaysia-data-center-boom",
@@ -193,7 +197,8 @@
         "KD Academy"
       ],
       "path": "Research/Malaysia Data Center Boom.md",
-      "connections": 13
+      "connections": 13,
+      "dataset": "mission"
     },
     {
       "id": "defence-tech",
@@ -222,7 +227,8 @@
         "Venture Playbook"
       ],
       "path": "Research/Defence Tech.md",
-      "connections": 9
+      "connections": 9,
+      "dataset": "mission"
     },
     {
       "id": "ai-native-education",
@@ -253,7 +259,8 @@
         "Competitors"
       ],
       "path": "Research/AI Native Education.md",
-      "connections": 10
+      "connections": 10,
+      "dataset": "mission"
     },
     {
       "id": "roadmap",
@@ -272,7 +279,8 @@
         "Bounty Board"
       ],
       "path": "Projects/Roadmap.md",
-      "connections": 4
+      "connections": 4,
+      "dataset": "mission"
     },
     {
       "id": "products-projects",
@@ -303,7 +311,8 @@
         "Portfolio"
       ],
       "path": "Projects/Products & Projects.md",
-      "connections": 10
+      "connections": 10,
+      "dataset": "mission"
     },
     {
       "id": "team",
@@ -328,7 +337,8 @@
         "Kracked Labs"
       ],
       "path": "Team/Team.md",
-      "connections": 8
+      "connections": 8,
+      "dataset": "mission"
     },
     {
       "id": "kracked-labs",
@@ -359,7 +369,8 @@
         "Portfolio"
       ],
       "path": "Ecosystem/Kracked Labs.md",
-      "connections": 34
+      "connections": 34,
+      "dataset": "mission"
     },
     {
       "id": "kracked-devs",
@@ -390,7 +401,8 @@
         "News Feed"
       ],
       "path": "Ecosystem/Kracked Devs.md",
-      "connections": 26
+      "connections": 26,
+      "dataset": "mission"
     },
     {
       "id": "kd-academy",
@@ -401,7 +413,8 @@
       "links": [],
       "linkNames": [],
       "path": "Ecosystem/KD Academy.md",
-      "connections": 11
+      "connections": 11,
+      "dataset": "mission"
     },
     {
       "id": "advisory-board",
@@ -430,7 +443,8 @@
         "Kracked Labs"
       ],
       "path": "Ecosystem/Advisory Board.md",
-      "connections": 14
+      "connections": 14,
+      "dataset": "mission"
     },
     {
       "id": "showcase",
@@ -445,7 +459,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/Showcase.md",
-      "connections": 5
+      "connections": 5,
+      "dataset": "mission"
     },
     {
       "id": "news-feed",
@@ -460,7 +475,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/News Feed.md",
-      "connections": 4
+      "connections": 4,
+      "dataset": "mission"
     },
     {
       "id": "leaderboard",
@@ -475,7 +491,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/Leaderboard.md",
-      "connections": 7
+      "connections": 7,
+      "dataset": "mission"
     },
     {
       "id": "job-board",
@@ -490,7 +507,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/Job Board.md",
-      "connections": 4
+      "connections": 4,
+      "dataset": "mission"
     },
     {
       "id": "guild-system",
@@ -505,7 +523,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/Guild System.md",
-      "connections": 6
+      "connections": 6,
+      "dataset": "mission"
     },
     {
       "id": "events",
@@ -522,7 +541,8 @@
         "Showcase"
       ],
       "path": "Platform/Events.md",
-      "connections": 5
+      "connections": 5,
+      "dataset": "mission"
     },
     {
       "id": "bounty-board",
@@ -537,7 +557,8 @@
         "Kracked Devs"
       ],
       "path": "Platform/Bounty Board.md",
-      "connections": 8
+      "connections": 8,
+      "dataset": "mission"
     },
     {
       "id": "rotican-ai",
@@ -552,7 +573,8 @@
         "Portfolio"
       ],
       "path": "Ventures/rotican.ai.md",
-      "connections": 2
+      "connections": 2,
+      "dataset": "mission"
     },
     {
       "id": "cofounders",
@@ -567,7 +589,8 @@
         "Portfolio"
       ],
       "path": "Ventures/cofounders.md",
-      "connections": 6
+      "connections": 6,
+      "dataset": "mission"
     },
     {
       "id": "venture-playbook",
@@ -586,7 +609,8 @@
         "Portfolio"
       ],
       "path": "Ventures/Venture Playbook.md",
-      "connections": 6
+      "connections": 6,
+      "dataset": "mission"
     },
     {
       "id": "revenue-model",
@@ -601,7 +625,8 @@
         "Kracked Technologies"
       ],
       "path": "Ventures/Revenue Model.md",
-      "connections": 2
+      "connections": 2,
+      "dataset": "mission"
     },
     {
       "id": "portfolio",
@@ -630,7 +655,8 @@
         "Masjid OS"
       ],
       "path": "Ventures/Portfolio.md",
-      "connections": 21
+      "connections": 21,
+      "dataset": "mission"
     },
     {
       "id": "pipeline",
@@ -649,7 +675,8 @@
         "Venture Playbook"
       ],
       "path": "Ventures/Pipeline.md",
-      "connections": 5
+      "connections": 5,
+      "dataset": "mission"
     },
     {
       "id": "masjid-os",
@@ -664,7 +691,8 @@
         "Portfolio"
       ],
       "path": "Ventures/Masjid OS.md",
-      "connections": 3
+      "connections": 3,
+      "dataset": "mission"
     },
     {
       "id": "market-landscape",
@@ -679,7 +707,8 @@
         "Kracked Labs"
       ],
       "path": "Ventures/Market Landscape.md",
-      "connections": 6
+      "connections": 6,
+      "dataset": "mission"
     },
     {
       "id": "mypeta",
@@ -694,7 +723,8 @@
         "Portfolio"
       ],
       "path": "Ventures/MYpeta.md",
-      "connections": 3
+      "connections": 3,
+      "dataset": "mission"
     },
     {
       "id": "jomqr",
@@ -709,7 +739,8 @@
         "Portfolio"
       ],
       "path": "Ventures/JomQR.md",
-      "connections": 2
+      "connections": 2,
+      "dataset": "mission"
     },
     {
       "id": "jomkopi",
@@ -724,7 +755,8 @@
         "Portfolio"
       ],
       "path": "Ventures/JomKopi.md",
-      "connections": 2
+      "connections": 2,
+      "dataset": "mission"
     },
     {
       "id": "growth-marketing",
@@ -743,7 +775,8 @@
         "Kracked Labs"
       ],
       "path": "Ventures/Growth & Marketing.md",
-      "connections": 6
+      "connections": 6,
+      "dataset": "mission"
     },
     {
       "id": "competitors",
@@ -758,7 +791,8 @@
         "Kracked Labs"
       ],
       "path": "Ventures/Competitors.md",
-      "connections": 7
+      "connections": 7,
+      "dataset": "mission"
     },
     {
       "id": "burhan",
@@ -773,7 +807,448 @@
         "Portfolio"
       ],
       "path": "Ventures/Burhan.md",
+      "connections": 2,
+      "dataset": "mission"
+    },
+    {
+      "id": "malaysian-startup-ecosystem",
+      "name": "Malaysian Startup Ecosystem",
+      "category": "Research",
+      "dataset": "research",
+      "content": "# Malaysian Startup Ecosystem\n\nOverview of Malaysia's tech startup landscape.\n\n## Key Metrics (2025)\n\n- **21,393** startups in ecosystem\n- **2,120** funded startups\n- **$18.9B** total raised (historical)\n- **$257M** equity funding in 2025 (40 deals)\n- KL ranked **43rd globally**, 3rd in Southeast Asia\n\n## Hottest Sectors\n\n- AI (74 deals 2019–2025)\n- Fintech (120+ deals)\n- Logistics & supply chain\n\n## Government Targets\n\nThe [[SUPER Roadmap]] (2021–2030) aims to make Malaysia a **top 20 global startup hub**.\n\n## Ecosystem Structure\n\n- **Funding**: [[Jelawang Capital]], [[Cradle Fund]], [[Gobi Partners]], [[500 Global]], [[1337 Ventures]]\n- **Builders**: [[Antler Malaysia]], [[NEXEA]], [[ScaleUp Malaysia]]\n- **Accelerators**: [[Cyberview Living Lab]], [[Sunway iLabs]]\n- **Unicorns**: [[Grab]], [[Carsome]], [[Aerodyne]]\n",
+      "wordCount": 150,
+      "links": [
+        "super-roadmap",
+        "cradle-fund",
+        "jelawang-capital",
+        "gobi-partners",
+        "500-global",
+        "1337-ventures",
+        "antler-malaysia",
+        "nexea",
+        "scaleup-malaysia",
+        "cyberview-living-lab",
+        "sunway-ilabs",
+        "grab",
+        "carsome",
+        "aerodyne",
+        "mranti",
+        "magic"
+      ],
+      "linkNames": [
+        "SUPER Roadmap",
+        "Cradle Fund",
+        "Jelawang Capital",
+        "Gobi Partners",
+        "500 Global",
+        "1337 Ventures",
+        "Antler Malaysia",
+        "NEXEA",
+        "ScaleUp Malaysia",
+        "Cyberview Living Lab",
+        "Sunway iLabs",
+        "Grab",
+        "Carsome",
+        "Aerodyne",
+        "MRANTI",
+        "MaGIC"
+      ],
+      "path": "research/malaysian-startup-ecosystem.md",
+      "connections": 16
+    },
+    {
+      "id": "super-roadmap",
+      "name": "SUPER Roadmap",
+      "category": "Research",
+      "dataset": "research",
+      "content": "# SUPER Roadmap\n\nStartup Ecosystem Roadmap 2021–2030, managed by [[MYStartup]] under MOSTI.\n\n## Goal\n\nMake Malaysia a **top 20 global startup ecosystem** by 2030.\n\n## Key Pillars\n\n- **Funding access** — streamline grants and VC funding\n- **Talent pipeline** — upskill local developers and founders\n- **Market access** — help startups expand regionally\n- **Regulatory support** — sandbox environments\n\n## Related\n\n- [[Cradle Fund]]\n- [[MRANTI]]\n- [[Jelawang Capital]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 120,
+      "links": [
+        "mystartup",
+        "cradle-fund",
+        "mranti",
+        "jelawang-capital",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "MYStartup",
+        "Cradle Fund",
+        "MRANTI",
+        "Jelawang Capital",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/super-roadmap.md",
+      "connections": 5
+    },
+    {
+      "id": "cradle-fund",
+      "name": "Cradle Fund",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# Cradle Fund\n\nGovernment agency under Ministry of Finance, incorporated 2003.\n\n## Programs\n\n### CIP Spark\n- Up to RM 150,000 (18 months)\n- Company < 5 years, revenue < RM 3M\n\n### CIP Sprint\n- Up to RM 600,000\n- Company < 7 years, revenue < RM 5M, 51% Malaysian-owned\n\n## Partnerships\n\n- Co-runs [[MYStartup]] Accelerator with [[NEXEA]]\n\n## Related\n\n- [[Jelawang Capital]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 130,
+      "links": [
+        "mystartup",
+        "nexea",
+        "super-roadmap",
+        "jelawang-capital",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "MYStartup",
+        "NEXEA",
+        "SUPER Roadmap",
+        "Jelawang Capital",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/cradle-fund.md",
+      "connections": 5
+    },
+    {
+      "id": "jelawang-capital",
+      "name": "Jelawang Capital",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# Jelawang Capital\n\nNational fund-of-funds launched by Khazanah Nasional. Consolidation of MAVCAP and Penjana Kapital.\n\n## Programs\n\n### Emerging Fund Managers Programme (EMP)\nFirst cohort: [[Vynn Capital]], [[Kairous Capital]], First Move\n\n## Funding\n\n- Budget 2025: RM 1 billion for NFOF\n- Deployed RM 60M+ since June 2025\n\n## Related\n\n- [[Cradle Fund]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 130,
+      "links": [
+        "vynn-capital",
+        "kairous-capital",
+        "cradle-fund",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Vynn Capital",
+        "Kairous Capital",
+        "Cradle Fund",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/jelawang-capital.md",
+      "connections": 4
+    },
+    {
+      "id": "mranti",
+      "name": "MRANTI",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# MRANTI\n\nMalaysian Research Accelerator for Technology & Innovation.\n\n## Key Programs\n\n### AI Sandbox\nAims to create **900 AI startups** by 2026.\n\n### MRANTI Park\nShared R&D facilities.\n\n## Related\n\n- [[Cradle Fund]]\n- [[SUPER Roadmap]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 90,
+      "links": [
+        "cradle-fund",
+        "super-roadmap",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Cradle Fund",
+        "SUPER Roadmap",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/mranti.md",
+      "connections": 3
+    },
+    {
+      "id": "magic",
+      "name": "MaGIC",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# MaGIC\n\nMalaysian Global Innovation & Creativity Centre.\n\n## Role in Ecosystem\n\nActs as a funnel — identifies founders, runs programs, connects with [[Jelawang Capital]], [[Cradle Fund]], and private VCs.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n- [[SUPER Roadmap]]\n",
+      "wordCount": 85,
+      "links": [
+        "jelawang-capital",
+        "cradle-fund",
+        "malaysian-startup-ecosystem",
+        "super-roadmap"
+      ],
+      "linkNames": [
+        "Jelawang Capital",
+        "Cradle Fund",
+        "Malaysian Startup Ecosystem",
+        "SUPER Roadmap"
+      ],
+      "path": "research/magic.md",
+      "connections": 4
+    },
+    {
+      "id": "mystartup",
+      "name": "MYStartup",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# MYStartup\n\nNational startup platform under MOSTI. 4,428+ active startups.\n\n## Programs\n\n### MYStartup Accelerator\nPowered by [[Cradle Fund]] with [[NEXEA]].\n\n## Related\n\n- [[SUPER Roadmap]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 80,
+      "links": [
+        "super-roadmap",
+        "cradle-fund",
+        "nexea",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "SUPER Roadmap",
+        "Cradle Fund",
+        "NEXEA",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/mystartup.md",
+      "connections": 4
+    },
+    {
+      "id": "mtdc",
+      "name": "MTDC",
+      "category": "Gov Funding",
+      "dataset": "research",
+      "content": "# MTDC\n\nMalaysian Technology Development Corporation. Funded 850+ companies.\n\n## Funds\n\n- **CRDF** — R&D commercialization\n- **BSF** — early-stage capital\n\n## Related\n\n- [[Cradle Fund]]\n- [[MRANTI]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 75,
+      "links": [
+        "cradle-fund",
+        "mranti",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Cradle Fund",
+        "MRANTI",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/mtdc.md",
+      "connections": 3
+    },
+    {
+      "id": "gobi-partners",
+      "name": "Gobi Partners",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# Gobi Partners\n\nPan-Asian VC, KL & Hong Kong. Founded 2002.\n\n- **US$1.6B** AUM\n- **380+** startups\n- **17** funds\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n- [[Jelawang Capital]]\n",
+      "wordCount": 70,
+      "links": [
+        "malaysian-startup-ecosystem",
+        "jelawang-capital"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem",
+        "Jelawang Capital"
+      ],
+      "path": "research/gobi-partners.md",
       "connections": 2
+    },
+    {
+      "id": "500-global",
+      "name": "500 Global",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# 500 Global\n\nFormerly 500 Startups. Early-stage VC with strong SEA presence.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n- [[Jelawang Capital]]\n",
+      "wordCount": 70,
+      "links": [
+        "malaysian-startup-ecosystem",
+        "jelawang-capital"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem",
+        "Jelawang Capital"
+      ],
+      "path": "research/500-global.md",
+      "connections": 2
+    },
+    {
+      "id": "1337-ventures",
+      "name": "1337 Ventures",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# 1337 Ventures\n\nMalaysia's leading early-stage VC since 2012. 90+ investments. Runs Alpha Startups bootcamp.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n- [[Cradle Fund]]\n",
+      "wordCount": 75,
+      "links": [
+        "malaysian-startup-ecosystem",
+        "cradle-fund"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem",
+        "Cradle Fund"
+      ],
+      "path": "research/1337-ventures.md",
+      "connections": 2
+    },
+    {
+      "id": "kairous-capital",
+      "name": "Kairous Capital",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# Kairous Capital\n\nUS$200M+ AUM. ASEAN-China focus. Series A & B.\n\nSelected as [[Jelawang Capital]] EMP fund manager.\n\n## Related\n\n- [[Jelawang Capital]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 70,
+      "links": [
+        "jelawang-capital",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Jelawang Capital",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/kairous-capital.md",
+      "connections": 2
+    },
+    {
+      "id": "vynn-capital",
+      "name": "Vynn Capital",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# Vynn Capital\n\nEarly-stage VC. Supply chain, mobility, property, food & agriculture.\n\nSelected as [[Jelawang Capital]] EMP fund manager.\n\n## Related\n\n- [[Jelawang Capital]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 55,
+      "links": [
+        "jelawang-capital",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Jelawang Capital",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/vynn-capital.md",
+      "connections": 2
+    },
+    {
+      "id": "rhl-ventures",
+      "name": "RHL Ventures",
+      "category": "Venture Capital",
+      "dataset": "research",
+      "content": "# RHL Ventures\n\nMulti-stage VC, Series A to growth. Sector-agnostic, SEA-wide.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 35,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/rhl-ventures.md",
+      "connections": 1
+    },
+    {
+      "id": "antler-malaysia",
+      "name": "Antler Malaysia",
+      "category": "Venture Builder",
+      "dataset": "research",
+      "content": "# Antler Malaysia\n\nGlobal Day Zero investor, KL office, backed by Khazanah.\n\n- 19 investments, ~$2M deployed\n- Up to $600K per startup via ARC\n- Target: 30+ startups over 3 years\n\n## Related\n\n- [[Jelawang Capital]]\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 90,
+      "links": [
+        "jelawang-capital",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Jelawang Capital",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/antler-malaysia.md",
+      "connections": 2
+    },
+    {
+      "id": "nexea",
+      "name": "NEXEA",
+      "category": "Venture Builder",
+      "dataset": "research",
+      "content": "# NEXEA\n\nVC + venture builder + accelerator + angel network.\n\n- Accelerator: RM 50K–100K\n- Co-runs [[MYStartup]] Accelerator with [[Cradle Fund]]\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 80,
+      "links": [
+        "mystartup",
+        "cradle-fund",
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "MYStartup",
+        "Cradle Fund",
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/nexea.md",
+      "connections": 3
+    },
+    {
+      "id": "scaleup-malaysia",
+      "name": "ScaleUp Malaysia",
+      "category": "Venture Builder",
+      "dataset": "research",
+      "content": "# ScaleUp Malaysia\n\n12-week accelerator + VC. $100K per company. \"Pegasus model\" — growth + profitability.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 70,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/scaleup-malaysia.md",
+      "connections": 1
+    },
+    {
+      "id": "cyberview-living-lab",
+      "name": "Cyberview Living Lab",
+      "category": "Accelerator",
+      "dataset": "research",
+      "content": "# Cyberview Living Lab\n\nLongest-running accelerator in Malaysia, Cyberjaya. Equity-free, 4-month program.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 60,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/cyberview-living-lab.md",
+      "connections": 1
+    },
+    {
+      "id": "sunway-ilabs",
+      "name": "Sunway iLabs",
+      "category": "Accelerator",
+      "dataset": "research",
+      "content": "# Sunway iLabs\n\nSunway Group innovation lab. AI Lab + general accelerator.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 55,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/sunway-ilabs.md",
+      "connections": 1
+    },
+    {
+      "id": "grab",
+      "name": "Grab",
+      "category": "Startup",
+      "dataset": "research",
+      "content": "# Grab\n\nMalaysian-founded super app. ~$40B valuation. Ride-hailing, food delivery, payments, financial services.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 85,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/grab.md",
+      "connections": 1
+    },
+    {
+      "id": "carsome",
+      "name": "Carsome",
+      "category": "Startup",
+      "dataset": "research",
+      "content": "# Carsome\n\nAutomotive marketplace. $1.3B unicorn. First full-year profit: $10M in FY24.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 75,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/carsome.md",
+      "connections": 1
+    },
+    {
+      "id": "aerodyne",
+      "name": "Aerodyne",
+      "category": "Startup",
+      "dataset": "research",
+      "content": "# Aerodyne\n\nDrone tech + AI. #1 global drone service provider. ~$260M valuation. 35+ countries.\n\n## Related\n\n- [[Malaysian Startup Ecosystem]]\n",
+      "wordCount": 80,
+      "links": [
+        "malaysian-startup-ecosystem"
+      ],
+      "linkNames": [
+        "Malaysian Startup Ecosystem"
+      ],
+      "path": "research/aerodyne.md",
+      "connections": 1
     }
   ],
   "edges": [
@@ -1408,11 +1883,175 @@
     {
       "source": "burhan",
       "target": "portfolio"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "super-roadmap"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "gobi-partners"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "500-global"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "1337-ventures"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "antler-malaysia"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "nexea"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "scaleup-malaysia"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "cyberview-living-lab"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "sunway-ilabs"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "grab"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "carsome"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "aerodyne"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "mranti"
+    },
+    {
+      "source": "malaysian-startup-ecosystem",
+      "target": "magic"
+    },
+    {
+      "source": "super-roadmap",
+      "target": "mystartup"
+    },
+    {
+      "source": "super-roadmap",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "super-roadmap",
+      "target": "mranti"
+    },
+    {
+      "source": "super-roadmap",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "cradle-fund",
+      "target": "mystartup"
+    },
+    {
+      "source": "cradle-fund",
+      "target": "nexea"
+    },
+    {
+      "source": "cradle-fund",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "jelawang-capital",
+      "target": "vynn-capital"
+    },
+    {
+      "source": "jelawang-capital",
+      "target": "kairous-capital"
+    },
+    {
+      "source": "mranti",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "magic",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "magic",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "magic",
+      "target": "super-roadmap"
+    },
+    {
+      "source": "mystartup",
+      "target": "nexea"
+    },
+    {
+      "source": "mystartup",
+      "target": "malaysian-startup-ecosystem"
+    },
+    {
+      "source": "mtdc",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "mtdc",
+      "target": "mranti"
+    },
+    {
+      "source": "mtdc",
+      "target": "malaysian-startup-ecosystem"
+    },
+    {
+      "source": "gobi-partners",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "500-global",
+      "target": "jelawang-capital"
+    },
+    {
+      "source": "1337-ventures",
+      "target": "cradle-fund"
+    },
+    {
+      "source": "kairous-capital",
+      "target": "malaysian-startup-ecosystem"
+    },
+    {
+      "source": "vynn-capital",
+      "target": "malaysian-startup-ecosystem"
+    },
+    {
+      "source": "rhl-ventures",
+      "target": "malaysian-startup-ecosystem"
+    },
+    {
+      "source": "antler-malaysia",
+      "target": "jelawang-capital"
     }
   ],
   "meta": {
-    "totalConcepts": 35,
-    "totalConnections": 158,
+    "totalConcepts": 57,
+    "totalConnections": 199,
     "categories": [
       "Root",
       "Research",
