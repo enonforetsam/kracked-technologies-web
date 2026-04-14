@@ -23,7 +23,7 @@
         "Roadmap"
       ],
       "path": "Kracked Technologies.md",
-      "connections": 11
+      "connections": 12
     },
     {
       "id": "team",
@@ -129,7 +129,7 @@
         "Portfolio"
       ],
       "path": "Ecosystem/Kracked Labs.md",
-      "connections": 20
+      "connections": 22
     },
     {
       "id": "kracked-devs",
@@ -160,7 +160,7 @@
         "News Feed"
       ],
       "path": "Ecosystem/Kracked Devs.md",
-      "connections": 18
+      "connections": 19
     },
     {
       "id": "kd-academy",
@@ -171,7 +171,30 @@
       "links": [],
       "linkNames": [],
       "path": "Ecosystem/KD Academy.md",
-      "connections": 3
+      "connections": 4
+    },
+    {
+      "id": "advisory-board",
+      "name": "Advisory Board",
+      "category": "Ecosystem",
+      "content": "# Advisory Board\n\nThe advisory board for [[Kracked Technologies]]. A group of experienced individuals providing strategic guidance across the ecosystem — [[Kracked Devs]], [[KD Academy]], and [[Kracked Labs]].\n\n## Status\n\nCurrently being formed. Initial advisors onboarded across government, VC, and AI/defence.\n\n## Advisors\n\n| Name | Domain | Role / Background |\n|------|--------|-------------------|\n| **Azlan Ismail** | Government & Policy | MyDigital (Malaysia's digital economy initiative under EPU) |\n| **Faiz Hassan** | VC & Startup Ecosystem | Assistant Manager — Technology & Innovation at Cradle Fund (since May 2023). Involved in MYStartup Startup Perks and MYStartup Tech Talent Program. Based in KL (hybrid). |\n| **Major Dr. Surenthiran Krishnan** | AI & Defence Tech | Malaysian Army (Tentera Darat Malaysia). Holds a PhD in AI. Bridges military/government and deep tech expertise. |\n\n## Advisory Areas\n\n- **Government & Policy** — Navigation of public sector partnerships, grants, regulatory landscape (Azlan Ismail)\n- **VC & Funding** — Cradle applications, startup ecosystem access, MYStartup programs (Faiz Hassan)\n- **AI & Deep Tech** — AI strategy, defence/government AI applications, research credibility (Dr. Surenthiran)\n- **Education & Talent** — Curriculum design, university partnerships, workforce development\n- **Community & Ecosystem** — Developer ecosystem building, regional expansion (Singapore, Indonesia)\n\n## What We Look For\n\n- Domain expertise relevant to Kracked's pillars\n- Network and credibility in Malaysian tech, government, or education\n- Willingness to engage regularly (not just a title)\n- Alignment with the builder-first, Malaysia-first mission\n\n## Structure\n\n- Informal advisory relationships (no board seats or equity commitments yet)\n- Regular check-ins with CEO and leadership\n- Advisors may be invited to mentor ventures under [[Kracked Labs]]\n",
+      "wordCount": 272,
+      "links": [
+        "kracked-technologies",
+        "kracked-devs",
+        "kd-academy",
+        "kracked-labs",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Kracked Devs",
+        "KD Academy",
+        "Kracked Labs",
+        "Kracked Labs"
+      ],
+      "path": "Ecosystem/Advisory Board.md",
+      "connections": 5
     },
     {
       "id": "showcase",
@@ -687,6 +710,26 @@
       "target": "news-feed"
     },
     {
+      "source": "advisory-board",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kd-academy"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-labs"
+    },
+    {
       "source": "showcase",
       "target": "kracked-devs"
     },
@@ -824,8 +867,8 @@
     }
   ],
   "meta": {
-    "totalConcepts": 28,
-    "totalConnections": 76,
+    "totalConcepts": 29,
+    "totalConnections": 81,
     "categories": [
       "Root",
       "Team",
@@ -834,6 +877,6 @@
       "Platform",
       "Ventures"
     ],
-    "syncedAt": "2026-04-14T03:55:27.583Z"
+    "syncedAt": "2026-04-14T05:13:12.461Z"
   }
 }

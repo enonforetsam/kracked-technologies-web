@@ -118,6 +118,7 @@ async function sync() {
     const blob = await put('graph.json', json, {
       access: 'public',
       addRandomSuffix: false,
+      allowOverwrite: true,
       contentType: 'application/json',
     })
     console.log(`Uploaded to Vercel Blob: ${blob.url}`)

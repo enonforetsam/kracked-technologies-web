@@ -53,13 +53,14 @@ function getCssVar(name) {
 export default function GraphPage({ graph }) {
   const fgRef = useRef()
   const [selected, setSelected] = useState(null)
-  const [expanded, setExpanded] = useState(false)
   const [search, setSearch] = useState('')
   const [showResults, setShowResults] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [hovered, setHovered] = useState(null)
   const panelRef = useRef(null)
   const gridRef = useRef(null)
+
+  const [view, setView] = useState('all') // 'mission' | 'research' | 'all'
 
   const [settings, setSettings] = useState({
     repulsion: 800,
@@ -72,7 +73,7 @@ export default function GraphPage({ graph }) {
     linkOpacity: 12,
     collisionPadding: 30,
     panelWidth: 440,
-    theme: 'cyberpunk',
+    theme: 'light',
     mode3d: false,
     // 3D settings
     showLabels3d: true,
@@ -95,15 +96,22 @@ export default function GraphPage({ graph }) {
   }, [settings.theme])
 
   const data = useMemo(() => {
-    const nodes = graph.nodes.map(n => ({
+    const filtered = view === 'all'
+      ? graph.nodes
+      : graph.nodes.filter(n => n.dataset === view)
+    const nodeIds = new Set(filtered.map(n => n.id))
+    const nodes = filtered.map(n => ({
       ...n,
       val: settings.nodeSize + n.connections * 3,
     }))
+    const links = graph.edges
+      .filter(e => nodeIds.has(e.source) && nodeIds.has(e.target))
+      .map(e => ({ source: e.source, target: e.target }))
     return {
       nodes: settings.showOrphans ? nodes : nodes.filter(n => n.connections > 0),
-      links: graph.edges.map(e => ({ source: e.source, target: e.target })),
+      links,
     }
-  }, [graph, settings.nodeSize, settings.showOrphans])
+  }, [graph, settings.nodeSize, settings.showOrphans, view])
 
   useEffect(() => {
     const fg = fgRef.current
@@ -113,7 +121,11 @@ export default function GraphPage({ graph }) {
       fg.d3Force('link').distance(settings.linkDistance)
       fg.d3Force('center').strength(settings.centerForce / 100)
       if (!settings.mode3d) {
-        fg.d3Force('collide', forceCollide(node => (node.val || 6) + settings.collisionPadding).strength(1))
+        fg.d3Force('collide', forceCollide(node => {
+          const labelW = (node.__labelWidth || 0) / 2
+          const nodeR = node.val || 6
+          return Math.max(nodeR, labelW) + settings.collisionPadding
+        }).strength(0.8))
       }
       fg.d3ReheatSimulation()
     } catch(e) { /* ignore if forces not ready */ }
@@ -335,7 +347,6 @@ export default function GraphPage({ graph }) {
       : nodeOrId
     if (node) {
       setSelected(node)
-      setExpanded(false)
       if (panelRef.current) panelRef.current.scrollTop = 0
 
       // Fly camera to node in 3D mode
@@ -353,7 +364,6 @@ export default function GraphPage({ graph }) {
 
   const closePanel = useCallback(() => {
     setSelected(null)
-    setExpanded(false)
 
     // Zoom back out in 3D mode
     if (settings.mode3d && fgRef.current && fgRef.current.cameraPosition) {
@@ -375,7 +385,6 @@ export default function GraphPage({ graph }) {
     if (link) {
       e.preventDefault()
       selectNode(link.dataset.nodeId)
-      setExpanded(true)
       if (panelRef.current) panelRef.current.scrollTop = 0
     }
   }, [selectNode])
@@ -412,19 +421,26 @@ export default function GraphPage({ graph }) {
     ctx.fill()
 
     if (settings.showLabels) {
-      const fontSize = Math.max(5, settings.labelSize / globalScale)
-      ctx.font = `600 ${fontSize}px Inter, sans-serif`
-      ctx.textAlign = 'center'
-      ctx.textBaseline = 'top'
-      ctx.fillStyle = getCssVar('--graph-label')
-      ctx.fillText(node.name, node.x, node.y + size + 5)
+      const fontSize = Math.min(settings.labelSize / globalScale, settings.labelSize * 0.9)
+      if (fontSize >= 3) {
+        ctx.font = `600 ${fontSize}px Inter, sans-serif`
+        ctx.textAlign = 'center'
+        ctx.textBaseline = 'top'
+        ctx.fillStyle = getCssVar('--graph-label')
+        // Fade text as it gets very small
+        if (fontSize < 6) ctx.globalAlpha = alpha * ((fontSize - 3) / 3)
+        ctx.fillText(node.name, node.x, node.y + size + 4)
+        // Store text width for collision
+        node.__labelWidth = ctx.measureText(node.name).width
+        node.__labelHeight = fontSize
+      }
     }
 
     ctx.globalAlpha = 1
   }, [selected, hoveredNeighborIds, settings.showLabels, settings.labelSize])
 
   const results = search.length > 1
-    ? graph.nodes.filter(n =>
+    ? data.nodes.filter(n =>
         n.name.toLowerCase().includes(search.toLowerCase())
       ).slice(0, 8)
     : []
@@ -438,7 +454,21 @@ export default function GraphPage({ graph }) {
     <div className="graph-page">
       {/* Header */}
       <div className="graph-header">
-        <span className="header-title">Kracked Technologies</span>
+        <div className="view-switcher">
+          {[
+            { id: 'mission', label: 'Mission Data' },
+            { id: 'research', label: 'Research' },
+            { id: 'all', label: 'Everything' },
+          ].map(v => (
+            <button
+              key={v.id}
+              className={`view-btn ${view === v.id ? 'view-btn-active' : ''}`}
+              onClick={() => { setView(v.id); setSelected(null) }}
+            >
+              {v.label}
+            </button>
+          ))}
+        </div>
         <div className="graph-search">
           <input
             type="text"
@@ -464,8 +494,8 @@ export default function GraphPage({ graph }) {
           )}
         </div>
         <div className="header-stats">
-          <span>{graph.meta.totalConcepts} concepts</span>
-          <span>{graph.meta.totalConnections} connections</span>
+          <span>{data.nodes.length} concepts</span>
+          <span>{data.links.length} connections</span>
         </div>
       </div>
 
