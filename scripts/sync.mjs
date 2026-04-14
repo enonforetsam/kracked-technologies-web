@@ -33,6 +33,83 @@ function getCategoryFromPath(relPath) {
   return parts.length > 1 ? parts[0] : 'Root'
 }
 
+function extractStatus(content) {
+  const match = content.match(/##\s*Status[:\s]*(.+)/i)
+  if (!match) return null
+  return match[1].trim().replace(/^-\s*Stage:\s*/i, '').trim() || null
+}
+
+function buildDashboard(nodes) {
+  // Deals
+  const deals = nodes
+    .filter(n => n.category === 'Deals')
+    .map(n => ({
+      name: n.name,
+      status: extractStatus(n.content) || 'Unknown',
+      id: n.id,
+    }))
+
+  // Ventures — only actual products, not meta pages
+  const META_VENTURE_IDS = ['venture-playbook', 'revenue-model', 'portfolio', 'pipeline', 'market-landscape', 'growth-marketing', 'competitors']
+  const ventureNodes = nodes.filter(n => n.category === 'Ventures' && !META_VENTURE_IDS.includes(n.id))
+  const ventures = ventureNodes.map(n => ({
+    name: n.name,
+    status: extractStatus(n.content) || 'Unknown',
+    id: n.id,
+  }))
+
+  // Team stats
+  const teamNode = nodes.find(n => n.id === 'team')
+  const teamCount = teamNode
+    ? (teamNode.content.match(/\|[^|]+\|[^|]+\|/g) || []).filter(r => !r.includes('Name') && !r.includes('---') && !r.includes('Member') && !r.includes('Builder') && !r.includes('Region')).length
+    : 0
+
+  // Roadmap
+  const roadmapNode = nodes.find(n => n.id === 'roadmap')
+  const roadmap = { now: [], next: [], later: [] }
+  if (roadmapNode) {
+    let section = null
+    for (const line of roadmapNode.content.split('\n')) {
+      if (/now/i.test(line) && /^##/.test(line)) section = 'now'
+      else if (/next/i.test(line) && /^##/.test(line)) section = 'next'
+      else if (/later/i.test(line) && /^##/.test(line)) section = 'later'
+      else if (section && /^-\s+/.test(line)) {
+        roadmap[section].push(line.replace(/^-\s+/, '').replace(/\[\[([^\]]+)\]\]/g, '$1'))
+      }
+    }
+  }
+
+  // Advisors
+  const advisorNode = nodes.find(n => n.id === 'advisory-board')
+  const advisors = []
+  if (advisorNode) {
+    const rows = advisorNode.content.match(/\|\s*\*\*(.+?)\*\*\s*\|(.+?)\|(.+?)\|/g) || []
+    for (const row of rows) {
+      const cols = row.split('|').filter(Boolean).map(s => s.trim())
+      if (cols.length >= 2) {
+        advisors.push({ name: cols[0].replace(/\*\*/g, ''), domain: cols[1] })
+      }
+    }
+  }
+
+  // KD Academy
+  const kdaNode = nodes.find(n => n.id === 'kd-academy')
+
+  // Graph stats
+  const missionNodes = nodes.filter(n => n.dataset === 'mission')
+  const researchNodes = nodes.filter(n => n.dataset === 'research')
+
+  return {
+    deals,
+    ventures,
+    team: { count: teamCount },
+    roadmap,
+    advisors,
+    academy: kdaNode ? { status: extractStatus(kdaNode.content) || 'In development', website: 'academy.krackeddevs.com' } : null,
+    graph: { mission: missionNodes.length, research: researchNodes.length, total: nodes.length },
+  }
+}
+
 async function sync() {
   // On CI/Vercel the vault isn't available — keep the committed graph.json
   if (!fs.existsSync(VAULT_DIR)) {
@@ -145,9 +222,13 @@ async function sync() {
     node.connections = connectionCounts[node.id] || 0
   }
 
+  // Build dashboard data from vault content
+  const dashboard = buildDashboard(nodes)
+
   const graph = {
     nodes,
     edges,
+    dashboard,
     meta: {
       totalConcepts: nodes.length,
       totalConnections: edges.length,

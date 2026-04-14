@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import GraphPage from './pages/GraphPage'
 import Home from './pages/Home'
 import ArticlePage from './pages/ArticlePage'
+import MissionControl from './pages/MissionControl'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -30,6 +31,12 @@ function ModeNav() {
       <Link to="/" className="mode-nav-brand">Kracked Technologies</Link>
       <div className="mode-nav-tabs">
         <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+          Control
+        </Link>
+        <Link to="/graph" className={`mode-nav-tab ${path === '/graph' ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
             <line x1="12" y1="10" x2="5" y2="8"/><line x1="12" y1="10" x2="19" y2="8"/><line x1="12" y1="14" x2="5" y2="16"/><line x1="12" y1="14" x2="19" y2="16"/>
@@ -157,7 +164,8 @@ export default function App() {
         <ModeNav />
         <div className="app-content">
           <Routes>
-            <Route path="/" element={<GraphPage graph={graph} />} />
+            <Route path="/" element={<MissionControl graph={graph} />} />
+            <Route path="/graph" element={<GraphPage graph={graph} />} />
             <Route path="/wiki" element={<Home graph={graph} />} />
             <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
           </Routes>
