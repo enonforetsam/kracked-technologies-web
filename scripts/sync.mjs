@@ -14,6 +14,7 @@ if (fs.existsSync(envPath)) {
 }
 
 const VAULT_DIR = path.resolve(process.cwd(), '..', 'Kracked Technologies')
+const RESEARCH_DIR = path.resolve(process.cwd(), '..', 'Obsidian Gov', 'Gov Malaysia', 'wiki', 'ecosystem')
 const OUT_FILE = path.resolve(process.cwd(), 'public', 'graph.json')
 
 const IGNORE = ['node_modules', '.obsidian']
@@ -48,6 +49,7 @@ async function sync() {
   const nodeMap = new Map()
   const edges = []
 
+  // Read mission nodes from KD vault
   for (const file of files) {
     const fullPath = path.join(VAULT_DIR, file)
     const raw = fs.readFileSync(fullPath, 'utf-8')
@@ -63,6 +65,7 @@ async function sync() {
       id: slug,
       name,
       category,
+      dataset: 'mission',
       content,
       wordCount,
       links: links.map(l => slugify(l)),
@@ -74,6 +77,52 @@ async function sync() {
     nodes.push(node)
     nodeMap.set(slug, node)
     nodeMap.set(name.toLowerCase(), node)
+  }
+
+  // Read research nodes from Obsidian Gov ecosystem folder
+  if (fs.existsSync(RESEARCH_DIR)) {
+    const RESEARCH_CATEGORIES = {
+      'ecosystem': 'Research',
+      'venture-capital': 'Venture Capital',
+      'venture-builder': 'Venture Builder',
+      'accelerator': 'Accelerator',
+      'startup': 'Startup',
+      'gov-funding': 'Gov Funding',
+    }
+
+    const researchFiles = await glob('*.md', { cwd: RESEARCH_DIR })
+    for (const file of researchFiles) {
+      const fullPath = path.join(RESEARCH_DIR, file)
+      const raw = fs.readFileSync(fullPath, 'utf-8')
+      const { data: frontmatter, content } = matter(raw)
+
+      const name = frontmatter.title || path.basename(file, '.md')
+      const slug = slugify(path.basename(file, '.md'))
+      const category = RESEARCH_CATEGORIES[frontmatter.category] || 'Research'
+      const links = extractWikilinks(content)
+      const wordCount = content.split(/\s+/).filter(Boolean).length
+
+      if (nodeMap.has(slug)) continue // skip duplicates
+
+      const node = {
+        id: slug,
+        name,
+        category,
+        dataset: 'research',
+        content,
+        wordCount,
+        links: links.map(l => slugify(l)),
+        linkNames: links,
+        path: `research/${file}`,
+      }
+
+      nodes.push(node)
+      nodeMap.set(slug, node)
+      nodeMap.set(name.toLowerCase(), node)
+    }
+    console.log(`Research: ${researchFiles.length} files from ${RESEARCH_DIR}`)
+  } else {
+    console.log('Research vault not found, skipping research nodes')
   }
 
   const nodeIds = new Set(nodes.map(n => n.id))
