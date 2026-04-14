@@ -30,9 +30,10 @@
   --graph-link: 0, 82, 239;
   --graph-label: #1a1a1a;
   --grid-color: 0, 0, 0;
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 12px;
+  --radius-xs: 2px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-pill: 99999px;
 }
 
@@ -273,7 +274,7 @@ a:hover {
   display: flex;
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: 99999px;
+  border-radius: var(--radius-pill);
   padding: 3px;
 }
 
@@ -285,7 +286,7 @@ a:hover {
   color: var(--text-secondary);
   background: transparent;
   border: none;
-  border-radius: 99999px;
+  border-radius: var(--radius-pill);
   cursor: pointer;
   transition: all 0.15s;
   white-space: nowrap;
@@ -837,7 +838,7 @@ a:hover {
   -webkit-appearance: none;
   appearance: none;
   background: var(--border);
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
   outline: none;
 }
 
@@ -1058,14 +1059,14 @@ a:hover {
   flex: 1;
   height: 4px;
   background: var(--bg-elevated);
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
   overflow: hidden;
 }
 
 .home-connected-fill {
   display: block;
   height: 100%;
-  border-radius: 2px;
+  border-radius: var(--radius-xs);
   transition: width 0.3s ease;
 }
 
@@ -1603,7 +1604,7 @@ a:hover {
 /* === MISSION CONTROL === */
 
 .mc {
-  padding: 32px;
+  padding: 40px 32px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1612,7 +1613,7 @@ a:hover {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .mc-title {
@@ -1630,14 +1631,14 @@ a:hover {
 .mc-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .mc-card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: var(--radius-lg);
+  padding: 24px;
   display: flex;
   flex-direction: column;
   transition: border-color 0.15s;
@@ -1651,7 +1652,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .mc-card-header h3 {
@@ -1668,8 +1669,8 @@ a:hover {
   color: white;
   font-size: 11px;
   font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 99px;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
 }
 
 .mc-card-body {
@@ -1682,12 +1683,13 @@ a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 12px 0;
 }
 
 .mc-card-footer {
   display: flex;
-  gap: 12px;
-  padding-top: 12px;
+  gap: 16px;
+  padding-top: 16px;
   margin-top: auto;
   border-top: 1px solid var(--border);
   font-size: 12px;
@@ -1702,22 +1704,20 @@ a:hover {
 .mc-deal-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  padding: 10px 8px;
+  margin: 0 -8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background 0.1s;
 }
 
-.mc-deal-row:last-child {
-  border-bottom: none;
+.mc-deal-row + .mc-deal-row {
+  border-top: 1px solid var(--border);
 }
 
 .mc-deal-row:hover {
   background: var(--bg-elevated);
-  margin: 0 -8px;
-  padding: 8px 8px;
-  border-radius: 6px;
 }
 
 .status-dot {
@@ -1751,7 +1751,7 @@ a:hover {
 .mc-big-label {
   font-size: 13px;
   color: var(--text-tertiary);
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 /* Ventures */
@@ -1762,9 +1762,20 @@ a:hover {
 .mc-venture-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 6px 0;
+  gap: 12px;
+  padding: 10px 8px;
+  margin: 0 -8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
+  transition: background 0.1s;
+}
+
+.mc-venture-row + .mc-venture-row {
+  border-top: 1px solid var(--border);
+}
+
+.mc-venture-row:hover {
+  background: var(--bg-elevated);
 }
 
 .mc-venture-row:hover .mc-venture-name {
@@ -1790,7 +1801,7 @@ a:hover {
 }
 
 .mc-roadmap-section {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .mc-roadmap-section:last-child {
@@ -1803,9 +1814,9 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 8px;
 }
 
 .mc-roadmap-now {
@@ -1832,8 +1843,8 @@ a:hover {
 .mc-roadmap-section li {
   font-size: 13px;
   color: var(--text);
-  padding: 3px 0;
-  padding-left: 16px;
+  padding: 4px 0;
+  padding-left: 18px;
   position: relative;
 }
 
@@ -1841,7 +1852,7 @@ a:hover {
   content: '';
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 11px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -1853,12 +1864,11 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
 }
 
-.mc-advisor-row:last-child {
-  border-bottom: none;
+.mc-advisor-row + .mc-advisor-row {
+  border-top: 1px solid var(--border);
 }
 
 .mc-advisor-name {
@@ -1876,12 +1886,11 @@ a:hover {
 .mc-academy-stat {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
 }
 
-.mc-academy-stat:last-child {
-  border-bottom: none;
+.mc-academy-stat + .mc-academy-stat {
+  border-top: 1px solid var(--border);
 }
 
 .mc-academy-label {
@@ -1914,8 +1923,12 @@ a:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
+  .mc {
+    padding: 24px 16px;
+  }
   .mc-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .mc-card-deals,
   .mc-card-ventures,
