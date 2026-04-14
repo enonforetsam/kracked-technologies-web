@@ -2,6 +2,16 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 import matter from 'gray-matter'
+import { put } from '@vercel/blob'
+
+// Load .env.local for BLOB_READ_WRITE_TOKEN
+const envPath = path.resolve(process.cwd(), '.env.local')
+if (fs.existsSync(envPath)) {
+  for (const line of fs.readFileSync(envPath, 'utf-8').split('\n')) {
+    const match = line.match(/^([^#=]+)=["']?(.+?)["']?$/)
+    if (match) process.env[match[1]] = match[2]
+  }
+}
 
 const VAULT_DIR = path.resolve(process.cwd(), '..', 'Kracked Technologies')
 const OUT_FILE = path.resolve(process.cwd(), 'public', 'graph.json')
@@ -97,8 +107,23 @@ async function sync() {
     },
   }
 
+  const json = JSON.stringify(graph, null, 2)
+
+  // Save locally
   fs.mkdirSync(path.dirname(OUT_FILE), { recursive: true })
-  fs.writeFileSync(OUT_FILE, JSON.stringify(graph, null, 2))
+  fs.writeFileSync(OUT_FILE, json)
+
+  // Upload to Vercel Blob if token is available
+  if (process.env.BLOB_READ_WRITE_TOKEN) {
+    const blob = await put('graph.json', json, {
+      access: 'public',
+      addRandomSuffix: false,
+      contentType: 'application/json',
+    })
+    console.log(`Uploaded to Vercel Blob: ${blob.url}`)
+  } else {
+    console.log('No BLOB_READ_WRITE_TOKEN found, skipping upload (set it in .env.local)')
+  }
 
   console.log(`Synced: ${nodes.length} concepts, ${edges.length} connections`)
   console.log(`Categories: ${graph.meta.categories.join(', ')}`)

@@ -6,7 +6,7 @@
   "scripts": {
     "sync": "node scripts/sync.mjs",
     "dev": "node scripts/sync.mjs && vite",
-    "build": "node scripts/sync.mjs && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@vercel/blob": "^2.3.3",
     "d3": "^7.9.0",
     "gray-matter": "^4.0.3",
     "marked": "^18.0.0",

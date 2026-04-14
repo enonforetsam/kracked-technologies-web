@@ -16,9 +16,11 @@ export default function App() {
   const [graph, setGraph] = useState(null)
 
   useEffect(() => {
-    fetch('/graph.json')
-      .then(r => r.json())
-      .then(setGraph)
+    const isDev = window.location.hostname === 'localhost'
+    const url = isDev
+      ? '/graph.json'
+      : 'https://gchcateoazgaft85.public.blob.vercel-storage.com/graph.json'
+    fetch(url).then(r => r.json()).then(setGraph)
   }, [])
 
   if (!graph) return null
