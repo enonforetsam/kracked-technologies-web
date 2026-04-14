@@ -13,7 +13,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-const VAULT_DIR = path.resolve(process.cwd(), '..', 'Kracked Technologies')
+const VAULT_DIR = path.resolve(process.cwd(), '..', 'kracked-vault')
 const RESEARCH_DIR = path.resolve(process.cwd(), '..', 'Obsidian Gov', 'Gov Malaysia', 'wiki', 'ecosystem')
 const OUT_FILE = path.resolve(process.cwd(), 'public', 'graph.json')
 
