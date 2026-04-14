@@ -23,6 +23,12 @@ function getCategoryFromPath(relPath) {
 }
 
 async function sync() {
+  // On CI/Vercel the vault isn't available — keep the committed graph.json
+  if (!fs.existsSync(VAULT_DIR)) {
+    console.log('Vault not found, skipping sync (using committed graph.json)')
+    return
+  }
+
   const files = await glob('**/*.md', {
     cwd: VAULT_DIR,
     ignore: IGNORE.map(d => `${d}/**`),
