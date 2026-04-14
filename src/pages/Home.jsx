@@ -62,7 +62,7 @@ export default function Home({ graph }) {
     byCategory[cat].sort((a, b) => b.connections - a.connections)
   }
 
-  const categoryOrder = ['Ecosystem', 'Platform', 'Ventures', 'Projects', 'Team', 'Root']
+  const categoryOrder = ['Ecosystem', 'Platform', 'Ventures', 'Projects', 'Team', 'Research', 'Root']
 
   const selectNode = useCallback((id) => {
     const node = graph.nodes.find(n => n.id === id)
