@@ -98,9 +98,7 @@ export default function GraphPage({ graph }) {
   const data = useMemo(() => {
     const filtered = view === 'all'
       ? graph.nodes
-      : view === 'research'
-        ? graph.nodes.filter(n => n.category === 'Research')
-        : graph.nodes.filter(n => n.category !== 'Research')
+      : graph.nodes.filter(n => n.dataset === view)
     const nodeIds = new Set(filtered.map(n => n.id))
     const nodes = filtered.map(n => ({
       ...n,
