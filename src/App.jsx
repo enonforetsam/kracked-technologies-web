@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext, useContext } from 'react'
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom'
 import GraphPage from './pages/GraphPage'
 import Home from './pages/Home'
@@ -6,25 +6,38 @@ import ArticlePage from './pages/ArticlePage'
 import MissionControl from './pages/MissionControl'
 
 const CATEGORY_COLORS = {
-  Ecosystem: '#00f0ff',
-  Platform: '#ff6b2d',
-  Ventures: '#b44dff',
-  Projects: '#ff2d7b',
-  Team: '#39ff14',
-  Root: '#ffe600',
-  'Venture Capital': '#f59e0b',
-  'Venture Builder': '#06b6d4',
-  'Accelerator': '#8b5cf6',
-  'Gov Funding': '#10b981',
-  'Startup': '#ef4444',
-  'Research': '#64748b',
+  Ecosystem: '#0e7490',
+  Platform: '#c2410c',
+  Ventures: '#7c3aed',
+  Projects: '#be185d',
+  Team: '#059669',
+  Root: '#0052ef',
+  'Venture Capital': '#b45309',
+  'Venture Builder': '#0e7490',
+  'Accelerator': '#6d28d9',
+  'Gov Funding': '#047857',
+  'Startup': '#dc2626',
+  'Research': '#475569',
 }
 
 export { CATEGORY_COLORS }
 
+const THEMES = [
+  { id: 'light', label: 'Light', colors: ['#ffffff', '#0052ef', '#f36458'] },
+  { id: 'cyberpunk', label: 'Cyberpunk', colors: ['#0a0a0f', '#00f0ff', '#ff2d7b'] },
+  { id: 'midnight', label: 'Midnight', colors: ['#0d0a1a', '#a78bfa', '#f472b6'] },
+  { id: 'emerald', label: 'Emerald', colors: ['#060f0a', '#34d399', '#f59e0b'] },
+  { id: 'sunset', label: 'Sunset', colors: ['#1a0e08', '#f97316', '#fb7185'] },
+]
+
+const ThemeContext = createContext()
+export function useTheme() { return useContext(ThemeContext) }
+export { THEMES }
+
 function ModeNav() {
   const location = useLocation()
   const path = location.pathname
+  const { theme, setTheme, showSettings, setShowSettings } = useTheme()
 
   return (
     <nav className="mode-nav">
@@ -50,6 +63,36 @@ function ModeNav() {
           Wiki
         </Link>
       </div>
+      <div className="mode-nav-right">
+        <button
+          className="mode-nav-settings"
+          onClick={() => setShowSettings(s => !s)}
+          title="Settings"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+          </svg>
+        </button>
+        {showSettings && (
+          <div className="global-settings-dropdown">
+            <h4>Theme</h4>
+            <div className="theme-picker">
+              {THEMES.map(t => (
+                <button
+                  key={t.id}
+                  className={`theme-swatch ${theme === t.id ? 'theme-active' : ''}`}
+                  onClick={() => setTheme(t.id)}
+                >
+                  <div className="theme-swatch-colors">
+                    {t.colors.map((c, i) => <div key={i} style={{ background: c }} />)}
+                  </div>
+                  <span>{t.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   )
 }
@@ -69,7 +112,7 @@ function InfoModal({ onClose }) {
         <div className="info-modal-body">
           <section className="info-section">
             <h3>What is this?</h3>
-            <p>This is a living knowledge base — every concept, venture, team member, and research thread in the Kracked ecosystem, connected in a single graph. It gets smarter every day as the team feeds into it.</p>
+            <p>This is a living knowledge base — every concept, venture, team member, and research thread in the Kracked ecosystem, connected in a single graph.</p>
           </section>
 
           <section className="info-section">
@@ -77,64 +120,19 @@ function InfoModal({ onClose }) {
             <div className="info-flow">
               <div className="info-flow-step">
                 <span className="info-flow-num">1</span>
-                <div>
-                  <strong>Team submits daily</strong>
-                  <p>Work done, blockers, insights — tagged to projects</p>
-                </div>
+                <div><strong>Team submits daily</strong><p>Work done, blockers, insights — tagged to projects</p></div>
               </div>
               <div className="info-flow-step">
                 <span className="info-flow-num">2</span>
-                <div>
-                  <strong>Obsidian vault updates</strong>
-                  <p>Reports processed into structured notes — the source of truth</p>
-                </div>
+                <div><strong>Obsidian vault updates</strong><p>Reports processed into structured notes</p></div>
               </div>
               <div className="info-flow-step">
                 <span className="info-flow-num">3</span>
-                <div>
-                  <strong>Graph syncs automatically</strong>
-                  <p>Connections, insights, and gaps surface across the ecosystem</p>
-                </div>
+                <div><strong>Graph syncs automatically</strong><p>Connections and insights surface across the ecosystem</p></div>
               </div>
               <div className="info-flow-step">
                 <span className="info-flow-num">4</span>
-                <div>
-                  <strong>Everyone learns from it</strong>
-                  <p>Onboarding, decision-making, and strategy — all in one place</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="info-section">
-            <h3>Roadmap</h3>
-            <div className="info-roadmap">
-              <div className="info-roadmap-phase info-roadmap-done">
-                <strong>Phase 1 — Foundation</strong>
-                <ul>
-                  <li>Obsidian vault as source of truth</li>
-                  <li>Graph + Wiki views</li>
-                  <li>Sync pipeline to Vercel</li>
-                  <li>Research section</li>
-                </ul>
-              </div>
-              <div className="info-roadmap-phase info-roadmap-current">
-                <strong>Phase 2 — Intelligence</strong>
-                <ul>
-                  <li>Daily report submission</li>
-                  <li>AI processing → auto-update notes</li>
-                  <li>Weekly summaries per venture & person</li>
-                  <li>Stale project detection</li>
-                </ul>
-              </div>
-              <div className="info-roadmap-phase">
-                <strong>Phase 3 — Full OS</strong>
-                <ul>
-                  <li>Real-time collaboration</li>
-                  <li>Metrics dashboard</li>
-                  <li>Decision log</li>
-                  <li>AI assistant for the ecosystem</li>
-                </ul>
+                <div><strong>Everyone learns from it</strong><p>Onboarding, decisions, strategy — all in one place</p></div>
               </div>
             </div>
           </section>
@@ -147,6 +145,12 @@ function InfoModal({ onClose }) {
 export default function App() {
   const [graph, setGraph] = useState(null)
   const [showInfo, setShowInfo] = useState(false)
+  const [theme, setTheme] = useState('light')
+  const [showSettings, setShowSettings] = useState(false)
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
   useEffect(() => {
     const isDev = window.location.hostname === 'localhost'
@@ -156,30 +160,42 @@ export default function App() {
     fetch(url).then(r => r.json()).then(setGraph)
   }, [])
 
+  // Close settings dropdown on outside click
+  useEffect(() => {
+    if (!showSettings) return
+    const handler = (e) => {
+      if (!e.target.closest('.mode-nav-right')) setShowSettings(false)
+    }
+    document.addEventListener('click', handler)
+    return () => document.removeEventListener('click', handler)
+  }, [showSettings])
+
   if (!graph) return null
 
   return (
-    <HashRouter>
-      <div className="app">
-        <ModeNav />
-        <div className="app-content">
-          <Routes>
-            <Route path="/" element={<MissionControl graph={graph} />} />
-            <Route path="/graph" element={<GraphPage graph={graph} />} />
-            <Route path="/wiki" element={<Home graph={graph} />} />
-            <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
-          </Routes>
+    <ThemeContext.Provider value={{ theme, setTheme, showSettings, setShowSettings }}>
+      <HashRouter>
+        <div className="app">
+          <ModeNav />
+          <div className="app-content">
+            <Routes>
+              <Route path="/" element={<MissionControl graph={graph} />} />
+              <Route path="/graph" element={<GraphPage graph={graph} />} />
+              <Route path="/wiki" element={<Home graph={graph} />} />
+              <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
+            </Routes>
+          </div>
+
+          <button className="info-trigger" onClick={() => setShowInfo(true)} title="About Kracked OS">
+            <span className="info-trigger-ping" />
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+          </button>
+
+          {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
         </div>
-
-        <button className="info-trigger" onClick={() => setShowInfo(true)} title="About Kracked OS">
-          <span className="info-trigger-ping" />
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-        </button>
-
-        {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
-      </div>
-    </HashRouter>
+      </HashRouter>
+    </ThemeContext.Provider>
   )
 }

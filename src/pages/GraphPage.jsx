@@ -146,43 +146,37 @@ export default function GraphPage({ graph }) {
     resize()
     window.addEventListener('resize', resize)
 
-    const gridSize = 60
-    const lines = []
+    const dotSpacing = 24
+    const dotRadius = 0.8
 
-    // Collect all grid lines
-    const init = () => {
-      lines.length = 0
-      const cols = Math.ceil(canvas.width / gridSize) + 1
-      const rows = Math.ceil(canvas.height / gridSize) + 1
-      for (let i = 0; i < cols; i++) {
-        lines.push({ x: i * gridSize, dir: 'v', phase: Math.random() * Math.PI * 2, speed: 0.3 + Math.random() * 0.7 })
-      }
-      for (let j = 0; j < rows; j++) {
-        lines.push({ y: j * gridSize, dir: 'h', phase: Math.random() * Math.PI * 2, speed: 0.3 + Math.random() * 0.7 })
-      }
-    }
-    init()
-
-    const draw = (t) => {
+    const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
-      ctx.fillStyle = getCssVar('--bg')
+
+      // Background
+      const bg = getCssVar('--bg')
+      ctx.fillStyle = bg
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
+      // Radial gradient — slightly lighter center, darker edges
+      const cx = canvas.width / 2
+      const cy = canvas.height / 2
+      const maxR = Math.hypot(cx, cy)
+      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, maxR)
+      const surface = getCssVar('--bg-surface')
+      grad.addColorStop(0, surface + '40')
+      grad.addColorStop(1, 'transparent')
+      ctx.fillStyle = grad
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+      // Dot grid
       const gridColor = getCssVar('--grid-color')
-      for (const line of lines) {
-        const pulse = Math.sin(t * 0.001 * line.speed + line.phase)
-        const alpha = 0.03 + Math.max(0, pulse) * 0.04
-        ctx.strokeStyle = `rgba(${gridColor}, ${alpha})`
-        ctx.lineWidth = 1
-        ctx.beginPath()
-        if (line.dir === 'v') {
-          ctx.moveTo(line.x, 0)
-          ctx.lineTo(line.x, canvas.height)
-        } else {
-          ctx.moveTo(0, line.y)
-          ctx.lineTo(canvas.width, line.y)
+      ctx.fillStyle = `rgba(${gridColor}, 0.08)`
+      for (let x = dotSpacing; x < canvas.width; x += dotSpacing) {
+        for (let y = dotSpacing; y < canvas.height; y += dotSpacing) {
+          ctx.beginPath()
+          ctx.arc(x, y, dotRadius, 0, 2 * Math.PI)
+          ctx.fill()
         }
-        ctx.stroke()
       }
 
       animId = requestAnimationFrame(draw)
@@ -396,50 +390,85 @@ export default function GraphPage({ graph }) {
   }, [])
 
   const nodeCanvasObject = useCallback((node, ctx, globalScale) => {
-    const size = node.val
-    const color = CATEGORY_COLORS[node.category] || '#5b76fe'
+    const color = CATEGORY_COLORS[node.category] || '#0052ef'
+    const isRoot = node.id === 'kracked-technologies'
+    const isPillar = ['kracked-devs', 'kd-academy', 'kracked-labs'].includes(node.id)
     const isSelected = selected && selected.id === node.id
+    const isHoverTarget = hovered && hovered.id === node.id
     const dimmed = hoveredNeighborIds && !hoveredNeighborIds.has(node.id)
-    const alpha = dimmed ? 0.1 : 1
+    const alpha = dimmed ? 0.08 : 1
+
+    // Size hierarchy
+    const baseSize = isRoot ? 14 : isPillar ? 9 : 4 + (node.connections || 0) * 0.4
+    const size = baseSize
 
     ctx.globalAlpha = alpha
 
+    // Outer ring (stroke only)
     ctx.beginPath()
-    ctx.arc(node.x, node.y, size, 0, 2 * Math.PI)
-    ctx.fillStyle = isSelected ? color + '44' : color + '22'
-    ctx.fill()
+    ctx.arc(node.x, node.y, size + 2, 0, 2 * Math.PI)
+    ctx.strokeStyle = color + (isSelected || isHoverTarget ? 'aa' : '40')
+    ctx.lineWidth = isRoot ? 2 : 1.5
+    ctx.stroke()
 
-    if (isSelected) {
-      ctx.beginPath()
-      ctx.arc(node.x, node.y, size + 3, 0, 2 * Math.PI)
-      ctx.strokeStyle = color
-      ctx.lineWidth = 2
-      ctx.stroke()
-    }
-
+    // Inner dot
     ctx.beginPath()
-    ctx.arc(node.x, node.y, size * 0.6, 0, 2 * Math.PI)
+    ctx.arc(node.x, node.y, isRoot ? size * 0.5 : isPillar ? size * 0.45 : size * 0.4, 0, 2 * Math.PI)
     ctx.fillStyle = color
     ctx.fill()
 
+    // Selected ring pulse
+    if (isSelected) {
+      ctx.beginPath()
+      ctx.arc(node.x, node.y, size + 6, 0, 2 * Math.PI)
+      ctx.strokeStyle = color + '55'
+      ctx.lineWidth = 1
+      ctx.stroke()
+    }
+
+    // Root gets extra glow
+    if (isRoot) {
+      ctx.beginPath()
+      ctx.arc(node.x, node.y, size + 8, 0, 2 * Math.PI)
+      ctx.fillStyle = color + '0a'
+      ctx.fill()
+    }
+
+    // Labels — hierarchy sizes, positioned to the right
     if (settings.showLabels) {
-      const fontSize = Math.min(settings.labelSize / globalScale, settings.labelSize * 0.9)
-      if (fontSize >= 3) {
-        ctx.font = `600 ${fontSize}px Inter, sans-serif`
-        ctx.textAlign = 'center'
-        ctx.textBaseline = 'top'
-        ctx.fillStyle = getCssVar('--graph-label')
-        // Fade text as it gets very small
-        if (fontSize < 6) ctx.globalAlpha = alpha * ((fontSize - 3) / 3)
-        ctx.fillText(node.name, node.x, node.y + size + 4)
-        // Store text width for collision
-        node.__labelWidth = ctx.measureText(node.name).width
+      let fontSize, fontWeight
+      if (isRoot) {
+        fontSize = 16 / globalScale
+        fontWeight = '700'
+      } else if (isPillar) {
+        fontSize = 13 / globalScale
+        fontWeight = '600'
+      } else {
+        fontSize = 11 / globalScale
+        fontWeight = '400'
+      }
+      fontSize = Math.min(fontSize, isRoot ? 16 : isPillar ? 13 : 11)
+
+      if (fontSize >= 2.5) {
+        ctx.font = `${fontWeight} ${fontSize}px Inter, sans-serif`
+        ctx.textAlign = 'left'
+        ctx.textBaseline = 'middle'
+
+        const labelColor = getCssVar('--graph-label')
+        const labelAlpha = isPillar || isRoot ? 1 : 0.7
+        if (fontSize < 5) ctx.globalAlpha = alpha * ((fontSize - 2.5) / 2.5) * labelAlpha
+        else ctx.globalAlpha = alpha * labelAlpha
+
+        ctx.fillStyle = labelColor
+        ctx.fillText(node.name, node.x + size + 6, node.y)
+
+        node.__labelWidth = ctx.measureText(node.name).width + size + 6
         node.__labelHeight = fontSize
       }
     }
 
     ctx.globalAlpha = 1
-  }, [selected, hoveredNeighborIds, settings.showLabels, settings.labelSize])
+  }, [selected, hovered, hoveredNeighborIds, settings.showLabels, settings.labelSize])
 
   const results = search.length > 1
     ? data.nodes.filter(n =>
@@ -539,7 +568,8 @@ export default function GraphPage({ graph }) {
                 const connected = hoveredNeighborIds.has(srcId) && hoveredNeighborIds.has(tgtId)
                 return connected ? `rgba(${getCssVar('--graph-link')}, 0.5)` : `rgba(${getCssVar('--graph-link')}, 0.03)`
               }}
-              linkWidth={0.8}
+              linkWidth={0.6}
+              linkCurvature={0.15}
               d3VelocityDecay={0.25}
               d3AlphaDecay={0.015}
               warmupTicks={100}
