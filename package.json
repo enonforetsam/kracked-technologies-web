@@ -1,0 +1,33 @@
+{
+  "name": "kracked-technologies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "dev": "node scripts/sync.mjs && vite",
+    "build": "node scripts/sync.mjs && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "d3": "^7.9.0",
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-force-graph-2d": "^1.29.1",
+    "react-force-graph-3d": "^1.29.1",
+    "react-router-dom": "^7.14.0",
+    "three": "^0.183.2",
+    "three-spritetext": "^1.10.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "glob": "^13.0.6",
+    "vite": "^8.0.8"
+  }
+}
