@@ -47,8 +47,99 @@ function ModeNav() {
   )
 }
 
+function InfoModal({ onClose }) {
+  return (
+    <div className="info-overlay" onClick={onClose}>
+      <div className="info-modal" onClick={e => e.stopPropagation()}>
+        <button className="info-modal-close" onClick={onClose}>&times;</button>
+
+        <div className="info-modal-header">
+          <div className="info-modal-pulse-dot" />
+          <h2>Kracked OS</h2>
+        </div>
+        <p className="info-modal-subtitle">The central nervous system of Kracked Technologies</p>
+
+        <div className="info-modal-body">
+          <section className="info-section">
+            <h3>What is this?</h3>
+            <p>This is a living knowledge base — every concept, venture, team member, and research thread in the Kracked ecosystem, connected in a single graph. It gets smarter every day as the team feeds into it.</p>
+          </section>
+
+          <section className="info-section">
+            <h3>How data flows</h3>
+            <div className="info-flow">
+              <div className="info-flow-step">
+                <span className="info-flow-num">1</span>
+                <div>
+                  <strong>Team submits daily</strong>
+                  <p>Work done, blockers, insights — tagged to projects</p>
+                </div>
+              </div>
+              <div className="info-flow-step">
+                <span className="info-flow-num">2</span>
+                <div>
+                  <strong>Obsidian vault updates</strong>
+                  <p>Reports processed into structured notes — the source of truth</p>
+                </div>
+              </div>
+              <div className="info-flow-step">
+                <span className="info-flow-num">3</span>
+                <div>
+                  <strong>Graph syncs automatically</strong>
+                  <p>Connections, insights, and gaps surface across the ecosystem</p>
+                </div>
+              </div>
+              <div className="info-flow-step">
+                <span className="info-flow-num">4</span>
+                <div>
+                  <strong>Everyone learns from it</strong>
+                  <p>Onboarding, decision-making, and strategy — all in one place</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="info-section">
+            <h3>Roadmap</h3>
+            <div className="info-roadmap">
+              <div className="info-roadmap-phase info-roadmap-done">
+                <strong>Phase 1 — Foundation</strong>
+                <ul>
+                  <li>Obsidian vault as source of truth</li>
+                  <li>Graph + Wiki views</li>
+                  <li>Sync pipeline to Vercel</li>
+                  <li>Research section</li>
+                </ul>
+              </div>
+              <div className="info-roadmap-phase info-roadmap-current">
+                <strong>Phase 2 — Intelligence</strong>
+                <ul>
+                  <li>Daily report submission</li>
+                  <li>AI processing → auto-update notes</li>
+                  <li>Weekly summaries per venture & person</li>
+                  <li>Stale project detection</li>
+                </ul>
+              </div>
+              <div className="info-roadmap-phase">
+                <strong>Phase 3 — Full OS</strong>
+                <ul>
+                  <li>Real-time collaboration</li>
+                  <li>Metrics dashboard</li>
+                  <li>Decision log</li>
+                  <li>AI assistant for the ecosystem</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
   const [graph, setGraph] = useState(null)
+  const [showInfo, setShowInfo] = useState(false)
 
   useEffect(() => {
     const isDev = window.location.hostname === 'localhost'
@@ -71,6 +162,15 @@ export default function App() {
             <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
           </Routes>
         </div>
+
+        <button className="info-trigger" onClick={() => setShowInfo(true)} title="About Kracked OS">
+          <span className="info-trigger-ping" />
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+        </button>
+
+        {showInfo && <InfoModal onClose={() => setShowInfo(false)} />}
       </div>
     </HashRouter>
   )
