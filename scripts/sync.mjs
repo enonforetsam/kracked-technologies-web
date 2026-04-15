@@ -95,6 +95,29 @@ function buildDashboard(nodes) {
   // KD Academy
   const kdaNode = nodes.find(n => n.id === 'kd-academy')
 
+  // This Week — free-form markdown from `This Week.md`, minus the H1
+  const thisWeekNode = nodes.find(n => n.id === 'this-week')
+  const thisWeek = thisWeekNode ? thisWeekNode.content.replace(/^#[^\n]*\n/, '').trim() : null
+
+  // Agents — files in the Agents/ folder (excluding README)
+  const agents = nodes
+    .filter(n => n.category === 'Agents' && n.id !== 'readme')
+    .map(n => {
+      const firstPara = n.content
+        .replace(/^---[\s\S]*?---\s*/m, '')
+        .replace(/^#[^\n]*\n/, '')
+        .trim()
+        .split(/\n\n/)[0]
+        .replace(/\*\*/g, '')
+        .replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, t, l) => l || t)
+      return {
+        id: n.id,
+        name: n.name,
+        status: (n.status || 'planning'),
+        blurb: firstPara.slice(0, 180),
+      }
+    })
+
   // Graph stats
   const missionNodes = nodes.filter(n => n.dataset === 'mission')
   const researchNodes = nodes.filter(n => n.dataset === 'research')
@@ -106,6 +129,8 @@ function buildDashboard(nodes) {
     roadmap,
     advisors,
     academy: kdaNode ? { status: extractStatus(kdaNode.content) || 'In development', website: 'academy.krackeddevs.com' } : null,
+    thisWeek,
+    agents,
     graph: { mission: missionNodes.length, research: researchNodes.length, total: nodes.length },
   }
 }

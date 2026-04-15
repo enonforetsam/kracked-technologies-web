@@ -6,18 +6,18 @@ import ArticlePage from './pages/ArticlePage'
 import MissionControl from './pages/MissionControl'
 
 const CATEGORY_COLORS = {
-  Ecosystem: '#0e7490',
-  Platform: '#c2410c',
-  Ventures: '#7c3aed',
-  Projects: '#be185d',
-  Team: '#059669',
-  Root: '#0052ef',
-  'Venture Capital': '#b45309',
-  'Venture Builder': '#0e7490',
-  'Accelerator': '#6d28d9',
-  'Gov Funding': '#047857',
-  'Startup': '#dc2626',
-  'Research': '#475569',
+  Ecosystem: '#00f0ff',
+  Platform: '#ff6b2d',
+  Ventures: '#b44dff',
+  Projects: '#ff2d7b',
+  Team: '#39ff14',
+  Root: '#ffe600',
+  'Venture Capital': '#f59e0b',
+  'Venture Builder': '#06b6d4',
+  'Accelerator': '#8b5cf6',
+  'Gov Funding': '#10b981',
+  'Startup': '#ef4444',
+  'Research': '#64748b',
 }
 
 export { CATEGORY_COLORS }

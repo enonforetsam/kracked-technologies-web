@@ -14,7 +14,9 @@ function renderContent(content, nodes) {
     }
     return label || target
   })
-  return marked(html)
+  let out = marked(html)
+  out = out.replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
+  return out
 }
 
 function extractHeadings(content) {

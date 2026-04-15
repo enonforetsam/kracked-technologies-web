@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
 
@@ -19,29 +19,100 @@ function renderContent(content, nodes) {
   html = html.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
     const slug = target.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
     const exists = nodes.some(n => n.id === slug)
-    if (exists) {
-      return `<a href="#" data-node-id="${slug}" class="wiki-link">${label || target}</a>`
-    }
+    if (exists) return `<a href="#" data-node-id="${slug}" class="wiki-link">${label || target}</a>`
     return label || target
   })
-  return marked(html)
+  let out = marked(html)
+  out = out.replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
+  return out
 }
 
-function extractHeadings(content) {
-  return content.split('\n')
-    .filter(l => /^#{2,3}\s/.test(l))
-    .map(l => {
-      const level = l.match(/^(#+)/)[1].length
-      const text = l.replace(/^#+\s*/, '')
-      const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      return { level, text, id }
-    })
+function CardHeader({ icon, title, accent, count }) {
+  return (
+    <div className="mc-card-head" style={{ borderBottomColor: accent + '40' }}>
+      <div className="mc-card-head-left">
+        <span className="mc-card-icon" style={{ background: accent + '22', color: accent }}>{icon}</span>
+        <span className="mc-card-head-title">{title}</span>
+      </div>
+      {count !== undefined && <span className="mc-card-count" style={{ color: accent }}>{count}</span>}
+    </div>
+  )
+}
+
+function ArticleModal({ node, graph, onClose, onOpen }) {
+  const handleClick = useCallback((e) => {
+    const link = e.target.closest('[data-node-id]')
+    if (link) {
+      e.preventDefault()
+      onOpen(link.dataset.nodeId)
+    }
+  }, [onOpen])
+
+  if (!node) return null
+  const color = CATEGORY_COLORS[node.category] || '#0052ef'
+  const html = renderContent(node.content, graph.nodes)
+
+  const neighbors = (() => {
+    const ids = new Set()
+    for (const edge of graph.edges) {
+      if (edge.source === node.id) ids.add(edge.target)
+      if (edge.target === node.id) ids.add(edge.source)
+    }
+    return graph.nodes.filter(n => ids.has(n.id))
+  })()
+
+  return (
+    <div className="mc-modal-overlay" onClick={onClose}>
+      <div className="mc-modal glass" onClick={e => e.stopPropagation()} onClickCapture={handleClick}>
+        <button className="mc-modal-close" onClick={onClose}>&times;</button>
+
+        <div className="mc-modal-head" style={{ borderBottomColor: color + '40' }}>
+          <span className="mc-card-icon" style={{ background: color + '22', color }}>◆</span>
+          <div className="mc-modal-head-text">
+            <span className="mc-modal-category" style={{ color }}>{node.category}</span>
+            <h2 className="mc-modal-title">{node.name}</h2>
+          </div>
+        </div>
+
+        <div className="mc-modal-body">
+          <div className="article-body" dangerouslySetInnerHTML={{ __html: html }} />
+
+          {neighbors.length > 0 && (
+            <div className="mc-modal-connections">
+              <h4>Connections ({neighbors.length})</h4>
+              <div className="mc-modal-conn-grid">
+                {neighbors.map(n => (
+                  <button key={n.id} className="mc-modal-conn" onClick={() => onOpen(n.id)}>
+                    {n.name}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const CATEGORY_ICONS = {
+  Ecosystem: '◉',
+  Platform: '◈',
+  Ventures: '▸',
+  Projects: '✦',
+  Team: '⌘',
+  Research: '◆',
+  Root: '✧',
 }
 
 export default function Home({ graph }) {
-  const [selected, setSelected] = useState(null)
-  const [panelFullscreen, setPanelFullscreen] = useState(false)
-  const panelRef = useRef(null)
+  const [openNodeId, setOpenNodeId] = useState(null)
+
+  const openNode = useCallback((id) => {
+    if (graph.nodes.find(n => n.id === id)) setOpenNodeId(id)
+  }, [graph])
+
+  const openedNode = openNodeId ? graph.nodes.find(n => n.id === openNodeId) : null
 
   const featured = graph.nodes.reduce((a, b) => a.connections > b.connections ? a : b)
 
@@ -65,202 +136,101 @@ export default function Home({ graph }) {
 
   const categoryOrder = ['Ecosystem', 'Platform', 'Ventures', 'Projects', 'Team', 'Research', 'Root']
 
-  const selectNode = useCallback((id) => {
-    const node = graph.nodes.find(n => n.id === id)
-    if (node) {
-      setSelected(node)
-      if (panelRef.current) panelRef.current.scrollTop = 0
-    }
-  }, [graph])
-
-  const closePanel = useCallback(() => {
-    setSelected(null)
-    setPanelFullscreen(false)
-  }, [])
-
-  const handlePanelClick = useCallback((e) => {
-    const link = e.target.closest('[data-node-id]')
-    if (link) {
-      e.preventDefault()
-      selectNode(link.dataset.nodeId)
-    }
-  }, [selectNode])
-
-  const neighbors = selected
-    ? (() => {
-        const ids = new Set()
-        for (const edge of graph.edges) {
-          if (edge.source === selected.id) ids.add(edge.target)
-          if (edge.target === selected.id) ids.add(edge.source)
-        }
-        return graph.nodes.filter(n => ids.has(n.id))
-      })()
-    : []
-
-  const articleHtml = selected ? renderContent(selected.content, graph.nodes) : ''
-  const headings = selected ? extractHeadings(selected.content) : []
-
   return (
-    <div className="home-layout">
-      <div className={`home ${selected ? 'home-with-panel' : ''}`}>
-        {/* Hero */}
-        <div className="home-hero">
-          <h1 className="home-hero-title">Kracked Technologies</h1>
-          <p className="home-hero-sub">Internal knowledge base — {graph.meta.totalConcepts} concepts, {graph.meta.totalConnections} connections</p>
+    <div className="mc">
+      <div className="mc-mesh">
+        <div className="mc-mesh-blob mc-mesh-blob-1" />
+        <div className="mc-mesh-blob mc-mesh-blob-2" />
+        <div className="mc-mesh-blob mc-mesh-blob-3" />
+      </div>
+
+      <div className="mc-inner">
+        <div className="mc-header">
+          <h1 className="mc-title">Wiki</h1>
+          <p className="mc-subtitle">{graph.meta.totalConcepts} concepts · {graph.meta.totalConnections} connections</p>
         </div>
 
-        {/* Top row */}
-        <div className="home-top">
-          <div className="home-featured">
-            <div className="home-featured-inner">
-              <span className="spotlight-badge">Spotlight</span>
+        {/* Metric strip: category counts */}
+        <div className="mc-metrics">
+          {categoryOrder.filter(c => categoryCounts[c]).map(cat => (
+            <div
+              key={cat}
+              className="mc-metric glass clickable"
+              style={{ '--accent': CATEGORY_COLORS[cat] || '#0052ef' }}
+              onClick={() => {
+                const firstInCat = byCategory[cat][0]
+                if (firstInCat) openNode(firstInCat.id)
+              }}
+            >
+              <span className="mc-metric-label">{cat}</span>
+              <span className="mc-metric-value">{categoryCounts[cat]}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Featured + Most Connected side by side */}
+        <div className="mc-row-2">
+          <div className="mc-card glass clickable" onClick={() => openNode(featured.id)}>
+            <CardHeader icon="★" title="Featured" accent={CATEGORY_COLORS[featured.category] || '#0052ef'} />
+            <div className="home-featured-body">
               <h2 className="home-featured-title">{featured.name}</h2>
-              <p className="home-featured-excerpt">{getExcerpt(featured.content, 180)}</p>
+              <p className="home-featured-excerpt">{getExcerpt(featured.content, 160)}</p>
               <div className="home-featured-meta">
                 <span>{featured.wordCount} words</span>
                 <span>{featured.connections} connections</span>
               </div>
-              <button onClick={() => selectNode(featured.id)} className="home-featured-btn">
-                Open article &rarr;
-              </button>
             </div>
           </div>
 
-          <div className="home-sidebar-top">
-            <div className="home-topics">
-              <h3 className="home-section-label">Browse by Topic</h3>
-              <div className="home-topic-grid">
-                {categoryOrder.filter(c => categoryCounts[c]).map(cat => (
-                  <button
-                    key={cat}
-                    className="home-topic-card"
-                    style={{ borderLeft: `3px solid ${CATEGORY_COLORS[cat]}` }}
-                  >
-                    <span className="home-topic-name">{cat}</span>
-                    <span className="home-topic-count">{categoryCounts[cat]}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="home-most-connected">
-              <h3 className="home-section-label">Most Connected</h3>
+          <div className="mc-card glass">
+            <CardHeader icon="✦" title="Most Connected" accent="#0052ef" />
+            <div className="mc-list">
               {mostConnected.map(n => (
-                <button key={n.id} onClick={() => selectNode(n.id)} className="home-connected-row">
-                  <span className="home-connected-name">{n.name}</span>
-                  <span className="home-connected-bar">
-                    <span
-                      className="home-connected-fill"
-                      style={{
-                        width: `${(n.connections / mostConnected[0].connections) * 100}%`,
-                        background: CATEGORY_COLORS[n.category] || '#5b76fe',
-                      }}
-                    />
-                  </span>
-                  <span className="home-connected-count">{n.connections}</span>
-                </button>
+                <div key={n.id} className="mc-list-row" onClick={() => openNode(n.id)}>
+                  <span
+                    className="status-dot"
+                    style={{ background: CATEGORY_COLORS[n.category] || '#0052ef' }}
+                  />
+                  <span className="mc-list-name">{n.name}</span>
+                  <span className="mc-list-status">{n.connections} links</span>
+                </div>
               ))}
             </div>
           </div>
         </div>
 
         {/* Category sections */}
-        {categoryOrder.filter(c => byCategory[c]).map(cat => (
-          <div key={cat} className="home-category-section">
-            <div className="home-category-header">
-              <span className="home-category-dot" style={{ background: CATEGORY_COLORS[cat] }} />
-              <h3 className="home-category-title">{cat}</h3>
-              <span className="home-category-count">{byCategory[cat].length} concepts</span>
-            </div>
-            <div className="home-concept-grid">
-              {byCategory[cat].map(n => (
-                <button key={n.id} onClick={() => selectNode(n.id)} className="home-concept-card">
-                  <div className="home-concept-top">
-                    <h4 className="home-concept-name">{n.name}</h4>
-                    {n.connections > 0 && (
-                      <span className="home-concept-connections">{n.connections}</span>
-                    )}
-                  </div>
-                  <p className="home-concept-desc">{getExcerpt(n.content, 80)}</p>
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Slide-in article panel */}
-      {selected && (
-        <div className={`article-panel wiki-article-panel ${panelFullscreen ? 'article-panel-fullscreen' : ''}`} ref={panelRef} onClick={handlePanelClick}>
-          <div className="article-panel-actions">
-            <button className="article-panel-action-btn" onClick={(e) => { e.stopPropagation(); setPanelFullscreen(f => !f) }} title={panelFullscreen ? 'Exit fullscreen' : 'Fullscreen'}>
-              {panelFullscreen ? (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/>
-                </svg>
-              ) : (
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/>
-                </svg>
-              )}
-            </button>
-            <button className="article-panel-action-btn" onClick={(e) => { e.stopPropagation(); closePanel() }} title="Close">
-              &times;
-            </button>
-          </div>
-
-          <nav className="article-panel-breadcrumb">
-            <span className="breadcrumb-link" style={{ cursor: 'pointer' }} onClick={(e) => { e.stopPropagation(); closePanel() }}>Wiki</span>
-            <span className="breadcrumb-sep">/</span>
-            <span className="breadcrumb-link breadcrumb-category">{selected.category}</span>
-            <span className="breadcrumb-sep">/</span>
-            <span className="breadcrumb-current">{selected.name}</span>
-          </nav>
-
-          <h1 className="article-panel-title">{selected.name}</h1>
-          <div className="article-panel-meta">
-            <span
-              className="article-panel-badge"
-              style={{
-                background: (CATEGORY_COLORS[selected.category] || '#5b76fe') + '1a',
-                color: CATEGORY_COLORS[selected.category] || '#5b76fe',
-              }}
-            >
-              {selected.category}
-            </span>
-            <span>{selected.connections} connections</span>
-            <span>{selected.wordCount}w</span>
-          </div>
-
-          {headings.length > 0 && (
-            <div className="article-panel-toc">
-              {headings.map((h, i) => (
-                <a key={i} href={`#${h.id}`} className="toc-item" style={{ paddingLeft: h.level === 3 ? 12 : 0 }}>
-                  {h.text}
-                </a>
-              ))}
-            </div>
-          )}
-
-          <div className="article-body" dangerouslySetInnerHTML={{ __html: articleHtml }} />
-
-          {neighbors.length > 0 && (
-            <div className="article-panel-connections">
-              <h4>Connections ({neighbors.length})</h4>
-              <div className="article-panel-conn-grid">
-                {neighbors.map(n => (
-                  <button
-                    key={n.id}
-                    className="article-panel-conn-link"
-                    onClick={(e) => { e.stopPropagation(); selectNode(n.id) }}
-                  >
-                    {n.name}
+        {categoryOrder.filter(c => byCategory[c]).map(cat => {
+          const color = CATEGORY_COLORS[cat] || '#0052ef'
+          const icon = CATEGORY_ICONS[cat] || '◆'
+          return (
+            <div key={cat} className="mc-card glass mc-card-wide">
+              <CardHeader icon={icon} title={cat} accent={color} count={byCategory[cat].length} />
+              <div className="home-concept-grid">
+                {byCategory[cat].map(n => (
+                  <button key={n.id} onClick={() => openNode(n.id)} className="home-concept-card">
+                    <div className="home-concept-top">
+                      <h4 className="home-concept-name">{n.name}</h4>
+                      {n.connections > 0 && (
+                        <span className="home-concept-connections">{n.connections}</span>
+                      )}
+                    </div>
+                    <p className="home-concept-desc">{getExcerpt(n.content, 70)}</p>
                   </button>
                 ))}
               </div>
             </div>
-          )}
-        </div>
+          )
+        })}
+      </div>
+
+      {openedNode && (
+        <ArticleModal
+          node={openedNode}
+          graph={graph}
+          onClose={() => setOpenNodeId(null)}
+          onOpen={openNode}
+        />
       )}
     </div>
   )
