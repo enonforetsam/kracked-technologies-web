@@ -105,7 +105,8 @@ function buildDashboard(nodes) {
     .map(n => {
       const firstPara = n.content
         .replace(/^---[\s\S]*?---\s*/m, '')
-        .replace(/^#[^\n]*\n/, '')
+        .trim()
+        .replace(/^#[^\n]*\n+/, '')
         .trim()
         .split(/\n\n/)[0]
         .replace(/\*\*/g, '')

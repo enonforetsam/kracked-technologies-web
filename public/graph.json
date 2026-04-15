@@ -53,80 +53,6 @@
       "connections": 26
     },
     {
-      "id": "team",
-      "name": "Team",
-      "category": "Team",
-      "dataset": "mission",
-      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | CEO |\n| Muhaimin | Project Director |\n| Iroh | Payroll & Accounts |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Engineering\n\n| Name | Role |\n|------|------|\n| Muhammad Fadli Bin Md Khalid | Software Engineer |\n| Unies | AI / Software Engineer |\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Adam Alias | Community Manager |\n| Ijam | KD Academy Lead |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 developers across Malaysia\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
-      "wordCount": 347,
-      "links": [
-        "kracked-technologies",
-        "mypeta",
-        "leaderboard",
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "MYpeta",
-        "Leaderboard",
-        "Kracked Labs"
-      ],
-      "path": "Team/Team.md",
-      "connections": 6
-    },
-    {
-      "id": "roadmap",
-      "name": "Roadmap",
-      "category": "Projects",
-      "dataset": "mission",
-      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
-      "wordCount": 111,
-      "links": [
-        "pipeline",
-        "portfolio",
-        "bounty-board"
-      ],
-      "linkNames": [
-        "Pipeline",
-        "Portfolio",
-        "Bounty Board"
-      ],
-      "path": "Projects/Roadmap.md",
-      "connections": 4
-    },
-    {
-      "id": "products-projects",
-      "name": "Products & Projects",
-      "category": "Projects",
-      "dataset": "mission",
-      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
-      "wordCount": 105,
-      "links": [
-        "kracked-technologies",
-        "bounty-board",
-        "job-board",
-        "leaderboard",
-        "guild-system",
-        "showcase",
-        "events",
-        "news-feed",
-        "portfolio"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Bounty Board",
-        "Job Board",
-        "Leaderboard",
-        "Guild System",
-        "Showcase",
-        "Events",
-        "News Feed",
-        "Portfolio"
-      ],
-      "path": "Projects/Products & Projects.md",
-      "connections": 10
-    },
-    {
       "id": "sea-expansion",
       "name": "SEA Expansion",
       "category": "Research",
@@ -611,6 +537,80 @@
       ],
       "path": "Ventures/Burhan.md",
       "connections": 3
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "category": "Team",
+      "dataset": "mission",
+      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | CEO |\n| Muhaimin | Project Director |\n| Iroh | Payroll & Accounts |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Engineering\n\n| Name | Role |\n|------|------|\n| Muhammad Fadli Bin Md Khalid | Software Engineer |\n| Unies | AI / Software Engineer |\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Adam Alias | Community Manager |\n| Ijam | KD Academy Lead |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 developers across Malaysia\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
+      "wordCount": 347,
+      "links": [
+        "kracked-technologies",
+        "mypeta",
+        "leaderboard",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "MYpeta",
+        "Leaderboard",
+        "Kracked Labs"
+      ],
+      "path": "Team/Team.md",
+      "connections": 6
+    },
+    {
+      "id": "roadmap",
+      "name": "Roadmap",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
+      "wordCount": 111,
+      "links": [
+        "pipeline",
+        "portfolio",
+        "bounty-board"
+      ],
+      "linkNames": [
+        "Pipeline",
+        "Portfolio",
+        "Bounty Board"
+      ],
+      "path": "Projects/Roadmap.md",
+      "connections": 4
+    },
+    {
+      "id": "products-projects",
+      "name": "Products & Projects",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
+      "wordCount": 105,
+      "links": [
+        "kracked-technologies",
+        "bounty-board",
+        "job-board",
+        "leaderboard",
+        "guild-system",
+        "showcase",
+        "events",
+        "news-feed",
+        "portfolio"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Bounty Board",
+        "Job Board",
+        "Leaderboard",
+        "Guild System",
+        "Showcase",
+        "Events",
+        "News Feed",
+        "Portfolio"
+      ],
+      "path": "Projects/Products & Projects.md",
+      "connections": 10
     },
     {
       "id": "tenders-and-contracts",
@@ -1706,70 +1706,6 @@
       "target": "roadmap"
     },
     {
-      "source": "team",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "team",
-      "target": "mypeta"
-    },
-    {
-      "source": "team",
-      "target": "leaderboard"
-    },
-    {
-      "source": "team",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "roadmap",
-      "target": "pipeline"
-    },
-    {
-      "source": "roadmap",
-      "target": "portfolio"
-    },
-    {
-      "source": "roadmap",
-      "target": "bounty-board"
-    },
-    {
-      "source": "products-projects",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "products-projects",
-      "target": "bounty-board"
-    },
-    {
-      "source": "products-projects",
-      "target": "job-board"
-    },
-    {
-      "source": "products-projects",
-      "target": "leaderboard"
-    },
-    {
-      "source": "products-projects",
-      "target": "guild-system"
-    },
-    {
-      "source": "products-projects",
-      "target": "showcase"
-    },
-    {
-      "source": "products-projects",
-      "target": "events"
-    },
-    {
-      "source": "products-projects",
-      "target": "news-feed"
-    },
-    {
-      "source": "products-projects",
-      "target": "portfolio"
-    },
-    {
       "source": "sea-expansion",
       "target": "kracked-technologies"
     },
@@ -2171,6 +2107,70 @@
     },
     {
       "source": "burhan",
+      "target": "portfolio"
+    },
+    {
+      "source": "team",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "team",
+      "target": "mypeta"
+    },
+    {
+      "source": "team",
+      "target": "leaderboard"
+    },
+    {
+      "source": "team",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "roadmap",
+      "target": "pipeline"
+    },
+    {
+      "source": "roadmap",
+      "target": "portfolio"
+    },
+    {
+      "source": "roadmap",
+      "target": "bounty-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "products-projects",
+      "target": "bounty-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "job-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "leaderboard"
+    },
+    {
+      "source": "products-projects",
+      "target": "guild-system"
+    },
+    {
+      "source": "products-projects",
+      "target": "showcase"
+    },
+    {
+      "source": "products-projects",
+      "target": "events"
+    },
+    {
+      "source": "products-projects",
+      "target": "news-feed"
+    },
+    {
+      "source": "products-projects",
       "target": "portfolio"
     },
     {
@@ -3025,25 +3025,25 @@
         "id": "xavier",
         "name": "Xavier",
         "status": "planning",
-        "blurb": "# Xavier"
+        "blurb": "Xavier is Kracked Technologies' education lead — tracking learners, shaping curriculum, growing the ambassador network, and turning digital consumers into AI builders."
       },
       {
         "id": "rick",
         "name": "Rick",
         "status": "planning",
-        "blurb": "# Rick"
+        "blurb": "Rick is Kracked Technologies' venture operator — shipping products, watching portfolio health, and spotting the next bet worth taking."
       },
       {
         "id": "alfred",
         "name": "Alfred",
         "status": "planning",
-        "blurb": "# Alfred"
+        "blurb": "Alfred is Kracked Technologies' digital chief of staff — always on, grounded in the vault, quietly keeping the CEO ahead of the company."
       },
       {
         "id": "agent-sniper",
         "name": "Agent Sniper",
         "status": "planning",
-        "blurb": "# Sniper"
+        "blurb": "Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters."
       }
     ],
     "graph": {
@@ -3057,10 +3057,10 @@
     "totalConnections": 314,
     "categories": [
       "Root",
-      "Team",
-      "Projects",
       "Research",
       "Ventures",
+      "Team",
+      "Projects",
       "Ecosystem",
       "Platform",
       "Deals",
@@ -3071,6 +3071,6 @@
       "Gov Funding",
       "Startup"
     ],
-    "syncedAt": "2026-04-15T03:40:59.237Z"
+    "syncedAt": "2026-04-15T03:53:31.088Z"
   }
 }
