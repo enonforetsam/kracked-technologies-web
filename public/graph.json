@@ -20,21 +20,21 @@
         "Kracked Labs"
       ],
       "path": "This Week.md",
-      "connections": 9
+      "connections": 11
     },
     {
       "id": "kracked-technologies",
       "name": "Kracked Technologies",
       "category": "Root",
       "dataset": "mission",
-      "content": "# Kracked Technologies\n\nThe ecosystem for builders who build with AI. Based in Malaysia, building the future of technical excellence in Southeast Asia.\n\n## The Pillars\n\n- [[Kracked Devs]] — The community platform. Where developers gather, compete, earn, and get hired.\n- [[KD Academy]] — The education arm. Malaysia's builder-first education system.\n- [[Kracked Labs]] — The venture builder. Where startups get built and shipped.\n- [[Tenders and Contracts]] — The revenue arm. Government, GLC, and corporate contracts — run by [[Agent Sniper]].\n\n## Quick Links\n\n- [[Team]]\n- [[Products & Projects]]\n- [[Roadmap]]\n",
-      "wordCount": 94,
+      "content": "# Kracked Technologies\n\nThe ecosystem for builders who build with AI. Based in Malaysia, building the future of technical excellence in Southeast Asia.\n\n## The Pillars\n\n- [[Kracked Devs]] — The community platform. Where developers gather, compete, earn, and get hired.\n- [[KD Academy]] — The education arm. Malaysia's builder-first education system.\n- [[Kracked Labs]] — The venture builder. Where startups get built and shipped.\n- [[Tenders and Contracts]] — The revenue arm. Government, GLC, and corporate contracts — run by [[Sniper]].\n\n## Quick Links\n\n- [[Team]]\n- [[Products & Projects]]\n- [[Roadmap]]\n",
+      "wordCount": 93,
       "links": [
         "kracked-devs",
         "kd-academy",
         "kracked-labs",
         "tenders-and-contracts",
-        "agent-sniper",
+        "sniper",
         "team",
         "products-projects",
         "roadmap"
@@ -44,13 +44,13 @@
         "KD Academy",
         "Kracked Labs",
         "Tenders and Contracts",
-        "Agent Sniper",
+        "Sniper",
         "Team",
         "Products & Projects",
         "Roadmap"
       ],
       "path": "Kracked Technologies.md",
-      "connections": 26
+      "connections": 29
     },
     {
       "id": "sea-expansion",
@@ -96,7 +96,7 @@
         "Growth & Marketing"
       ],
       "path": "Research/SEA Expansion.md",
-      "connections": 17
+      "connections": 18
     },
     {
       "id": "research",
@@ -138,7 +138,7 @@
         "Kracked Labs"
       ],
       "path": "Research/Research.md",
-      "connections": 14
+      "connections": 15
     },
     {
       "id": "open-source-strategy",
@@ -224,7 +224,7 @@
         "KD Academy"
       ],
       "path": "Research/Malaysia Data Center Boom.md",
-      "connections": 13
+      "connections": 14
     },
     {
       "id": "defence-tech",
@@ -254,7 +254,7 @@
         "Venture Playbook"
       ],
       "path": "Research/Defence Tech.md",
-      "connections": 9
+      "connections": 12
     },
     {
       "id": "ai-native-education",
@@ -354,7 +354,7 @@
         "Kracked Technologies"
       ],
       "path": "Ventures/Revenue Model.md",
-      "connections": 2
+      "connections": 4
     },
     {
       "id": "portfolio",
@@ -617,33 +617,33 @@
       "name": "Tenders and Contracts",
       "category": "Ecosystem",
       "dataset": "mission",
-      "content": "\n# Tenders and Contracts\n\nThe revenue and credibility arm of [[Kracked Technologies]]. Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Agent Sniper]], under CEO approval.\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Agent Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this is a pillar, not a department\n\nTenders and Contracts is where the other two pillars cash in:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — those get booked through this pillar.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- Every tender we bid on is signed under the **Kracked Technologies** umbrella, regardless of which pillar delivers.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Agent Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Agent Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
-      "wordCount": 408,
+      "content": "\n# Tenders and Contracts\n\nThe revenue and credibility arm of [[Kracked Technologies]]. Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Sniper]], under CEO approval.\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this is a pillar, not a department\n\nTenders and Contracts is where the other two pillars cash in:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — those get booked through this pillar.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- Every tender we bid on is signed under the **Kracked Technologies** umbrella, regardless of which pillar delivers.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
+      "wordCount": 404,
       "links": [
         "kracked-technologies",
-        "agent-sniper",
-        "agent-sniper",
+        "sniper",
+        "sniper",
         "this-week",
         "kd-academy",
         "kracked-labs",
         "alfred",
-        "agent-sniper",
+        "sniper",
         "kracked-technologies",
-        "agent-sniper",
+        "sniper",
         "alfred",
         "this-week"
       ],
       "linkNames": [
         "Kracked Technologies",
-        "Agent Sniper",
-        "Agent Sniper",
+        "Sniper",
+        "Sniper",
         "This Week",
         "KD Academy",
         "Kracked Labs",
         "Alfred",
-        "Agent Sniper",
+        "Sniper",
         "Kracked Technologies",
-        "Agent Sniper",
+        "Sniper",
         "Alfred",
         "This Week"
       ],
@@ -651,7 +651,7 @@
       "type": "pillar",
       "status": "In development",
       "owner": "danial",
-      "connections": 14
+      "connections": 15
     },
     {
       "id": "kracked-labs",
@@ -683,7 +683,7 @@
         "Portfolio"
       ],
       "path": "Ecosystem/Kracked Labs.md",
-      "connections": 37
+      "connections": 40
     },
     {
       "id": "kracked-devs",
@@ -727,20 +727,23 @@
       "links": [],
       "linkNames": [],
       "path": "Ecosystem/KD Academy.md",
-      "connections": 15
+      "connections": 17
     },
     {
       "id": "advisory-board",
       "name": "Advisory Board",
       "category": "Ecosystem",
       "dataset": "mission",
-      "content": "# Advisory Board\n\nThe advisory board for [[Kracked Technologies]]. A group of experienced individuals providing strategic guidance across the ecosystem — [[Kracked Devs]], [[KD Academy]], and [[Kracked Labs]].\n\n## Status\n\nCurrently being formed. Initial advisors onboarded across government, VC, and AI/defence.\n\n## Advisors\n\n| Name | Domain | Role / Background |\n|------|--------|-------------------|\n| **Azlan Ismail** | Government & Policy | MyDigital (Malaysia's digital economy initiative under EPU) |\n| **Faiz Hassan** | VC & Startup Ecosystem | Assistant Manager — Technology & Innovation at Cradle Fund (since May 2023). Involved in MYStartup Startup Perks and MYStartup Tech Talent Program. Based in KL (hybrid). |\n| **Major Dr. Surenthiran Krishnan** | AI & Defence Tech | Malaysian Army (Tentera Darat Malaysia). Holds a PhD in AI. Bridges military/government and deep tech expertise. |\n\n## Advisory Areas\n\n- **Government & Policy** — Navigation of public sector partnerships, grants, regulatory landscape (Azlan Ismail)\n- **VC & Funding** — Cradle applications, startup ecosystem access, MYStartup programs (Faiz Hassan)\n- **AI & Deep Tech** — AI strategy, defence/government AI applications, research credibility (Dr. Surenthiran)\n- **Education & Talent** — Curriculum design, university partnerships, workforce development\n- **Community & Ecosystem** — Developer ecosystem building, regional expansion (Singapore, Indonesia)\n\n## Planning & Strategy\n\n### Advisor Pipeline\n\n| Name | Domain | Status | Next Step |\n|------|--------|--------|-----------|\n| Azlan Ismail | Government & Policy | Onboarded | Define engagement cadence; align on MyDigital program participation |\n| Faiz Hassan | VC & Startup Ecosystem | Onboarded | Discuss Cradle CIP Spark application strategy |\n| Major Dr. Surenthiran Krishnan | AI & Defence Tech | Onboarded | Explore defence-tech use cases and AI research collaboration |\n| *(University/Education lead)* | Education & Talent | Identifying | Target CS faculty deans — UKM, UTM, USM, or MMU. Key for [[KD Academy]] pipeline |\n| *(SEA regional figure)* | Regional Expansion | Identifying | Singapore or Indonesia tech ecosystem connector for [[cofounders.my]] expansion |\n\n### Coverage Gaps\n\n| Domain | Status | Why It Matters |\n|--------|--------|----------------|\n| Government & Policy | Covered (Azlan) | MyDigital alignment, GLC pilot access |\n| VC & Funding | Covered (Faiz) | Cradle grants, MYStartup programs |\n| AI & Deep Tech | Covered (Dr. Surenthiran) | Technical credibility, research angle |\n| Education & Talent | Open | 30K CS graduates/year; university MOUs for KD Academy |\n| Regional / SEA | Open | cofounders.my expanding to Singapore & Indonesia |\n| Industry / Corporate | Open | Corporate sponsors, B2B training clients for Academy |\n\n### Engagement Tracker\n\n| Advisor | Last Check-in | Frequency | Active Initiatives |\n|---------|---------------|-----------|-------------------|\n| Azlan Ismail | — | TBD | — |\n| Faiz Hassan | — | TBD | — |\n| Dr. Surenthiran | — | TBD | — |\n\n### Ideas & Actions\n\n- [ ] Set up quarterly advisory roundtable (all advisors together, not just 1:1)\n- [ ] Prepare a one-pager per advisor showing what Kracked needs from their domain\n- [ ] Leverage Faiz's position to get early feedback on Cradle CIP application before formal submission\n- [ ] Explore if Azlan can connect Kracked to MyDigital programs (e.g. digital economy grants, GLC partnerships)\n- [ ] Discuss with Dr. Surenthiran potential for a defence/gov AI venture under [[Kracked Labs]]\n- [ ] Identify and approach a university partner — aim for 1 MOU by Q3 2026\n- [ ] Identify a Singapore-based tech figure for SEA advisory (cofounders.my expansion)\n- [ ] Consider formalizing advisory terms once 5+ advisors are active (light agreement, no equity yet)\n\n## What We Look For\n\n- Domain expertise relevant to Kracked's pillars\n- Network and credibility in Malaysian tech, government, or education\n- Willingness to engage regularly (not just a title)\n- Alignment with the builder-first, Malaysia-first mission\n\n## Structure\n\n- Informal advisory relationships (no board seats or equity commitments yet)\n- Regular check-ins with CEO and leadership\n- Advisors may be invited to mentor ventures under [[Kracked Labs]]\n",
-      "wordCount": 671,
+      "content": "# Advisory Board\n\nThe advisory board for [[Kracked Technologies]]. A group of experienced individuals providing strategic guidance across the ecosystem — [[Kracked Devs]], [[KD Academy]], and [[Kracked Labs]].\n\n## Status\n\nCurrently being formed. Initial advisors onboarded across government, VC, and AI/defence.\n\n## Advisors\n\n| Name | Domain | Role / Background |\n|------|--------|-------------------|\n| **[[Azlan Ismail]]** | Government & Policy | MyDigital (Malaysia's digital economy initiative under EPU) |\n| **[[Faiz Hassan]]** | VC & Startup Ecosystem | Assistant Manager — Technology & Innovation at Cradle Fund (since May 2023). Involved in MYStartup Startup Perks and MYStartup Tech Talent Program. Based in KL (hybrid). |\n| **[[Surenthiran Krishnan|Major Dr. Surenthiran Krishnan]]** | AI & Defence Tech | Malaysian Army (Tentera Darat Malaysia). Holds a PhD in AI. Bridges military/government and deep tech expertise. |\n\n## Advisory Areas\n\n- **Government & Policy** — Navigation of public sector partnerships, grants, regulatory landscape (Azlan Ismail)\n- **VC & Funding** — Cradle applications, startup ecosystem access, MYStartup programs (Faiz Hassan)\n- **AI & Deep Tech** — AI strategy, defence/government AI applications, research credibility (Dr. Surenthiran)\n- **Education & Talent** — Curriculum design, university partnerships, workforce development\n- **Community & Ecosystem** — Developer ecosystem building, regional expansion (Singapore, Indonesia)\n\n## Planning & Strategy\n\n### Advisor Pipeline\n\n| Name | Domain | Status | Next Step |\n|------|--------|--------|-----------|\n| Azlan Ismail | Government & Policy | Onboarded | Define engagement cadence; align on MyDigital program participation |\n| Faiz Hassan | VC & Startup Ecosystem | Onboarded | Discuss Cradle CIP Spark application strategy |\n| Major Dr. Surenthiran Krishnan | AI & Defence Tech | Onboarded | Explore defence-tech use cases and AI research collaboration |\n| *(University/Education lead)* | Education & Talent | Identifying | Target CS faculty deans — UKM, UTM, USM, or MMU. Key for [[KD Academy]] pipeline |\n| *(SEA regional figure)* | Regional Expansion | Identifying | Singapore or Indonesia tech ecosystem connector for [[cofounders.my]] expansion |\n\n### Coverage Gaps\n\n| Domain | Status | Why It Matters |\n|--------|--------|----------------|\n| Government & Policy | Covered (Azlan) | MyDigital alignment, GLC pilot access |\n| VC & Funding | Covered (Faiz) | Cradle grants, MYStartup programs |\n| AI & Deep Tech | Covered (Dr. Surenthiran) | Technical credibility, research angle |\n| Education & Talent | Open | 30K CS graduates/year; university MOUs for KD Academy |\n| Regional / SEA | Open | cofounders.my expanding to Singapore & Indonesia |\n| Industry / Corporate | Open | Corporate sponsors, B2B training clients for Academy |\n\n### Engagement Tracker\n\n| Advisor | Last Check-in | Frequency | Active Initiatives |\n|---------|---------------|-----------|-------------------|\n| Azlan Ismail | — | TBD | — |\n| Faiz Hassan | — | TBD | — |\n| Dr. Surenthiran | — | TBD | — |\n\n### Ideas & Actions\n\n- [ ] Set up quarterly advisory roundtable (all advisors together, not just 1:1)\n- [ ] Prepare a one-pager per advisor showing what Kracked needs from their domain\n- [ ] Leverage Faiz's position to get early feedback on Cradle CIP application before formal submission\n- [ ] Explore if Azlan can connect Kracked to MyDigital programs (e.g. digital economy grants, GLC partnerships)\n- [ ] Discuss with Dr. Surenthiran potential for a defence/gov AI venture under [[Kracked Labs]]\n- [ ] Identify and approach a university partner — aim for 1 MOU by Q3 2026\n- [ ] Identify a Singapore-based tech figure for SEA advisory (cofounders.my expansion)\n- [ ] Consider formalizing advisory terms once 5+ advisors are active (light agreement, no equity yet)\n\n## What We Look For\n\n- Domain expertise relevant to Kracked's pillars\n- Network and credibility in Malaysian tech, government, or education\n- Willingness to engage regularly (not just a title)\n- Alignment with the builder-first, Malaysia-first mission\n\n## Structure\n\n- Informal advisory relationships (no board seats or equity commitments yet)\n- Regular check-ins with CEO and leadership\n- Advisors may be invited to mentor ventures under [[Kracked Labs]]\n",
+      "wordCount": 672,
       "links": [
         "kracked-technologies",
         "kracked-devs",
         "kd-academy",
         "kracked-labs",
+        "azlan-ismail",
+        "faiz-hassan",
+        "surenthiran-krishnan",
         "kd-academy",
         "cofounders-my",
         "kracked-labs",
@@ -751,13 +754,16 @@
         "Kracked Devs",
         "KD Academy",
         "Kracked Labs",
+        "Azlan Ismail",
+        "Faiz Hassan",
+        "Surenthiran Krishnan",
         "KD Academy",
         "cofounders.my",
         "Kracked Labs",
         "Kracked Labs"
       ],
       "path": "Ecosystem/Advisory Board.md",
-      "connections": 14
+      "connections": 21
     },
     {
       "id": "showcase",
@@ -891,7 +897,7 @@
       "links": [],
       "linkNames": [],
       "path": "Platform/Company Brain - Architecture.md",
-      "connections": 9
+      "connections": 11
     },
     {
       "id": "bounty-board",
@@ -910,56 +916,100 @@
       "connections": 8
     },
     {
-      "id": "taylor-bookaslot-taylors-uni",
-      "name": "Taylor BookaSlot - Taylors Uni",
-      "category": "Deals",
+      "id": "surenthiran-krishnan",
+      "name": "Surenthiran Krishnan",
+      "category": "Advisors",
       "dataset": "mission",
-      "content": "# Taylor BookaSlot — Taylors Uni\n\n## Status: Awaiting Decision\n\n## Details\n\n- **Client**: Taylors University\n- **Project**: BookaSlot\n- **Stage**: Waiting on higher-ups decision\n- **Next**: Follow-up sent, awaiting response\n\n## Notes\n\n- Already followed up (as of 2026-04-14)\n- Decision depends on university leadership\n",
-      "wordCount": 46,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/Taylor BookaSlot - Taylors Uni.md",
-      "connections": 1
-    },
-    {
-      "id": "misi-x-kda-ix-telecom",
-      "name": "MISI x KDA - IX Telecom",
-      "category": "Deals",
-      "dataset": "mission",
-      "content": "# MISI x KDA — IX Telecom\n\n## Status: In Progress\n\n## Details\n\n- **Client**: IX Telecom\n- **Project**: MISI x [[KD Academy]]\n- **Stage**: Proposal ready, need 2nd briefing with CEO\n- **Next**: Meeting likely next week (per CEO's staff)\n\n## Notes\n\n- IX Telecom CEO seems busy (as of 2026-04-14)\n- Need to incorporate his concerns from 1st briefing into proposal\n",
-      "wordCount": 63,
+      "content": "\n# Major Dr. Surenthiran Krishnan\n\n> ![photo placeholder](https://placehold.co/200x200/7c3aed/white?text=SK)\n\n**Signal Officer, Malaysian Armed Forces (Tentera Darat Malaysia). IT instructor focused on AI and Big Data. Bridges military, government, and deep-tech expertise.**\n\n## Background\n\n- Joined the Malaysian Armed Forces Signal Corps in **April 2004**.\n- BEng in Computer Engineering — **Universiti Teknologi Malaysia (UTM)**.\n- Affiliated with UTM's Advanced Informatics School (AIS) for postgraduate research.\n- Research focus: deep learning, recurrent neural networks, gated recurrent units (hybrid models). Published in journals including the *International Journal of Electrical and Computer Engineering*.\n\n> **Note on credentials:** the [[Advisory Board]] note lists him as \"Major Dr.\" with a PhD. Public sources (ResearchGate, journal bylines) confirm Signal Officer rank and active research output, but I couldn't independently verify the PhD title from open web sources. Worth confirming directly with him before using \"Dr.\" in external materials.\n\n## What he brings to Kracked\n\n- **Defence-tech credibility** — direct insight into how the Malaysian military procures, evaluates, and adopts AI capabilities. Critical for any [[Kracked Labs]] venture targeting MINDEF or related agencies.\n- **Government AI relationships** — bridges Kracked into MAMPU, MINDEF, and adjacent agencies running AI pilots.\n- **Research credibility** — co-author/peer-reviewed AI publications give Kracked academic legitimacy when pitching research-grade work.\n- **Defence-tech venture sponsor** — natural advisor for a Labs venture in the defence/government AI space (aligned with [[Defence Tech]] research thesis).\n\n## Engagement plan\n\n- Map specific defence-tech use cases with venture potential under [[Kracked Labs]]\n- Explore co-authored research output to support KD Academy's research pillar\n- Confirm credentials before formalising \"Major Dr.\" in public materials\n\n## Sources\n\n- ResearchGate: https://www.researchgate.net/profile/Surenthiran-Krishnan-2\n- Sample publication (IJECE): https://pdfs.semanticscholar.org/48d7/59e56ef870677b961f49f56df14dd473c382.pdf\n- Context — Malaysian defence AI landscape: https://focusmalaysia.my/eyes-in-the-sky-strengthening-malaysias-defence-with-ai-and-drones/\n\n## Related\n\n- [[Advisory Board]]\n- [[Defence Tech]] — research thesis his expertise underwrites\n- [[Kracked Labs]] — likely sponsor for a defence-tech venture\n- [[Kracked Technologies]]\n",
+      "wordCount": 309,
       "links": [
-        "kd-academy"
+        "advisory-board",
+        "kracked-labs",
+        "defence-tech",
+        "kracked-labs",
+        "advisory-board",
+        "defence-tech",
+        "kracked-labs",
+        "kracked-technologies"
       ],
       "linkNames": [
-        "KD Academy"
+        "Advisory Board",
+        "Kracked Labs",
+        "Defence Tech",
+        "Kracked Labs",
+        "Advisory Board",
+        "Defence Tech",
+        "Kracked Labs",
+        "Kracked Technologies"
       ],
-      "path": "Deals/MISI x KDA - IX Telecom.md",
-      "connections": 1
+      "path": "Advisors/Surenthiran Krishnan.md",
+      "type": "advisor",
+      "domain": "AI & Defence Tech",
+      "status": "Onboarded",
+      "photo": null,
+      "researchgate": "https://www.researchgate.net/profile/Surenthiran-Krishnan-2",
+      "location": "Malaysia",
+      "connections": 9
     },
     {
-      "id": "mdec-mdlr-rapide-telecom",
-      "name": "MDEC MDLR - Rapide Telecom",
-      "category": "Deals",
+      "id": "faiz-hassan",
+      "name": "Faiz Hassan",
+      "category": "Advisors",
       "dataset": "mission",
-      "content": "# MDEC MDLR — Rapide Telecom\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Rapide Telecom\n- **Program**: MDEC MDLR\n- **Stage**: Final sign-off pending\n- **Next**: Kick-off meeting after sign-off\n\n## Notes\n\n- Daily follow-up with client (as of 2026-04-14)\n- Project director tracking this actively\n",
-      "wordCount": 47,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/MDEC MDLR - Rapide Telecom.md",
-      "connections": 0
+      "content": "\n# Faiz Hassan\n\n> ![photo placeholder](https://placehold.co/200x200/059669/white?text=FH)\n\n**Assistant Manager — Technology & Innovation at [Cradle Fund](https://cradle.com.my) (May 2023–present). Program lead for Startup Perks and MYStartup Tech Talents.** Full name: Muhammad Faiz Mohd Hassan.\n\n## Background\n\nDecade+ of experience across business development, partnerships, and social enterprise — telecommunications, hospitality, sustainability, and nonprofit sectors before Cradle. Education: Diploma in Chemical Engineering, UiTM (2012). Champions sustainability initiatives within the Cradle ecosystem.\n\n## Role at Cradle\n\n[Cradle Fund Sdn Bhd](https://cradle.com.my/who-we-are/) is Malaysia's early-stage startup funder, incorporated under the Ministry of Finance in 2003. Mandate: fund high-calibre tech startups via the Cradle Investment Programme (CIP). 1,000+ companies funded; highest commercialisation rate among Malaysian funding agencies.\n\n[MYStartup](https://www.mystartup.gov.my/) is the national startup ecosystem platform — initiated by MOSTI, operated by Cradle. Faiz leads two of its programmes: Startup Perks (founder discounts/credits) and MYStartup Tech Talents.\n\n## Expertise\n\nPartnerships, business development, social entrepreneurship, event management, B2B sales, program design, sustainability, design thinking.\n\n## What he brings to Kracked\n\n- **Cradle CIP application strategy** — direct insider on Cradle CIP Spark (RM 150K) and Accelerate (RM 500K) — both flagged in [[Revenue Model]] as non-dilutive funding to apply for.\n- **MYStartup positioning** — Kracked Devs / KD Academy can be plugged into Tech Talents programme; Startup Perks can be a benefit Kracked offers its members.\n- **Ecosystem connectivity** — Cradle sits at the centre of Malaysia's startup graph. Faiz is a router for intros to founders, accelerators, and corporate venture arms.\n\n## Engagement plan\n\n- Pre-submission review of Cradle CIP Spark application before formal filing\n- Explore MYStartup Tech Talents partnership for [[KD Academy]]\n- Intro to Cradle portfolio companies as potential Sniper leads (vendors needing dev talent)\n\n## Sources\n\n- LinkedIn: https://www.linkedin.com/in/faizhassan/\n- Personal site: https://www.faiz-hassan.bio/\n- Cradle Fund: https://cradle.com.my/\n- MYStartup: https://www.mystartup.gov.my/\n\n## Related\n\n- [[Advisory Board]]\n- [[Revenue Model]] — Cradle CIP grants\n- [[Kracked Technologies]]\n",
+      "wordCount": 309,
+      "links": [
+        "revenue-model",
+        "kd-academy",
+        "advisory-board",
+        "revenue-model",
+        "kracked-technologies"
+      ],
+      "linkNames": [
+        "Revenue Model",
+        "KD Academy",
+        "Advisory Board",
+        "Revenue Model",
+        "Kracked Technologies"
+      ],
+      "path": "Advisors/Faiz Hassan.md",
+      "type": "advisor",
+      "domain": "VC & Startup Ecosystem",
+      "status": "Onboarded",
+      "photo": null,
+      "linkedin": "https://www.linkedin.com/in/faizhassan/",
+      "website": "https://www.faiz-hassan.bio/",
+      "location": "Kuala Lumpur, Malaysia",
+      "connections": 6
     },
     {
-      "id": "dey-short-circuit-works",
-      "name": "DEY - Short Circuit Works",
-      "category": "Deals",
+      "id": "azlan-ismail",
+      "name": "Azlan Ismail",
+      "category": "Advisors",
       "dataset": "mission",
-      "content": "# DEY — Short Circuit Works\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Short Circuit Works\n- **Project**: DEY\n- **Stage**: Final sign-off pending\n- **Next**: Contacted company to hasten, stuck on client response\n\n## Notes\n\n- Client response is the bottleneck (as of 2026-04-14)\n",
-      "wordCount": 46,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/DEY - Short Circuit Works.md",
-      "connections": 0
+      "content": "\n# Azlan Ismail\n\n> ![photo placeholder](https://placehold.co/200x200/3b82f6/white?text=AI)\n\n**Strategy & Change Management lead at MyDIGITAL Corporation. Director of the Programme Management Office (PMO) State.** Full name: Saiful Azlan bin Ismail.\n\n## Role at MyDIGITAL\n\nMyDIGITAL Corporation is the agency executing the [Malaysia Digital Economy Blueprint](https://www.mydigital.gov.my/about-us/) — Malaysia's national digital transformation programme under the Economic Planning Unit (EPU) and the Prime Minister's Office. Azlan operates inside the Strategic Change Management Office (SCMO), translating EPU's blueprint into action items at federal and state level.\n\n## What he brings to Kracked\n\n- **MyDigital alignment** — direct line into Malaysia's national digital economy agenda. Routes for Kracked Devs and KD Academy to be referenced as ecosystem assets in MyDigital programmes.\n- **GLC pilot access** — MyDIGITAL coordinates with GLCs on digital transformation pilots, the same buyers [[Sniper]] is targeting.\n- **State-level reach** — PMO State role gives Kracked an angle into state digital initiatives beyond federal procurement.\n- **Policy framing** — helps position Kracked's \"self-sustaining ecosystem, zero public funding\" pitch in language that resonates with policymakers.\n\n## Engagement plan\n\n- Define cadence (monthly check-in proposed)\n- Align on which MyDigital programmes Kracked Devs / KD Academy can plug into\n- Explore state-level digitalization pilots as Sniper-tracked opportunities\n\n## Sources\n\n- LinkedIn: https://www.linkedin.com/in/sazlanismail/\n- MyDIGITAL contact directory: https://www.mydigital.gov.my/contact-us/\n- Malaysia Digital Economy Blueprint background: https://dig.watch/resource/malaysia-digital-economy-blueprint\n\n## Related\n\n- [[Advisory Board]]\n- [[Sniper]] — Azlan's MyDigital + state-level network feeds tender pipeline\n- [[Kracked Technologies]]\n",
+      "wordCount": 237,
+      "links": [
+        "sniper",
+        "advisory-board",
+        "sniper",
+        "kracked-technologies"
+      ],
+      "linkNames": [
+        "Sniper",
+        "Advisory Board",
+        "Sniper",
+        "Kracked Technologies"
+      ],
+      "path": "Advisors/Azlan Ismail.md",
+      "type": "advisor",
+      "domain": "Government & Policy",
+      "status": "Onboarded",
+      "photo": null,
+      "linkedin": "https://www.linkedin.com/in/sazlanismail/",
+      "email": "azlan.ismail@mydigital.gov.my",
+      "location": "Kuala Lumpur, Malaysia",
+      "connections": 5
     },
     {
       "id": "xavier",
@@ -1024,7 +1074,93 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 21
+      "connections": 27
+    },
+    {
+      "id": "sniper",
+      "name": "Sniper",
+      "category": "Agents",
+      "dataset": "mission",
+      "content": "\n# Sniper\n\n**Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters.**\n\nRuns the [[Tenders and Contracts]] pillar under [[Kracked Technologies]].\n\nWhere [[Alfred]] is the chief of staff, Sniper is the field scout. Sniper hunts on two fronts:\n\n1. **Tenders, RFPs, grants, and contract opportunities** — the things we could win.\n2. **Main contractors and their points of contact** — the people and firms we should know.\n\n## What Sniper does\n\n### Tender & contract hunting\n\n- Scans government procurement portals (MyProcurement, ePerolehan), gov-tech programme calls (MDEC, MRANTI, Cradle, Khazanah, PADU), corporate RFP boards, and grant databases on a daily schedule.\n- Scores each opportunity against Kracked's capability profile + current [[This Week]] focus. Fit score = domain match × capability match × deadline feasibility × strategic priority.\n- Drafts shortlisted opportunities as new notes in `Deals/` (Tenders & Contracts) with structured frontmatter: deadline, value, source URL, fit score, recommended response path.\n- Flags tight deadlines or strategic fits for the CEO's morning briefing.\n\n### Contractor intelligence\n\n- Maintains a live registry of main contractors — gov-linked integrators, system houses, primes we could sub under or partner with.\n- For each contractor: primary contacts (name, title, email, phone, LinkedIn), ongoing government projects, sectors of strength, past interactions with Kracked, relationship temperature.\n- Enriches from public sources (company websites, LinkedIn, news, procurement history) with CEO-approved additions from meetings and outreach.\n- Surfaces contractor overlap when new tenders appear — \"Sniper found: contractor X is lead on this tender, and we met their COO last month.\"\n\n## What Sniper isn't\n\n- Not a scraper of arbitrary websites. Explicit source list, curated, auditable.\n- Not autonomous on outreach — drafts emails and LinkedIn messages, but never sends. All outreach goes through CEO approval.\n- Not a CRM replacement on day one — the vault *is* the CRM.\n\n## Outputs\n\nAll writes go through [[Alfred]]'s Approval Layer — nothing hits the vault without CEO sign-off.\n\n### New vault structure Sniper maintains\n\n- `Deals/` — Tenders & Contracts (existing folder, existing Mission Control card).\n- `Contractors/` *(new)* — one markdown note per contractor, e.g. `Contractors/IX Telecom.md`.\n- `Contractors/Contacts.md` *(new)* — flat registry of all individual contacts, cross-linked to their contractor note.\n\n### Frontmatter conventions Sniper writes\n\n**Tender note** (`Deals/*.md`):\n```yaml\n---\ntype: tender\nstatus: lead            # lead | shortlisted | bidding | won | lost | dropped\nsource: MyProcurement\nsource_url: https://...\ndeadline: 2026-05-12\nvalue_myr: 500000\nfit_score: 0.82\nowner: danial\n---\n```\n\n**Contractor note** (`Contractors/*.md`):\n```yaml\n---\ntype: contractor\ntier: prime             # prime | integrator | sub | vendor\nsectors: [defence, gov-tech, telco]\nrelationship: warm      # cold | warm | active | partner\nlast_contact: 2026-03-20\n---\n```\n\n**Contact entry** (inline in contractor note or in `Contacts.md`):\n```yaml\n- name: Aisyah Binti ...\n  title: Head of Digital\n  company: IX Telecom\n  email: ...\n  phone: ...\n  linkedin: ...\n  last_interaction: 2026-03-20 — coffee at Menara KL\n```\n\n## How Sniper is built\n\n- **Daily cron** (Vercel Cron at 8am MYT) runs the source crawlers.\n- **Crawlers** are small adapters, one per source. Each returns normalized `Opportunity` records.\n- **Scoring** uses Claude Haiku with a cached system prompt containing the capability profile + this week's focus. Fast, cheap, runs on every candidate.\n- **Drafting** uses Claude Sonnet to write the tender / contractor note in full markdown with proper frontmatter.\n- **Diffs go to Pending Approvals** on Mission Control alongside Alfred's suggestions — one unified queue.\n- **Contractor enrichment** runs weekly (Sunday), re-checks public signals for stale contractor records, proposes field updates (e.g. \"X Telecom appointed new CTO — update lead contact?\").\n\nFull architecture context: [[Company Brain - Architecture]].\n\n## Build plan\n\nLayered on top of Alfred's phases — Sniper reuses the ingestion, suggestion, and approval layers.\n\n| Phase | Weeks | What ships |\n|---|---|---|\n| **Phase 1** — Manual seed | 3–6 | Create `Contractors/` folder, seed 10–15 known primes manually. Stand up the daily cron with one source (MyProcurement) writing tender drafts to `Deals/`. |\n| **Phase 2** — Multi-source + scoring | 7–12 | Add 3–5 more sources (ePerolehan, MRANTI, MDEC, one corporate RFP feed). Scoring against capability profile. Morning briefing includes top-3 tender hits. |\n| **Phase 3** — Contractor intelligence | 13–20 | Weekly enrichment pass, contractor-tender cross-linking, LinkedIn / news monitoring for the contact list. |\n| **Phase 4** — Outreach drafts | 21–26 | Drafts personalised intro emails + LinkedIn notes when a tender matches a warm contractor. CEO approves before anything goes out. |\n\n## Decisions needed before build starts\n\n1. **Source list** — confirm which portals and programmes Sniper should scan on day one. Default: MyProcurement + ePerolehan + MRANTI + MDEC + Cradle.\n2. **Capability profile** — Sniper needs a machine-readable version of \"what Kracked actually does\" to score fit. Where does that live? Proposed: `Kracked Technologies.md` frontmatter + a new `Capabilities.md`.\n3. **Contractor seed list** — CEO to provide the initial 10–15 primes (names + known contacts). Sniper enriches from there.\n4. **Fit score threshold** — below what score do we drop opportunities silently? Above what do we page the CEO immediately?\n5. **Scraping ethics / ToS** — public portals are fine; LinkedIn is a grey area. Recommendation: use LinkedIn only as a human-curated field on contact notes, no automated scraping.\n\n## Related\n\n- [[Alfred]] — the CEO's strategic assistant; Sniper feeds it.\n- [[Company Brain - Architecture]] — shared infrastructure (ingestion, approval, retrieval).\n- [[This Week]] — Sniper weights priorities against the current weekly focus.\n",
+      "wordCount": 914,
+      "links": [
+        "tenders-and-contracts",
+        "kracked-technologies",
+        "alfred",
+        "this-week",
+        "alfred",
+        "company-brain-architecture",
+        "alfred",
+        "company-brain-architecture",
+        "this-week"
+      ],
+      "linkNames": [
+        "Tenders and Contracts",
+        "Kracked Technologies",
+        "Alfred",
+        "This Week",
+        "Alfred",
+        "Company Brain - Architecture",
+        "Alfred",
+        "Company Brain - Architecture",
+        "This Week"
+      ],
+      "path": "Agents/Sniper.md",
+      "type": "agent",
+      "status": "planning",
+      "owner": "danial",
+      "connections": 27
+    },
+    {
+      "id": "scout",
+      "name": "Scout",
+      "category": "Agents",
+      "dataset": "mission",
+      "content": "\n# Scout\n\n**Scout is Kracked Technologies' research agent — always reading, always summarising, keeping the company's view of the world current.**\n\nWhere [[Alfred]] reasons over what's already in the vault and [[Agent Sniper]] hunts opportunities we can win, Scout is the background researcher — it goes out, reads, and brings back structured briefs on anything relevant to Kracked's strategy, ecosystem, and ventures.\n\n## What Scout does\n\n- **Monitors a watchlist** of topics, companies, people, technologies, and markets tagged as relevant to Kracked Technologies.\n- **Pulls from curated sources** — news, trade publications, research reports, government announcements, funding databases, company filings, engineering blogs, AI/ML publications.\n- **Summarises into vault notes** — each meaningful finding becomes an update to an existing `Research/` note or a draft for a new one, with citations and dates.\n- **Tracks deltas** — flags when a watched company raises funding, a competitor ships, a minister makes a statement, a programme call opens.\n- **Runs on a schedule** — daily skim, weekly deep-dive, monthly landscape refresh.\n- **Feeds [[Alfred]]'s briefings** — Scout's findings are what turn the morning briefing from \"here's what happened internally\" into \"here's what happened externally that matters.\"\n\n## What Scout isn't\n\n- Not a firehose — doesn't dump news articles into the vault. Only writes when a finding moves the needle on a watched entity or topic.\n- Not a scraper of arbitrary sites — explicit curated source list, auditable.\n- Not a fact-checker — cites primary sources, flags uncertainty, never asserts as fact.\n\n## Outputs\n\nAll writes go through the Approval Layer — nothing commits without CEO sign-off.\n\n### Where Scout writes\n\n- `Research/` — existing folder. Scout appends dated findings under a `## Updates` section on topic notes like [[Defence Tech]], [[Malaysia Data Center Boom]], [[SEA Expansion]]. Creates new notes for topics that pass a relevance threshold.\n- `Research/Watchlist.md` *(new)* — the machine-readable list of entities, topics, and sources Scout monitors.\n- `Research/Digest.md` *(new)* — rolling weekly research digest; top 5–10 findings, Alfred uses this for the Sunday strategic digest.\n- `Research/Signals.md` *(new)* — time-stamped log of meaningful deltas (funding rounds, policy moves, competitor launches) for historical lookup.\n\n### Frontmatter conventions Scout writes\n\n**Research note** (`Research/*.md`):\n```yaml\n---\ntype: research\ntopic: defence-tech\nlast_updated: 2026-04-15\nconfidence: high          # high | medium | low\nwatchlist: true\nsources:\n  - https://...\n  - https://...\n---\n```\n\n**Signal entry** (appended to `Signals.md`):\n```yaml\n- date: 2026-04-15\n  type: funding | policy | launch | hire | partnership | ma\n  entity: IX Telecom\n  summary: Raised MYR 50M Series B led by Khazanah\n  relevance: \"Tier-1 prime in defence comms; potential contractor partner\"\n  sources: [https://...]\n```\n\n## How Scout is built\n\n- **Curated source adapters** — one per source type: RSS feeds, news APIs (e.g. MySinarHarian, The Edge, Tech in Asia), funding databases (Crunchbase / Tracxn if licensed, else public filings), arxiv/huggingface for AI research, government press release feeds (PMO, MCMC, MDEC).\n- **Filter cascade:**\n  1. **Source** returns candidate items.\n  2. **Classifier** (Claude Haiku, cached system prompt = watchlist) decides: relevant / not. ~80% drop here.\n  3. **Scorer** (Haiku) assigns relevance × impact × novelty. Below threshold → discard.\n  4. **Summariser** (Claude Sonnet) drafts the vault update with citations.\n  5. **Approval Layer** queues it for CEO review on Mission Control.\n- **Deduplication** — before summarising, checks if the same story is already covered in a recent vault note; if so, proposes an update to the existing note instead of creating a new one.\n- **Cadence:**\n  - Hourly: pull sources, run classifier.\n  - Daily 7am: batch summaries for the morning briefing.\n  - Weekly Sunday: regenerate `Digest.md`.\n  - Monthly: landscape-level refresh of each watchlist topic.\n\nShared infrastructure with [[Alfred]] and [[Agent Sniper]] — same approval layer, same retrieval layer, same Pending Approvals card on Mission Control. See [[Company Brain - Architecture]].\n\n## Watchlist seed (for CEO to confirm)\n\n**Topics**\n- AI-native education / vibe coding / AI training markets\n- Defence tech (MY + SEA)\n- Malaysia data centre and compute infrastructure\n- Gov-tech procurement trends (MOSTI, MCMC, MDEC, MRANTI, Khazanah)\n- Developer community platforms and monetisation models\n- Venture builder models globally\n- SEA AI funding landscape\n\n**Entities — companies**\n- Main contractors / primes on [[Tenders and Contracts]] watchlist\n- Malaysian GLCs in tech (TM, Axiata, CelcomDigi, MyEG)\n- Regional venture builders (Antler, Entrepreneur First, Rocket Internet)\n- Competing training/community plays (Sigma School, NEXT Academy, LeWagon, TryHackMe)\n\n**Entities — people**\n- Ministers and senior officers in MOSTI, MCMC, MITI, MOD\n- Malaysia venture / corporate leaders worth tracking\n- Advisors and potential advisors to Kracked\n\n**Signal types**\n- Funding rounds > MYR 5M in SEA tech\n- Government programme calls and policy announcements\n- Competitor launches or major hires\n- New contracts awarded to tracked primes\n\n## Build plan\n\nLayers onto the shared Company Brain infrastructure.\n\n| Phase | Weeks | What ships |\n|---|---|---|\n| **Phase 1** — Manual seed | 3–6 | Watchlist, Signals.md, 2–3 sources (RSS of MDEC + The Edge + one AI news feed). Manual curation, no AI summarisation yet — just surfacing candidate items. |\n| **Phase 2** — Classifier + summariser | 7–12 | Haiku classifier, Sonnet summariser, automatic drafts to Pending Approvals card. Weekly `Digest.md` regeneration. |\n| **Phase 3** — Multi-source + deltas | 13–20 | 8–12 sources, dedup, delta tracking per watched entity, morning briefing integration. |\n| **Phase 4** — Proactive insight | 21–26 | Scout proposes strategic implications, not just findings. \"Three tracked primes have hired defence leads in the last 6 weeks — worth positioning Kracked Labs here?\" Suggestions feed into [[This Week]] drafts. |\n\n## Decisions needed before build starts\n\n1. **Source list** — confirm day-one curated sources. Default: MDEC + MCMC + MOSTI press feeds, The Edge, Tech in Asia, MalaysiaKini tech, arxiv AI, Hacker News top-of-week. Any paid sources we should license (Crunchbase, PitchBook, Tracxn)?\n2. **Watchlist ownership** — who maintains the watchlist as priorities shift? Recommend: the watchlist itself is a vault note, so updates go through the Approval Layer like anything else.\n3. **Scope boundaries** — should Scout also watch AI research (arxiv, HuggingFace, Anthropic/OpenAI releases) for [[KD Academy]] curriculum, or keep it strategy-focused?\n4. **Digest format** — email, Mission Control card, both?\n5. **Signal thresholds** — how loud should Scout be? Default: only things scoring 0.7+ on relevance × impact surface to the morning briefing; everything else goes into `Signals.md` for search only.\n\n## Related\n\n- [[Alfred]] — consumes Scout's findings for briefings and digests.\n- [[Agent Sniper]] — Scout flags contractor / agency news; Sniper acts on it.\n- [[Company Brain - Architecture]] — shared infra.\n- [[Research]] — destination folder for Scout's writes.\n- [[This Week]] — Scout weighs findings against current strategic focus.\n",
+      "wordCount": 1113,
+      "links": [
+        "alfred",
+        "agent-sniper",
+        "alfred",
+        "defence-tech",
+        "malaysia-data-center-boom",
+        "sea-expansion",
+        "alfred",
+        "agent-sniper",
+        "company-brain-architecture",
+        "tenders-and-contracts",
+        "this-week",
+        "kd-academy",
+        "alfred",
+        "agent-sniper",
+        "company-brain-architecture",
+        "research",
+        "this-week"
+      ],
+      "linkNames": [
+        "Alfred",
+        "Agent Sniper",
+        "Alfred",
+        "Defence Tech",
+        "Malaysia Data Center Boom",
+        "SEA Expansion",
+        "Alfred",
+        "Agent Sniper",
+        "Company Brain - Architecture",
+        "Tenders and Contracts",
+        "This Week",
+        "KD Academy",
+        "Alfred",
+        "Agent Sniper",
+        "Company Brain - Architecture",
+        "Research",
+        "This Week"
+      ],
+      "path": "Agents/Scout.md",
+      "type": "agent",
+      "status": "planning",
+      "owner": "danial",
+      "connections": 15
     },
     {
       "id": "rick",
@@ -1101,21 +1237,22 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 34
+      "connections": 38
     },
     {
       "id": "readme",
       "name": "README",
       "category": "Agents",
       "dataset": "mission",
-      "content": "# Agents & Skills\n\nThis is the directory of the AI agents and skills that make up [[Alfred]] — Kracked Technologies' Company Brain.\n\n**Agents** are persistent personas with a job (e.g. Alfred, a planner, an architect).\n**Skills** are reusable procedures anyone — or any agent — can invoke (e.g. `/standup`, `/sync-vault`, `/weekly-review`).\n\n## Agents\n\n- [[Alfred]] — the CEO's always-on strategic assistant. Queries the vault, drafts edits, runs the morning briefing and weekly digest.\n- [[Sniper]] — tender hunter. Scans eperolehan and GLC portals, maps main contractors, surfaces named contacts and drafts outreach. Owns **Contracts & Tenders**.\n- [[Rick]] — venture operator. Tracks portfolio health, scores pipeline ideas, watches live products. Owns **Kracked Labs**.\n- [[Xavier]] — education lead. Tracks learners, cohorts, ambassadors, and curriculum drift. Owns **KD Academy**.\n\n## Skills\n\n*(Coming soon — see the Company Brain architecture for the planned skill surface.)*\n\n- `/standup` — submit a daily update (Phase 1 of the Daily Update System)\n- `/sync-vault` — manually trigger a vault → graph.json resync\n- `/ask` — ask Alfred a grounded question\n\n## Governance\n\nEvery agent that can write to the vault goes through the **Approval Layer** — the CEO reviews and approves diffs before they commit. See [[Company Brain - Architecture]] §7.\n\n## Related\n\n- [[Company Brain - Architecture]] — full system design\n- [[Daily Update System]] — the ingestion brief\n- [[Daily Update System - Plan]] — the implementation plan\n",
-      "wordCount": 236,
+      "content": "# Agents & Skills\n\nThis is the directory of the AI agents and skills that make up [[Alfred]] — Kracked Technologies' Company Brain.\n\n**Agents** are persistent personas with a job (e.g. Alfred, a planner, an architect).\n**Skills** are reusable procedures anyone — or any agent — can invoke (e.g. `/standup`, `/sync-vault`, `/weekly-review`).\n\n## Agents\n\n- [[Alfred]] — the CEO's always-on strategic assistant. Queries the vault, drafts edits, runs the morning briefing and weekly digest.\n- [[Sniper]] — tender hunter. Scans eperolehan and GLC portals, maps main contractors, surfaces named contacts and drafts outreach. Owns **Contracts & Tenders**.\n- [[Rick]] — venture operator. Tracks portfolio health, scores pipeline ideas, watches live products. Owns **Kracked Labs**.\n- [[Xavier]] — education lead. Tracks learners, cohorts, ambassadors, and curriculum drift. Owns **KD Academy**.\n- [[Scout]] — research agent. Monitors watchlists across topics, companies, and people; summarises meaningful deltas into `Research/` and feeds Alfred's briefings.\n\n## Skills\n\n*(Coming soon — see the Company Brain architecture for the planned skill surface.)*\n\n- `/standup` — submit a daily update (Phase 1 of the Daily Update System)\n- `/sync-vault` — manually trigger a vault → graph.json resync\n- `/ask` — ask Alfred a grounded question\n\n## Governance\n\nEvery agent that can write to the vault goes through the **Approval Layer** — the CEO reviews and approves diffs before they commit. See [[Company Brain - Architecture]] §7.\n\n## Related\n\n- [[Company Brain - Architecture]] — full system design\n- [[Daily Update System]] — the ingestion brief\n- [[Daily Update System - Plan]] — the implementation plan\n",
+      "wordCount": 257,
       "links": [
         "alfred",
         "alfred",
         "sniper",
         "rick",
         "xavier",
+        "scout",
         "company-brain-architecture",
         "company-brain-architecture",
         "daily-update-system",
@@ -1127,13 +1264,14 @@
         "Sniper",
         "Rick",
         "Xavier",
+        "Scout",
         "Company Brain - Architecture",
         "Company Brain - Architecture",
         "Daily Update System",
         "Daily Update System - Plan"
       ],
       "path": "Agents/README.md",
-      "connections": 8
+      "connections": 10
     },
     {
       "id": "alfred",
@@ -1164,42 +1302,59 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 22
+      "connections": 26
     },
     {
-      "id": "agent-sniper",
-      "name": "Agent Sniper",
-      "category": "Agents",
+      "id": "taylor-bookaslot-taylors-uni",
+      "name": "Taylor BookaSlot - Taylors Uni",
+      "category": "Deals",
       "dataset": "mission",
-      "content": "\n# Sniper\n\n**Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters.**\n\nRuns the [[Tenders and Contracts]] pillar under [[Kracked Technologies]].\n\nWhere [[Alfred]] is the chief of staff, Sniper is the field scout. Sniper hunts on two fronts:\n\n1. **Tenders, RFPs, grants, and contract opportunities** — the things we could win.\n2. **Main contractors and their points of contact** — the people and firms we should know.\n\n## What Sniper does\n\n### Tender & contract hunting\n\n- Scans government procurement portals (MyProcurement, ePerolehan), gov-tech programme calls (MDEC, MRANTI, Cradle, Khazanah, PADU), corporate RFP boards, and grant databases on a daily schedule.\n- Scores each opportunity against Kracked's capability profile + current [[This Week]] focus. Fit score = domain match × capability match × deadline feasibility × strategic priority.\n- Drafts shortlisted opportunities as new notes in `Deals/` (Tenders & Contracts) with structured frontmatter: deadline, value, source URL, fit score, recommended response path.\n- Flags tight deadlines or strategic fits for the CEO's morning briefing.\n\n### Contractor intelligence\n\n- Maintains a live registry of main contractors — gov-linked integrators, system houses, primes we could sub under or partner with.\n- For each contractor: primary contacts (name, title, email, phone, LinkedIn), ongoing government projects, sectors of strength, past interactions with Kracked, relationship temperature.\n- Enriches from public sources (company websites, LinkedIn, news, procurement history) with CEO-approved additions from meetings and outreach.\n- Surfaces contractor overlap when new tenders appear — \"Sniper found: contractor X is lead on this tender, and we met their COO last month.\"\n\n## What Sniper isn't\n\n- Not a scraper of arbitrary websites. Explicit source list, curated, auditable.\n- Not autonomous on outreach — drafts emails and LinkedIn messages, but never sends. All outreach goes through CEO approval.\n- Not a CRM replacement on day one — the vault *is* the CRM.\n\n## Outputs\n\nAll writes go through [[Alfred]]'s Approval Layer — nothing hits the vault without CEO sign-off.\n\n### New vault structure Sniper maintains\n\n- `Deals/` — Tenders & Contracts (existing folder, existing Mission Control card).\n- `Contractors/` *(new)* — one markdown note per contractor, e.g. `Contractors/IX Telecom.md`.\n- `Contractors/Contacts.md` *(new)* — flat registry of all individual contacts, cross-linked to their contractor note.\n\n### Frontmatter conventions Sniper writes\n\n**Tender note** (`Deals/*.md`):\n```yaml\n---\ntype: tender\nstatus: lead            # lead | shortlisted | bidding | won | lost | dropped\nsource: MyProcurement\nsource_url: https://...\ndeadline: 2026-05-12\nvalue_myr: 500000\nfit_score: 0.82\nowner: danial\n---\n```\n\n**Contractor note** (`Contractors/*.md`):\n```yaml\n---\ntype: contractor\ntier: prime             # prime | integrator | sub | vendor\nsectors: [defence, gov-tech, telco]\nrelationship: warm      # cold | warm | active | partner\nlast_contact: 2026-03-20\n---\n```\n\n**Contact entry** (inline in contractor note or in `Contacts.md`):\n```yaml\n- name: Aisyah Binti ...\n  title: Head of Digital\n  company: IX Telecom\n  email: ...\n  phone: ...\n  linkedin: ...\n  last_interaction: 2026-03-20 — coffee at Menara KL\n```\n\n## How Sniper is built\n\n- **Daily cron** (Vercel Cron at 8am MYT) runs the source crawlers.\n- **Crawlers** are small adapters, one per source. Each returns normalized `Opportunity` records.\n- **Scoring** uses Claude Haiku with a cached system prompt containing the capability profile + this week's focus. Fast, cheap, runs on every candidate.\n- **Drafting** uses Claude Sonnet to write the tender / contractor note in full markdown with proper frontmatter.\n- **Diffs go to Pending Approvals** on Mission Control alongside Alfred's suggestions — one unified queue.\n- **Contractor enrichment** runs weekly (Sunday), re-checks public signals for stale contractor records, proposes field updates (e.g. \"X Telecom appointed new CTO — update lead contact?\").\n\nFull architecture context: [[Company Brain - Architecture]].\n\n## Build plan\n\nLayered on top of Alfred's phases — Sniper reuses the ingestion, suggestion, and approval layers.\n\n| Phase | Weeks | What ships |\n|---|---|---|\n| **Phase 1** — Manual seed | 3–6 | Create `Contractors/` folder, seed 10–15 known primes manually. Stand up the daily cron with one source (MyProcurement) writing tender drafts to `Deals/`. |\n| **Phase 2** — Multi-source + scoring | 7–12 | Add 3–5 more sources (ePerolehan, MRANTI, MDEC, one corporate RFP feed). Scoring against capability profile. Morning briefing includes top-3 tender hits. |\n| **Phase 3** — Contractor intelligence | 13–20 | Weekly enrichment pass, contractor-tender cross-linking, LinkedIn / news monitoring for the contact list. |\n| **Phase 4** — Outreach drafts | 21–26 | Drafts personalised intro emails + LinkedIn notes when a tender matches a warm contractor. CEO approves before anything goes out. |\n\n## Decisions needed before build starts\n\n1. **Source list** — confirm which portals and programmes Sniper should scan on day one. Default: MyProcurement + ePerolehan + MRANTI + MDEC + Cradle.\n2. **Capability profile** — Sniper needs a machine-readable version of \"what Kracked actually does\" to score fit. Where does that live? Proposed: `Kracked Technologies.md` frontmatter + a new `Capabilities.md`.\n3. **Contractor seed list** — CEO to provide the initial 10–15 primes (names + known contacts). Sniper enriches from there.\n4. **Fit score threshold** — below what score do we drop opportunities silently? Above what do we page the CEO immediately?\n5. **Scraping ethics / ToS** — public portals are fine; LinkedIn is a grey area. Recommendation: use LinkedIn only as a human-curated field on contact notes, no automated scraping.\n\n## Related\n\n- [[Alfred]] — the CEO's strategic assistant; Sniper feeds it.\n- [[Company Brain - Architecture]] — shared infrastructure (ingestion, approval, retrieval).\n- [[This Week]] — Sniper weights priorities against the current weekly focus.\n",
-      "wordCount": 914,
+      "content": "# Taylor BookaSlot — Taylors Uni\n\n## Status: Awaiting Decision\n\n## Details\n\n- **Client**: Taylors University\n- **Project**: BookaSlot\n- **Stage**: Waiting on higher-ups decision\n- **Next**: Follow-up sent, awaiting response\n\n## Notes\n\n- Already followed up (as of 2026-04-14)\n- Decision depends on university leadership\n",
+      "wordCount": 46,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/Taylor BookaSlot - Taylors Uni.md",
+      "connections": 1
+    },
+    {
+      "id": "misi-x-kda-ix-telecom",
+      "name": "MISI x KDA - IX Telecom",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# MISI x KDA — IX Telecom\n\n## Status: In Progress\n\n## Details\n\n- **Client**: IX Telecom\n- **Project**: MISI x [[KD Academy]]\n- **Stage**: Proposal ready, need 2nd briefing with CEO\n- **Next**: Meeting likely next week (per CEO's staff)\n\n## Notes\n\n- IX Telecom CEO seems busy (as of 2026-04-14)\n- Need to incorporate his concerns from 1st briefing into proposal\n",
+      "wordCount": 63,
       "links": [
-        "tenders-and-contracts",
-        "kracked-technologies",
-        "alfred",
-        "this-week",
-        "alfred",
-        "company-brain-architecture",
-        "alfred",
-        "company-brain-architecture",
-        "this-week"
+        "kd-academy"
       ],
       "linkNames": [
-        "Tenders and Contracts",
-        "Kracked Technologies",
-        "Alfred",
-        "This Week",
-        "Alfred",
-        "Company Brain - Architecture",
-        "Alfred",
-        "Company Brain - Architecture",
-        "This Week"
+        "KD Academy"
       ],
-      "path": "Agents/Agent Sniper.md",
-      "type": "agent",
-      "status": "planning",
-      "owner": "danial",
-      "connections": 14
+      "path": "Deals/MISI x KDA - IX Telecom.md",
+      "connections": 1
+    },
+    {
+      "id": "mdec-mdlr-rapide-telecom",
+      "name": "MDEC MDLR - Rapide Telecom",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# MDEC MDLR — Rapide Telecom\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Rapide Telecom\n- **Program**: MDEC MDLR\n- **Stage**: Final sign-off pending\n- **Next**: Kick-off meeting after sign-off\n\n## Notes\n\n- Daily follow-up with client (as of 2026-04-14)\n- Project director tracking this actively\n",
+      "wordCount": 47,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/MDEC MDLR - Rapide Telecom.md",
+      "connections": 0
+    },
+    {
+      "id": "dey-short-circuit-works",
+      "name": "DEY - Short Circuit Works",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# DEY — Short Circuit Works\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Short Circuit Works\n- **Project**: DEY\n- **Stage**: Final sign-off pending\n- **Next**: Contacted company to hasten, stuck on client response\n\n## Notes\n\n- Client response is the bottleneck (as of 2026-04-14)\n",
+      "wordCount": 46,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/DEY - Short Circuit Works.md",
+      "connections": 0
     },
     {
       "id": "vynn-capital",
@@ -1691,7 +1846,7 @@
     },
     {
       "source": "kracked-technologies",
-      "target": "agent-sniper"
+      "target": "sniper"
     },
     {
       "source": "kracked-technologies",
@@ -2179,11 +2334,11 @@
     },
     {
       "source": "tenders-and-contracts",
-      "target": "agent-sniper"
+      "target": "sniper"
     },
     {
       "source": "tenders-and-contracts",
-      "target": "agent-sniper"
+      "target": "sniper"
     },
     {
       "source": "tenders-and-contracts",
@@ -2203,7 +2358,7 @@
     },
     {
       "source": "tenders-and-contracts",
-      "target": "agent-sniper"
+      "target": "sniper"
     },
     {
       "source": "tenders-and-contracts",
@@ -2211,7 +2366,7 @@
     },
     {
       "source": "tenders-and-contracts",
-      "target": "agent-sniper"
+      "target": "sniper"
     },
     {
       "source": "tenders-and-contracts",
@@ -2311,6 +2466,18 @@
     },
     {
       "source": "advisory-board",
+      "target": "azlan-ismail"
+    },
+    {
+      "source": "advisory-board",
+      "target": "faiz-hassan"
+    },
+    {
+      "source": "advisory-board",
+      "target": "surenthiran-krishnan"
+    },
+    {
+      "source": "advisory-board",
       "target": "kd-academy"
     },
     {
@@ -2354,8 +2521,72 @@
       "target": "kracked-devs"
     },
     {
-      "source": "misi-x-kda-ix-telecom",
+      "source": "surenthiran-krishnan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "defence-tech"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "defence-tech"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "revenue-model"
+    },
+    {
+      "source": "faiz-hassan",
       "target": "kd-academy"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "revenue-model"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "sniper"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "advisory-board"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "sniper"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "kracked-technologies"
     },
     {
       "source": "xavier",
@@ -2371,6 +2602,10 @@
     },
     {
       "source": "xavier",
+      "target": "sniper"
+    },
+    {
+      "source": "xavier",
       "target": "rick"
     },
     {
@@ -2387,11 +2622,19 @@
     },
     {
       "source": "xavier",
+      "target": "sniper"
+    },
+    {
+      "source": "xavier",
       "target": "rick"
     },
     {
       "source": "xavier",
       "target": "taylor-bookaslot-taylors-uni"
+    },
+    {
+      "source": "xavier",
+      "target": "sniper"
     },
     {
       "source": "xavier",
@@ -2404,6 +2647,10 @@
     {
       "source": "xavier",
       "target": "rick"
+    },
+    {
+      "source": "xavier",
+      "target": "sniper"
     },
     {
       "source": "xavier",
@@ -2419,6 +2666,10 @@
     },
     {
       "source": "xavier",
+      "target": "sniper"
+    },
+    {
+      "source": "xavier",
       "target": "kd-academy"
     },
     {
@@ -2428,6 +2679,102 @@
     {
       "source": "xavier",
       "target": "rick"
+    },
+    {
+      "source": "xavier",
+      "target": "sniper"
+    },
+    {
+      "source": "sniper",
+      "target": "tenders-and-contracts"
+    },
+    {
+      "source": "sniper",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "sniper",
+      "target": "alfred"
+    },
+    {
+      "source": "sniper",
+      "target": "this-week"
+    },
+    {
+      "source": "sniper",
+      "target": "alfred"
+    },
+    {
+      "source": "sniper",
+      "target": "company-brain-architecture"
+    },
+    {
+      "source": "sniper",
+      "target": "alfred"
+    },
+    {
+      "source": "sniper",
+      "target": "company-brain-architecture"
+    },
+    {
+      "source": "sniper",
+      "target": "this-week"
+    },
+    {
+      "source": "scout",
+      "target": "alfred"
+    },
+    {
+      "source": "scout",
+      "target": "alfred"
+    },
+    {
+      "source": "scout",
+      "target": "defence-tech"
+    },
+    {
+      "source": "scout",
+      "target": "malaysia-data-center-boom"
+    },
+    {
+      "source": "scout",
+      "target": "sea-expansion"
+    },
+    {
+      "source": "scout",
+      "target": "alfred"
+    },
+    {
+      "source": "scout",
+      "target": "company-brain-architecture"
+    },
+    {
+      "source": "scout",
+      "target": "tenders-and-contracts"
+    },
+    {
+      "source": "scout",
+      "target": "this-week"
+    },
+    {
+      "source": "scout",
+      "target": "kd-academy"
+    },
+    {
+      "source": "scout",
+      "target": "alfred"
+    },
+    {
+      "source": "scout",
+      "target": "company-brain-architecture"
+    },
+    {
+      "source": "scout",
+      "target": "research"
+    },
+    {
+      "source": "scout",
+      "target": "this-week"
     },
     {
       "source": "rick",
@@ -2440,6 +2787,10 @@
     {
       "source": "rick",
       "target": "alfred"
+    },
+    {
+      "source": "rick",
+      "target": "sniper"
     },
     {
       "source": "rick",
@@ -2491,11 +2842,19 @@
     },
     {
       "source": "rick",
+      "target": "sniper"
+    },
+    {
+      "source": "rick",
       "target": "alfred"
     },
     {
       "source": "rick",
       "target": "venture-playbook"
+    },
+    {
+      "source": "rick",
+      "target": "sniper"
     },
     {
       "source": "rick",
@@ -2531,6 +2890,10 @@
     },
     {
       "source": "rick",
+      "target": "sniper"
+    },
+    {
+      "source": "rick",
       "target": "xavier"
     },
     {
@@ -2540,6 +2903,10 @@
     {
       "source": "readme",
       "target": "alfred"
+    },
+    {
+      "source": "readme",
+      "target": "sniper"
     },
     {
       "source": "readme",
@@ -2551,6 +2918,10 @@
     },
     {
       "source": "readme",
+      "target": "scout"
+    },
+    {
+      "source": "readme",
       "target": "company-brain-architecture"
     },
     {
@@ -2594,40 +2965,8 @@
       "target": "kracked-technologies"
     },
     {
-      "source": "agent-sniper",
-      "target": "tenders-and-contracts"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "alfred"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "this-week"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "alfred"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "company-brain-architecture"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "alfred"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "company-brain-architecture"
-    },
-    {
-      "source": "agent-sniper",
-      "target": "this-week"
+      "source": "misi-x-kda-ix-telecom",
+      "target": "kd-academy"
     },
     {
       "source": "vynn-capital",
@@ -3003,16 +3342,16 @@
     },
     "advisors": [
       {
-        "name": "Azlan Ismail",
+        "name": "[[Azlan Ismail]]",
         "domain": "Government & Policy"
       },
       {
-        "name": "Faiz Hassan",
+        "name": "[[Faiz Hassan]]",
         "domain": "VC & Startup Ecosystem"
       },
       {
-        "name": "Major Dr. Surenthiran Krishnan",
-        "domain": "AI & Defence Tech"
+        "name": "[[Surenthiran Krishnan",
+        "domain": "Major Dr. Surenthiran Krishnan]]**"
       }
     ],
     "academy": {
@@ -3028,6 +3367,18 @@
         "blurb": "Xavier is Kracked Technologies' education lead — tracking learners, shaping curriculum, growing the ambassador network, and turning digital consumers into AI builders."
       },
       {
+        "id": "sniper",
+        "name": "Sniper",
+        "status": "planning",
+        "blurb": "Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters."
+      },
+      {
+        "id": "scout",
+        "name": "Scout",
+        "status": "planning",
+        "blurb": "Scout is Kracked Technologies' research agent — always reading, always summarising, keeping the company's view of the world current."
+      },
+      {
         "id": "rick",
         "name": "Rick",
         "status": "planning",
@@ -3038,23 +3389,17 @@
         "name": "Alfred",
         "status": "planning",
         "blurb": "Alfred is Kracked Technologies' digital chief of staff — always on, grounded in the vault, quietly keeping the CEO ahead of the company."
-      },
-      {
-        "id": "agent-sniper",
-        "name": "Agent Sniper",
-        "status": "planning",
-        "blurb": "Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters."
       }
     ],
     "graph": {
-      "mission": 49,
+      "mission": 53,
       "research": 22,
-      "total": 71
+      "total": 75
     }
   },
   "meta": {
-    "totalConcepts": 71,
-    "totalConnections": 314,
+    "totalConcepts": 75,
+    "totalConnections": 360,
     "categories": [
       "Root",
       "Research",
@@ -3063,14 +3408,15 @@
       "Projects",
       "Ecosystem",
       "Platform",
-      "Deals",
+      "Advisors",
       "Agents",
+      "Deals",
       "Venture Capital",
       "Accelerator",
       "Venture Builder",
       "Gov Funding",
       "Startup"
     ],
-    "syncedAt": "2026-04-15T03:53:31.088Z"
+    "syncedAt": "2026-04-15T04:04:13.565Z"
   }
 }
