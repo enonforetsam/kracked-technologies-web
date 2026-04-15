@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
@@ -14,6 +14,8 @@ const CARD_ACCENTS = {
   graph: '#0052ef',
   revenue: '#dc2626',
   agents: '#a855f7',
+  strategy: '#ef4444',
+  whatIf: '#eab308',
 }
 
 const STATUS_COLORS = {
@@ -41,8 +43,12 @@ function CardHeader({ icon, title, accent, count }) {
   )
 }
 
+function slugifyHeading(text) {
+  return 'h-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60)
+}
+
 function renderContent(content, nodes) {
-  let html = content.replace(/^#[^\n]*\n/, '')
+  let html = content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n/, '')
   html = html.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
     const slug = target.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
     const exists = nodes.some(n => n.id === slug)
@@ -50,12 +56,26 @@ function renderContent(content, nodes) {
     return label || target
   })
   let out = marked(html)
+  // Add ids to h2 and h3 for TOC anchoring
+  out = out.replace(/<(h2|h3)>([^<]+)<\/\1>/g, (_, tag, text) => `<${tag} id="${slugifyHeading(text)}">${text}</${tag}>`)
   // External links open in new tab
   out = out.replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
   return out
 }
 
-function ArticleModal({ node, graph, onClose, onOpen }) {
+function extractHeadings(content) {
+  const body = content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n/, '')
+  const out = []
+  for (const line of body.split('\n')) {
+    const m = line.match(/^(##+)\s+(.+?)\s*$/)
+    if (m && m[1].length <= 3) {
+      out.push({ level: m[1].length, text: m[2].replace(/\*\*/g, '').replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, t, l) => l || t), id: slugifyHeading(m[2]) })
+    }
+  }
+  return out
+}
+
+function ArticleModal({ node, graph, onClose, onOpen, trail = [], onJumpTrail }) {
   const handleClick = useCallback((e) => {
     const link = e.target.closest('[data-node-id]')
     if (link) {
@@ -67,6 +87,12 @@ function ArticleModal({ node, graph, onClose, onOpen }) {
   if (!node) return null
   const color = CATEGORY_COLORS[node.category] || '#0052ef'
   const html = renderContent(node.content, graph.nodes)
+  const headings = extractHeadings(node.content)
+  const bodyRef = useRef(null)
+  const scrollTo = (id) => {
+    const el = bodyRef.current?.querySelector('#' + CSS.escape(id))
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 
   const neighbors = (() => {
     const ids = new Set()
@@ -82,6 +108,21 @@ function ArticleModal({ node, graph, onClose, onOpen }) {
       <div className="mc-modal glass" onClick={e => e.stopPropagation()} onClickCapture={handleClick}>
         <button className="mc-modal-close" onClick={onClose}>&times;</button>
 
+        {trail.length > 1 && (
+          <div className="mc-breadcrumbs">
+            {trail.map((n, i) => (
+              <span key={n.id} className="mc-crumb-wrap">
+                {i > 0 && <span className="mc-crumb-sep">›</span>}
+                {i === trail.length - 1 ? (
+                  <span className="mc-crumb mc-crumb-current">{n.name}</span>
+                ) : (
+                  <button className="mc-crumb" onClick={() => onJumpTrail(i)}>{n.name}</button>
+                )}
+              </span>
+            ))}
+          </div>
+        )}
+
         <div className="mc-modal-head" style={{ borderBottomColor: color + '40' }}>
           <span className="mc-card-icon" style={{ background: color + '22', color }}>◆</span>
           <div className="mc-modal-head-text">
@@ -90,22 +131,113 @@ function ArticleModal({ node, graph, onClose, onOpen }) {
           </div>
         </div>
 
-        <div className="mc-modal-body">
-          <div className="article-body" dangerouslySetInnerHTML={{ __html: html }} />
-
-          {neighbors.length > 0 && (
-            <div className="mc-modal-connections">
-              <h4>Connections ({neighbors.length})</h4>
-              <div className="mc-modal-conn-grid">
-                {neighbors.map(n => (
-                  <button key={n.id} className="mc-modal-conn" onClick={() => onOpen(n.id)}>
-                    {n.name}
-                  </button>
-                ))}
-              </div>
-            </div>
+        <div className={`mc-modal-body ${headings.length >= 3 ? 'mc-modal-body-withtoc' : ''}`} ref={bodyRef}>
+          {headings.length >= 3 && (
+            <aside className="mc-toc">
+              <div className="mc-toc-label">On this page</div>
+              {headings.map(h => (
+                <button
+                  key={h.id}
+                  className={`mc-toc-item mc-toc-l${h.level}`}
+                  onClick={() => scrollTo(h.id)}
+                >
+                  {h.text}
+                </button>
+              ))}
+            </aside>
           )}
+
+          <div className="mc-modal-main">
+            <div className="article-body" dangerouslySetInnerHTML={{ __html: html }} />
+
+            {neighbors.length > 0 && (
+              <div className="mc-modal-connections">
+                <h4>Connections ({neighbors.length})</h4>
+                <div className="mc-modal-conn-grid">
+                  {neighbors.map(n => (
+                    <button key={n.id} className="mc-modal-conn" onClick={() => onOpen(n.id)}>
+                      {n.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
+      </div>
+    </div>
+  )
+}
+
+function Q2PlanSummary({ strategies, openNode }) {
+  const pillars = [
+    { n: 1, title: 'Tenders, Projects & Claw OS Sales', accent: '#3b82f6', bullet: 'One unified outbound motion. Project work, tender wins, Claw OS consultation/workshop/bespoke.' },
+    { n: 2, title: 'KD Academy', accent: '#be185d', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.' },
+    { n: 3, title: 'Kracked Labs', accent: '#7c3aed', bullet: 'No new ventures. Portfolio standardised. Rick drafts Q3 health review.' },
+  ]
+  const milestones = [
+    { label: 'Apr 22', text: 'Itachi live — CEO can ask the vault', status: 'now' },
+    { label: 'Apr 30', text: 'Internal Claw OS live + first Sniper agent dry-run', status: 'next' },
+    { label: 'May 31', text: 'Pitch deck v1 · Consultation SKU packaged · First proposal out', status: 'later' },
+    { label: 'Jun 30', text: '2 signed consultations · 1 workshop booked · 1 bespoke in pipeline', status: 'later' },
+  ]
+  const metrics = [
+    { label: 'YT sessions', baseline: 1, target: 12 },
+    { label: 'Paid tutors', baseline: 0, target: '3–5' },
+    { label: 'Discovery calls', baseline: 0, target: 10 },
+    { label: 'Paid consultations', baseline: 0, target: 2 },
+    { label: 'Workshops booked', baseline: 0, target: '1+' },
+    { label: 'Tender applications', baseline: 0, target: 3 },
+  ]
+  return (
+    <div className="q2plan">
+      <div className="q2plan-hero">
+        <div className="q2plan-hero-left">
+          <span className="q2plan-eyebrow">Q2 2026 · 11 weeks · Apr 15 → Jun 30</span>
+          <h3 className="q2plan-thesis">Build Claw OS, sell Claw OS, feed the funnel.</h3>
+          <p className="q2plan-subthesis">AI company brain — <em>infra before growth</em>.</p>
+        </div>
+        <div className="q2plan-docs">
+          {strategies.map(s => (
+            <button key={s.id} className="q2plan-doc" onClick={() => openNode(s.id)}>
+              <span className="q2plan-doc-name">{s.name}</span>
+              <span className="q2plan-doc-arrow">→</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="q2plan-section-label">Three pillars</div>
+      <div className="q2plan-pillars">
+        {pillars.map(p => (
+          <div key={p.n} className="q2plan-pillar" style={{ '--accent': p.accent }}>
+            <span className="q2plan-pillar-n">{p.n}</span>
+            <div>
+              <div className="q2plan-pillar-title">{p.title}</div>
+              <div className="q2plan-pillar-bullet">{p.bullet}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="q2plan-section-label">Milestones</div>
+      <div className="q2plan-milestones">
+        {milestones.map((m, i) => (
+          <div key={i} className={`q2plan-milestone q2plan-ms-${m.status}`}>
+            <div className="q2plan-ms-label">{m.label}</div>
+            <div className="q2plan-ms-text">{m.text}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="q2plan-section-label">Metrics · baseline → Q2 target</div>
+      <div className="q2plan-metrics">
+        {metrics.map((m, i) => (
+          <div key={i} className="q2plan-metric">
+            <div className="q2plan-metric-label">{m.label}</div>
+            <div className="q2plan-metric-val"><span className="q2plan-metric-base">{m.baseline}</span> → <span className="q2plan-metric-target">{m.target}</span></div>
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -113,15 +245,32 @@ function ArticleModal({ node, graph, onClose, onOpen }) {
 
 export default function MissionControl({ graph }) {
   const navigate = useNavigate()
-  const [openNodeId, setOpenNodeId] = useState(null)
+  const [trail, setTrail] = useState([])
+  const MAX_TRAIL = 7
+  const [topTab, setTopTab] = useState('q2plan')
   const d = graph.dashboard
   if (!d) return null
 
   const openNode = useCallback((id) => {
-    if (graph.nodes.find(n => n.id === id)) setOpenNodeId(id)
+    if (!graph.nodes.find(n => n.id === id)) return
+    setTrail(prev => {
+      if (prev[prev.length - 1] === id) return prev
+      const existing = prev.indexOf(id)
+      if (existing !== -1) return prev.slice(0, existing + 1)
+      const next = [...prev, id]
+      return next.length > MAX_TRAIL ? next.slice(next.length - MAX_TRAIL) : next
+    })
   }, [graph])
 
-  const openedNode = openNodeId ? graph.nodes.find(n => n.id === openNodeId) : null
+  const jumpTrail = useCallback((idx) => {
+    setTrail(prev => prev.slice(0, idx + 1))
+  }, [])
+
+  const closeModal = useCallback(() => setTrail([]), [])
+
+  const currentId = trail[trail.length - 1]
+  const openedNode = currentId ? graph.nodes.find(n => n.id === currentId) : null
+  const trailNodes = trail.map(id => graph.nodes.find(n => n.id === id)).filter(Boolean)
 
   return (
     <div className="mc">
@@ -137,17 +286,45 @@ export default function MissionControl({ graph }) {
           <p className="mc-subtitle">Last sync · {new Date(graph.meta.syncedAt).toLocaleDateString()}</p>
         </div>
 
-        {d.thisWeek && (
-          <div className="mc-card glass mc-card-wide mc-thisweek">
-            <CardHeader icon="★" title="This Week" accent={CARD_ACCENTS.thisWeek} />
-            <div
-              className="article-body mc-thisweek-body"
-              onClickCapture={(e) => {
-                const link = e.target.closest('[data-node-id]')
-                if (link) { e.preventDefault(); openNode(link.dataset.nodeId) }
-              }}
-              dangerouslySetInnerHTML={{ __html: renderContent(d.thisWeek, graph.nodes) }}
-            />
+        {(d.thisWeek || (d.strategies && d.strategies.length > 0)) && (
+          <div className="mc-card glass mc-card-wide">
+            <div className="mc-tabs">
+              {d.thisWeek && (
+                <button
+                  className={`mc-tab ${topTab === 'thisweek' ? 'active' : ''}`}
+                  onClick={() => setTopTab('thisweek')}
+                  style={{ '--accent': CARD_ACCENTS.thisWeek }}
+                >
+                  <span className="mc-card-icon" style={{ background: CARD_ACCENTS.thisWeek + '22', color: CARD_ACCENTS.thisWeek }}>★</span>
+                  This Week
+                </button>
+              )}
+              {d.strategies && d.strategies.length > 0 && (
+                <button
+                  className={`mc-tab mc-tab-pulse ${topTab === 'q2plan' ? 'active' : ''}`}
+                  onClick={() => setTopTab('q2plan')}
+                  style={{ '--accent': CARD_ACCENTS.strategy }}
+                >
+                  <span className="mc-card-icon" style={{ background: CARD_ACCENTS.strategy + '22', color: CARD_ACCENTS.strategy }}>◆</span>
+                  Q2 Plan
+                </button>
+              )}
+            </div>
+
+            {topTab === 'thisweek' && d.thisWeek && (
+              <div
+                className="article-body mc-thisweek-body"
+                onClickCapture={(e) => {
+                  const link = e.target.closest('[data-node-id]')
+                  if (link) { e.preventDefault(); openNode(link.dataset.nodeId) }
+                }}
+                dangerouslySetInnerHTML={{ __html: renderContent(d.thisWeek, graph.nodes) }}
+              />
+            )}
+
+            {topTab === 'q2plan' && d.strategies && (
+              <Q2PlanSummary strategies={d.strategies} openNode={openNode} />
+            )}
           </div>
         )}
 
@@ -266,14 +443,30 @@ export default function MissionControl({ graph }) {
             </div>
           </div>
         </div>
+
+        {d.whatIf && (
+          <div className="mc-card glass mc-card-wide mc-whatif">
+            <CardHeader icon="◇" title="What If" accent={CARD_ACCENTS.whatIf} />
+            <div
+              className="article-body mc-whatif-body"
+              onClickCapture={(e) => {
+                const link = e.target.closest('[data-node-id]')
+                if (link) { e.preventDefault(); openNode(link.dataset.nodeId) }
+              }}
+              dangerouslySetInnerHTML={{ __html: renderContent(d.whatIf, graph.nodes) }}
+            />
+          </div>
+        )}
       </div>
 
       {openedNode && (
         <ArticleModal
           node={openedNode}
           graph={graph}
-          onClose={() => setOpenNodeId(null)}
+          onClose={closeModal}
           onOpen={openNode}
+          trail={trailNodes}
+          onJumpTrail={jumpTrail}
         />
       )}
     </div>

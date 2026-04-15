@@ -99,6 +99,10 @@ function buildDashboard(nodes) {
   const thisWeekNode = nodes.find(n => n.id === 'this-week')
   const thisWeek = thisWeekNode ? thisWeekNode.content.replace(/^#[^\n]*\n/, '').trim() : null
 
+  // What If — speculative thesis, rendered at the bottom of Mission Control
+  const whatIfNode = nodes.find(n => n.id === 'what-if')
+  const whatIf = whatIfNode ? whatIfNode.content.replace(/^#[^\n]*\n/, '').trim() : null
+
   // Agents — files in the Agents/ folder (excluding README)
   const agents = nodes
     .filter(n => n.category === 'Agents' && n.id !== 'readme')
@@ -131,7 +135,21 @@ function buildDashboard(nodes) {
     advisors,
     academy: kdaNode ? { status: extractStatus(kdaNode.content) || 'In development', website: 'academy.krackeddevs.com' } : null,
     thisWeek,
+    whatIf,
     agents,
+    strategies: nodes
+      .filter(n => n.category === 'Strategy')
+      .map(n => {
+        const body = n.content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n+/, '').trim()
+        const blurb = body.split(/\n\n/)[0].replace(/\*\*/g, '').replace(/>\s*/g, '').replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, t, l) => l || t).slice(0, 200)
+        return {
+          id: n.id,
+          name: n.name,
+          status: n.status || 'draft',
+          period: n.period || null,
+          blurb,
+        }
+      }),
     graph: { mission: missionNodes.length, research: researchNodes.length, total: nodes.length },
   }
 }
