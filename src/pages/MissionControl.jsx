@@ -331,8 +331,9 @@ function ArticleModal({ node, graph, onClose, onOpen, trail = [], onJumpTrail })
 }
 
 function Q2PlanSummary({ strategies, openNode }) {
+  const parentOp = { title: 'Projects, Tenders & Claw OS Sales', accent: '#ef4444', bullet: 'Run at the Kracked Technologies parent level: project work, tender wins, and Claw OS consultation / workshop / bespoke — one unified outbound.' }
   const pillars = [
-    { n: 1, title: 'Tenders, Projects & Claw OS Sales', accent: '#3b82f6', bullet: 'One unified outbound motion. Project work, tender wins, Claw OS consultation/workshop/bespoke.' },
+    { n: 1, title: 'Kracked Devs', accent: '#3b82f6', bullet: 'Community + Recruitment arm. AI skill scorecards, Recruiter agent, Featured Listings. MYR 15k Q2 target.' },
     { n: 2, title: 'KD Academy', accent: '#be185d', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.' },
     { n: 3, title: 'Kracked Labs', accent: '#7c3aed', bullet: 'No new ventures. Portfolio standardised. Rick drafts Q3 health review.' },
   ]
@@ -365,6 +366,15 @@ function Q2PlanSummary({ strategies, openNode }) {
               <span className="q2plan-doc-arrow">→</span>
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="q2plan-section-label">Parent motion · Kracked Technologies</div>
+      <div className="q2plan-pillar q2plan-parentop" style={{ '--accent': parentOp.accent }}>
+        <span className="q2plan-pillar-n">★</span>
+        <div>
+          <div className="q2plan-pillar-title">{parentOp.title}</div>
+          <div className="q2plan-pillar-bullet">{parentOp.bullet}</div>
         </div>
       </div>
 

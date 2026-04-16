@@ -125,30 +125,542 @@
       "name": "Kracked Technologies",
       "category": "Root",
       "dataset": "mission",
-      "content": "# Kracked Technologies\n\nThe ecosystem for builders who build with AI. Based in Malaysia, building the future of technical excellence in Southeast Asia.\n\n## The Pillars\n\n- [[Kracked Devs]] — The community platform. Where developers gather, compete, earn, and get hired.\n- [[KD Academy]] — The education arm. Malaysia's builder-first education system.\n- [[Kracked Labs]] — The venture builder. Where startups get built and shipped.\n- [[Tenders and Contracts]] — The revenue arm. Government, GLC, and corporate contracts — run by [[Sniper]].\n\n## Quick Links\n\n- [[Team]]\n- [[Products & Projects]]\n- [[Roadmap]]\n",
-      "wordCount": 93,
+      "content": "# Kracked Technologies\n\nThe ecosystem for builders who build with AI. Based in Malaysia, building the future of technical excellence in Southeast Asia.\n\n**Kracked Technologies is the parent umbrella.** It runs the outbound revenue motion directly — projects, tenders, and Claw OS sales to companies — and houses three product pillars beneath it.\n\n## The Three Pillars\n\n- [[Kracked Devs]] — The community platform. Developers gather, compete, earn, and get hired. Includes the Recruitment arm ([[Job Portal Monetisation]]) where companies post jobs and AI-scored developers apply.\n- [[KD Academy]] — The education arm. Malaysia's builder-first education system. Top of the funnel for everything.\n- [[Kracked Labs]] — The venture builder. Where startups get built and shipped.\n\n## Parent-level operations\n\n- **Projects & Tenders** — government, GLC, and corporate contract wins. Run at the Kracked Technologies level; [[Sniper]] scans, CEO pitches. See [[Tenders and Contracts]] for the registry, contractors, and sources.\n- **Claw OS sales** — consultation, workshops, and bespoke deployments of our own AI company brain to external clients. One unified outbound motion with Projects & Tenders.\n\n## Quick Links\n\n- [[Team]]\n- [[Products & Projects]]\n- [[Roadmap]]\n- [[Q2 2026]] — current quarterly strategy\n",
+      "wordCount": 195,
       "links": [
+        "kracked-devs",
+        "job-portal-monetisation",
+        "kd-academy",
+        "kracked-labs",
+        "sniper",
+        "tenders-and-contracts",
+        "team",
+        "products-projects",
+        "roadmap",
+        "q2-2026"
+      ],
+      "linkNames": [
+        "Kracked Devs",
+        "Job Portal Monetisation",
+        "KD Academy",
+        "Kracked Labs",
+        "Sniper",
+        "Tenders and Contracts",
+        "Team",
+        "Products & Projects",
+        "Roadmap",
+        "Q2 2026"
+      ],
+      "path": "Kracked Technologies.md",
+      "connections": 36
+    },
+    {
+      "id": "sea-expansion",
+      "name": "SEA Expansion",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# SEA Expansion\n\nResearch into expanding [[Kracked Technologies]] beyond Malaysia into Southeast Asia, starting with Singapore and Indonesia.\n\n## Why Expand\n\n- [[cofounders]] is already positioned for cross-border founder matching\n- Malaysia sits between Singapore (high cost, high talent) and Indonesia (massive scale)\n- SEA has 700M+ population with rapidly growing developer communities\n- Regional presence strengthens [[Kracked Labs]] deal flow and [[Kracked Devs]] talent pool\n\n## Target Markets\n\n### Singapore\n\n- Mature startup ecosystem, high developer salaries\n- Bridge to global VC funding\n- [[Advisory Board]] gap: need a Singapore-based tech figure\n- [[cofounders]] expansion target\n\n### Indonesia\n\n- 270M population, fastest-growing developer community in SEA\n- Dicoding and BuildWith Angga are local competitors (see [[Competitors]])\n- Massive untapped market for AI education in Bahasa (linguistic similarity to Malay)\n- [[cofounders]] expansion target\n\n## Expansion Models\n\n1. **Community-first** — Launch Kracked Devs chapters in SG/ID, grow organically\n2. **Product-first** — Ship [[cofounders]] and [[Showcase]] to SEA markets, let community follow\n3. **Partnership** — Partner with existing communities (Tech in Asia, e27, Glints) for distribution\n\n## Open Questions\n\n- Which market first — Singapore or Indonesia?\n- Does Kracked Devs' Bahasa content translate to Indonesian market?\n- What's the minimum viable team needed for a regional presence?\n- Can the [[Guild System]] and [[Leaderboard]] work cross-border?\n\n## Related\n\n- [[cofounders]]\n- [[Competitors]]\n- [[Advisory Board]]\n- [[Growth & Marketing]]\n",
+      "wordCount": 229,
+      "links": [
+        "kracked-technologies",
+        "cofounders",
+        "kracked-labs",
+        "kracked-devs",
+        "advisory-board",
+        "cofounders",
+        "competitors",
+        "cofounders",
+        "cofounders",
+        "showcase",
+        "guild-system",
+        "leaderboard",
+        "cofounders",
+        "competitors",
+        "advisory-board",
+        "growth-marketing"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "cofounders",
+        "Kracked Labs",
+        "Kracked Devs",
+        "Advisory Board",
+        "cofounders",
+        "Competitors",
+        "cofounders",
+        "cofounders",
+        "Showcase",
+        "Guild System",
+        "Leaderboard",
+        "cofounders",
+        "Competitors",
+        "Advisory Board",
+        "Growth & Marketing"
+      ],
+      "path": "Research/SEA Expansion.md",
+      "connections": 18
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# Research\n\nResearch and exploration by [[Kracked Technologies]]. This is where we investigate new domains, technologies, and market opportunities before they become active projects or ventures.\n\n## Active Research\n\n- [[AI Native Education]] — AI-first approaches to developer education for [[KD Academy]]\n- [[Malaysia Data Center Boom]] — Hyperscaler investment wave and implications for Kracked\n- [[Defence Tech]] — Defence and government AI opportunities via [[Advisory Board]]\n- [[SEA Expansion]] — Expanding beyond Malaysia into Singapore and Indonesia\n- [[Open Source Strategy]] — Using OSS as a growth engine for [[Kracked Devs]]\n\n## Purpose\n\n- Explore emerging technologies and trends relevant to the Malaysian tech ecosystem\n- Validate ideas before committing resources under [[Kracked Labs]] or [[Kracked Devs]]\n- Build knowledge that strengthens our advisory, education, and venture building arms\n\n## How Research Becomes Action\n\n1. Research notes are created here as exploration\n2. Promising areas get validated with advisors and the [[Team]]\n3. Validated ideas move to [[Projects]] or become [[Kracked Labs]] ventures\n",
+      "wordCount": 164,
+      "links": [
+        "kracked-technologies",
+        "ai-native-education",
+        "kd-academy",
+        "malaysia-data-center-boom",
+        "defence-tech",
+        "advisory-board",
+        "sea-expansion",
+        "open-source-strategy",
+        "kracked-devs",
+        "kracked-labs",
+        "kracked-devs",
+        "team",
+        "projects",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "AI Native Education",
+        "KD Academy",
+        "Malaysia Data Center Boom",
+        "Defence Tech",
+        "Advisory Board",
+        "SEA Expansion",
+        "Open Source Strategy",
+        "Kracked Devs",
+        "Kracked Labs",
+        "Kracked Devs",
+        "Team",
+        "Projects",
+        "Kracked Labs"
+      ],
+      "path": "Research/Research.md",
+      "connections": 16
+    },
+    {
+      "id": "open-source-strategy",
+      "name": "Open Source Strategy",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# Open Source Strategy\n\nResearch into how [[Kracked Technologies]] can leverage open source as a growth engine for [[Kracked Devs]] and [[Kracked Labs]].\n\n## Why Open Source\n\n- Builds credibility and trust in the developer community\n- Creates inbound talent pipeline for [[Kracked Devs]]\n- Drives adoption of tools built by [[Kracked Labs]] ventures\n- Aligns with the builder-first culture — show, don't tell\n\n## Potential Open Source Projects\n\n### Developer Tools\n\n- Bounty board platform (open source the core of [[Bounty Board]])\n- [[Guild System]] framework — reusable community gamification\n- [[Leaderboard]] engine — ranking and reputation system\n\n### AI/Education\n\n- Bilingual (Malay/English) coding exercise datasets\n- AI-assisted code review tools\n- Vibe coding starter templates and frameworks\n\n### Community Infrastructure\n\n- [[Events]] management system\n- [[News Feed]] aggregation engine (\"The Daily Sync\")\n\n## Strategic Questions\n\n- Which projects generate the most community goodwill vs. engineering cost?\n- Do we open source core platform pieces or build separate OSS tools?\n- How do we balance open source contributions with shipping product?\n- Can OSS contributions count toward [[Leaderboard]] and [[Bounty Board]] reputation?\n\n## Related\n\n- [[Kracked Devs]]\n- [[Kracked Labs]]\n- [[Bounty Board]]\n- [[Guild System]]\n- [[Growth & Marketing]]\n",
+      "wordCount": 201,
+      "links": [
+        "kracked-technologies",
+        "kracked-devs",
+        "kracked-labs",
+        "kracked-devs",
+        "kracked-labs",
+        "bounty-board",
+        "guild-system",
+        "leaderboard",
+        "events",
+        "news-feed",
+        "leaderboard",
+        "bounty-board",
+        "kracked-devs",
+        "kracked-labs",
+        "bounty-board",
+        "guild-system",
+        "growth-marketing"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Kracked Devs",
+        "Kracked Labs",
+        "Kracked Devs",
+        "Kracked Labs",
+        "Bounty Board",
+        "Guild System",
+        "Leaderboard",
+        "Events",
+        "News Feed",
+        "Leaderboard",
+        "Bounty Board",
+        "Kracked Devs",
+        "Kracked Labs",
+        "Bounty Board",
+        "Guild System",
+        "Growth & Marketing"
+      ],
+      "path": "Research/Open Source Strategy.md",
+      "connections": 18
+    },
+    {
+      "id": "malaysia-data-center-boom",
+      "name": "Malaysia Data Center Boom",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# Malaysia Data Center Boom\n\nResearch into the 2024–2026 data center investment wave and its implications for [[Kracked Technologies]].\n\n## The Numbers\n\nMicrosoft, Google, AWS, Oracle, and ByteDance have committed tens of billions USD to Malaysian data center infrastructure. This is reshaping Malaysia's position as an ASEAN tech hub (see [[Market Landscape]]).\n\n## Implications for Kracked\n\n### Developer Demand Surge\n\n- Data centers need local engineering talent for operations, cloud services, and adjacent software\n- Creates hiring demand that [[Kracked Devs]] can serve through the [[Job Board]] and [[Bounty Board]]\n- Upskilling opportunity for [[KD Academy]] — cloud infrastructure, DevOps, MLOps curricula\n\n### Venture Opportunities\n\n- Infrastructure-adjacent startups: monitoring, observability, edge computing\n- Data sovereignty and compliance tools for Malaysian enterprises\n- AI inference services leveraging local GPU capacity\n- Potential ventures for [[Kracked Labs]] to explore\n\n### Government Alignment\n\n- Aligns with MyDIGITAL Blueprint target of 22.6% digital economy GDP contribution\n- MDEC incentives (0–10% tax for up to 10 years) available for qualifying tech companies\n- Strengthens the case for [[Advisory Board]] engagement with government agencies\n\n## Open Questions\n\n- How quickly does data center investment translate to local developer job creation?\n- Which specific skills will be in highest demand? (Cloud, networking, security, AI ops?)\n- Can Kracked position itself as a talent pipeline partner to hyperscalers?\n\n## Related\n\n- [[Market Landscape]]\n- [[Advisory Board]]\n- [[Kracked Labs]]\n- [[KD Academy]]\n",
+      "wordCount": 234,
+      "links": [
+        "kracked-technologies",
+        "market-landscape",
+        "kracked-devs",
+        "job-board",
+        "bounty-board",
+        "kd-academy",
+        "kracked-labs",
+        "advisory-board",
+        "market-landscape",
+        "advisory-board",
+        "kracked-labs",
+        "kd-academy"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Market Landscape",
+        "Kracked Devs",
+        "Job Board",
+        "Bounty Board",
+        "KD Academy",
+        "Kracked Labs",
+        "Advisory Board",
+        "Market Landscape",
+        "Advisory Board",
+        "Kracked Labs",
+        "KD Academy"
+      ],
+      "path": "Research/Malaysia Data Center Boom.md",
+      "connections": 14
+    },
+    {
+      "id": "defence-tech",
+      "name": "Defence Tech",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# Defence Tech\n\nResearch into defence and government technology opportunities, connected to [[Advisory Board]] member Major Dr. Surenthiran Krishnan's expertise in AI and the Malaysian Army.\n\n## Context\n\nMalaysia's military and government agencies are increasingly interested in AI applications. Dr. Surenthiran holds a PhD in AI and bridges the gap between military/government and deep tech. This is an area [[Kracked Labs]] could explore for venture building.\n\n## Potential Areas\n\n### AI for Defence\n\n- Computer vision for surveillance and reconnaissance\n- Natural language processing for intelligence analysis (Malay + English)\n- Predictive maintenance for military equipment\n- Cybersecurity and threat detection\n\n### Government Digital Services\n\n- Citizen-facing AI tools (e.g. chatbots for government services)\n- Document processing and automation for public sector\n- Smart city infrastructure (related to [[MYpeta]] and [[Masjid OS]] concepts)\n\n### Dual-Use Opportunities\n\n- Technology that serves both defence and civilian markets\n- Lower regulatory barriers for civilian applications\n- Defence credibility opens doors for government contracts\n\n## Considerations\n\n- Security clearances and compliance requirements\n- Long sales cycles in government procurement\n- Need for Malaysian-owned IP (not foreign-dependent)\n- Ethical frameworks for AI in defence\n\n## Next Steps\n\n- Explore with Dr. Surenthiran what specific use cases the military is actively seeking\n- Identify if there are existing government RFPs or tenders Kracked could respond to\n- Assess whether a defence-focused venture fits [[Kracked Labs]]' current capacity\n\n## Related\n\n- [[Advisory Board]]\n- [[Kracked Labs]]\n- [[Venture Playbook]]\n",
+      "wordCount": 242,
+      "links": [
+        "advisory-board",
+        "kracked-labs",
+        "mypeta",
+        "masjid-os",
+        "kracked-labs",
+        "advisory-board",
+        "kracked-labs",
+        "venture-playbook"
+      ],
+      "linkNames": [
+        "Advisory Board",
+        "Kracked Labs",
+        "MYpeta",
+        "Masjid OS",
+        "Kracked Labs",
+        "Advisory Board",
+        "Kracked Labs",
+        "Venture Playbook"
+      ],
+      "path": "Research/Defence Tech.md",
+      "connections": 12
+    },
+    {
+      "id": "ai-native-education",
+      "name": "AI Native Education",
+      "category": "Research",
+      "dataset": "mission",
+      "content": "# AI Native Education\n\nResearch into AI-first approaches to developer education for [[KD Academy]] and the broader [[Kracked Technologies]] ecosystem.\n\n## Context\n\nTraditional coding bootcamps in Malaysia show 20–50% completion rates with poor employment outcomes (see [[Market Landscape]]). AI-native education is a fundamentally different approach — not \"add AI to existing curriculum\" but \"rebuild education assuming AI tools are the default.\"\n\n## Key Questions\n\n- What does a curriculum look like when students use AI copilots from day one?\n- How do you assess skills when AI can write code?\n- What skills become more valuable vs. less valuable?\n- How does this intersect with [[Competitors]] like 42 KL, Sigma School, and NEXT Academy?\n\n## Vibe Coding as Pedagogy\n\n\"Vibe coding\" — using AI tools to ship products without deep syntax mastery — may be the entry point that gets non-technical builders into the ecosystem. This could be [[KD Academy]]'s unique differentiator in the Malaysian market.\n\n### Open Questions\n\n- Can vibe coding be a legitimate first step toward deeper technical skills?\n- What's the failure mode? (Shallow understanding, debugging inability?)\n- How do we design a progression: vibe coder → junior dev → builder?\n\n## Bahasa Malaysia Content Gap\n\nAlmost no quality tech education content exists in Malay (see [[Competitors]]). This is both a market gap and a research question — how do you produce high-quality bilingual technical content at scale?\n\n## Related\n\n- [[KD Academy]]\n- [[Market Landscape]]\n- [[Competitors]]\n",
+      "wordCount": 242,
+      "links": [
+        "kd-academy",
+        "kracked-technologies",
+        "market-landscape",
+        "competitors",
+        "kd-academy",
+        "competitors",
+        "kd-academy",
+        "market-landscape",
+        "competitors"
+      ],
+      "linkNames": [
+        "KD Academy",
+        "Kracked Technologies",
+        "Market Landscape",
+        "Competitors",
+        "KD Academy",
+        "Competitors",
+        "KD Academy",
+        "Market Landscape",
+        "Competitors"
+      ],
+      "path": "Research/AI Native Education.md",
+      "connections": 10
+    },
+    {
+      "id": "q2-2026",
+      "name": "Q2 2026",
+      "category": "Strategy",
+      "dataset": "mission",
+      "content": "\n# Q2 2026 Strategy — Kracked Technologies\n\n**11 weeks. Build Claw OS, sell Claw OS, feed the funnel.**\n\n> Product name **Claw OS**. Positioning: **\"AI company brain — infra before growth.\"** We sell the operational backbone a company needs *before* it tries to scale, not a tool that promises to 10x anything. Malay-name variant (e.g. Cakar OS) still open.\n\n## The thesis\n\nKracked Technologies has four pillars and one secret weapon. The secret weapon is **Claw OS** — the agent-powered Company Brain ([[Itachi]] + [[Alfred]] + [[Sniper]] + [[Scout]] + [[Rick]] + [[Xavier]]) we're building for ourselves this quarter.\n\nQ2 turns Claw OS into a dual-use asset:\n- **Internally** — it runs Kracked's operations so the team scales without adding headcount.\n- **Externally** — we sell it to companies as **consultation + workshops + bespoke deployments**. That revenue funds everything else.\n\n## Structure\n\n**Kracked Technologies** is the parent. It runs **Projects, Tenders & Claw OS sales** directly at the parent level — the Q2 revenue motion. Three pillars sit beneath:\n\n| Pillar | Q2 job |\n|---|---|\n| **[[Kracked Devs]]** | Grow the community + launch the Recruitment arm (AI Recruiter agent + skill scorecards + Featured Listings). |\n| **[[KD Academy]]** | 12 Vibe Coding 101 sessions, 3–5 paid tutors, 3× Discord signup growth. Top of every funnel. |\n| **[[Kracked Labs]]** | No new ventures. Standardise portfolio. Rick drafts Q3 health review. |\n\n### Parent-level Q2 motion — Projects, Tenders & Claw OS sales *(primary)*\n\nOne unified outbound pipeline, three sellable shapes:\n- **(a) Project work** — bespoke builds for clients.\n- **(b) Tender wins** — gov / GLC / corporate contracts via [[Sniper]].\n- **(c) Claw OS deployments** — consultation, workshop, or bespoke deployments of our AI company brain.\n\nEvery discovery conversation qualifies into whichever shape fits. Use Claw OS itself to automate the hunt.\n\n## The underlying spine — build Claw OS\n\nClaw OS is the operational backbone. If we don't ship it, everything above gets harder.\n\n### Compressed timeline — internal Claw OS live by April 30 *(CEO directive, 2026-04-15)*\n\n15 days from today. Aggressive but doable with focused build.\n\n- **Sprint 1 (Apr 15–22):** [[Itachi]] chat interface with vault read/search. Pending Approvals card stub on Mission Control. CEO can ask grounded questions against the vault and see citations.\n- **Sprint 2 (Apr 23–30):** Two tracks in parallel:\n  - *Ingestion track:* Daily-update submission form (CEO-only to start) + approve-to-commit pipeline writing to the local vault. `sync.mjs` re-runs on every approved write.\n  - *Agent track:* first Claw OS-style agent running live — [[Sniper]] in dry-run mode against Projects & Tenders. One or two seed sources (e.g. MyProcurement + one corporate RFP feed), scores a handful of opportunities against a stub [[Capabilities]] note, drafts tender entries into `Deals/`, surfaces them on the Pending Approvals card alongside the CEO's own updates. Purpose: prove the agent pattern works end-to-end before we generalise it.\n  - Internal Claw OS live by Apr 30 with **both** a human update path and a first agent writing proposals.\n- **Phase 2 (May 1–Jun 30):** Productisation + polish. Pitch deck to v1, consultation SKU ready, outbound starts. Team form rolled out. [[Sniper]] + [[Scout]] Phase 1 seeded. Morning briefing. First external demos.\n- **By June 30:** CEO running Kracked through Claw OS daily. Claw OS is demo-able to paying clients.\n\n### What gets cut to hit April 30\n\nThe 15-day target only works by deferring everything non-essential:\n\n- **Clerk auth** — internal-only MVP uses a shared token or IP allowlist. Real auth lands in May.\n- **GitHub API commits** — write directly to the local vault filesystem on the CEO's machine; git commit + push run locally. Production-safe writes deferred.\n- **Postgres + pgvector** — skip. Use in-memory keyword search over `graph.json` for Itachi's retrieval. Embeddings layer in May.\n- **Team rollout** — Sprint 2 is CEO-only. Wider team form is a May deliverable.\n- **LLM suggestion engine** — MVP approval card starts with **manual edits only** (CEO types the diff). Claude-proposed diffs land in May as a stretch add.\n\n### What this means for staffing — decide this week\n\n**Non-negotiable:** one person full-time on build for 15 days, or two part-time. If it's the CEO solo in evenings, April 30 slips to mid-May and something else on this quarter's list slips to compensate. This is the biggest schedule risk in the whole plan.\n\n**Productisation track, in parallel:**\n- **Claw OS Deck (v0)** — a 10–15 slide pitch deck with live demo screenshots. Ready by end of May.\n- **Claw OS Consultation SKU** — 2–4 week discovery + brain-architecture design engagement. Priced and packaged by end of May.\n- **Claw OS Workshop SKU** — \"Build your company brain in a day\" — corporate workshop format. Ready as a v1 offering by end of June.\n- **Claw OS Bespoke SKU** — full deployment package (discovery → build → handover → retainer). Priced and packaged by end of June. First paid deployment targeted Q3.\n\n## Parent operation — Tenders, Projects & Claw OS sales *(primary)*\n\nRun by [[Sniper]] (automation) + CEO (pitching).\n\n### Projects\n- **Seed contractor registry.** CEO provides 10–15 main contractors + known contacts in April. Placed into `Contractors/` (scaffold folder when seeding starts).\n- **Source list confirmed.** Day-one portals for Sniper: MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, plus 2–3 corporate RFP feeds.\n- **[[Capabilities]].md** written — the machine-readable profile of what Kracked delivers (including Claw OS). Sniper scores opportunities against this.\n- **Sniper Phase 1 (dry-run) by end of May** — scanning + drafting tender notes into `Deals/`, but not acting autonomously.\n- **Target:** 3 live tender applications submitted by June 30 (paid workshops, gov-tech projects, or Claw OS deployments).\n\n### Claw OS sales motion\n- **Positioning:** \"AI company brain — infra before growth.\" We sell to leaders who feel operational chaos and know they need a backbone *before* they try to scale. Not a productivity-booster pitch.\n- **The buyer pain** the pitch leads with: \"Your leadership team spends hours every week chasing status, updating decks, and trying to remember what was decided. Claw OS is the shared memory your company should already have.\"\n- **Target buyer segments:** Malaysian GLCs, mid-size corporates going through AI transformation, government agencies, military, family offices / investment holding companies.\n- **One unified outbound motion.** Every discovery conversation qualifies into a project, a tender path, or a Claw OS engagement — whichever fits their pain.\n- **Outbound via warm network** — CEO + Adam + Zarul identify 10 initial conversations from existing relationships. Lead with the consultation SKU (cheapest entry, highest information value).\n- **Inbound via content** — every Vibe Coding 101 episode subtly surfaces \"this is how we work with Claw OS.\" YouTube becomes the top of funnel for Claw OS buyers too.\n- **Q2 targets:**\n  - 10 discovery conversations held.\n  - 2 paid consultation engagements signed (any of: bank, telco, government agency, GLC).\n  - 1 bespoke deployment in the pipeline with clear close path into Q3.\n  - 1 corporate workshop booked (can overlap with KD Academy paid-workshop goal).\n\n## Pillar — Kracked Devs *(community + recruitment)*\n\nRun by Irfan + team (platform), [[Sniper]]-style Recruiter agent (outreach once live).\n\n- **Recruitment arm launch.** See [[Job Portal Monetisation]] — AI Recruiter agent does outbound to hiring companies; developers build AI-scored portfolios via [[Showcase]] + [[Bounty Board]].\n- **AI skill scorecards** live on developer profiles by end of June.\n- **First Featured Listings + Sponsored Bounties** — MYR 15k Q2 revenue target from Kracked Devs alone.\n- **Community growth** — from YouTube + KD Academy, target 3× Discord signup growth.\n- **Site-polish sprint** — clean up public onboarding flow so new signups from YouTube land well. Two-week sprint, one owner.\n\n## Pillar — KD Academy *(growth)*\n\nRun by Xavier (once live) + Adam, Zarul, Irfan (humans driving the work).\n\n- **Vibe Coding 101** — weekly YouTube live + recorded session. **Goal: 12 sessions published by June 30.** Starts ASAP (next session this week).\n- **Syllabus v1** completed and published by end of April.\n- **Tutor onboarding** — trial → paid-per-lesson pipeline running by end of May. 3–5 tutors live by end of June.\n- **Online learner count** — set baseline this week (current Discord + Academy signups), target 3x growth by end of June. Top-of-funnel metric.\n- **Unpaid pilots (secondary school + university)** — complete delivery, capture as case studies by end of May. Case-study artefact format agreed upfront.\n- **Ambassadors** — 4 → 8 active by end of June with tracked KPIs.\n\n## Pillar — Kracked Labs *(assemble)*\n\nRun by [[Rick]] (once live).\n\n- **No new ventures this quarter.**\n- **Portfolio standardisation** — every venture note ([[rotican.ai]], [[cofounders]], [[JomKopi]], [[JomQR]], [[MYpeta]], [[Masjid OS]], [[Burhan]]) gets the standard frontmatter by end of April.\n- **Weekly portfolio digest** live by end of May. Rick drafts; CEO reviews.\n- **Venture leads report weekly** via the Daily Update System once it's live.\n- **End of quarter:** Rick drafts a portfolio health review — double down / hold / sunset recommendations for Q3 planning.\n\n## Funnel logic (why this order works)\n\n```\n     KD Academy (learners)\n           │\n           ▼\n     Kracked Devs (community)\n           │\n           ▼\n    ┌──────┴──────┐\n    ▼             ▼\nKracked Labs    Tenders & Projects + Claw OS sales\n(founders)      (revenue)\n```\n\nKD Academy + YouTube are the top of every funnel — for future tutors, future founders, future workshop attendees, AND future Claw OS customers. If we don't grow that, the bottom starves. That's why KD Academy is Priority 2 despite T&C being Priority 1 — the revenue flows, the funnel feeds.\n\n## Top-level metrics (review weekly with [[Itachi]])\n\n| Metric | Baseline | Q2 target |\n|---|---|---|\n| YouTube sessions published | 1 | 12 |\n| Discord signups from YouTube | TBD | 200 |\n| Paid tutors onboarded | 0 | 3–5 |\n| Case studies published | 0 | 2 (from unpaid pilots) |\n| Active ambassadors | 4 | 8 |\n| Claw OS discovery conversations | 0 | 10 |\n| Paid Claw OS consultation engagements | 0 | 2 |\n| Paid workshops booked (any kind) | 0 | 1+ |\n| Tender applications submitted | 0 | 3 |\n| Contractors seeded | 0 | 10–15 |\n| Claw OS build — phases shipped | 0 | Phase 0 + 1 + start Phase 2 |\n\n## Week-by-week execution\n\nDates are week-starting Mondays. Every week has one meta-deliverable in bold.\n\n### Week 1 · Apr 14 *(we are here — Claw OS Sprint 1)*\n- **Itachi goes live — CEO can ask the vault questions.**\n- Day 1–2: lock naming call (Claw OS vs Cakar OS), pricing anchors, engineering capacity.\n- Day 3–5: Itachi chat endpoint wired to vault read + keyword search, grounded-answer prompt with citations.\n- Day 5–7: Pending Approvals card stub on Mission Control (empty state OK).\n- In parallel: Vibe Coding 101 session #2 live on YouTube. Unpaid workshop case-study template agreed.\n\n### Week 2 · Apr 21 *(Claw OS Sprint 2)*\n- **Internal Claw OS live by Apr 30 — human updates AND first agent running.**\n- Day 1–3: Daily-update submission form (CEO-only), writes to KV.\n- Day 3–5: Approve-to-commit pipeline — CEO reviews diff, approves, local vault file updates, `sync.mjs` re-runs.\n- Day 4–6: **First Claw OS agent live — [[Sniper]] dry-run on Tenders & Projects.** 1–2 seed sources, scores opportunities against stub [[Capabilities]], drafts tender notes into `Deals/` for CEO approval on the same Pending Approvals card.\n- Day 7: Smoke test — one real CEO standup + one Sniper-drafted tender submitted through Claw OS, deployed to production URL behind shared token.\n- In parallel: pitch deck v0 sharpened. Pricing confirmed across three SKUs. Contractor registry: 10–15 seeded. Vibe Coding 101 session #3.\n\n### Week 3 · Apr 28\n- **Outbound motion starts — Claw OS internal is live.**\n- First 3 discovery conversations scheduled from the warm list (we can now demo live).\n- Daily Update System extended: team-wide rollout begins.\n- Syllabus v1 published.\n- Vibe Coding 101 session #4.\n- Ventures frontmatter done; Rick's Portfolio.md stub created.\n\n### Week 4 · May 5\n- **Pitch deck visually designed.**\n- Deck v1 with graphics, real Mission Control screenshots, case-study anecdote.\n- Daily Update System: submission form + KV storage shipped (behind auth).\n- Discovery conversations: 5 done cumulatively.\n- Vibe Coding 101 session #5.\n- Tutor outreach begins — 5 candidates contacted.\n\n### Week 5 · May 12\n- **First paid consultation proposal sent.**\n- At least one discovery converts to proposal.\n- Daily Update System: Pending Approvals card live on Mission Control.\n- Vibe Coding 101 session #6.\n- First tutor trial session scheduled.\n\n### Week 6 · May 19\n- **Claw Phase 1 walking skeleton complete.**\n- Team can submit updates; CEO can approve; vault commits land; `sync.mjs` re-runs.\n- Dogfooding starts internally.\n- Unpaid pilot workshops: both delivered, case studies drafted.\n- Vibe Coding 101 session #7.\n- Discovery conversations: 8 cumulatively.\n\n### Week 7 · May 26\n- **First consultation engagement signed** *(target; slippage acceptable into June).*\n- Sniper Phase 1 dry-run scans begin (manual sources).\n- Daily Update System extended — team form rolled out to full team.\n- Vibe Coding 101 session #8.\n- Tutor pipeline: 2 paid trial lessons delivered.\n\n### Week 8 · Jun 2\n- **Case studies published.**\n- Two unpaid-pilot case studies written up for sales material.\n- Morning Briefing card live on Mission Control (Alfred Phase 2 start).\n- Vibe Coding 101 session #9.\n- Claw OS Workshop SKU packaged and priced.\n\n### Week 9 · Jun 9\n- **Second consultation signed; first workshop booked.**\n- Pipeline: bespoke deployment in advanced discussion.\n- Scout Phase 1 manual seed watchlist running.\n- Vibe Coding 101 session #10.\n- Tutor pipeline: 3–5 tutors active, per-lesson pay flowing.\n\n### Week 10 · Jun 16\n- **Tender applications submitted.**\n- 2–3 live tender applications out the door (paid workshops, gov-tech projects, or Claw OS deployments).\n- Ambassadors: 8 active, KPIs tracked.\n- Vibe Coding 101 session #11.\n- Rick drafts the Q3 portfolio health review.\n\n### Week 11 · Jun 23\n- **Q2 wrap + Q3 kickoff.**\n- Vibe Coding 101 session #12 — the cadence milestone.\n- Quarterly review with Itachi — metrics vs targets, what we learned, what to change.\n- Q3 strategy doc drafted.\n- Bespoke deployment: closed or qualified out for Q3.\n\n---\n\n## Top 10 initiatives (ordered by priority)\n\n1. **Stand up Itachi (Claw OS Phase 0)** — so strategy, build, and coordination run through the brain from week one.\n2. **Vibe Coding 101 weekly cadence** — session #2 this week, then weekly.\n3. **Claw OS pitch deck v0** — needed to sell anything. End of May.\n4. **Claw OS consultation SKU** — packaged, priced, sellable. End of May.\n5. **Daily Update System walking skeleton** — Phase 1 of Claw OS. By end of May.\n6. **CEO outbound: 10 warm discovery conversations.** Start this month.\n7. **Contractor registry seed** — CEO writes 10–15 primes this week.\n8. **Syllabus v1 + tutor pipeline** — Adam, Zarul, Irfan own. End of April and end of May respectively.\n9. **Unpaid-pilot case studies** — template + capture-as-you-go. End of May.\n10. **Portfolio standardisation in Ventures/** — frontmatter on all 7 venture notes. End of April.\n\n## Explicit non-goals for Q2\n\n- No new ventures under Kracked Labs.\n- No Claw OS SaaS build — bespoke + consultation + workshops only. SaaS is a Q4+ decision if at all.\n- No major Kracked Devs platform features — one site-polish sprint max.\n- No expansion outside Malaysia.\n- No advisor onboarding push.\n\n## Risks to watch\n\n- **Claw OS build slipping.** Building the tool while using it to do the work is the classic trap. Mitigation: protect two focused days/week for Claw OS work; Itachi owns the build log.\n- **Sales cycle longer than the quarter.** Malaysian corporate / GLC sales cycles can easily be 3–6 months. Two signed consultations by end of June is ambitious. Mitigation: start outbound in April, not May. Accept that some of the funnel closes in Q3.\n- **Vibe Coding cadence slipping.** If sessions miss weekly, the top of funnel erodes for every pillar. Mitigation: [[This Week]] tracks it; Itachi flags in every weekly review.\n- **CEO bottleneck.** Approvals + outbound sales + Claw OS architecture + weekly briefings all route through Danial. Mitigation: identify one lieutenant per workstream; delegate execution, keep final sign-off.\n- **Claw OS pitch falls flat.** Companies don't buy \"a brain\" — they buy a specific pain relieved. Mitigation: the pitch deck must lead with a concrete pain (e.g. \"your exec team spends 6 hours a week updating status — here's how Claw OS does it automatically, with your CEO approving each write\").\n\n## Decisions the CEO needs to lock this week\n\n1. **Lock the Malay-variant call.** Keep \"Claw OS\" as-is, or switch to Cakar OS / Taring OS / another variant? Blocks domains, deck design, and any external mention.\n2. **Claw OS pricing anchors.** Rough price point for consultation (MYR 30k? 80k?) and bespoke (MYR 250k+?). We can refine, but need a starting number.\n3. **Outbound list.** The 10 warm contacts for discovery conversations — CEO writes the list this week.\n4. **Contractor seed list.** 10–15 primes + known contacts.\n5. **Kracked Devs site polish owner.** Two-week sprint; who runs it?\n6. **Claw OS build engineering capacity.** Danial solo evenings, or one dedicated builder? This is the biggest schedule risk.\n\n## Open strategic questions (for [[Itachi]])\n\n**Decided 2026-04-15:**\n- ✅ Positioning: **AI company brain, infra before growth.**\n- ✅ Product name: **Claw OS** (Malay variant e.g. Cakar OS still on the table).\n- ✅ Outbound motion runs at the Kracked Technologies parent level (not a sub-pillar). Tenders, Projects, and Claw OS sales as one unified pipeline. Three pillars beneath: Kracked Devs, KD Academy, Kracked Labs.\n\n**Still open:**\n- **Malay naming variant.** Commit to \"Claw OS\" as-is, or localise (Cakar OS, Taring OS, etc.)? Affects domains + branding.\n- **OSS question.** Is there an \"Open Claw\" edition — open-source core, paid services layered on top? Deferred to Q3 decision.\n- **Team shape if Q2 revenue lands.** First hire — BD/sales? Claw OS engineer? Tutor coordinator?\n\n## Related\n\n- [[This Week]] — weekly execution; ladders up to this quarter\n- [[Itachi]] — stewards this quarter's execution, runs weekly check-ins with CEO\n- [[Company Brain - Architecture]] — the Claw OS architecture (rename target once product name confirmed)\n- [[Daily Update System - Plan]] — Claw OS Phase 1\n- [[Kracked Technologies]] — parent; four-pillar frame\n- [[Alfred]], [[Sniper]], [[Scout]], [[Rick]], [[Xavier]] — the agents inside Claw OS\n",
+      "wordCount": 3099,
+      "links": [
+        "itachi",
+        "alfred",
+        "sniper",
+        "scout",
+        "rick",
+        "xavier",
         "kracked-devs",
         "kd-academy",
         "kracked-labs",
-        "tenders-and-contracts",
         "sniper",
-        "team",
-        "products-projects",
-        "roadmap"
+        "itachi",
+        "sniper",
+        "capabilities",
+        "sniper",
+        "scout",
+        "sniper",
+        "capabilities",
+        "sniper",
+        "job-portal-monetisation",
+        "showcase",
+        "bounty-board",
+        "rick",
+        "rotican-ai",
+        "cofounders",
+        "jomkopi",
+        "jomqr",
+        "mypeta",
+        "masjid-os",
+        "burhan",
+        "itachi",
+        "sniper",
+        "capabilities",
+        "this-week",
+        "itachi",
+        "this-week",
+        "itachi",
+        "company-brain-architecture",
+        "daily-update-system-plan",
+        "kracked-technologies",
+        "alfred",
+        "sniper",
+        "scout",
+        "rick",
+        "xavier"
+      ],
+      "linkNames": [
+        "Itachi",
+        "Alfred",
+        "Sniper",
+        "Scout",
+        "Rick",
+        "Xavier",
+        "Kracked Devs",
+        "KD Academy",
+        "Kracked Labs",
+        "Sniper",
+        "Itachi",
+        "Sniper",
+        "Capabilities",
+        "Sniper",
+        "Scout",
+        "Sniper",
+        "Capabilities",
+        "Sniper",
+        "Job Portal Monetisation",
+        "Showcase",
+        "Bounty Board",
+        "Rick",
+        "rotican.ai",
+        "cofounders",
+        "JomKopi",
+        "JomQR",
+        "MYpeta",
+        "Masjid OS",
+        "Burhan",
+        "Itachi",
+        "Sniper",
+        "Capabilities",
+        "This Week",
+        "Itachi",
+        "This Week",
+        "Itachi",
+        "Company Brain - Architecture",
+        "Daily Update System - Plan",
+        "Kracked Technologies",
+        "Alfred",
+        "Sniper",
+        "Scout",
+        "Rick",
+        "Xavier"
+      ],
+      "path": "Strategy/Q2 2026.md",
+      "type": "strategy",
+      "quarter": "Q2-2026",
+      "period": "2026-04-15 → 2026-06-30",
+      "status": "draft",
+      "owner": "danial",
+      "connections": 45
+    },
+    {
+      "id": "job-portal-monetisation",
+      "name": "Job Portal Monetisation",
+      "category": "Strategy",
+      "dataset": "mission",
+      "content": "\n# Job Portal Monetisation — Kracked Devs\n\n**Turn the Job Board into a revenue line by automating outbound to hiring companies and pulling developers in through portfolio-building.**\n\n[[Kracked Devs]] already has 979 job listings, 1,190 developers, 30+ showcase projects. The Job Board is live but passive. This plan makes it active on both sides.\n\n## The two-sided loop\n\n```\n        Companies                          Developers\n            │                                   │\n  (AI agent outreach)              (Sign up → Build portfolio)\n            │                                   │\n            ▼                                   ▼\n      Post a job ─────► Kracked Devs ◄───── Ship projects\n                            │                   │\n                            ▼                   ▼\n                    Shortlist ──────► Hire (paid conversion)\n```\n\n## The developer side (supply)\n\n**Goal:** every developer who signs up has shipped at least one project, publicly, before they apply to anything.\n\n- **Portfolio-first onboarding.** Signup flow nudges toward the Showcase before the Job Board. Empty-profile applications are de-prioritised.\n- **Project-as-proof.** Developers post projects (built via [[KD Academy]] workshops, [[Bounty Board]] tasks, or personal builds). Projects become the résumé.\n- **Verification.** GitHub integration validates actual commits. Showcase badges for shipped projects.\n- **Leaderboard feeds application.** Companies browsing candidates see ranked builders with real output, not just CVs.\n\nThe existing 30+ projects prove the flow works. Goal this quarter: **3× that by growing Showcase through KD Academy cohort outputs.**\n\n### AI skill assessment *(new)*\n\nEvery developer profile gets an AI-generated skill scorecard — the thing companies actually want when hiring.\n\n- **Inputs:** GitHub commit history, Showcase projects, Bounty Board completions, KD Academy cohort outcomes, guild activity.\n- **Outputs per developer:**\n  - **Skill vector** — scored strengths across a standard taxonomy (e.g. React: 0.8, Postgres: 0.4, AI/LLM: 0.6, systems design: 0.3).\n  - **Shipping signal** — cadence of real output; \"ships every 2 weeks on average.\"\n  - **Verification flags** — GitHub-verified, bounty-verified, cohort-verified.\n  - **One-paragraph summary** — human-readable, grounded, cited to specific projects. No hype.\n- **Refreshes weekly** from new activity.\n- **Governance** — developer can contest or hide the scorecard; CEO approves the assessment template before any score goes public.\n- **How companies see it:** the scorecard is what's shown in shortlists and Developer Directory, not just a CV. Makes the \"0% fees, 48-hour shortlist\" pitch concrete.\n\nBuilt by a new sub-flow in Claw OS — scoring runs on Haiku (cheap, high-volume), summary generation on Sonnet. Reuses the same prompt-caching + approval-layer pattern as the other agents.\n\n## The company side (demand)\n\n**Goal:** AI agent does the cold outreach Kracked has no time to do manually.\n\n### The outbound agent — \"Recruiter\" *(new agent, or extend [[Sniper]])*\n\nRuns a continuous outbound motion:\n1. **Target list** — Malaysian tech-hiring companies. Seed from public job boards (Jobstreet, LinkedIn, Indeed), GLC HR pages, startup lists.\n2. **AI lead scoring** — each candidate company passed through a scoring pass before a human sees it:\n   - **Fit score** — how well Kracked Devs' talent pool matches their open roles (cross-references the skill vectors from the developer side).\n   - **Intent signal** — are they actively posting jobs, funded, hiring trend (e.g. 5+ open roles on LinkedIn in the last 30 days)?\n   - **Reachability** — do we have a named contact, warm intro path, or only cold-email?\n   - **Pitch angle** — auto-drafted one-liner tailored to their specific hiring gap (\"You've been hiring React for 3 months — here are 12 verified React builders ready tomorrow\").\n   - **Output:** a ranked lead list the CEO reviews weekly. Low-score leads drop silently; high-score leads get drafted into outbound emails.\n3. **Qualification** — cross-reference against Kracked Devs' current skill pool (what can our 1,190 devs deliver?). Only contact companies whose open roles we can actually fill.\n3. **Personalised pitch** — for each target: \"You're hiring a React engineer. Kracked Devs has 40 verified React builders in KL with shipped projects. Here are the top 5 public profiles. Post your role, get a 48-hour shortlist, zero fees.\"\n4. **Drafts emails and LinkedIn messages** — never auto-sends. CEO / BD approves before anything goes out.\n5. **Follow-up cadence** — 3-touch sequence, measured open / reply / post conversion.\n\nThis reuses Claw OS's approval layer and agent infrastructure. Likely the smallest net-new agent build because Sniper's architecture maps directly.\n\n## The monetisation wedge\n\nThe platform is currently **0% fees** (see [[Kracked Devs]] \"For Companies\" table). That's a positioning choice, not a law. Three paths to revenue without breaking the promise:\n\n1. **Featured job listings** — companies pay to surface roles at the top of the board. Keeps base listings free. Est. MYR 500–2000 per featured post.\n2. **Premium company accounts** — bulk posting, direct candidate DMs, access to the developer directory filter-view. Est. MYR 1–5k / month.\n3. **Placement success fees** — opt-in model: companies pay a flat fee (not %) when they hire through Kracked Devs. Est. MYR 3–10k per hire, dwarfed by traditional 20–30% agency cost. Opt-in keeps the \"0% fees\" headline intact.\n4. **Sponsored bounties** — companies post paid bounties (live on [[Bounty Board]]) as low-commitment try-before-hire. Kracked Devs takes a platform fee on bounty payouts.\n\n**Recommendation:** lead with **Featured Listings** + **Sponsored Bounties** in Q2 (low-friction, low-commitment for companies), layer Placement Fees in Q3 once volume justifies the negotiation work.\n\n## Q2 targets *(through Jun 30)*\n\n| Metric | Baseline | Q2 target |\n|---|---|---|\n| Developers with ≥1 Showcase project | 30 | 100 |\n| Developers with AI skill scorecard live | 0 | 300 |\n| Leads AI-scored | 0 | 500 |\n| Companies actively hiring on Kracked Devs | TBD | 20 |\n| Paid Featured Listings | 0 | 10 |\n| Sponsored Bounties posted | existing | 5 new |\n| Recruiter agent outbound emails drafted | 0 | 200 |\n| Recruiter-driven job posts landed | 0 | 15 |\n| Revenue from Job Portal | 0 | MYR 15k |\n\n## Build plan\n\n### Phase 1 · Weeks 1–2 *(through Apr 30)*\n- Land inside the Claw OS Sprint 2 work: add Recruiter as a second agent alongside [[Sniper]].\n- Source list: top 200 Malaysian tech-hiring companies.\n- One outbound template. Manual send by CEO for first week (before approval UI).\n\n### Phase 2 · Weeks 3–6 *(May)*\n- Recruiter drafts 50 emails / week into Pending Approvals card.\n- Featured Listings SKU packaged. Price set. Sold manually (no payment UI yet).\n- KD Academy cohorts pushed to publish Showcase projects as part of workshop exit criteria.\n- First 3 paid Featured Listings signed.\n\n### Phase 3 · Weeks 7–11 *(June)*\n- Sponsored Bounties flowing — first 5 paid bounties posted.\n- Developer-side: Showcase count passes 100.\n- Premium Company SKU packaged (stretch).\n- Monthly revenue rhythm established.\n\n## Decisions needed before build starts\n\n1. **New agent, or extend Sniper?** Recruiter is sales-adjacent; Sniper is tender-adjacent. I lean: new agent (\"Recruiter\") with shared infrastructure. Same approval layer, same Pending Approvals card.\n2. **Pricing.** MYR anchors above are guesses. CEO confirms.\n3. **Free tier boundary.** Free jobs stay unlimited, or free tier capped at X posts/month?\n4. **Who runs outreach in week 1** (before approval UI exists)? CEO? Adam? Zarul?\n5. **Who owns Showcase push inside KD Academy cohorts?** Likely Xavier domain once live; Irfan in the meantime.\n6. **Payment infrastructure.** Stripe already wired on Kracked Devs, or is this net-new? Affects Phase 2 timeline.\n\n## Related\n\n- [[Kracked Devs]] — the platform this monetises\n- [[Job Board]] — the existing surface\n- [[Showcase]] — the portfolio side\n- [[Bounty Board]] — Sponsored Bounties path\n- [[Sniper]] — architecturally closest agent\n- [[Q2 2026]] — parent quarterly plan\n- [[KD Academy]] — feeds Showcase projects\n- [[Company Brain - Architecture]] — shared agent infra\n",
+      "wordCount": 1255,
+      "links": [
+        "kracked-devs",
+        "kd-academy",
+        "bounty-board",
+        "sniper",
+        "kracked-devs",
+        "bounty-board",
+        "sniper",
+        "kracked-devs",
+        "job-board",
+        "showcase",
+        "bounty-board",
+        "sniper",
+        "q2-2026",
+        "kd-academy",
+        "company-brain-architecture"
       ],
       "linkNames": [
         "Kracked Devs",
         "KD Academy",
-        "Kracked Labs",
-        "Tenders and Contracts",
+        "Bounty Board",
         "Sniper",
-        "Team",
-        "Products & Projects",
-        "Roadmap"
+        "Kracked Devs",
+        "Bounty Board",
+        "Sniper",
+        "Kracked Devs",
+        "Job Board",
+        "Showcase",
+        "Bounty Board",
+        "Sniper",
+        "Q2 2026",
+        "KD Academy",
+        "Company Brain - Architecture"
       ],
-      "path": "Kracked Technologies.md",
-      "connections": 34
+      "path": "Strategy/Job Portal Monetisation.md",
+      "type": "strategy",
+      "pillar": "kracked-devs",
+      "status": "draft",
+      "owner": "danial",
+      "period": "2026-04-16 → 2026-09-30",
+      "connections": 18
+    },
+    {
+      "id": "claw-os-pitch-deck",
+      "name": "Claw OS - Pitch Deck",
+      "category": "Strategy",
+      "dataset": "mission",
+      "content": "\n# Claw OS — Pitch Deck v0\n\n> Audience: CEO / COO / Chief of Staff at 30–300 headcount companies feeling operational chaos. GLCs, mid-corporates, government agencies, military, family offices.\n> Length: 12 slides + appendix.\n> Goal: book a paid consultation engagement.\n\n## The narrative arc\n\n1. **The pain is universal.** Every growing company hits the same wall: leadership memory fragments, status takes hours to chase, decisions disappear.\n2. **Tools have failed at this.** Notion, Confluence, Slack, email — more tools, more fragmentation, not less.\n3. **Claw OS is not another tool.** It's the company's shared brain — grounded, continuously updated, queryable by anyone who should see it.\n4. **We use it to run Kracked Technologies.** Live demo, real vault, real decisions.\n5. **Here's what it looks like for you.** Three engagement shapes, clear pricing, clear next step.\n\n---\n\n## Slide 1 — Title\n\n- **Claw OS**\n- *The AI company brain. Infra before growth.*\n- Kracked Technologies\n- Contact / date\n\n## Slide 2 — The quiet cost of scale\n\nHeadline: **\"The moment your leadership team stops remembering the same things, your company slows down.\"**\n\nThree bullets framing the pain, not the solution:\n- Status updates consume hours every week and age within days.\n- Decisions made in meetings vanish; the same debate returns weeks later.\n- Knowledge lives in the heads of your best people — and leaves when they do.\n\nVisual: simple illustration of fragmented information sources (Slack, email, decks, heads).\n\n## Slide 3 — Why more tools make it worse\n\nHeadline: **\"You don't have a tools problem. You have a memory problem.\"**\n\n- Notion, Confluence, Jira, Slack, email — each solves a slice, none is the shared source of truth.\n- Your people spend more time navigating tools than doing the work.\n- AI wrappers on top of fragmented data make the fragmentation worse, not better.\n\nVisual: a chaotic cloud of tool logos, with an arrow pointing to question mark.\n\n## Slide 4 — A company brain\n\nHeadline: **\"One source of truth. Always current. Queryable by everyone who should see it.\"**\n\nWhat a company brain is:\n- A single, structured knowledge store of how your company actually operates.\n- Fed continuously by the team — status updates, meeting outcomes, decisions, deals.\n- AI agents that keep it current, draft updates for approval, and answer questions with citations.\n- Your CEO is the approver of every write — you stay in control.\n\nVisual: the Mission Control dashboard from the live Kracked vault.\n\n## Slide 5 — How it works (three loops)\n\nHeadline: **\"Ingest. Answer. Act.\"**\n\nThree small diagrams:\n1. **Ingestion loop** — team submits updates → AI drafts vault edits → CEO approves → vault updates → everyone sees current state.\n2. **Query loop** — anyone authorised asks a question → AI answers with citations to the source.\n3. **Proactive loop** — AI watches for stalls, risks, opportunities → surfaces them on the CEO's morning briefing.\n\n## Slide 6 — The agent layer\n\nHeadline: **\"A team of AI agents, each with a specific job.\"**\n\nVisual: Itachi at the top, five specialists below (Alfred, Sniper, Scout, Rick, Xavier).\n\nOne line per agent:\n- **Itachi** — strategic partner. Thinks with the CEO, maintains the architecture.\n- **Alfred** — chief of staff. Daily briefings, query interface.\n- **Sniper** — revenue hunter. Tracks tenders and sales opportunities.\n- **Scout** — researcher. Monitors market, competitors, ecosystem.\n- **Rick** — portfolio operator. Watches products and ventures.\n- **Xavier** — education / workforce lead. (For clients: swap in their domain — ops, compliance, clinical, etc.)\n\n> \"Every client's agent team is shaped around their business. This is ours.\"\n\n## Slide 7 — Grounded, never hallucinating\n\nHeadline: **\"Every answer cites a source. Every write waits for approval.\"**\n\n- Retrieval layer fetches cited passages from your company's real notes.\n- If no source exists, the agent says so — it doesn't fabricate.\n- Every proposed vault edit lands on an approval queue the CEO or delegate reviews.\n- Git history is the audit log. Every change is reversible, attributable, explainable.\n\nVisual: screenshot of the Pending Approvals card with an AI-proposed diff.\n\n## Slide 8 — Live demo / case study: Kracked Technologies\n\nHeadline: **\"We run Kracked on Claw OS. This is our real vault.\"**\n\n- 77 notes, 405 connections as of today.\n- Four pillars, live agents, weekly strategy grounded in the vault.\n- Screenshot of Mission Control — graph, This Week card, Agents list.\n- Brief anecdote: \"Last week, Itachi flagged a stalled deal that had been invisible for three weeks. One conversation saved the bid.\"\n\n## Slide 9 — Three ways to engage\n\nHeadline: **\"Pick your shape.\"**\n\nThree columns:\n\n**Consultation** *(2–4 weeks)*\n- Discovery workshops, brain architecture design, agent shortlist, MVP roadmap.\n- Deliverable: a written architecture and 90-day plan tailored to your company.\n- *Pricing anchor: MYR 30–80k.*\n\n**Workshop** *(1 day)*\n- \"Build your company brain in a day\" — run with your leadership team.\n- Deliverable: a first vault, a running agent, and an internal plan to extend.\n- *Pricing anchor: MYR 15–30k per cohort.*\n\n**Bespoke Deployment** *(3–6 months)*\n- Full Claw OS build for your company: vault, agents, approval layer, integrations, training.\n- Deliverable: a working company brain handed over to your team, with optional retainer.\n- *Pricing anchor: MYR 250k+ build + monthly retainer.*\n\n## Slide 10 — Who we are\n\nHeadline: **\"Kracked Technologies — builders, not consultants.\"**\n\n- Team of engineers, educators, venture builders.\n- Running [[KD Academy]] (training), [[Kracked Labs]] (ventures), [[Kracked Devs]] (community), Tenders and Contracts (revenue).\n- We built Claw OS for ourselves first. We ship what we use.\n- Based in Malaysia, serving the region.\n\n## Slide 11 — What happens next\n\nHeadline: **\"Two conversations.\"**\n\n1. **30-minute alignment call.** We scope your pain, confirm fit, agree on engagement shape.\n2. **2-hour discovery session** (free). We map your current information flows, leadership frustrations, and the decisions you want to make faster.\n\nFrom there: a written proposal within 5 working days. A decision within 2 weeks.\n\nCTA: *email / calendar link / QR code.*\n\n## Slide 12 — Appendix\n\nOptional slides to pull in depending on audience:\n- Architecture deep-dive (the Company Brain layered diagram).\n- Security & governance (audit log, role scoping, approval layer, data residency).\n- Cost model per scale tier.\n- Case study — a specific agent flow (e.g. how Sniper handles a tender).\n- FAQ — integrations, data export, vendor lock-in, Malay-language support.\n\n---\n\n## Positioning guardrails (for the speaker)\n\n- **Never lead with \"AI\" or \"agents\".** Lead with the pain. Agents are the mechanism.\n- **Never promise growth / 10x.** Promise calm, clarity, and control.\n- **Never compare directly to Notion or similar.** Frame them as complements that sit below Claw OS in the stack.\n- **Always ground the demo in the real Kracked vault.** Do not use mock data.\n- **Always mention the approval layer early.** It's the antidote to \"AI will take over my company\" anxiety.\n\n## Open items before the deck is ready to present\n\n1. Lock the product name (Claw OS vs Cakar OS vs other).\n2. Final pricing numbers (currently anchors only).\n3. Visual design pass — current outline is text-only.\n4. Two reference quotes from inside Kracked — ideally Adam, Zarul, or Irfan on why the brain matters to their day.\n5. A short video clip of the Mission Control dashboard in motion for slides 4, 7, and 8.\n\n## Related\n\n- [[Q2 2026]] — quarterly plan this deck supports\n- [[Company Brain - Architecture]] — the technical system behind the pitch\n- [[Itachi]], [[Alfred]], [[Sniper]], [[Scout]], [[Rick]], [[Xavier]] — agent slide source\n- [[Tenders and Contracts]] — pillar this deck supports\n",
+      "wordCount": 1277,
+      "links": [
+        "kd-academy",
+        "kracked-labs",
+        "kracked-devs",
+        "q2-2026",
+        "company-brain-architecture",
+        "itachi",
+        "alfred",
+        "sniper",
+        "scout",
+        "rick",
+        "xavier",
+        "tenders-and-contracts"
+      ],
+      "linkNames": [
+        "KD Academy",
+        "Kracked Labs",
+        "Kracked Devs",
+        "Q2 2026",
+        "Company Brain - Architecture",
+        "Itachi",
+        "Alfred",
+        "Sniper",
+        "Scout",
+        "Rick",
+        "Xavier",
+        "Tenders and Contracts"
+      ],
+      "path": "Strategy/Claw OS - Pitch Deck.md",
+      "type": "deck",
+      "product": "claw-os",
+      "status": "outline",
+      "owner": "danial",
+      "connections": 12
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "category": "Team",
+      "dataset": "mission",
+      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | CEO |\n| Muhaimin | Project Director |\n| Iroh | Payroll & Accounts |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Engineering\n\n| Name | Role |\n|------|------|\n| Muhammad Fadli Bin Md Khalid | Software Engineer |\n| Unies | AI / Software Engineer |\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Adam Alias | Community Manager |\n| Ijam | KD Academy Lead |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 developers across Malaysia\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
+      "wordCount": 347,
+      "links": [
+        "kracked-technologies",
+        "mypeta",
+        "leaderboard",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "MYpeta",
+        "Leaderboard",
+        "Kracked Labs"
+      ],
+      "path": "Team/Team.md",
+      "connections": 6
+    },
+    {
+      "id": "roadmap",
+      "name": "Roadmap",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
+      "wordCount": 111,
+      "links": [
+        "pipeline",
+        "portfolio",
+        "bounty-board"
+      ],
+      "linkNames": [
+        "Pipeline",
+        "Portfolio",
+        "Bounty Board"
+      ],
+      "path": "Projects/Roadmap.md",
+      "connections": 4
+    },
+    {
+      "id": "products-projects",
+      "name": "Products & Projects",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
+      "wordCount": 105,
+      "links": [
+        "kracked-technologies",
+        "bounty-board",
+        "job-board",
+        "leaderboard",
+        "guild-system",
+        "showcase",
+        "events",
+        "news-feed",
+        "portfolio"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Bounty Board",
+        "Job Board",
+        "Leaderboard",
+        "Guild System",
+        "Showcase",
+        "Events",
+        "News Feed",
+        "Portfolio"
+      ],
+      "path": "Projects/Products & Projects.md",
+      "connections": 10
     },
     {
       "id": "rotican-ai",
@@ -401,511 +913,23 @@
       "connections": 4
     },
     {
-      "id": "sea-expansion",
-      "name": "SEA Expansion",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# SEA Expansion\n\nResearch into expanding [[Kracked Technologies]] beyond Malaysia into Southeast Asia, starting with Singapore and Indonesia.\n\n## Why Expand\n\n- [[cofounders]] is already positioned for cross-border founder matching\n- Malaysia sits between Singapore (high cost, high talent) and Indonesia (massive scale)\n- SEA has 700M+ population with rapidly growing developer communities\n- Regional presence strengthens [[Kracked Labs]] deal flow and [[Kracked Devs]] talent pool\n\n## Target Markets\n\n### Singapore\n\n- Mature startup ecosystem, high developer salaries\n- Bridge to global VC funding\n- [[Advisory Board]] gap: need a Singapore-based tech figure\n- [[cofounders]] expansion target\n\n### Indonesia\n\n- 270M population, fastest-growing developer community in SEA\n- Dicoding and BuildWith Angga are local competitors (see [[Competitors]])\n- Massive untapped market for AI education in Bahasa (linguistic similarity to Malay)\n- [[cofounders]] expansion target\n\n## Expansion Models\n\n1. **Community-first** — Launch Kracked Devs chapters in SG/ID, grow organically\n2. **Product-first** — Ship [[cofounders]] and [[Showcase]] to SEA markets, let community follow\n3. **Partnership** — Partner with existing communities (Tech in Asia, e27, Glints) for distribution\n\n## Open Questions\n\n- Which market first — Singapore or Indonesia?\n- Does Kracked Devs' Bahasa content translate to Indonesian market?\n- What's the minimum viable team needed for a regional presence?\n- Can the [[Guild System]] and [[Leaderboard]] work cross-border?\n\n## Related\n\n- [[cofounders]]\n- [[Competitors]]\n- [[Advisory Board]]\n- [[Growth & Marketing]]\n",
-      "wordCount": 229,
-      "links": [
-        "kracked-technologies",
-        "cofounders",
-        "kracked-labs",
-        "kracked-devs",
-        "advisory-board",
-        "cofounders",
-        "competitors",
-        "cofounders",
-        "cofounders",
-        "showcase",
-        "guild-system",
-        "leaderboard",
-        "cofounders",
-        "competitors",
-        "advisory-board",
-        "growth-marketing"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "cofounders",
-        "Kracked Labs",
-        "Kracked Devs",
-        "Advisory Board",
-        "cofounders",
-        "Competitors",
-        "cofounders",
-        "cofounders",
-        "Showcase",
-        "Guild System",
-        "Leaderboard",
-        "cofounders",
-        "Competitors",
-        "Advisory Board",
-        "Growth & Marketing"
-      ],
-      "path": "Research/SEA Expansion.md",
-      "connections": 18
-    },
-    {
-      "id": "research",
-      "name": "Research",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# Research\n\nResearch and exploration by [[Kracked Technologies]]. This is where we investigate new domains, technologies, and market opportunities before they become active projects or ventures.\n\n## Active Research\n\n- [[AI Native Education]] — AI-first approaches to developer education for [[KD Academy]]\n- [[Malaysia Data Center Boom]] — Hyperscaler investment wave and implications for Kracked\n- [[Defence Tech]] — Defence and government AI opportunities via [[Advisory Board]]\n- [[SEA Expansion]] — Expanding beyond Malaysia into Singapore and Indonesia\n- [[Open Source Strategy]] — Using OSS as a growth engine for [[Kracked Devs]]\n\n## Purpose\n\n- Explore emerging technologies and trends relevant to the Malaysian tech ecosystem\n- Validate ideas before committing resources under [[Kracked Labs]] or [[Kracked Devs]]\n- Build knowledge that strengthens our advisory, education, and venture building arms\n\n## How Research Becomes Action\n\n1. Research notes are created here as exploration\n2. Promising areas get validated with advisors and the [[Team]]\n3. Validated ideas move to [[Projects]] or become [[Kracked Labs]] ventures\n",
-      "wordCount": 164,
-      "links": [
-        "kracked-technologies",
-        "ai-native-education",
-        "kd-academy",
-        "malaysia-data-center-boom",
-        "defence-tech",
-        "advisory-board",
-        "sea-expansion",
-        "open-source-strategy",
-        "kracked-devs",
-        "kracked-labs",
-        "kracked-devs",
-        "team",
-        "projects",
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "AI Native Education",
-        "KD Academy",
-        "Malaysia Data Center Boom",
-        "Defence Tech",
-        "Advisory Board",
-        "SEA Expansion",
-        "Open Source Strategy",
-        "Kracked Devs",
-        "Kracked Labs",
-        "Kracked Devs",
-        "Team",
-        "Projects",
-        "Kracked Labs"
-      ],
-      "path": "Research/Research.md",
-      "connections": 16
-    },
-    {
-      "id": "open-source-strategy",
-      "name": "Open Source Strategy",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# Open Source Strategy\n\nResearch into how [[Kracked Technologies]] can leverage open source as a growth engine for [[Kracked Devs]] and [[Kracked Labs]].\n\n## Why Open Source\n\n- Builds credibility and trust in the developer community\n- Creates inbound talent pipeline for [[Kracked Devs]]\n- Drives adoption of tools built by [[Kracked Labs]] ventures\n- Aligns with the builder-first culture — show, don't tell\n\n## Potential Open Source Projects\n\n### Developer Tools\n\n- Bounty board platform (open source the core of [[Bounty Board]])\n- [[Guild System]] framework — reusable community gamification\n- [[Leaderboard]] engine — ranking and reputation system\n\n### AI/Education\n\n- Bilingual (Malay/English) coding exercise datasets\n- AI-assisted code review tools\n- Vibe coding starter templates and frameworks\n\n### Community Infrastructure\n\n- [[Events]] management system\n- [[News Feed]] aggregation engine (\"The Daily Sync\")\n\n## Strategic Questions\n\n- Which projects generate the most community goodwill vs. engineering cost?\n- Do we open source core platform pieces or build separate OSS tools?\n- How do we balance open source contributions with shipping product?\n- Can OSS contributions count toward [[Leaderboard]] and [[Bounty Board]] reputation?\n\n## Related\n\n- [[Kracked Devs]]\n- [[Kracked Labs]]\n- [[Bounty Board]]\n- [[Guild System]]\n- [[Growth & Marketing]]\n",
-      "wordCount": 201,
-      "links": [
-        "kracked-technologies",
-        "kracked-devs",
-        "kracked-labs",
-        "kracked-devs",
-        "kracked-labs",
-        "bounty-board",
-        "guild-system",
-        "leaderboard",
-        "events",
-        "news-feed",
-        "leaderboard",
-        "bounty-board",
-        "kracked-devs",
-        "kracked-labs",
-        "bounty-board",
-        "guild-system",
-        "growth-marketing"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Kracked Devs",
-        "Kracked Labs",
-        "Kracked Devs",
-        "Kracked Labs",
-        "Bounty Board",
-        "Guild System",
-        "Leaderboard",
-        "Events",
-        "News Feed",
-        "Leaderboard",
-        "Bounty Board",
-        "Kracked Devs",
-        "Kracked Labs",
-        "Bounty Board",
-        "Guild System",
-        "Growth & Marketing"
-      ],
-      "path": "Research/Open Source Strategy.md",
-      "connections": 18
-    },
-    {
-      "id": "malaysia-data-center-boom",
-      "name": "Malaysia Data Center Boom",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# Malaysia Data Center Boom\n\nResearch into the 2024–2026 data center investment wave and its implications for [[Kracked Technologies]].\n\n## The Numbers\n\nMicrosoft, Google, AWS, Oracle, and ByteDance have committed tens of billions USD to Malaysian data center infrastructure. This is reshaping Malaysia's position as an ASEAN tech hub (see [[Market Landscape]]).\n\n## Implications for Kracked\n\n### Developer Demand Surge\n\n- Data centers need local engineering talent for operations, cloud services, and adjacent software\n- Creates hiring demand that [[Kracked Devs]] can serve through the [[Job Board]] and [[Bounty Board]]\n- Upskilling opportunity for [[KD Academy]] — cloud infrastructure, DevOps, MLOps curricula\n\n### Venture Opportunities\n\n- Infrastructure-adjacent startups: monitoring, observability, edge computing\n- Data sovereignty and compliance tools for Malaysian enterprises\n- AI inference services leveraging local GPU capacity\n- Potential ventures for [[Kracked Labs]] to explore\n\n### Government Alignment\n\n- Aligns with MyDIGITAL Blueprint target of 22.6% digital economy GDP contribution\n- MDEC incentives (0–10% tax for up to 10 years) available for qualifying tech companies\n- Strengthens the case for [[Advisory Board]] engagement with government agencies\n\n## Open Questions\n\n- How quickly does data center investment translate to local developer job creation?\n- Which specific skills will be in highest demand? (Cloud, networking, security, AI ops?)\n- Can Kracked position itself as a talent pipeline partner to hyperscalers?\n\n## Related\n\n- [[Market Landscape]]\n- [[Advisory Board]]\n- [[Kracked Labs]]\n- [[KD Academy]]\n",
-      "wordCount": 234,
-      "links": [
-        "kracked-technologies",
-        "market-landscape",
-        "kracked-devs",
-        "job-board",
-        "bounty-board",
-        "kd-academy",
-        "kracked-labs",
-        "advisory-board",
-        "market-landscape",
-        "advisory-board",
-        "kracked-labs",
-        "kd-academy"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Market Landscape",
-        "Kracked Devs",
-        "Job Board",
-        "Bounty Board",
-        "KD Academy",
-        "Kracked Labs",
-        "Advisory Board",
-        "Market Landscape",
-        "Advisory Board",
-        "Kracked Labs",
-        "KD Academy"
-      ],
-      "path": "Research/Malaysia Data Center Boom.md",
-      "connections": 14
-    },
-    {
-      "id": "defence-tech",
-      "name": "Defence Tech",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# Defence Tech\n\nResearch into defence and government technology opportunities, connected to [[Advisory Board]] member Major Dr. Surenthiran Krishnan's expertise in AI and the Malaysian Army.\n\n## Context\n\nMalaysia's military and government agencies are increasingly interested in AI applications. Dr. Surenthiran holds a PhD in AI and bridges the gap between military/government and deep tech. This is an area [[Kracked Labs]] could explore for venture building.\n\n## Potential Areas\n\n### AI for Defence\n\n- Computer vision for surveillance and reconnaissance\n- Natural language processing for intelligence analysis (Malay + English)\n- Predictive maintenance for military equipment\n- Cybersecurity and threat detection\n\n### Government Digital Services\n\n- Citizen-facing AI tools (e.g. chatbots for government services)\n- Document processing and automation for public sector\n- Smart city infrastructure (related to [[MYpeta]] and [[Masjid OS]] concepts)\n\n### Dual-Use Opportunities\n\n- Technology that serves both defence and civilian markets\n- Lower regulatory barriers for civilian applications\n- Defence credibility opens doors for government contracts\n\n## Considerations\n\n- Security clearances and compliance requirements\n- Long sales cycles in government procurement\n- Need for Malaysian-owned IP (not foreign-dependent)\n- Ethical frameworks for AI in defence\n\n## Next Steps\n\n- Explore with Dr. Surenthiran what specific use cases the military is actively seeking\n- Identify if there are existing government RFPs or tenders Kracked could respond to\n- Assess whether a defence-focused venture fits [[Kracked Labs]]' current capacity\n\n## Related\n\n- [[Advisory Board]]\n- [[Kracked Labs]]\n- [[Venture Playbook]]\n",
-      "wordCount": 242,
-      "links": [
-        "advisory-board",
-        "kracked-labs",
-        "mypeta",
-        "masjid-os",
-        "kracked-labs",
-        "advisory-board",
-        "kracked-labs",
-        "venture-playbook"
-      ],
-      "linkNames": [
-        "Advisory Board",
-        "Kracked Labs",
-        "MYpeta",
-        "Masjid OS",
-        "Kracked Labs",
-        "Advisory Board",
-        "Kracked Labs",
-        "Venture Playbook"
-      ],
-      "path": "Research/Defence Tech.md",
-      "connections": 12
-    },
-    {
-      "id": "ai-native-education",
-      "name": "AI Native Education",
-      "category": "Research",
-      "dataset": "mission",
-      "content": "# AI Native Education\n\nResearch into AI-first approaches to developer education for [[KD Academy]] and the broader [[Kracked Technologies]] ecosystem.\n\n## Context\n\nTraditional coding bootcamps in Malaysia show 20–50% completion rates with poor employment outcomes (see [[Market Landscape]]). AI-native education is a fundamentally different approach — not \"add AI to existing curriculum\" but \"rebuild education assuming AI tools are the default.\"\n\n## Key Questions\n\n- What does a curriculum look like when students use AI copilots from day one?\n- How do you assess skills when AI can write code?\n- What skills become more valuable vs. less valuable?\n- How does this intersect with [[Competitors]] like 42 KL, Sigma School, and NEXT Academy?\n\n## Vibe Coding as Pedagogy\n\n\"Vibe coding\" — using AI tools to ship products without deep syntax mastery — may be the entry point that gets non-technical builders into the ecosystem. This could be [[KD Academy]]'s unique differentiator in the Malaysian market.\n\n### Open Questions\n\n- Can vibe coding be a legitimate first step toward deeper technical skills?\n- What's the failure mode? (Shallow understanding, debugging inability?)\n- How do we design a progression: vibe coder → junior dev → builder?\n\n## Bahasa Malaysia Content Gap\n\nAlmost no quality tech education content exists in Malay (see [[Competitors]]). This is both a market gap and a research question — how do you produce high-quality bilingual technical content at scale?\n\n## Related\n\n- [[KD Academy]]\n- [[Market Landscape]]\n- [[Competitors]]\n",
-      "wordCount": 242,
-      "links": [
-        "kd-academy",
-        "kracked-technologies",
-        "market-landscape",
-        "competitors",
-        "kd-academy",
-        "competitors",
-        "kd-academy",
-        "market-landscape",
-        "competitors"
-      ],
-      "linkNames": [
-        "KD Academy",
-        "Kracked Technologies",
-        "Market Landscape",
-        "Competitors",
-        "KD Academy",
-        "Competitors",
-        "KD Academy",
-        "Market Landscape",
-        "Competitors"
-      ],
-      "path": "Research/AI Native Education.md",
-      "connections": 10
-    },
-    {
-      "id": "team",
-      "name": "Team",
-      "category": "Team",
-      "dataset": "mission",
-      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | CEO |\n| Muhaimin | Project Director |\n| Iroh | Payroll & Accounts |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Engineering\n\n| Name | Role |\n|------|------|\n| Muhammad Fadli Bin Md Khalid | Software Engineer |\n| Unies | AI / Software Engineer |\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Adam Alias | Community Manager |\n| Ijam | KD Academy Lead |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 developers across Malaysia\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
-      "wordCount": 347,
-      "links": [
-        "kracked-technologies",
-        "mypeta",
-        "leaderboard",
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "MYpeta",
-        "Leaderboard",
-        "Kracked Labs"
-      ],
-      "path": "Team/Team.md",
-      "connections": 6
-    },
-    {
-      "id": "q2-2026",
-      "name": "Q2 2026",
-      "category": "Strategy",
-      "dataset": "mission",
-      "content": "\n# Q2 2026 Strategy — Kracked Technologies\n\n**11 weeks. Build Claw OS, sell Claw OS, feed the funnel.**\n\n> Product name **Claw OS**. Positioning: **\"AI company brain — infra before growth.\"** We sell the operational backbone a company needs *before* it tries to scale, not a tool that promises to 10x anything. Malay-name variant (e.g. Cakar OS) still open.\n\n## The thesis\n\nKracked Technologies has four pillars and one secret weapon. The secret weapon is **Claw OS** — the agent-powered Company Brain ([[Itachi]] + [[Alfred]] + [[Sniper]] + [[Scout]] + [[Rick]] + [[Xavier]]) we're building for ourselves this quarter.\n\nQ2 turns Claw OS into a dual-use asset:\n- **Internally** — it runs Kracked's operations so the team scales without adding headcount.\n- **Externally** — we sell it to companies as **consultation + workshops + bespoke deployments**. That revenue funds everything else.\n\nThe three pillar priorities for Q2, in order:\n\n1. **Tenders, Projects & Claw OS sales** *(unified motion)* — one outbound pipeline, three sellable shapes: (a) regular project work, (b) tender wins, (c) Claw OS deployments (consultation, workshop, or bespoke). Every conversation qualifies into whichever shape fits. Use Claw OS itself to automate the hunt.\n2. **KD Academy** — more online sessions, more learners. The top of the funnel that everything else feeds from.\n3. **Kracked Labs** — assemble the portfolio properly, tee it up to grow in Q3.\n\n## The underlying spine — build Claw OS\n\nClaw OS is the operational backbone. If we don't ship it, everything above gets harder.\n\n### Compressed timeline — internal Claw OS live by April 30 *(CEO directive, 2026-04-15)*\n\n15 days from today. Aggressive but doable with focused build.\n\n- **Sprint 1 (Apr 15–22):** [[Itachi]] chat interface with vault read/search. Pending Approvals card stub on Mission Control. CEO can ask grounded questions against the vault and see citations.\n- **Sprint 2 (Apr 23–30):** Two tracks in parallel:\n  - *Ingestion track:* Daily-update submission form (CEO-only to start) + approve-to-commit pipeline writing to the local vault. `sync.mjs` re-runs on every approved write.\n  - *Agent track:* first Claw OS-style agent running live — [[Sniper]] in dry-run mode against Projects & Tenders. One or two seed sources (e.g. MyProcurement + one corporate RFP feed), scores a handful of opportunities against a stub [[Capabilities]] note, drafts tender entries into `Deals/`, surfaces them on the Pending Approvals card alongside the CEO's own updates. Purpose: prove the agent pattern works end-to-end before we generalise it.\n  - Internal Claw OS live by Apr 30 with **both** a human update path and a first agent writing proposals.\n- **Phase 2 (May 1–Jun 30):** Productisation + polish. Pitch deck to v1, consultation SKU ready, outbound starts. Team form rolled out. [[Sniper]] + [[Scout]] Phase 1 seeded. Morning briefing. First external demos.\n- **By June 30:** CEO running Kracked through Claw OS daily. Claw OS is demo-able to paying clients.\n\n### What gets cut to hit April 30\n\nThe 15-day target only works by deferring everything non-essential:\n\n- **Clerk auth** — internal-only MVP uses a shared token or IP allowlist. Real auth lands in May.\n- **GitHub API commits** — write directly to the local vault filesystem on the CEO's machine; git commit + push run locally. Production-safe writes deferred.\n- **Postgres + pgvector** — skip. Use in-memory keyword search over `graph.json` for Itachi's retrieval. Embeddings layer in May.\n- **Team rollout** — Sprint 2 is CEO-only. Wider team form is a May deliverable.\n- **LLM suggestion engine** — MVP approval card starts with **manual edits only** (CEO types the diff). Claude-proposed diffs land in May as a stretch add.\n\n### What this means for staffing — decide this week\n\n**Non-negotiable:** one person full-time on build for 15 days, or two part-time. If it's the CEO solo in evenings, April 30 slips to mid-May and something else on this quarter's list slips to compensate. This is the biggest schedule risk in the whole plan.\n\n**Productisation track, in parallel:**\n- **Claw OS Deck (v0)** — a 10–15 slide pitch deck with live demo screenshots. Ready by end of May.\n- **Claw OS Consultation SKU** — 2–4 week discovery + brain-architecture design engagement. Priced and packaged by end of May.\n- **Claw OS Workshop SKU** — \"Build your company brain in a day\" — corporate workshop format. Ready as a v1 offering by end of June.\n- **Claw OS Bespoke SKU** — full deployment package (discovery → build → handover → retainer). Priced and packaged by end of June. First paid deployment targeted Q3.\n\n## Pillar 1 — Tenders, Projects & Claw OS sales *(primary)*\n\nRun by [[Sniper]] (automation) + CEO (pitching).\n\n### Projects\n- **Seed contractor registry.** CEO provides 10–15 main contractors + known contacts in April. Placed into `Contractors/` (scaffold folder when seeding starts).\n- **Source list confirmed.** Day-one portals for Sniper: MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, plus 2–3 corporate RFP feeds.\n- **[[Capabilities]].md** written — the machine-readable profile of what Kracked delivers (including Claw OS). Sniper scores opportunities against this.\n- **Sniper Phase 1 (dry-run) by end of May** — scanning + drafting tender notes into `Deals/`, but not acting autonomously.\n- **Target:** 3 live tender applications submitted by June 30 (paid workshops, gov-tech projects, or Claw OS deployments).\n\n### Claw OS sales motion\n- **Positioning:** \"AI company brain — infra before growth.\" We sell to leaders who feel operational chaos and know they need a backbone *before* they try to scale. Not a productivity-booster pitch.\n- **The buyer pain** the pitch leads with: \"Your leadership team spends hours every week chasing status, updating decks, and trying to remember what was decided. Claw OS is the shared memory your company should already have.\"\n- **Target buyer segments:** Malaysian GLCs, mid-size corporates going through AI transformation, government agencies, military, family offices / investment holding companies.\n- **One unified outbound motion.** Every discovery conversation qualifies into a project, a tender path, or a Claw OS engagement — whichever fits their pain.\n- **Outbound via warm network** — CEO + Adam + Zarul identify 10 initial conversations from existing relationships. Lead with the consultation SKU (cheapest entry, highest information value).\n- **Inbound via content** — every Vibe Coding 101 episode subtly surfaces \"this is how we work with Claw OS.\" YouTube becomes the top of funnel for Claw OS buyers too.\n- **Q2 targets:**\n  - 10 discovery conversations held.\n  - 2 paid consultation engagements signed (any of: bank, telco, government agency, GLC).\n  - 1 bespoke deployment in the pipeline with clear close path into Q3.\n  - 1 corporate workshop booked (can overlap with KD Academy paid-workshop goal).\n\n## Pillar 2 — KD Academy *(growth)*\n\nRun by Xavier (once live) + Adam, Zarul, Irfan (humans driving the work).\n\n- **Vibe Coding 101** — weekly YouTube live + recorded session. **Goal: 12 sessions published by June 30.** Starts ASAP (next session this week).\n- **Syllabus v1** completed and published by end of April.\n- **Tutor onboarding** — trial → paid-per-lesson pipeline running by end of May. 3–5 tutors live by end of June.\n- **Online learner count** — set baseline this week (current Discord + Academy signups), target 3x growth by end of June. Top-of-funnel metric.\n- **Unpaid pilots (secondary school + university)** — complete delivery, capture as case studies by end of May. Case-study artefact format agreed upfront.\n- **Ambassadors** — 4 → 8 active by end of June with tracked KPIs.\n\n## Pillar 3 — Kracked Labs *(assemble)*\n\nRun by [[Rick]] (once live).\n\n- **No new ventures this quarter.**\n- **Portfolio standardisation** — every venture note ([[rotican.ai]], [[cofounders]], [[JomKopi]], [[JomQR]], [[MYpeta]], [[Masjid OS]], [[Burhan]]) gets the standard frontmatter by end of April.\n- **Weekly portfolio digest** live by end of May. Rick drafts; CEO reviews.\n- **Venture leads report weekly** via the Daily Update System once it's live.\n- **End of quarter:** Rick drafts a portfolio health review — double down / hold / sunset recommendations for Q3 planning.\n\n## Funnel logic (why this order works)\n\n```\n     KD Academy (learners)\n           │\n           ▼\n     Kracked Devs (community)\n           │\n           ▼\n    ┌──────┴──────┐\n    ▼             ▼\nKracked Labs    Tenders & Projects + Claw OS sales\n(founders)      (revenue)\n```\n\nKD Academy + YouTube are the top of every funnel — for future tutors, future founders, future workshop attendees, AND future Claw OS customers. If we don't grow that, the bottom starves. That's why KD Academy is Priority 2 despite T&C being Priority 1 — the revenue flows, the funnel feeds.\n\n## Top-level metrics (review weekly with [[Itachi]])\n\n| Metric | Baseline | Q2 target |\n|---|---|---|\n| YouTube sessions published | 1 | 12 |\n| Discord signups from YouTube | TBD | 200 |\n| Paid tutors onboarded | 0 | 3–5 |\n| Case studies published | 0 | 2 (from unpaid pilots) |\n| Active ambassadors | 4 | 8 |\n| Claw OS discovery conversations | 0 | 10 |\n| Paid Claw OS consultation engagements | 0 | 2 |\n| Paid workshops booked (any kind) | 0 | 1+ |\n| Tender applications submitted | 0 | 3 |\n| Contractors seeded | 0 | 10–15 |\n| Claw OS build — phases shipped | 0 | Phase 0 + 1 + start Phase 2 |\n\n## Week-by-week execution\n\nDates are week-starting Mondays. Every week has one meta-deliverable in bold.\n\n### Week 1 · Apr 14 *(we are here — Claw OS Sprint 1)*\n- **Itachi goes live — CEO can ask the vault questions.**\n- Day 1–2: lock naming call (Claw OS vs Cakar OS), pricing anchors, engineering capacity.\n- Day 3–5: Itachi chat endpoint wired to vault read + keyword search, grounded-answer prompt with citations.\n- Day 5–7: Pending Approvals card stub on Mission Control (empty state OK).\n- In parallel: Vibe Coding 101 session #2 live on YouTube. Unpaid workshop case-study template agreed.\n\n### Week 2 · Apr 21 *(Claw OS Sprint 2)*\n- **Internal Claw OS live by Apr 30 — human updates AND first agent running.**\n- Day 1–3: Daily-update submission form (CEO-only), writes to KV.\n- Day 3–5: Approve-to-commit pipeline — CEO reviews diff, approves, local vault file updates, `sync.mjs` re-runs.\n- Day 4–6: **First Claw OS agent live — [[Sniper]] dry-run on Tenders & Projects.** 1–2 seed sources, scores opportunities against stub [[Capabilities]], drafts tender notes into `Deals/` for CEO approval on the same Pending Approvals card.\n- Day 7: Smoke test — one real CEO standup + one Sniper-drafted tender submitted through Claw OS, deployed to production URL behind shared token.\n- In parallel: pitch deck v0 sharpened. Pricing confirmed across three SKUs. Contractor registry: 10–15 seeded. Vibe Coding 101 session #3.\n\n### Week 3 · Apr 28\n- **Outbound motion starts — Claw OS internal is live.**\n- First 3 discovery conversations scheduled from the warm list (we can now demo live).\n- Daily Update System extended: team-wide rollout begins.\n- Syllabus v1 published.\n- Vibe Coding 101 session #4.\n- Ventures frontmatter done; Rick's Portfolio.md stub created.\n\n### Week 4 · May 5\n- **Pitch deck visually designed.**\n- Deck v1 with graphics, real Mission Control screenshots, case-study anecdote.\n- Daily Update System: submission form + KV storage shipped (behind auth).\n- Discovery conversations: 5 done cumulatively.\n- Vibe Coding 101 session #5.\n- Tutor outreach begins — 5 candidates contacted.\n\n### Week 5 · May 12\n- **First paid consultation proposal sent.**\n- At least one discovery converts to proposal.\n- Daily Update System: Pending Approvals card live on Mission Control.\n- Vibe Coding 101 session #6.\n- First tutor trial session scheduled.\n\n### Week 6 · May 19\n- **Claw Phase 1 walking skeleton complete.**\n- Team can submit updates; CEO can approve; vault commits land; `sync.mjs` re-runs.\n- Dogfooding starts internally.\n- Unpaid pilot workshops: both delivered, case studies drafted.\n- Vibe Coding 101 session #7.\n- Discovery conversations: 8 cumulatively.\n\n### Week 7 · May 26\n- **First consultation engagement signed** *(target; slippage acceptable into June).*\n- Sniper Phase 1 dry-run scans begin (manual sources).\n- Daily Update System extended — team form rolled out to full team.\n- Vibe Coding 101 session #8.\n- Tutor pipeline: 2 paid trial lessons delivered.\n\n### Week 8 · Jun 2\n- **Case studies published.**\n- Two unpaid-pilot case studies written up for sales material.\n- Morning Briefing card live on Mission Control (Alfred Phase 2 start).\n- Vibe Coding 101 session #9.\n- Claw OS Workshop SKU packaged and priced.\n\n### Week 9 · Jun 9\n- **Second consultation signed; first workshop booked.**\n- Pipeline: bespoke deployment in advanced discussion.\n- Scout Phase 1 manual seed watchlist running.\n- Vibe Coding 101 session #10.\n- Tutor pipeline: 3–5 tutors active, per-lesson pay flowing.\n\n### Week 10 · Jun 16\n- **Tender applications submitted.**\n- 2–3 live tender applications out the door (paid workshops, gov-tech projects, or Claw OS deployments).\n- Ambassadors: 8 active, KPIs tracked.\n- Vibe Coding 101 session #11.\n- Rick drafts the Q3 portfolio health review.\n\n### Week 11 · Jun 23\n- **Q2 wrap + Q3 kickoff.**\n- Vibe Coding 101 session #12 — the cadence milestone.\n- Quarterly review with Itachi — metrics vs targets, what we learned, what to change.\n- Q3 strategy doc drafted.\n- Bespoke deployment: closed or qualified out for Q3.\n\n---\n\n## Top 10 initiatives (ordered by priority)\n\n1. **Stand up Itachi (Claw OS Phase 0)** — so strategy, build, and coordination run through the brain from week one.\n2. **Vibe Coding 101 weekly cadence** — session #2 this week, then weekly.\n3. **Claw OS pitch deck v0** — needed to sell anything. End of May.\n4. **Claw OS consultation SKU** — packaged, priced, sellable. End of May.\n5. **Daily Update System walking skeleton** — Phase 1 of Claw OS. By end of May.\n6. **CEO outbound: 10 warm discovery conversations.** Start this month.\n7. **Contractor registry seed** — CEO writes 10–15 primes this week.\n8. **Syllabus v1 + tutor pipeline** — Adam, Zarul, Irfan own. End of April and end of May respectively.\n9. **Unpaid-pilot case studies** — template + capture-as-you-go. End of May.\n10. **Portfolio standardisation in Ventures/** — frontmatter on all 7 venture notes. End of April.\n\n## Explicit non-goals for Q2\n\n- No new ventures under Kracked Labs.\n- No Claw OS SaaS build — bespoke + consultation + workshops only. SaaS is a Q4+ decision if at all.\n- No major Kracked Devs platform features — one site-polish sprint max.\n- No expansion outside Malaysia.\n- No advisor onboarding push.\n\n## Risks to watch\n\n- **Claw OS build slipping.** Building the tool while using it to do the work is the classic trap. Mitigation: protect two focused days/week for Claw OS work; Itachi owns the build log.\n- **Sales cycle longer than the quarter.** Malaysian corporate / GLC sales cycles can easily be 3–6 months. Two signed consultations by end of June is ambitious. Mitigation: start outbound in April, not May. Accept that some of the funnel closes in Q3.\n- **Vibe Coding cadence slipping.** If sessions miss weekly, the top of funnel erodes for every pillar. Mitigation: [[This Week]] tracks it; Itachi flags in every weekly review.\n- **CEO bottleneck.** Approvals + outbound sales + Claw OS architecture + weekly briefings all route through Danial. Mitigation: identify one lieutenant per workstream; delegate execution, keep final sign-off.\n- **Claw OS pitch falls flat.** Companies don't buy \"a brain\" — they buy a specific pain relieved. Mitigation: the pitch deck must lead with a concrete pain (e.g. \"your exec team spends 6 hours a week updating status — here's how Claw OS does it automatically, with your CEO approving each write\").\n\n## Decisions the CEO needs to lock this week\n\n1. **Lock the Malay-variant call.** Keep \"Claw OS\" as-is, or switch to Cakar OS / Taring OS / another variant? Blocks domains, deck design, and any external mention.\n2. **Claw OS pricing anchors.** Rough price point for consultation (MYR 30k? 80k?) and bespoke (MYR 250k+?). We can refine, but need a starting number.\n3. **Outbound list.** The 10 warm contacts for discovery conversations — CEO writes the list this week.\n4. **Contractor seed list.** 10–15 primes + known contacts.\n5. **Kracked Devs site polish owner.** Two-week sprint; who runs it?\n6. **Claw OS build engineering capacity.** Danial solo evenings, or one dedicated builder? This is the biggest schedule risk.\n\n## Open strategic questions (for [[Itachi]])\n\n**Decided 2026-04-15:**\n- ✅ Positioning: **AI company brain, infra before growth.**\n- ✅ Product name: **Claw OS** (Malay variant e.g. Cakar OS still on the table).\n- ✅ Pillar 1 is unified: Tenders, Projects, and Claw OS sales run as one outbound motion.\n\n**Still open:**\n- **Malay naming variant.** Commit to \"Claw OS\" as-is, or localise (Cakar OS, Taring OS, etc.)? Affects domains + branding.\n- **OSS question.** Is there an \"Open Claw\" edition — open-source core, paid services layered on top? Deferred to Q3 decision.\n- **Team shape if Q2 revenue lands.** First hire — BD/sales? Claw OS engineer? Tutor coordinator?\n\n## Related\n\n- [[This Week]] — weekly execution; ladders up to this quarter\n- [[Itachi]] — stewards this quarter's execution, runs weekly check-ins with CEO\n- [[Company Brain - Architecture]] — the Claw OS architecture (rename target once product name confirmed)\n- [[Daily Update System - Plan]] — Claw OS Phase 1\n- [[Kracked Technologies]] — parent; four-pillar frame\n- [[Alfred]], [[Sniper]], [[Scout]], [[Rick]], [[Xavier]] — the agents inside Claw OS\n",
-      "wordCount": 2897,
-      "links": [
-        "itachi",
-        "alfred",
-        "sniper",
-        "scout",
-        "rick",
-        "xavier",
-        "itachi",
-        "sniper",
-        "capabilities",
-        "sniper",
-        "scout",
-        "sniper",
-        "capabilities",
-        "rick",
-        "rotican-ai",
-        "cofounders",
-        "jomkopi",
-        "jomqr",
-        "mypeta",
-        "masjid-os",
-        "burhan",
-        "itachi",
-        "sniper",
-        "capabilities",
-        "this-week",
-        "itachi",
-        "this-week",
-        "itachi",
-        "company-brain-architecture",
-        "daily-update-system-plan",
-        "kracked-technologies",
-        "alfred",
-        "sniper",
-        "scout",
-        "rick",
-        "xavier"
-      ],
-      "linkNames": [
-        "Itachi",
-        "Alfred",
-        "Sniper",
-        "Scout",
-        "Rick",
-        "Xavier",
-        "Itachi",
-        "Sniper",
-        "Capabilities",
-        "Sniper",
-        "Scout",
-        "Sniper",
-        "Capabilities",
-        "Rick",
-        "rotican.ai",
-        "cofounders",
-        "JomKopi",
-        "JomQR",
-        "MYpeta",
-        "Masjid OS",
-        "Burhan",
-        "Itachi",
-        "Sniper",
-        "Capabilities",
-        "This Week",
-        "Itachi",
-        "This Week",
-        "Itachi",
-        "Company Brain - Architecture",
-        "Daily Update System - Plan",
-        "Kracked Technologies",
-        "Alfred",
-        "Sniper",
-        "Scout",
-        "Rick",
-        "Xavier"
-      ],
-      "path": "Strategy/Q2 2026.md",
-      "type": "strategy",
-      "quarter": "Q2-2026",
-      "period": "2026-04-15 → 2026-06-30",
-      "status": "draft",
-      "owner": "danial",
-      "connections": 36
-    },
-    {
-      "id": "job-portal-monetisation",
-      "name": "Job Portal Monetisation",
-      "category": "Strategy",
-      "dataset": "mission",
-      "content": "\n# Job Portal Monetisation — Kracked Devs\n\n**Turn the Job Board into a revenue line by automating outbound to hiring companies and pulling developers in through portfolio-building.**\n\n[[Kracked Devs]] already has 979 job listings, 1,190 developers, 30+ showcase projects. The Job Board is live but passive. This plan makes it active on both sides.\n\n## The two-sided loop\n\n```\n        Companies                          Developers\n            │                                   │\n  (AI agent outreach)              (Sign up → Build portfolio)\n            │                                   │\n            ▼                                   ▼\n      Post a job ─────► Kracked Devs ◄───── Ship projects\n                            │                   │\n                            ▼                   ▼\n                    Shortlist ──────► Hire (paid conversion)\n```\n\n## The developer side (supply)\n\n**Goal:** every developer who signs up has shipped at least one project, publicly, before they apply to anything.\n\n- **Portfolio-first onboarding.** Signup flow nudges toward the Showcase before the Job Board. Empty-profile applications are de-prioritised.\n- **Project-as-proof.** Developers post projects (built via [[KD Academy]] workshops, [[Bounty Board]] tasks, or personal builds). Projects become the résumé.\n- **Verification.** GitHub integration validates actual commits. Showcase badges for shipped projects.\n- **Leaderboard feeds application.** Companies browsing candidates see ranked builders with real output, not just CVs.\n\nThe existing 30+ projects prove the flow works. Goal this quarter: **3× that by growing Showcase through KD Academy cohort outputs.**\n\n### AI skill assessment *(new)*\n\nEvery developer profile gets an AI-generated skill scorecard — the thing companies actually want when hiring.\n\n- **Inputs:** GitHub commit history, Showcase projects, Bounty Board completions, KD Academy cohort outcomes, guild activity.\n- **Outputs per developer:**\n  - **Skill vector** — scored strengths across a standard taxonomy (e.g. React: 0.8, Postgres: 0.4, AI/LLM: 0.6, systems design: 0.3).\n  - **Shipping signal** — cadence of real output; \"ships every 2 weeks on average.\"\n  - **Verification flags** — GitHub-verified, bounty-verified, cohort-verified.\n  - **One-paragraph summary** — human-readable, grounded, cited to specific projects. No hype.\n- **Refreshes weekly** from new activity.\n- **Governance** — developer can contest or hide the scorecard; CEO approves the assessment template before any score goes public.\n- **How companies see it:** the scorecard is what's shown in shortlists and Developer Directory, not just a CV. Makes the \"0% fees, 48-hour shortlist\" pitch concrete.\n\nBuilt by a new sub-flow in Claw OS — scoring runs on Haiku (cheap, high-volume), summary generation on Sonnet. Reuses the same prompt-caching + approval-layer pattern as the other agents.\n\n## The company side (demand)\n\n**Goal:** AI agent does the cold outreach Kracked has no time to do manually.\n\n### The outbound agent — \"Recruiter\" *(new agent, or extend [[Sniper]])*\n\nRuns a continuous outbound motion:\n1. **Target list** — Malaysian tech-hiring companies. Seed from public job boards (Jobstreet, LinkedIn, Indeed), GLC HR pages, startup lists.\n2. **AI lead scoring** — each candidate company passed through a scoring pass before a human sees it:\n   - **Fit score** — how well Kracked Devs' talent pool matches their open roles (cross-references the skill vectors from the developer side).\n   - **Intent signal** — are they actively posting jobs, funded, hiring trend (e.g. 5+ open roles on LinkedIn in the last 30 days)?\n   - **Reachability** — do we have a named contact, warm intro path, or only cold-email?\n   - **Pitch angle** — auto-drafted one-liner tailored to their specific hiring gap (\"You've been hiring React for 3 months — here are 12 verified React builders ready tomorrow\").\n   - **Output:** a ranked lead list the CEO reviews weekly. Low-score leads drop silently; high-score leads get drafted into outbound emails.\n3. **Qualification** — cross-reference against Kracked Devs' current skill pool (what can our 1,190 devs deliver?). Only contact companies whose open roles we can actually fill.\n3. **Personalised pitch** — for each target: \"You're hiring a React engineer. Kracked Devs has 40 verified React builders in KL with shipped projects. Here are the top 5 public profiles. Post your role, get a 48-hour shortlist, zero fees.\"\n4. **Drafts emails and LinkedIn messages** — never auto-sends. CEO / BD approves before anything goes out.\n5. **Follow-up cadence** — 3-touch sequence, measured open / reply / post conversion.\n\nThis reuses Claw OS's approval layer and agent infrastructure. Likely the smallest net-new agent build because Sniper's architecture maps directly.\n\n## The monetisation wedge\n\nThe platform is currently **0% fees** (see [[Kracked Devs]] \"For Companies\" table). That's a positioning choice, not a law. Three paths to revenue without breaking the promise:\n\n1. **Featured job listings** — companies pay to surface roles at the top of the board. Keeps base listings free. Est. MYR 500–2000 per featured post.\n2. **Premium company accounts** — bulk posting, direct candidate DMs, access to the developer directory filter-view. Est. MYR 1–5k / month.\n3. **Placement success fees** — opt-in model: companies pay a flat fee (not %) when they hire through Kracked Devs. Est. MYR 3–10k per hire, dwarfed by traditional 20–30% agency cost. Opt-in keeps the \"0% fees\" headline intact.\n4. **Sponsored bounties** — companies post paid bounties (live on [[Bounty Board]]) as low-commitment try-before-hire. Kracked Devs takes a platform fee on bounty payouts.\n\n**Recommendation:** lead with **Featured Listings** + **Sponsored Bounties** in Q2 (low-friction, low-commitment for companies), layer Placement Fees in Q3 once volume justifies the negotiation work.\n\n## Q2 targets *(through Jun 30)*\n\n| Metric | Baseline | Q2 target |\n|---|---|---|\n| Developers with ≥1 Showcase project | 30 | 100 |\n| Developers with AI skill scorecard live | 0 | 300 |\n| Leads AI-scored | 0 | 500 |\n| Companies actively hiring on Kracked Devs | TBD | 20 |\n| Paid Featured Listings | 0 | 10 |\n| Sponsored Bounties posted | existing | 5 new |\n| Recruiter agent outbound emails drafted | 0 | 200 |\n| Recruiter-driven job posts landed | 0 | 15 |\n| Revenue from Job Portal | 0 | MYR 15k |\n\n## Build plan\n\n### Phase 1 · Weeks 1–2 *(through Apr 30)*\n- Land inside the Claw OS Sprint 2 work: add Recruiter as a second agent alongside [[Sniper]].\n- Source list: top 200 Malaysian tech-hiring companies.\n- One outbound template. Manual send by CEO for first week (before approval UI).\n\n### Phase 2 · Weeks 3–6 *(May)*\n- Recruiter drafts 50 emails / week into Pending Approvals card.\n- Featured Listings SKU packaged. Price set. Sold manually (no payment UI yet).\n- KD Academy cohorts pushed to publish Showcase projects as part of workshop exit criteria.\n- First 3 paid Featured Listings signed.\n\n### Phase 3 · Weeks 7–11 *(June)*\n- Sponsored Bounties flowing — first 5 paid bounties posted.\n- Developer-side: Showcase count passes 100.\n- Premium Company SKU packaged (stretch).\n- Monthly revenue rhythm established.\n\n## Decisions needed before build starts\n\n1. **New agent, or extend Sniper?** Recruiter is sales-adjacent; Sniper is tender-adjacent. I lean: new agent (\"Recruiter\") with shared infrastructure. Same approval layer, same Pending Approvals card.\n2. **Pricing.** MYR anchors above are guesses. CEO confirms.\n3. **Free tier boundary.** Free jobs stay unlimited, or free tier capped at X posts/month?\n4. **Who runs outreach in week 1** (before approval UI exists)? CEO? Adam? Zarul?\n5. **Who owns Showcase push inside KD Academy cohorts?** Likely Xavier domain once live; Irfan in the meantime.\n6. **Payment infrastructure.** Stripe already wired on Kracked Devs, or is this net-new? Affects Phase 2 timeline.\n\n## Related\n\n- [[Kracked Devs]] — the platform this monetises\n- [[Job Board]] — the existing surface\n- [[Showcase]] — the portfolio side\n- [[Bounty Board]] — Sponsored Bounties path\n- [[Sniper]] — architecturally closest agent\n- [[Q2 2026]] — parent quarterly plan\n- [[KD Academy]] — feeds Showcase projects\n- [[Company Brain - Architecture]] — shared agent infra\n",
-      "wordCount": 1255,
-      "links": [
-        "kracked-devs",
-        "kd-academy",
-        "bounty-board",
-        "sniper",
-        "kracked-devs",
-        "bounty-board",
-        "sniper",
-        "kracked-devs",
-        "job-board",
-        "showcase",
-        "bounty-board",
-        "sniper",
-        "q2-2026",
-        "kd-academy",
-        "company-brain-architecture"
-      ],
-      "linkNames": [
-        "Kracked Devs",
-        "KD Academy",
-        "Bounty Board",
-        "Sniper",
-        "Kracked Devs",
-        "Bounty Board",
-        "Sniper",
-        "Kracked Devs",
-        "Job Board",
-        "Showcase",
-        "Bounty Board",
-        "Sniper",
-        "Q2 2026",
-        "KD Academy",
-        "Company Brain - Architecture"
-      ],
-      "path": "Strategy/Job Portal Monetisation.md",
-      "type": "strategy",
-      "pillar": "kracked-devs",
-      "status": "draft",
-      "owner": "danial",
-      "period": "2026-04-16 → 2026-09-30",
-      "connections": 16
-    },
-    {
-      "id": "claw-os-pitch-deck",
-      "name": "Claw OS - Pitch Deck",
-      "category": "Strategy",
-      "dataset": "mission",
-      "content": "\n# Claw OS — Pitch Deck v0\n\n> Audience: CEO / COO / Chief of Staff at 30–300 headcount companies feeling operational chaos. GLCs, mid-corporates, government agencies, military, family offices.\n> Length: 12 slides + appendix.\n> Goal: book a paid consultation engagement.\n\n## The narrative arc\n\n1. **The pain is universal.** Every growing company hits the same wall: leadership memory fragments, status takes hours to chase, decisions disappear.\n2. **Tools have failed at this.** Notion, Confluence, Slack, email — more tools, more fragmentation, not less.\n3. **Claw OS is not another tool.** It's the company's shared brain — grounded, continuously updated, queryable by anyone who should see it.\n4. **We use it to run Kracked Technologies.** Live demo, real vault, real decisions.\n5. **Here's what it looks like for you.** Three engagement shapes, clear pricing, clear next step.\n\n---\n\n## Slide 1 — Title\n\n- **Claw OS**\n- *The AI company brain. Infra before growth.*\n- Kracked Technologies\n- Contact / date\n\n## Slide 2 — The quiet cost of scale\n\nHeadline: **\"The moment your leadership team stops remembering the same things, your company slows down.\"**\n\nThree bullets framing the pain, not the solution:\n- Status updates consume hours every week and age within days.\n- Decisions made in meetings vanish; the same debate returns weeks later.\n- Knowledge lives in the heads of your best people — and leaves when they do.\n\nVisual: simple illustration of fragmented information sources (Slack, email, decks, heads).\n\n## Slide 3 — Why more tools make it worse\n\nHeadline: **\"You don't have a tools problem. You have a memory problem.\"**\n\n- Notion, Confluence, Jira, Slack, email — each solves a slice, none is the shared source of truth.\n- Your people spend more time navigating tools than doing the work.\n- AI wrappers on top of fragmented data make the fragmentation worse, not better.\n\nVisual: a chaotic cloud of tool logos, with an arrow pointing to question mark.\n\n## Slide 4 — A company brain\n\nHeadline: **\"One source of truth. Always current. Queryable by everyone who should see it.\"**\n\nWhat a company brain is:\n- A single, structured knowledge store of how your company actually operates.\n- Fed continuously by the team — status updates, meeting outcomes, decisions, deals.\n- AI agents that keep it current, draft updates for approval, and answer questions with citations.\n- Your CEO is the approver of every write — you stay in control.\n\nVisual: the Mission Control dashboard from the live Kracked vault.\n\n## Slide 5 — How it works (three loops)\n\nHeadline: **\"Ingest. Answer. Act.\"**\n\nThree small diagrams:\n1. **Ingestion loop** — team submits updates → AI drafts vault edits → CEO approves → vault updates → everyone sees current state.\n2. **Query loop** — anyone authorised asks a question → AI answers with citations to the source.\n3. **Proactive loop** — AI watches for stalls, risks, opportunities → surfaces them on the CEO's morning briefing.\n\n## Slide 6 — The agent layer\n\nHeadline: **\"A team of AI agents, each with a specific job.\"**\n\nVisual: Itachi at the top, five specialists below (Alfred, Sniper, Scout, Rick, Xavier).\n\nOne line per agent:\n- **Itachi** — strategic partner. Thinks with the CEO, maintains the architecture.\n- **Alfred** — chief of staff. Daily briefings, query interface.\n- **Sniper** — revenue hunter. Tracks tenders and sales opportunities.\n- **Scout** — researcher. Monitors market, competitors, ecosystem.\n- **Rick** — portfolio operator. Watches products and ventures.\n- **Xavier** — education / workforce lead. (For clients: swap in their domain — ops, compliance, clinical, etc.)\n\n> \"Every client's agent team is shaped around their business. This is ours.\"\n\n## Slide 7 — Grounded, never hallucinating\n\nHeadline: **\"Every answer cites a source. Every write waits for approval.\"**\n\n- Retrieval layer fetches cited passages from your company's real notes.\n- If no source exists, the agent says so — it doesn't fabricate.\n- Every proposed vault edit lands on an approval queue the CEO or delegate reviews.\n- Git history is the audit log. Every change is reversible, attributable, explainable.\n\nVisual: screenshot of the Pending Approvals card with an AI-proposed diff.\n\n## Slide 8 — Live demo / case study: Kracked Technologies\n\nHeadline: **\"We run Kracked on Claw OS. This is our real vault.\"**\n\n- 77 notes, 405 connections as of today.\n- Four pillars, live agents, weekly strategy grounded in the vault.\n- Screenshot of Mission Control — graph, This Week card, Agents list.\n- Brief anecdote: \"Last week, Itachi flagged a stalled deal that had been invisible for three weeks. One conversation saved the bid.\"\n\n## Slide 9 — Three ways to engage\n\nHeadline: **\"Pick your shape.\"**\n\nThree columns:\n\n**Consultation** *(2–4 weeks)*\n- Discovery workshops, brain architecture design, agent shortlist, MVP roadmap.\n- Deliverable: a written architecture and 90-day plan tailored to your company.\n- *Pricing anchor: MYR 30–80k.*\n\n**Workshop** *(1 day)*\n- \"Build your company brain in a day\" — run with your leadership team.\n- Deliverable: a first vault, a running agent, and an internal plan to extend.\n- *Pricing anchor: MYR 15–30k per cohort.*\n\n**Bespoke Deployment** *(3–6 months)*\n- Full Claw OS build for your company: vault, agents, approval layer, integrations, training.\n- Deliverable: a working company brain handed over to your team, with optional retainer.\n- *Pricing anchor: MYR 250k+ build + monthly retainer.*\n\n## Slide 10 — Who we are\n\nHeadline: **\"Kracked Technologies — builders, not consultants.\"**\n\n- Team of engineers, educators, venture builders.\n- Running [[KD Academy]] (training), [[Kracked Labs]] (ventures), [[Kracked Devs]] (community), Tenders and Contracts (revenue).\n- We built Claw OS for ourselves first. We ship what we use.\n- Based in Malaysia, serving the region.\n\n## Slide 11 — What happens next\n\nHeadline: **\"Two conversations.\"**\n\n1. **30-minute alignment call.** We scope your pain, confirm fit, agree on engagement shape.\n2. **2-hour discovery session** (free). We map your current information flows, leadership frustrations, and the decisions you want to make faster.\n\nFrom there: a written proposal within 5 working days. A decision within 2 weeks.\n\nCTA: *email / calendar link / QR code.*\n\n## Slide 12 — Appendix\n\nOptional slides to pull in depending on audience:\n- Architecture deep-dive (the Company Brain layered diagram).\n- Security & governance (audit log, role scoping, approval layer, data residency).\n- Cost model per scale tier.\n- Case study — a specific agent flow (e.g. how Sniper handles a tender).\n- FAQ — integrations, data export, vendor lock-in, Malay-language support.\n\n---\n\n## Positioning guardrails (for the speaker)\n\n- **Never lead with \"AI\" or \"agents\".** Lead with the pain. Agents are the mechanism.\n- **Never promise growth / 10x.** Promise calm, clarity, and control.\n- **Never compare directly to Notion or similar.** Frame them as complements that sit below Claw OS in the stack.\n- **Always ground the demo in the real Kracked vault.** Do not use mock data.\n- **Always mention the approval layer early.** It's the antidote to \"AI will take over my company\" anxiety.\n\n## Open items before the deck is ready to present\n\n1. Lock the product name (Claw OS vs Cakar OS vs other).\n2. Final pricing numbers (currently anchors only).\n3. Visual design pass — current outline is text-only.\n4. Two reference quotes from inside Kracked — ideally Adam, Zarul, or Irfan on why the brain matters to their day.\n5. A short video clip of the Mission Control dashboard in motion for slides 4, 7, and 8.\n\n## Related\n\n- [[Q2 2026]] — quarterly plan this deck supports\n- [[Company Brain - Architecture]] — the technical system behind the pitch\n- [[Itachi]], [[Alfred]], [[Sniper]], [[Scout]], [[Rick]], [[Xavier]] — agent slide source\n- [[Tenders and Contracts]] — pillar this deck supports\n",
-      "wordCount": 1277,
-      "links": [
-        "kd-academy",
-        "kracked-labs",
-        "kracked-devs",
-        "q2-2026",
-        "company-brain-architecture",
-        "itachi",
-        "alfred",
-        "sniper",
-        "scout",
-        "rick",
-        "xavier",
-        "tenders-and-contracts"
-      ],
-      "linkNames": [
-        "KD Academy",
-        "Kracked Labs",
-        "Kracked Devs",
-        "Q2 2026",
-        "Company Brain - Architecture",
-        "Itachi",
-        "Alfred",
-        "Sniper",
-        "Scout",
-        "Rick",
-        "Xavier",
-        "Tenders and Contracts"
-      ],
-      "path": "Strategy/Claw OS - Pitch Deck.md",
-      "type": "deck",
-      "product": "claw-os",
-      "status": "outline",
-      "owner": "danial",
-      "connections": 12
-    },
-    {
-      "id": "roadmap",
-      "name": "Roadmap",
-      "category": "Projects",
-      "dataset": "mission",
-      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
-      "wordCount": 111,
-      "links": [
-        "pipeline",
-        "portfolio",
-        "bounty-board"
-      ],
-      "linkNames": [
-        "Pipeline",
-        "Portfolio",
-        "Bounty Board"
-      ],
-      "path": "Projects/Roadmap.md",
-      "connections": 4
-    },
-    {
-      "id": "products-projects",
-      "name": "Products & Projects",
-      "category": "Projects",
-      "dataset": "mission",
-      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
-      "wordCount": 105,
-      "links": [
-        "kracked-technologies",
-        "bounty-board",
-        "job-board",
-        "leaderboard",
-        "guild-system",
-        "showcase",
-        "events",
-        "news-feed",
-        "portfolio"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Bounty Board",
-        "Job Board",
-        "Leaderboard",
-        "Guild System",
-        "Showcase",
-        "Events",
-        "News Feed",
-        "Portfolio"
-      ],
-      "path": "Projects/Products & Projects.md",
-      "connections": 10
-    },
-    {
       "id": "tenders-and-contracts",
       "name": "Tenders and Contracts",
       "category": "Ecosystem",
       "dataset": "mission",
-      "content": "\n# Tenders and Contracts\n\nThe revenue and credibility arm of [[Kracked Technologies]]. Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Sniper]], under CEO approval.\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this is a pillar, not a department\n\nTenders and Contracts is where the other two pillars cash in:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — those get booked through this pillar.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- Every tender we bid on is signed under the **Kracked Technologies** umbrella, regardless of which pillar delivers.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
-      "wordCount": 404,
+      "content": "\n# Tenders and Contracts\n\nThe outbound revenue operation of [[Kracked Technologies]], run at the parent level (not a sub-pillar). Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Sniper]], under CEO approval. Sits alongside (not inside) the three pillars: [[Kracked Devs]], [[KD Academy]], [[Kracked Labs]].\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this runs at the parent level\n\nProjects and tenders are cross-pillar by nature — the other three cash in through this operation:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — booked through this operation.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- [[Kracked Devs]]' recruitment arm can be bundled into bigger contracts (e.g. \"we'll deliver this project AND staff your internal team\").\n- Every tender we bid on is signed under **Kracked Technologies** regardless of which pillar delivers, so it makes sense to run outbound at the parent level.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
+      "wordCount": 456,
       "links": [
         "kracked-technologies",
         "sniper",
+        "kracked-devs",
+        "kd-academy",
+        "kracked-labs",
         "sniper",
         "this-week",
         "kd-academy",
         "kracked-labs",
+        "kracked-devs",
         "alfred",
         "sniper",
         "kracked-technologies",
@@ -916,10 +940,14 @@
       "linkNames": [
         "Kracked Technologies",
         "Sniper",
+        "Kracked Devs",
+        "KD Academy",
+        "Kracked Labs",
         "Sniper",
         "This Week",
         "KD Academy",
         "Kracked Labs",
+        "Kracked Devs",
         "Alfred",
         "Sniper",
         "Kracked Technologies",
@@ -931,7 +959,7 @@
       "type": "pillar",
       "status": "In development",
       "owner": "danial",
-      "connections": 16
+      "connections": 20
     },
     {
       "id": "kracked-labs",
@@ -963,7 +991,7 @@
         "Portfolio"
       ],
       "path": "Ecosystem/Kracked Labs.md",
-      "connections": 44
+      "connections": 46
     },
     {
       "id": "kracked-devs",
@@ -999,7 +1027,7 @@
         "Sniper"
       ],
       "path": "Ecosystem/Kracked Devs.md",
-      "connections": 37
+      "connections": 40
     },
     {
       "id": "advisory-board",
@@ -1051,7 +1079,7 @@
         "Kracked Devs"
       ],
       "path": "Platform/Showcase.md",
-      "connections": 6
+      "connections": 7
     },
     {
       "id": "news-feed",
@@ -1185,7 +1213,7 @@
         "Kracked Devs"
       ],
       "path": "Platform/Bounty Board.md",
-      "connections": 11
+      "connections": 12
     },
     {
       "id": "surenthiran-krishnan",
@@ -1284,6 +1312,18 @@
       "connections": 7
     },
     {
+      "id": "kd-academy",
+      "name": "KD Academy",
+      "category": "Ecosystem",
+      "dataset": "mission",
+      "content": "# KD Academy\n\nMalaysia's builder-first education system. Transforms digital consumers into AI technical builders.\n\n**Website:** https://academy.krackeddevs.com\n**Motto:** \"NECB: Now Everyone Can Build\"\n**Philosophy:** \"Ship small, publish early.\"\n**Founded:** December 2025\n\n## What We Teach\n\n- Vibe coding methodology\n- Building with AI\n- Shipping products fast\n- Structured learning pipelines\n\n## Curriculum Components\n\n- Vibe Coding methodology\n- Builder Syllabus\n- Research Thesis\n- Kracked OS (development environment)\n\n## Structure\n\n- **Pipeline** — Structured learning path (National Capability Graph, Strategic Growth Pipeline)\n- **Workshops** — Hands-on sessions\n- **Ambassadors** — Distributed ambassador network, peer educators\n- **Research** — Research initiatives\n\n## Status\n\n- Stage: In development (subpages still being built)\n- Platform: academy.krackeddevs.com\n",
+      "wordCount": 113,
+      "links": [],
+      "linkNames": [],
+      "path": "Ecosystem/KD Academy/KD Academy.md",
+      "connections": 25
+    },
+    {
       "id": "taylor-bookaslot-taylors-uni",
       "name": "Taylor BookaSlot - Taylors Uni",
       "category": "Deals",
@@ -1334,18 +1374,6 @@
       "linkNames": [],
       "path": "Deals/DEY - Short Circuit Works.md",
       "connections": 0
-    },
-    {
-      "id": "kd-academy",
-      "name": "KD Academy",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "# KD Academy\n\nMalaysia's builder-first education system. Transforms digital consumers into AI technical builders.\n\n**Website:** https://academy.krackeddevs.com\n**Motto:** \"NECB: Now Everyone Can Build\"\n**Philosophy:** \"Ship small, publish early.\"\n**Founded:** December 2025\n\n## What We Teach\n\n- Vibe coding methodology\n- Building with AI\n- Shipping products fast\n- Structured learning pipelines\n\n## Curriculum Components\n\n- Vibe Coding methodology\n- Builder Syllabus\n- Research Thesis\n- Kracked OS (development environment)\n\n## Structure\n\n- **Pipeline** — Structured learning path (National Capability Graph, Strategic Growth Pipeline)\n- **Workshops** — Hands-on sessions\n- **Ambassadors** — Distributed ambassador network, peer educators\n- **Research** — Research initiatives\n\n## Status\n\n- Stage: In development (subpages still being built)\n- Platform: academy.krackeddevs.com\n",
-      "wordCount": 113,
-      "links": [],
-      "linkNames": [],
-      "path": "Ecosystem/KD Academy/KD Academy.md",
-      "connections": 23
     },
     {
       "id": "xavier",
@@ -1417,8 +1445,8 @@
       "name": "Sniper",
       "category": "Agents",
       "dataset": "mission",
-      "content": "\n# Sniper\n\n**Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters.**\n\nRuns the [[Tenders and Contracts]] pillar under [[Kracked Technologies]].\n\nWhere [[Alfred]] is the chief of staff, Sniper is the field scout. Sniper hunts on two fronts:\n\n1. **Tenders, RFPs, grants, and contract opportunities** — the things we could win.\n2. **Main contractors and their points of contact** — the people and firms we should know.\n\n## What Sniper does\n\n### Tender & contract hunting\n\n- Scans government procurement portals (MyProcurement, ePerolehan), gov-tech programme calls (MDEC, MRANTI, Cradle, Khazanah, PADU), corporate RFP boards, and grant databases on a daily schedule.\n- Scores each opportunity against Kracked's capability profile + current [[This Week]] focus. Fit score = domain match × capability match × deadline feasibility × strategic priority.\n- Drafts shortlisted opportunities as new notes in `Deals/` (Tenders & Contracts) with structured frontmatter: deadline, value, source URL, fit score, recommended response path.\n- Flags tight deadlines or strategic fits for the CEO's morning briefing.\n\n### Contractor intelligence\n\n- Maintains a live registry of main contractors — gov-linked integrators, system houses, primes we could sub under or partner with.\n- For each contractor: primary contacts (name, title, email, phone, LinkedIn), ongoing government projects, sectors of strength, past interactions with Kracked, relationship temperature.\n- Enriches from public sources (company websites, LinkedIn, news, procurement history) with CEO-approved additions from meetings and outreach.\n- Surfaces contractor overlap when new tenders appear — \"Sniper found: contractor X is lead on this tender, and we met their COO last month.\"\n\n## What Sniper isn't\n\n- Not a scraper of arbitrary websites. Explicit source list, curated, auditable.\n- Not autonomous on outreach — drafts emails and LinkedIn messages, but never sends. All outreach goes through CEO approval.\n- Not a CRM replacement on day one — the vault *is* the CRM.\n\n## Outputs\n\nAll writes go through [[Alfred]]'s Approval Layer — nothing hits the vault without CEO sign-off.\n\n### New vault structure Sniper maintains\n\n- `Deals/` — Tenders & Contracts (existing folder, existing Mission Control card).\n- `Contractors/` *(new)* — one markdown note per contractor, e.g. `Contractors/IX Telecom.md`.\n- `Contractors/Contacts.md` *(new)* — flat registry of all individual contacts, cross-linked to their contractor note.\n\n### Frontmatter conventions Sniper writes\n\n**Tender note** (`Deals/*.md`):\n```yaml\n---\ntype: tender\nstatus: lead            # lead | shortlisted | bidding | won | lost | dropped\nsource: MyProcurement\nsource_url: https://...\ndeadline: 2026-05-12\nvalue_myr: 500000\nfit_score: 0.82\nowner: danial\n---\n```\n\n**Contractor note** (`Contractors/*.md`):\n```yaml\n---\ntype: contractor\ntier: prime             # prime | integrator | sub | vendor\nsectors: [defence, gov-tech, telco]\nrelationship: warm      # cold | warm | active | partner\nlast_contact: 2026-03-20\n---\n```\n\n**Contact entry** (inline in contractor note or in `Contacts.md`):\n```yaml\n- name: Aisyah Binti ...\n  title: Head of Digital\n  company: IX Telecom\n  email: ...\n  phone: ...\n  linkedin: ...\n  last_interaction: 2026-03-20 — coffee at Menara KL\n```\n\n## How Sniper is built\n\n- **Daily cron** (Vercel Cron at 8am MYT) runs the source crawlers.\n- **Crawlers** are small adapters, one per source. Each returns normalized `Opportunity` records.\n- **Scoring** uses Claude Haiku with a cached system prompt containing the capability profile + this week's focus. Fast, cheap, runs on every candidate.\n- **Drafting** uses Claude Sonnet to write the tender / contractor note in full markdown with proper frontmatter.\n- **Diffs go to Pending Approvals** on Mission Control alongside Alfred's suggestions — one unified queue.\n- **Contractor enrichment** runs weekly (Sunday), re-checks public signals for stale contractor records, proposes field updates (e.g. \"X Telecom appointed new CTO — update lead contact?\").\n\nFull architecture context: [[Company Brain - Architecture]].\n\n## Build plan\n\nLayered on top of Alfred's phases — Sniper reuses the ingestion, suggestion, and approval layers.\n\n| Phase | Weeks | What ships |\n|---|---|---|\n| **Phase 1** — Manual seed | 3–6 | Create `Contractors/` folder, seed 10–15 known primes manually. Stand up the daily cron with one source (MyProcurement) writing tender drafts to `Deals/`. |\n| **Phase 2** — Multi-source + scoring | 7–12 | Add 3–5 more sources (ePerolehan, MRANTI, MDEC, one corporate RFP feed). Scoring against capability profile. Morning briefing includes top-3 tender hits. |\n| **Phase 3** — Contractor intelligence | 13–20 | Weekly enrichment pass, contractor-tender cross-linking, LinkedIn / news monitoring for the contact list. |\n| **Phase 4** — Outreach drafts | 21–26 | Drafts personalised intro emails + LinkedIn notes when a tender matches a warm contractor. CEO approves before anything goes out. |\n\n## Decisions needed before build starts\n\n1. **Source list** — confirm which portals and programmes Sniper should scan on day one. Default: MyProcurement + ePerolehan + MRANTI + MDEC + Cradle.\n2. **Capability profile** — Sniper needs a machine-readable version of \"what Kracked actually does\" to score fit. Where does that live? Proposed: `Kracked Technologies.md` frontmatter + a new `Capabilities.md`.\n3. **Contractor seed list** — CEO to provide the initial 10–15 primes (names + known contacts). Sniper enriches from there.\n4. **Fit score threshold** — below what score do we drop opportunities silently? Above what do we page the CEO immediately?\n5. **Scraping ethics / ToS** — public portals are fine; LinkedIn is a grey area. Recommendation: use LinkedIn only as a human-curated field on contact notes, no automated scraping.\n\n## Related\n\n- [[Alfred]] — the CEO's strategic assistant; Sniper feeds it.\n- [[Company Brain - Architecture]] — shared infrastructure (ingestion, approval, retrieval).\n- [[This Week]] — Sniper weights priorities against the current weekly focus.\n",
-      "wordCount": 914,
+      "content": "\n# Sniper\n\n**Sniper is Kracked Technologies' tenders & contracts hunter — always scanning, always scoring, surfacing only what matters.**\n\nRuns [[Tenders and Contracts]] — the outbound projects + tenders operation at the [[Kracked Technologies]] parent level (not a sub-pillar).\n\nWhere [[Alfred]] is the chief of staff, Sniper is the field scout. Sniper hunts on two fronts:\n\n1. **Tenders, RFPs, grants, and contract opportunities** — the things we could win.\n2. **Main contractors and their points of contact** — the people and firms we should know.\n\n## What Sniper does\n\n### Tender & contract hunting\n\n- Scans government procurement portals (MyProcurement, ePerolehan), gov-tech programme calls (MDEC, MRANTI, Cradle, Khazanah, PADU), corporate RFP boards, and grant databases on a daily schedule.\n- Scores each opportunity against Kracked's capability profile + current [[This Week]] focus. Fit score = domain match × capability match × deadline feasibility × strategic priority.\n- Drafts shortlisted opportunities as new notes in `Deals/` (Tenders & Contracts) with structured frontmatter: deadline, value, source URL, fit score, recommended response path.\n- Flags tight deadlines or strategic fits for the CEO's morning briefing.\n\n### Contractor intelligence\n\n- Maintains a live registry of main contractors — gov-linked integrators, system houses, primes we could sub under or partner with.\n- For each contractor: primary contacts (name, title, email, phone, LinkedIn), ongoing government projects, sectors of strength, past interactions with Kracked, relationship temperature.\n- Enriches from public sources (company websites, LinkedIn, news, procurement history) with CEO-approved additions from meetings and outreach.\n- Surfaces contractor overlap when new tenders appear — \"Sniper found: contractor X is lead on this tender, and we met their COO last month.\"\n\n## What Sniper isn't\n\n- Not a scraper of arbitrary websites. Explicit source list, curated, auditable.\n- Not autonomous on outreach — drafts emails and LinkedIn messages, but never sends. All outreach goes through CEO approval.\n- Not a CRM replacement on day one — the vault *is* the CRM.\n\n## Outputs\n\nAll writes go through [[Alfred]]'s Approval Layer — nothing hits the vault without CEO sign-off.\n\n### New vault structure Sniper maintains\n\n- `Deals/` — Tenders & Contracts (existing folder, existing Mission Control card).\n- `Contractors/` *(new)* — one markdown note per contractor, e.g. `Contractors/IX Telecom.md`.\n- `Contractors/Contacts.md` *(new)* — flat registry of all individual contacts, cross-linked to their contractor note.\n\n### Frontmatter conventions Sniper writes\n\n**Tender note** (`Deals/*.md`):\n```yaml\n---\ntype: tender\nstatus: lead            # lead | shortlisted | bidding | won | lost | dropped\nsource: MyProcurement\nsource_url: https://...\ndeadline: 2026-05-12\nvalue_myr: 500000\nfit_score: 0.82\nowner: danial\n---\n```\n\n**Contractor note** (`Contractors/*.md`):\n```yaml\n---\ntype: contractor\ntier: prime             # prime | integrator | sub | vendor\nsectors: [defence, gov-tech, telco]\nrelationship: warm      # cold | warm | active | partner\nlast_contact: 2026-03-20\n---\n```\n\n**Contact entry** (inline in contractor note or in `Contacts.md`):\n```yaml\n- name: Aisyah Binti ...\n  title: Head of Digital\n  company: IX Telecom\n  email: ...\n  phone: ...\n  linkedin: ...\n  last_interaction: 2026-03-20 — coffee at Menara KL\n```\n\n## How Sniper is built\n\n- **Daily cron** (Vercel Cron at 8am MYT) runs the source crawlers.\n- **Crawlers** are small adapters, one per source. Each returns normalized `Opportunity` records.\n- **Scoring** uses Claude Haiku with a cached system prompt containing the capability profile + this week's focus. Fast, cheap, runs on every candidate.\n- **Drafting** uses Claude Sonnet to write the tender / contractor note in full markdown with proper frontmatter.\n- **Diffs go to Pending Approvals** on Mission Control alongside Alfred's suggestions — one unified queue.\n- **Contractor enrichment** runs weekly (Sunday), re-checks public signals for stale contractor records, proposes field updates (e.g. \"X Telecom appointed new CTO — update lead contact?\").\n\nFull architecture context: [[Company Brain - Architecture]].\n\n## Build plan\n\nLayered on top of Alfred's phases — Sniper reuses the ingestion, suggestion, and approval layers.\n\n| Phase | Weeks | What ships |\n|---|---|---|\n| **Phase 1** — Manual seed | 3–6 | Create `Contractors/` folder, seed 10–15 known primes manually. Stand up the daily cron with one source (MyProcurement) writing tender drafts to `Deals/`. |\n| **Phase 2** — Multi-source + scoring | 7–12 | Add 3–5 more sources (ePerolehan, MRANTI, MDEC, one corporate RFP feed). Scoring against capability profile. Morning briefing includes top-3 tender hits. |\n| **Phase 3** — Contractor intelligence | 13–20 | Weekly enrichment pass, contractor-tender cross-linking, LinkedIn / news monitoring for the contact list. |\n| **Phase 4** — Outreach drafts | 21–26 | Drafts personalised intro emails + LinkedIn notes when a tender matches a warm contractor. CEO approves before anything goes out. |\n\n## Decisions needed before build starts\n\n1. **Source list** — confirm which portals and programmes Sniper should scan on day one. Default: MyProcurement + ePerolehan + MRANTI + MDEC + Cradle.\n2. **Capability profile** — Sniper needs a machine-readable version of \"what Kracked actually does\" to score fit. Where does that live? Proposed: `Kracked Technologies.md` frontmatter + a new `Capabilities.md`.\n3. **Contractor seed list** — CEO to provide the initial 10–15 primes (names + known contacts). Sniper enriches from there.\n4. **Fit score threshold** — below what score do we drop opportunities silently? Above what do we page the CEO immediately?\n5. **Scraping ethics / ToS** — public portals are fine; LinkedIn is a grey area. Recommendation: use LinkedIn only as a human-curated field on contact notes, no automated scraping.\n\n## Related\n\n- [[Alfred]] — the CEO's strategic assistant; Sniper feeds it.\n- [[Company Brain - Architecture]] — shared infrastructure (ingestion, approval, retrieval).\n- [[This Week]] — Sniper weights priorities against the current weekly focus.\n",
+      "wordCount": 925,
       "links": [
         "tenders-and-contracts",
         "kracked-technologies",
@@ -1445,7 +1473,7 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 44
+      "connections": 46
     },
     {
       "id": "scout",
@@ -2332,6 +2360,10 @@
     },
     {
       "source": "kracked-technologies",
+      "target": "job-portal-monetisation"
+    },
+    {
+      "source": "kracked-technologies",
       "target": "kd-academy"
     },
     {
@@ -2340,11 +2372,11 @@
     },
     {
       "source": "kracked-technologies",
-      "target": "tenders-and-contracts"
+      "target": "sniper"
     },
     {
       "source": "kracked-technologies",
-      "target": "sniper"
+      "target": "tenders-and-contracts"
     },
     {
       "source": "kracked-technologies",
@@ -2359,108 +2391,8 @@
       "target": "roadmap"
     },
     {
-      "source": "rotican-ai",
-      "target": "portfolio"
-    },
-    {
-      "source": "cofounders",
-      "target": "portfolio"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "portfolio"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "portfolio"
-    },
-    {
-      "source": "revenue-model",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "portfolio",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "portfolio",
-      "target": "rotican-ai"
-    },
-    {
-      "source": "portfolio",
-      "target": "jomqr"
-    },
-    {
-      "source": "portfolio",
-      "target": "mypeta"
-    },
-    {
-      "source": "portfolio",
-      "target": "burhan"
-    },
-    {
-      "source": "portfolio",
-      "target": "jomkopi"
-    },
-    {
-      "source": "portfolio",
-      "target": "masjid-os"
-    },
-    {
-      "source": "pipeline",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "pipeline",
-      "target": "portfolio"
-    },
-    {
-      "source": "pipeline",
-      "target": "venture-playbook"
-    },
-    {
-      "source": "masjid-os",
-      "target": "portfolio"
-    },
-    {
-      "source": "market-landscape",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "mypeta",
-      "target": "portfolio"
-    },
-    {
-      "source": "jomqr",
-      "target": "portfolio"
-    },
-    {
-      "source": "jomkopi",
-      "target": "portfolio"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "competitors",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "burhan",
-      "target": "portfolio"
+      "source": "kracked-technologies",
+      "target": "q2-2026"
     },
     {
       "source": "sea-expansion",
@@ -2763,22 +2695,6 @@
       "target": "competitors"
     },
     {
-      "source": "team",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "team",
-      "target": "mypeta"
-    },
-    {
-      "source": "team",
-      "target": "leaderboard"
-    },
-    {
-      "source": "team",
-      "target": "kracked-labs"
-    },
-    {
       "source": "q2-2026",
       "target": "itachi"
     },
@@ -2804,6 +2720,22 @@
     },
     {
       "source": "q2-2026",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "q2-2026",
+      "target": "kd-academy"
+    },
+    {
+      "source": "q2-2026",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "q2-2026",
+      "target": "sniper"
+    },
+    {
+      "source": "q2-2026",
       "target": "itachi"
     },
     {
@@ -2821,6 +2753,22 @@
     {
       "source": "q2-2026",
       "target": "sniper"
+    },
+    {
+      "source": "q2-2026",
+      "target": "sniper"
+    },
+    {
+      "source": "q2-2026",
+      "target": "job-portal-monetisation"
+    },
+    {
+      "source": "q2-2026",
+      "target": "showcase"
+    },
+    {
+      "source": "q2-2026",
+      "target": "bounty-board"
     },
     {
       "source": "q2-2026",
@@ -3019,6 +2967,22 @@
       "target": "tenders-and-contracts"
     },
     {
+      "source": "team",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "team",
+      "target": "mypeta"
+    },
+    {
+      "source": "team",
+      "target": "leaderboard"
+    },
+    {
+      "source": "team",
+      "target": "kracked-labs"
+    },
+    {
       "source": "roadmap",
       "target": "pipeline"
     },
@@ -3067,12 +3031,128 @@
       "target": "portfolio"
     },
     {
+      "source": "rotican-ai",
+      "target": "portfolio"
+    },
+    {
+      "source": "cofounders",
+      "target": "portfolio"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "portfolio"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "portfolio"
+    },
+    {
+      "source": "revenue-model",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "portfolio",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "portfolio",
+      "target": "rotican-ai"
+    },
+    {
+      "source": "portfolio",
+      "target": "jomqr"
+    },
+    {
+      "source": "portfolio",
+      "target": "mypeta"
+    },
+    {
+      "source": "portfolio",
+      "target": "burhan"
+    },
+    {
+      "source": "portfolio",
+      "target": "jomkopi"
+    },
+    {
+      "source": "portfolio",
+      "target": "masjid-os"
+    },
+    {
+      "source": "pipeline",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "pipeline",
+      "target": "portfolio"
+    },
+    {
+      "source": "pipeline",
+      "target": "venture-playbook"
+    },
+    {
+      "source": "masjid-os",
+      "target": "portfolio"
+    },
+    {
+      "source": "market-landscape",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "mypeta",
+      "target": "portfolio"
+    },
+    {
+      "source": "jomqr",
+      "target": "portfolio"
+    },
+    {
+      "source": "jomkopi",
+      "target": "portfolio"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "competitors",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "burhan",
+      "target": "portfolio"
+    },
+    {
       "source": "tenders-and-contracts",
       "target": "kracked-technologies"
     },
     {
       "source": "tenders-and-contracts",
       "target": "sniper"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "kd-academy"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "kracked-labs"
     },
     {
       "source": "tenders-and-contracts",
@@ -3089,6 +3169,10 @@
     {
       "source": "tenders-and-contracts",
       "target": "kracked-labs"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "kracked-devs"
     },
     {
       "source": "tenders-and-contracts",
@@ -4231,14 +4315,14 @@
   },
   "meta": {
     "totalConcepts": 80,
-    "totalConnections": 478,
+    "totalConnections": 492,
     "categories": [
       "Root",
-      "Ventures",
       "Research",
-      "Team",
       "Strategy",
+      "Team",
       "Projects",
+      "Ventures",
       "Ecosystem",
       "Platform",
       "Advisors",
@@ -4250,6 +4334,6 @@
       "Gov Funding",
       "Startup"
     ],
-    "syncedAt": "2026-04-16T04:26:38.377Z"
+    "syncedAt": "2026-04-16T05:09:23.973Z"
   }
 }
