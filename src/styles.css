@@ -4176,3 +4176,195 @@ a:hover {
   .mc-row-3 { grid-template-columns: 1fr !important; }
 }
 
+
+/* ==========================================================================
+   HUD CONSISTENCY PASS
+   Every major panel shares one visual contract:
+   - 4px radius
+   - hairline border (no color swap on hover)
+   - L-shaped corner brackets in panel's accent
+   - hover = faint accent glow via box-shadow, not border change
+   See STYLE.md §"Panel rules"
+   ========================================================================== */
+
+/* Unified panel base — applies to every "big box" on the site */
+.mc-card,
+.mc-collapsible,
+.mc-metrics,
+.mc-whatif-card,
+.strategy-hero,
+.q2plan-hero,
+.article-sidebar,
+.mc-whatif-fullscreen {
+  border-radius: 4px !important;
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent) !important;
+  background: color-mix(in srgb, var(--bg-elevated) 42%, transparent) !important;
+  position: relative;
+  transition: box-shadow 0.22s ease, transform 0.18s ease;
+}
+
+/* L-shaped corner brackets on every panel.
+   Accent defaults to --blue; override per-panel via --hud-accent. */
+.mc-card::before,
+.mc-card::after,
+.mc-collapsible::before,
+.mc-collapsible::after,
+.mc-metrics::before,
+.mc-metrics::after,
+.mc-whatif-card::before,
+.mc-whatif-card::after,
+.strategy-hero::before,
+.strategy-hero::after,
+.q2plan::before,
+.q2plan::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-color: color-mix(in srgb, var(--hud-accent, var(--blue)) 60%, transparent);
+  border-style: solid;
+  pointer-events: none;
+  z-index: 1;
+}
+.mc-card::before,
+.mc-collapsible::before,
+.mc-metrics::before,
+.mc-whatif-card::before,
+.q2plan::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+
+.mc-card::after,
+.mc-collapsible::after,
+.mc-metrics::after,
+.mc-whatif-card::after,
+.q2plan::after { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
+
+/* Hero brackets live on the corners of the hero itself (overrides bg gradient stacking) */
+.strategy-hero::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; background: transparent !important; }
+.strategy-hero::after { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+
+/* Add bottom corners via ::before on an inserted pseudo child (we use the article-sidebar and list pseudo slots) */
+.mc-card > .mc-card-head,
+.mc-collapsible > summary,
+.mc-metrics > .mc-metric:first-child,
+.mc-whatif-card > .mc-whatif-reader {
+  position: relative;
+}
+
+/* Reuse a wrapper trick: draw bottom brackets on the last child via inset pseudo on the panel itself by layering */
+.mc-card,
+.mc-collapsible,
+.mc-metrics,
+.mc-whatif-card,
+.q2plan { isolation: isolate; }
+
+/* Bottom-left and bottom-right brackets via background gradient masks on the panel (no dom changes) */
+.mc-card::before,
+.mc-collapsible::before,
+.mc-metrics::before,
+.mc-whatif-card::before,
+.q2plan::before,
+.mc-card::after,
+.mc-collapsible::after,
+.mc-metrics::after,
+.mc-whatif-card::after,
+.q2plan::after { opacity: 0.85; }
+
+/* Bottom brackets via a wrapping .panel-corners utility where helpful — but we also add them with a background image for panels that don't have an inner corner element. Simpler: use outline + negative offsets… too fragile. Keep top brackets only; they carry the aesthetic well enough. */
+
+/* --- Per-panel accent defaults for the top corners --- */
+.mc-card,
+.mc-collapsible { --hud-accent: var(--blue); }
+.mc-metrics { --hud-accent: var(--blue); }
+.mc-whatif-card { --hud-accent: #eab308; }
+.strategy-hero { --hud-accent: var(--blue); }
+
+/* --- Hover = faint glow, never border-color swap --- */
+/* Kill all prior blue-border hovers on these panels; rely on shadow only. */
+.mc-card:hover,
+.mc-list-row:hover,
+.mc-metric.clickable:hover,
+.mc-collapsible:hover,
+.mc-whatif-card:hover {
+  border-color: color-mix(in srgb, var(--border) 75%, transparent) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--hud-accent, var(--blue)) 18%, transparent),
+    0 10px 30px color-mix(in srgb, var(--hud-accent, var(--blue)) 12%, transparent);
+}
+.mc-list-row { transition: background 0.15s ease, box-shadow 0.18s ease; border-radius: 3px; }
+.mc-list-row:hover {
+  background: color-mix(in srgb, var(--hud-accent, var(--blue)) 5%, transparent) !important;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--hud-accent, var(--blue)) 15%, transparent);
+}
+
+/* Strategy pillars — same glow treatment, drop the border-color:blue hovers */
+.strategy-pillar-btn:hover {
+  background: color-mix(in srgb, var(--accent) 10%, transparent) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent),
+    0 10px 28px color-mix(in srgb, var(--accent) 15%, transparent) !important;
+  transform: translateY(-1px);
+}
+.strategy-pillar-btn::after { display: none; } /* drop the "→" arrow-on-hover, glow carries the interactivity */
+
+/* Strategy sidebar open/close buttons — glow not border flip */
+.strategy-sidebar-open:hover,
+.strategy-sidebar-close:hover,
+.mc-whatif-ctrl:hover,
+.mc-whatif-close:hover,
+.mc-whatif-navbtn:hover:not(:disabled),
+.strategy-sidebar-neighbor:hover,
+.q2plan-doc:hover {
+  border-color: var(--border) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--blue) 25%, transparent),
+    0 4px 14px color-mix(in srgb, var(--blue) 15%, transparent);
+  background: color-mix(in srgb, var(--blue) 7%, transparent) !important;
+  color: var(--text-bright) !important;
+}
+.strategy-sidebar-close:hover,
+.mc-whatif-close:hover {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, #ef4444 35%, transparent),
+    0 4px 14px color-mix(in srgb, #ef4444 18%, transparent) !important;
+  background: color-mix(in srgb, #ef4444 8%, transparent) !important;
+  color: #ef4444 !important;
+}
+
+/* Mode nav tabs — glow on active */
+.mode-nav-tab { transition: background 0.15s, box-shadow 0.18s; }
+.mode-nav-tab:hover {
+  background: color-mix(in srgb, var(--blue) 8%, transparent) !important;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 20%, transparent);
+}
+.mode-nav-tab-active {
+  box-shadow: inset 0 -1px 0 var(--blue), 0 0 12px color-mix(in srgb, var(--blue) 18%, transparent);
+}
+
+/* Article cards on Home and elsewhere — consistent treatment */
+.home-concept-card:hover,
+.home-tile:hover {
+  border-color: var(--border) !important;
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--blue) 20%, transparent),
+    0 8px 24px color-mix(in srgb, var(--blue) 12%, transparent) !important;
+  transform: translateY(-1px);
+}
+
+/* Modal card parity */
+.mc-modal {
+  border-radius: 4px !important;
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent) !important;
+}
+.mc-modal::before,
+.mc-modal::after {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-color: color-mix(in srgb, var(--blue) 55%, transparent);
+  border-style: solid;
+  pointer-events: none;
+}
+.mc-modal::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+.mc-modal::after { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
+
