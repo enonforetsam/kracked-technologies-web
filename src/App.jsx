@@ -4,6 +4,7 @@ import GraphPage from './pages/GraphPage'
 import Home from './pages/Home'
 import ArticlePage from './pages/ArticlePage'
 import MissionControl from './pages/MissionControl'
+import StrategyPage from './pages/StrategyPage'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -61,6 +62,12 @@ function ModeNav() {
             <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
           </svg>
           Wiki
+        </Link>
+        <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
+          </svg>
+          Strategy
         </Link>
       </div>
       <div className="mode-nav-right">
@@ -182,6 +189,7 @@ export default function App() {
               <Route path="/" element={<MissionControl graph={graph} />} />
               <Route path="/graph" element={<GraphPage graph={graph} />} />
               <Route path="/wiki" element={<Home graph={graph} />} />
+              <Route path="/strategy" element={<StrategyPage graph={graph} />} />
               <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
             </Routes>
           </div>

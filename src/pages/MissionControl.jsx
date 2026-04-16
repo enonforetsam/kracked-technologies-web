@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useMemo, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
@@ -45,6 +45,167 @@ function CardHeader({ icon, title, accent, count }) {
 
 function slugifyHeading(text) {
   return 'h-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60)
+}
+
+function parseChapters(content) {
+  const body = content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n+/, '').trim()
+  const lines = body.split('\n')
+  const chapters = []
+  let current = { title: 'Preamble', body: [] }
+  for (const line of lines) {
+    const m = line.match(/^##\s+(.+?)\s*$/)
+    if (m) {
+      if (current.body.some(l => l.trim())) chapters.push({ title: current.title, body: current.body.join('\n').trim() })
+      current = { title: m[1].replace(/\*\*/g, '').trim(), body: [] }
+    } else {
+      current.body.push(line)
+    }
+  }
+  if (current.body.some(l => l.trim())) chapters.push({ title: current.title, body: current.body.join('\n').trim() })
+  return chapters
+}
+
+function renderChapterBody(bodyMd, nodes) {
+  let html = bodyMd.replace(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, target, label) => {
+    const slug = target.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+    const exists = nodes.some(n => n.id === slug)
+    if (exists) return `<a href="#" data-node-id="${slug}" class="wiki-link">${label || target}</a>`
+    return label || target
+  })
+  let out = marked(html)
+  out = out.replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" target="_blank" rel="noopener noreferrer"')
+  return out
+}
+
+function WhatIfReader({ content, graph, onOpen }) {
+  const chapters = useMemo(() => parseChapters(content), [content])
+  const total = chapters.length
+  const [idx, setIdx] = useState(0)
+  const [fullscreen, setFullscreen] = useState(false)
+  const [minimized, setMinimized] = useState(false)
+  const bodyRef = useRef(null)
+
+  useEffect(() => {
+    if (bodyRef.current) bodyRef.current.scrollTop = 0
+  }, [idx, fullscreen])
+
+  useEffect(() => {
+    if (!fullscreen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setFullscreen(false)
+      else if (e.key === 'ArrowRight') setIdx(i => Math.min(total - 1, i + 1))
+      else if (e.key === 'ArrowLeft') setIdx(i => Math.max(0, i - 1))
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [fullscreen, total])
+
+  const handleBodyClick = useCallback((e) => {
+    const link = e.target.closest('[data-node-id]')
+    if (link) { e.preventDefault(); onOpen(link.dataset.nodeId) }
+  }, [onOpen])
+
+  if (total === 0) return null
+  const current = chapters[idx] || chapters[0]
+  const progress = ((idx + 1) / total) * 100
+  const accent = '#eab308'
+
+  const reader = (
+    <div className={`mc-whatif-reader${fullscreen ? ' mc-whatif-fullscreen' : ''}${minimized ? ' mc-whatif-minimized' : ''}`}>
+      <div className="mc-whatif-head" style={{ borderBottomColor: accent + '40' }}>
+        <div className="mc-card-head-left">
+          <span className="mc-card-icon" style={{ background: accent + '22', color: accent }}>◇</span>
+          <span className="mc-card-head-title">What If</span>
+          <span className="mc-whatif-chapter-label">Ch. {idx + 1} / {total} — {current.title}</span>
+        </div>
+        <div className="mc-whatif-controls">
+          <button className="mc-whatif-ctrl" onClick={() => setMinimized(m => !m)} title={minimized ? 'Expand' : 'Minimize'} aria-label="Minimize">
+            {minimized ? '▢' : '—'}
+          </button>
+          <button className="mc-whatif-ctrl" onClick={() => setFullscreen(f => !f)} title={fullscreen ? 'Exit fullscreen' : 'Fullscreen'} aria-label="Fullscreen">
+            {fullscreen ? '⤓' : '⤢'}
+          </button>
+          {fullscreen && (
+            <button className="mc-whatif-ctrl mc-whatif-close" onClick={() => setFullscreen(false)} title="Close" aria-label="Close">
+              ×
+            </button>
+          )}
+        </div>
+      </div>
+      <div className="mc-whatif-progress" aria-hidden>
+        <div className="mc-whatif-progress-track">
+          {chapters.map((c, i) => (
+            <button
+              key={i}
+              className={`mc-whatif-progress-seg${i === idx ? ' is-current' : ''}${i < idx ? ' is-done' : ''}`}
+              onClick={() => setIdx(i)}
+              title={c.title}
+              style={{ flex: 1 }}
+            />
+          ))}
+        </div>
+        <div className="mc-whatif-progress-fill" style={{ width: `${progress}%`, background: accent }} />
+      </div>
+
+      {!minimized && (
+        <div className="mc-whatif-shell">
+          <aside className="mc-whatif-sidebar">
+            <h3>Chapters</h3>
+            <div className="mc-whatif-toc">
+              {chapters.map((c, i) => (
+                <button
+                  key={i}
+                  className={`mc-whatif-toc-item${i === idx ? ' is-active' : ''}`}
+                  onClick={() => setIdx(i)}
+                >
+                  <span className="mc-whatif-toc-num">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="mc-whatif-toc-title">{c.title}</span>
+                </button>
+              ))}
+            </div>
+          </aside>
+
+          <div className="mc-whatif-main">
+            <div
+              ref={bodyRef}
+              className="article-body mc-whatif-chapter"
+              onClickCapture={handleBodyClick}
+              dangerouslySetInnerHTML={{ __html: renderChapterBody(current.body, graph.nodes) }}
+            />
+
+            <div className="mc-whatif-nav">
+              <button
+                className="mc-whatif-navbtn"
+                onClick={() => setIdx(i => Math.max(0, i - 1))}
+                disabled={idx === 0}
+              >
+                ← Previous
+              </button>
+              <span className="mc-whatif-navcount">{idx + 1} of {total}</span>
+              <button
+                className="mc-whatif-navbtn mc-whatif-navbtn-primary"
+                onClick={() => setIdx(i => Math.min(total - 1, i + 1))}
+                disabled={idx === total - 1}
+                style={{ background: accent }}
+              >
+                Next →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+
+  if (fullscreen) {
+    return (
+      <div className="mc-whatif-overlay" onClick={(e) => { if (e.target === e.currentTarget) setFullscreen(false) }}>
+        {reader}
+      </div>
+    )
+  }
+
+  return <div className="mc-card glass mc-card-wide mc-whatif-card">{reader}</div>
 }
 
 function renderContent(content, nodes) {
@@ -445,17 +606,7 @@ export default function MissionControl({ graph }) {
         </div>
 
         {d.whatIf && (
-          <div className="mc-card glass mc-card-wide mc-whatif">
-            <CardHeader icon="◇" title="What If" accent={CARD_ACCENTS.whatIf} />
-            <div
-              className="article-body mc-whatif-body"
-              onClickCapture={(e) => {
-                const link = e.target.closest('[data-node-id]')
-                if (link) { e.preventDefault(); openNode(link.dataset.nodeId) }
-              }}
-              dangerouslySetInnerHTML={{ __html: renderContent(d.whatIf, graph.nodes) }}
-            />
-          </div>
+          <WhatIfReader content={d.whatIf} graph={graph} onOpen={openNode} />
         )}
       </div>
 
