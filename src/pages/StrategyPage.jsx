@@ -36,12 +36,37 @@ function extractHeadings(content) {
   return out
 }
 
+const Q2_START = new Date('2026-04-15')
+const Q2_END = new Date('2026-06-30')
+
+function daysBetween(from, to) {
+  return Math.round((to.getTime() - from.getTime()) / 86_400_000)
+}
+function parseMilestoneDate(label, year = 2026) {
+  const parsed = new Date(`${label} ${year}`)
+  return isNaN(parsed) ? null : parsed
+}
+function Countdown({ label }) {
+  const now = new Date()
+  const d = parseMilestoneDate(label)
+  if (!d) return null
+  const days = daysBetween(now, d)
+  if (days < 0) return <span className="strategy-ms-countdown strategy-ms-countdown-done">T{days}d</span>
+  if (days === 0) return <span className="strategy-ms-countdown strategy-ms-countdown-hot">TODAY</span>
+  const hot = days <= 7
+  return (
+    <span className={`strategy-ms-countdown${hot ? ' strategy-ms-countdown-hot' : ''}`}>
+      T-{days}d
+    </span>
+  )
+}
+
 function Q2HeroSummary({ onOpenNode }) {
-  const parentOp = { title: 'Projects, Tenders & Claw OS Sales', accent: '#ef4444', nodeId: 'kracked-technologies', bullet: 'Run at the Kracked Technologies parent level — project work, tender wins, and Claw OS consultation / workshop / bespoke sold as one unified outbound motion.' }
+  const parentOp = { codename: 'OP // PARENT-01', title: 'Projects, Tenders & Claw OS Sales', accent: '#ef4444', nodeId: 'kracked-technologies', bullet: 'Run at Kracked Technologies parent level — project work, tender wins, and Claw OS consultation / workshop / bespoke sold as one unified outbound motion.' }
   const pillars = [
-    { n: 1, title: 'Kracked Devs', accent: '#3b82f6', nodeId: 'kracked-devs', bullet: 'Community + Recruitment arm. AI skill scorecards, Recruiter agent, Featured Listings.' },
-    { n: 2, title: 'KD Academy', accent: '#be185d', nodeId: 'kd-academy', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.' },
-    { n: 3, title: 'Kracked Labs', accent: '#7c3aed', nodeId: 'kracked-labs', bullet: 'No new ventures. Portfolio standardised. Rick drafts Q3 health review.' },
+    { n: '01', title: 'Kracked Devs', accent: '#22d3ee', nodeId: 'kracked-devs', bullet: 'Community + Recruitment arm. AI skill scorecards, Recruiter agent, Featured Listings.', led: 'green' },
+    { n: '02', title: 'KD Academy', accent: '#e879f9', nodeId: 'kd-academy', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.', led: 'amber' },
+    { n: '03', title: 'Kracked Labs', accent: '#a78bfa', nodeId: 'kracked-labs', bullet: 'No new ventures. Portfolio standardised. Rick drafts Q3 health review.', led: 'blue' },
   ]
   const milestones = [
     { label: 'Apr 22', text: 'Itachi live — CEO can ask the vault', status: 'now' },
@@ -49,9 +74,27 @@ function Q2HeroSummary({ onOpenNode }) {
     { label: 'May 31', text: 'Pitch deck v1 · Consultation SKU packaged · First proposal out', status: 'later' },
     { label: 'Jun 30', text: '2 signed consultations · 1 workshop booked · 1 bespoke in pipeline', status: 'later' },
   ]
+
+  const now = new Date()
+  const elapsed = Math.max(0, daysBetween(Q2_START, now))
+  const remaining = Math.max(0, daysBetween(now, Q2_END))
+  const weekOf = Math.min(11, Math.max(1, Math.ceil((elapsed + 1) / 7)))
+
   return (
     <div className="strategy-hero">
-      <span className="strategy-eyebrow">Q2 2026 · 11 weeks · Apr 15 → Jun 30</span>
+      <div className="strategy-brief-ribbon">
+        <span className="hud-led hud-led-green" />
+        <span className="hud-ribbon">
+          <span>Q2 2026</span>
+          <span className="hud-ribbon-sep" />
+          <span className="hud-ribbon-hot">WEEK {String(weekOf).padStart(2, '0')} / 11</span>
+          <span className="hud-ribbon-sep" />
+          <span>{elapsed}D ELAPSED · {remaining}D REMAINING</span>
+          <span className="hud-ribbon-sep" />
+          <span>APR 15 → JUN 30</span>
+        </span>
+      </div>
+
       <h1 className="strategy-thesis">Build Claw OS, sell Claw OS, feed the funnel.</h1>
       <p className="strategy-subthesis">AI company brain — <em>infra before growth</em>.</p>
 
@@ -64,6 +107,7 @@ function Q2HeroSummary({ onOpenNode }) {
       >
         <span className="strategy-pillar-n">★</span>
         <div>
+          <div className="hud-codename" style={{ '--hud-accent': parentOp.accent }}>{parentOp.codename}</div>
           <div className="strategy-pillar-title">{parentOp.title}</div>
           <div className="strategy-pillar-bullet">{parentOp.bullet}</div>
         </div>
@@ -81,6 +125,9 @@ function Q2HeroSummary({ onOpenNode }) {
           >
             <span className="strategy-pillar-n">{p.n}</span>
             <div>
+              <div className="hud-codename" style={{ '--hud-accent': p.accent }}>
+                <span className={`hud-led hud-led-${p.led}`} /> PILLAR {p.n} // {p.title.toUpperCase()}
+              </div>
               <div className="strategy-pillar-title">{p.title}</div>
               <div className="strategy-pillar-bullet">{p.bullet}</div>
             </div>
@@ -88,10 +135,13 @@ function Q2HeroSummary({ onOpenNode }) {
         ))}
       </div>
 
+      <div className="strategy-section-label">Milestones · Q2 Horizon</div>
       <div className="strategy-milestones">
         {milestones.map((m, i) => (
           <div key={i} className={`strategy-milestone strategy-ms-${m.status}`}>
-            <div className="strategy-ms-label">{m.label}</div>
+            <div className="strategy-ms-label">
+              {m.label.toUpperCase()} <Countdown label={m.label} />
+            </div>
             <div className="strategy-ms-text">{m.text}</div>
           </div>
         ))}

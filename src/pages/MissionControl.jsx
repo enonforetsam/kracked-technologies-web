@@ -355,7 +355,16 @@ function Q2PlanSummary({ strategies, openNode }) {
     <div className="q2plan">
       <div className="q2plan-hero">
         <div className="q2plan-hero-left">
-          <span className="q2plan-eyebrow">Q2 2026 · 11 weeks · Apr 15 → Jun 30</span>
+          <div className="strategy-brief-ribbon">
+            <span className="hud-led hud-led-green" />
+            <span className="hud-ribbon">
+              <span>Q2 2026</span>
+              <span className="hud-ribbon-sep" />
+              <span className="hud-ribbon-hot">11 WEEKS</span>
+              <span className="hud-ribbon-sep" />
+              <span>APR 15 → JUN 30</span>
+            </span>
+          </div>
           <h3 className="q2plan-thesis">Build Claw OS, sell Claw OS, feed the funnel.</h3>
           <p className="q2plan-subthesis">AI company brain — <em>infra before growth</em>.</p>
         </div>
@@ -569,53 +578,87 @@ export default function MissionControl({ graph }) {
         </div>
 
         {d.agents && d.agents.length > 0 && (
-          <div className="mc-card glass mc-card-wide">
-            <CardHeader icon="◎" title="Agents & Skills" accent={CARD_ACCENTS.agents} count={d.agents.length} />
-            <div className="mc-list">
-              {d.agents.map(a => (
-                <div key={a.id} className="mc-list-row" onClick={() => openNode(a.id)}>
-                  <StatusDot status={a.status === 'planning' ? 'In development' : a.status} />
-                  <span className="mc-list-name">{a.name}</span>
-                  <span className="mc-list-domain">{a.blurb}</span>
-                </div>
-              ))}
+          <details className="mc-collapsible">
+            <summary>
+              <span className="hud-led hud-led-blue" />
+              <span className="mc-collapsible-summary-title">Agents & Skills</span>
+              <span className="mc-collapsible-summary-meta">
+                {d.agents.map(a => a.name).join(' · ')}
+              </span>
+              <span className="hud-collapse-count">{d.agents.length}</span>
+            </summary>
+            <div className="mc-collapsible-body">
+              <div className="mc-list">
+                {d.agents.map(a => (
+                  <div key={a.id} className="mc-list-row" onClick={() => openNode(a.id)}>
+                    <StatusDot status={a.status === 'planning' ? 'In development' : a.status} />
+                    <span className="mc-list-name">{a.name}</span>
+                    <span className="mc-list-domain">{a.blurb}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </details>
         )}
 
         <div className="mc-row-3">
-          <div className="mc-card glass">
-            <CardHeader icon="✦" title="Advisory Board" accent={CARD_ACCENTS.advisors} count={d.advisors.length} />
-            <div className="mc-list">
-              {d.advisors.map((a, i) => (
-                <div key={i} className="mc-list-row mc-list-row-static">
-                  <span className="mc-list-name">{a.name}</span>
-                  <span className="mc-list-domain">{a.domain}</span>
-                </div>
-              ))}
+          <details className="mc-collapsible">
+            <summary>
+              <span className="hud-led hud-led-blue hud-led-static" style={{ '--hud-led-color': '#0e7490' }} />
+              <span className="mc-collapsible-summary-title">Advisory Board</span>
+              <span className="mc-collapsible-summary-meta">
+                {d.advisors.map(a => a.name.split(' ')[0]).join(' · ')}
+              </span>
+              <span className="hud-collapse-count">{d.advisors.length}</span>
+            </summary>
+            <div className="mc-collapsible-body">
+              <div className="mc-list">
+                {d.advisors.map((a, i) => (
+                  <div key={i} className="mc-list-row mc-list-row-static">
+                    <span className="mc-list-name">{a.name}</span>
+                    <span className="mc-list-domain">{a.domain}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </details>
 
-          <div className="mc-card glass">
-            <CardHeader icon="⌘" title="KD Academy" accent={CARD_ACCENTS.academy} />
-            <div className="mc-kv-list">
-              <div className="mc-kv"><span>Website</span><span>{d.academy?.website || 'academy.krackeddevs.com'}</span></div>
-              {Object.entries(d.academy?.ops || {}).map(([k, v]) => (
-                <div key={k} className="mc-kv"><span>{k}</span><span>{v}</span></div>
-              ))}
+          <details className="mc-collapsible">
+            <summary>
+              <span className="hud-led hud-led-amber" />
+              <span className="mc-collapsible-summary-title">KD Academy</span>
+              <span className="mc-collapsible-summary-meta">
+                {Object.keys(d.academy?.ops || {}).slice(0, 2).join(' · ') || 'academy.krackeddevs.com'}
+              </span>
+            </summary>
+            <div className="mc-collapsible-body">
+              <div className="mc-kv-list">
+                <div className="mc-kv"><span>Website</span><span>{d.academy?.website || 'academy.krackeddevs.com'}</span></div>
+                {Object.entries(d.academy?.ops || {}).map(([k, v]) => (
+                  <div key={k} className="mc-kv"><span>{k}</span><span>{v}</span></div>
+                ))}
+              </div>
             </div>
-          </div>
+          </details>
 
-          <div className="mc-card glass">
-            <CardHeader icon="◆" title="Revenue" accent={CARD_ACCENTS.revenue} />
-            <div className="mc-revenue-body">
-              <span className="mc-revenue-label">Next milestone</span>
-              <span className="mc-revenue-value">{d.revenue?.nextMilestone || 'Marketplace'}</span>
-              {d.revenue?.nextMilestoneDetail && (
-                <span className="mc-revenue-sub">{d.revenue.nextMilestoneDetail}</span>
-              )}
+          <details className="mc-collapsible" open>
+            <summary>
+              <span className="hud-led hud-led-red" />
+              <span className="mc-collapsible-summary-title">Revenue</span>
+              <span className="mc-collapsible-summary-meta">
+                Next: {d.revenue?.nextMilestone || 'Marketplace'}
+              </span>
+            </summary>
+            <div className="mc-collapsible-body">
+              <div className="mc-revenue-body">
+                <span className="mc-revenue-label">Next milestone</span>
+                <span className="mc-revenue-value">{d.revenue?.nextMilestone || 'Marketplace'}</span>
+                {d.revenue?.nextMilestoneDetail && (
+                  <span className="mc-revenue-sub">{d.revenue.nextMilestoneDetail}</span>
+                )}
+              </div>
             </div>
-          </div>
+          </details>
         </div>
 
         {d.whatIf && (

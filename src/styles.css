@@ -3619,3 +3619,560 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   HUD SYSTEM — Mission-brief cyberpunk overlay applied sitewide.
+   Compacts spacing, adds corner brackets, mono data, status LEDs, countdowns.
+   Overrides are scoped by class so legacy styles still compose.
+   ========================================================================== */
+
+:root {
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --hud-bracket: 10px;
+  --hud-bracket-width: 1.5px;
+}
+
+/* --- Compact global spacing overrides --- */
+.mc-inner,
+.strategy-page,
+.article-page {
+  padding-top: 14px !important;
+  padding-bottom: 18px !important;
+}
+.mc-inner { gap: 10px !important; }
+.mc-row-2,
+.mc-row-3,
+.mc-metrics { gap: 8px !important; }
+.mc-card { padding: 0 !important; }
+
+/* --- HUD Frame: L-shaped corner brackets over any panel --- */
+.hud-frame {
+  position: relative;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 4px;
+}
+.hud-frame::before,
+.hud-frame::after,
+.hud-frame > .hud-corners::before,
+.hud-frame > .hud-corners::after {
+  content: '';
+  position: absolute;
+  width: var(--hud-bracket);
+  height: var(--hud-bracket);
+  border-color: var(--hud-accent, var(--blue));
+  border-style: solid;
+  pointer-events: none;
+}
+.hud-frame::before { top: -1px; left: -1px; border-width: var(--hud-bracket-width) 0 0 var(--hud-bracket-width); }
+.hud-frame::after { top: -1px; right: -1px; border-width: var(--hud-bracket-width) var(--hud-bracket-width) 0 0; }
+.hud-frame > .hud-corners { position: absolute; inset: 0; pointer-events: none; }
+.hud-frame > .hud-corners::before { bottom: -1px; left: -1px; border-width: 0 0 var(--hud-bracket-width) var(--hud-bracket-width); }
+.hud-frame > .hud-corners::after { bottom: -1px; right: -1px; border-width: 0 var(--hud-bracket-width) var(--hud-bracket-width) 0; }
+
+/* --- HUD Ribbon: mono data strip --- */
+.hud-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+  flex-wrap: wrap;
+}
+.hud-ribbon-sep {
+  width: 3px;
+  height: 3px;
+  background: var(--text-tertiary);
+  border-radius: 50%;
+  opacity: 0.55;
+}
+.hud-ribbon-hot { color: var(--blue); }
+
+/* --- HUD LED: pulsing status dot --- */
+.hud-led {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hud-led-color, var(--blue));
+  box-shadow: 0 0 6px var(--hud-led-color, var(--blue));
+  animation: hudLedPulse 1.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes hudLedPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+.hud-led-green { --hud-led-color: #39ff14; }
+.hud-led-amber { --hud-led-color: #f59e0b; }
+.hud-led-red { --hud-led-color: #ef4444; }
+.hud-led-blue { --hud-led-color: var(--blue); }
+.hud-led-static { animation: none; }
+
+/* --- HUD Codename header: PILLAR 01 // KRACKED DEVS --- */
+.hud-codename {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hud-accent, var(--text-tertiary));
+  margin-bottom: 4px;
+}
+.hud-codename-num {
+  display: inline-block;
+  padding: 1px 6px;
+  background: color-mix(in srgb, var(--hud-accent, var(--blue)) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--hud-accent, var(--blue)) 40%, transparent);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+/* --- HUD Countdown: days-remaining pill --- */
+.hud-countdown {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--blue);
+  padding: 2px 8px;
+  border: 1px solid color-mix(in srgb, var(--blue) 40%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--blue) 8%, transparent);
+  white-space: nowrap;
+}
+.hud-countdown-unit { font-size: 9px; opacity: 0.8; font-weight: 500; letter-spacing: 0.08em; }
+.hud-countdown-past {
+  color: var(--text-tertiary);
+  border-color: color-mix(in srgb, var(--text-tertiary) 35%, transparent);
+  background: transparent;
+}
+.hud-countdown-hot {
+  color: #f87171;
+  border-color: color-mix(in srgb, #f87171 50%, transparent);
+  background: color-mix(in srgb, #f87171 10%, transparent);
+}
+
+/* --- HUD Collapse: <details> styled as HUD panel --- */
+.hud-collapse {
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 4px;
+  position: relative;
+}
+.hud-collapse > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  user-select: none;
+}
+.hud-collapse > summary::-webkit-details-marker { display: none; }
+.hud-collapse > summary::after {
+  content: '▸';
+  font-family: inherit;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  transition: transform 0.18s ease;
+}
+.hud-collapse[open] > summary::after { transform: rotate(90deg); color: var(--blue); }
+.hud-collapse[open] > summary { border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent); }
+.hud-collapse-body { padding: 10px 14px 14px; }
+.hud-collapse-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-tertiary);
+  padding: 1px 7px;
+  background: color-mix(in srgb, var(--border) 50%, transparent);
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+/* --- HUD Scanline on dark themes only --- */
+[data-theme="cyberpunk"] body::after,
+[data-theme="midnight"] body::after,
+[data-theme="emerald"] body::after,
+[data-theme="sunset"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(255, 255, 255, 0.012) 3px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 999;
+  mix-blend-mode: overlay;
+}
+
+/* ==========================================================================
+   MISSION BRIEF — Strategy hero redesign
+   ========================================================================== */
+
+.strategy-hero {
+  padding: 18px 22px 20px !important;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--bg-elevated) 70%, transparent) 0%,
+    color-mix(in srgb, var(--bg-surface) 50%, transparent) 100%
+  );
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.strategy-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--blue) 8%, transparent) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.strategy-hero > * { position: relative; z-index: 1; }
+
+.strategy-brief-ribbon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.strategy-thesis {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  margin: 4px 0 6px !important;
+  letter-spacing: -0.02em;
+  color: var(--text-bright);
+}
+.strategy-subthesis {
+  font-size: 13px !important;
+  color: var(--text-secondary);
+  margin: 0 0 14px !important;
+}
+.strategy-subthesis em {
+  color: var(--blue);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.strategy-section-label {
+  font-family: var(--font-mono) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  color: var(--text-tertiary) !important;
+  margin: 14px 0 8px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.strategy-section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, color-mix(in srgb, var(--border) 80%, transparent), transparent);
+}
+
+.strategy-pillars { gap: 8px !important; margin-bottom: 12px !important; }
+.strategy-pillar {
+  padding: 12px 14px !important;
+  border-radius: 4px !important;
+  position: relative;
+  gap: 10px !important;
+}
+.strategy-pillar::before,
+.strategy-pillar::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--accent);
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.strategy-pillar::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+.strategy-pillar::after { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+.strategy-pillar-n {
+  width: 24px !important;
+  height: 24px !important;
+  font-family: var(--font-mono);
+  font-size: 12px !important;
+  border-radius: 3px !important;
+}
+.strategy-pillar-title {
+  font-family: var(--font-mono);
+  font-size: 11.5px !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-bright) !important;
+  margin-bottom: 3px !important;
+}
+.strategy-pillar-bullet { font-size: 12.5px !important; line-height: 1.5 !important; }
+
+.strategy-milestones {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 8px !important;
+  position: relative;
+}
+.strategy-milestones::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  right: 12px;
+  height: 1px;
+  background: repeating-linear-gradient(to right, var(--border) 0, var(--border) 4px, transparent 4px, transparent 8px);
+  z-index: 0;
+}
+.strategy-milestone {
+  padding: 10px 12px !important;
+  border-radius: 4px !important;
+  background: var(--bg) !important;
+  position: relative;
+  z-index: 1;
+}
+.strategy-milestone::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--bg);
+}
+.strategy-ms-now::before { background: #10b981; box-shadow: 0 0 8px #10b981; }
+.strategy-ms-next::before { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+.strategy-ms-later::before { background: var(--text-tertiary); }
+.strategy-ms-label {
+  font-family: var(--font-mono);
+  font-size: 10px !important;
+  letter-spacing: 0.12em;
+  margin-bottom: 3px !important;
+}
+.strategy-ms-text {
+  font-size: 11.5px !important;
+  line-height: 1.45 !important;
+  color: var(--text-secondary);
+}
+.strategy-ms-countdown {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 1px 6px;
+  border-radius: 999px;
+  margin-left: 6px;
+  color: var(--blue);
+  background: color-mix(in srgb, var(--blue) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--blue) 30%, transparent);
+}
+.strategy-ms-countdown-done { color: var(--text-tertiary); background: transparent; border-color: color-mix(in srgb, var(--text-tertiary) 30%, transparent); }
+.strategy-ms-countdown-hot { color: #f87171; background: color-mix(in srgb, #f87171 12%, transparent); border-color: color-mix(in srgb, #f87171 40%, transparent); }
+
+/* ==========================================================================
+   MISSION CONTROL compaction
+   ========================================================================== */
+
+.mc-metrics {
+  padding: 8px 10px !important;
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 6px;
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 0 !important;
+  position: relative;
+}
+.mc-metric {
+  border: none !important;
+  background: transparent !important;
+  padding: 4px 12px !important;
+  border-radius: 0 !important;
+  border-right: 1px solid color-mix(in srgb, var(--border) 50%, transparent) !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: 2px !important;
+}
+.mc-metric:last-child { border-right: none !important; }
+.mc-metric-label {
+  font-family: var(--font-mono) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  color: var(--text-tertiary) !important;
+}
+.mc-metric-value {
+  font-family: var(--font-mono) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: var(--text-bright) !important;
+  line-height: 1.1 !important;
+}
+.mc-metric.clickable:hover .mc-metric-value { color: var(--blue) !important; }
+
+/* Headers inside MC cards: tighter, monospaced */
+.mc-card-head {
+  padding: 9px 14px !important;
+  min-height: 0 !important;
+}
+.mc-card-head-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+}
+.mc-card-icon {
+  width: 22px !important;
+  height: 22px !important;
+  font-size: 12px !important;
+}
+.mc-card-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+/* Tighter list rows */
+.mc-list { padding: 2px 4px 6px !important; }
+.mc-list-row { padding: 6px 10px !important; gap: 8px !important; }
+.mc-list-name { font-size: 13px !important; }
+.mc-list-status,
+.mc-list-domain {
+  font-family: var(--font-mono);
+  font-size: 10.5px !important;
+  letter-spacing: 0.05em;
+}
+
+/* Roadmap tighter */
+.mc-roadmap-cols { padding: 10px 14px 14px !important; gap: 14px !important; }
+.mc-roadmap-tag {
+  font-family: var(--font-mono);
+  font-size: 10px !important;
+  letter-spacing: 0.14em !important;
+  padding: 2px 8px !important;
+}
+.mc-roadmap-col ul { font-size: 12.5px !important; line-height: 1.55 !important; }
+.mc-roadmap-col li { margin-bottom: 3px !important; }
+
+/* This Week compacted */
+.mc-thisweek-body { padding: 12px 16px 14px !important; font-size: 13px !important; line-height: 1.55 !important; }
+.mc-thisweek-body h2 { font-family: var(--font-mono); font-size: 10.5px !important; letter-spacing: 0.12em !important; margin: 10px 0 4px !important; }
+.mc-thisweek-body p { margin: 4px 0 !important; }
+
+/* KV list / revenue body tighter */
+.mc-kv-list { padding: 6px 10px 10px !important; gap: 0 !important; }
+.mc-kv {
+  padding: 5px 6px !important;
+  font-size: 12px !important;
+  border-bottom: 1px dashed color-mix(in srgb, var(--border) 50%, transparent);
+}
+.mc-kv:last-child { border-bottom: none; }
+.mc-kv span:first-child {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+.mc-revenue-body { padding: 14px 16px !important; }
+.mc-revenue-label { font-family: var(--font-mono); font-size: 10px !important; letter-spacing: 0.14em !important; }
+.mc-revenue-value { font-family: var(--font-mono); font-size: 22px !important; font-weight: 600 !important; }
+.mc-revenue-sub { font-size: 11px !important; font-family: var(--font-mono); color: var(--text-tertiary); letter-spacing: 0.06em; }
+
+/* Mode nav compactness */
+.mode-nav { padding: 6px 14px !important; min-height: 0 !important; }
+.mode-nav-brand { font-size: 13px !important; letter-spacing: 0.02em; }
+
+/* Article/strategy body tighter */
+.article-page,
+.strategy-page { padding-top: 16px !important; }
+
+/* ==========================================================================
+   Collapsible sections on Mission Control
+   ========================================================================== */
+.mc-collapsible {
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 6px;
+  position: relative;
+}
+.mc-collapsible > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+.mc-collapsible > summary::-webkit-details-marker { display: none; }
+.mc-collapsible > summary::after {
+  content: '▸';
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  transition: transform 0.18s ease;
+}
+.mc-collapsible[open] > summary::after { transform: rotate(90deg); color: var(--blue); }
+.mc-collapsible[open] > summary { border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent); }
+.mc-collapsible-summary-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-bright);
+}
+.mc-collapsible-summary-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  margin-left: auto;
+  padding-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}
+.mc-collapsible-body { padding: 2px 4px 6px; }
+
+/* Grid of secondary collapsibles */
+.mc-row-3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+}
+@media (max-width: 900px) {
+  .mc-row-3 { grid-template-columns: 1fr !important; }
+}
+
