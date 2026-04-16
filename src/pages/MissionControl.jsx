@@ -599,9 +599,10 @@ export default function MissionControl({ graph }) {
           <div className="mc-card glass">
             <CardHeader icon="⌘" title="KD Academy" accent={CARD_ACCENTS.academy} />
             <div className="mc-kv-list">
-              <div className="mc-kv"><span>Website</span><span>academy.krackeddevs.com</span></div>
-              <div className="mc-kv"><span>TVET</span><span>Slides ready, 2nd meeting pending</span></div>
-              <div className="mc-kv"><span>Ambassadors</span><span>4 onboarded, KPIs tracking</span></div>
+              <div className="mc-kv"><span>Website</span><span>{d.academy?.website || 'academy.krackeddevs.com'}</span></div>
+              {Object.entries(d.academy?.ops || {}).map(([k, v]) => (
+                <div key={k} className="mc-kv"><span>{k}</span><span>{v}</span></div>
+              ))}
             </div>
           </div>
 
@@ -609,8 +610,10 @@ export default function MissionControl({ graph }) {
             <CardHeader icon="◆" title="Revenue" accent={CARD_ACCENTS.revenue} />
             <div className="mc-revenue-body">
               <span className="mc-revenue-label">Next milestone</span>
-              <span className="mc-revenue-value">Marketplace</span>
-              <span className="mc-revenue-sub">on Kracked Devs</span>
+              <span className="mc-revenue-value">{d.revenue?.nextMilestone || 'Marketplace'}</span>
+              {d.revenue?.nextMilestoneDetail && (
+                <span className="mc-revenue-sub">{d.revenue.nextMilestoneDetail}</span>
+              )}
             </div>
           </div>
         </div>

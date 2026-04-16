@@ -92,8 +92,27 @@ function buildDashboard(nodes) {
     }
   }
 
-  // KD Academy
+  // KD Academy — pull operational snapshot key/value rows from the note
   const kdaNode = nodes.find(n => n.id === 'kd-academy')
+  const academyOps = {}
+  if (kdaNode) {
+    const opsSection = kdaNode.content.split(/##\s+Operational snapshot/i)[1]?.split(/##\s+/)[0] || ''
+    const rowRe = /\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|/g
+    let m
+    while ((m = rowRe.exec(opsSection)) !== null) {
+      const k = m[1].trim()
+      const v = m[2].trim()
+      if (!k || !v || k === '---' || /^Field$/i.test(k) || /^-+$/.test(v)) continue
+      academyOps[k] = v
+    }
+  }
+
+  // Revenue Model — pull next milestone from frontmatter
+  const revenueNode = nodes.find(n => n.id === 'revenue-model')
+  const revenue = revenueNode ? {
+    nextMilestone: revenueNode.next_milestone || 'Marketplace',
+    nextMilestoneDetail: revenueNode.next_milestone_detail || null,
+  } : null
 
   // This Week — free-form markdown from `This Week.md`, minus the H1
   const thisWeekNode = nodes.find(n => n.id === 'this-week')
@@ -133,7 +152,8 @@ function buildDashboard(nodes) {
     team: { count: teamCount },
     roadmap,
     advisors,
-    academy: kdaNode ? { status: extractStatus(kdaNode.content) || 'In development', website: 'academy.krackeddevs.com' } : null,
+    academy: kdaNode ? { status: extractStatus(kdaNode.content) || 'In development', website: 'academy.krackeddevs.com', ops: academyOps } : null,
+    revenue,
     thisWeek,
     whatIf,
     agents,
