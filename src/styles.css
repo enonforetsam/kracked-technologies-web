@@ -4368,3 +4368,227 @@ a:hover {
 .mc-modal::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
 .mc-modal::after { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
 
+
+/* ==========================================================================
+   TIMELINE — horizontal milestone track
+   Built to match the HUD panel language (mono labels, LED dots, dashed axis,
+   accent-filled elapsed portion, pulsing NOW marker).
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  padding: 6px 12px 8px;
+}
+
+/* Top ribbon: start date · NOW marker · end date */
+.timeline-ribbon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+  height: 18px;
+  margin-bottom: 6px;
+}
+.timeline-ribbon-end {
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 1px 6px;
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--bg-elevated) 30%, transparent);
+}
+.timeline-ribbon-spacer { flex: 1; }
+
+.timeline-ribbon-now {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #39ff14 12%, transparent);
+  border: 1px solid color-mix(in srgb, #39ff14 50%, transparent);
+  color: #39ff14;
+  text-shadow: 0 0 6px rgba(57, 255, 20, 0.4);
+  white-space: nowrap;
+  z-index: 3;
+}
+
+/* Axis: dashed horizon with accent-filled elapsed portion */
+.timeline-axis {
+  position: relative;
+  height: 28px;
+  margin: 2px 0 6px;
+}
+.timeline-axis-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    color-mix(in srgb, var(--border) 85%, transparent) 0,
+    color-mix(in srgb, var(--border) 85%, transparent) 5px,
+    transparent 5px,
+    transparent 9px
+  );
+  transform: translateY(-0.5px);
+}
+.timeline-axis-fill {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(to right,
+    color-mix(in srgb, var(--blue) 35%, transparent) 0%,
+    var(--blue) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--blue) 40%, transparent);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* NOW vertical marker */
+.timeline-now-marker {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 2px;
+  transform: translateX(-1px);
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    #39ff14 20%,
+    #39ff14 80%,
+    transparent 100%);
+  box-shadow: 0 0 10px #39ff14;
+  z-index: 2;
+  animation: timelineNowPulse 2s ease-in-out infinite;
+}
+@keyframes timelineNowPulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 0.45; }
+}
+
+/* Milestone nodes sit ON the axis */
+.timeline-node {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.timeline-node-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--node-color, var(--text-tertiary));
+  box-shadow: 0 0 8px var(--node-color, transparent);
+}
+.timeline-node-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--node-color, var(--text-tertiary));
+}
+
+.timeline-ms-now { --node-color: #10b981; }
+.timeline-ms-next { --node-color: #f59e0b; }
+.timeline-ms-later { --node-color: var(--text-tertiary); }
+.timeline-ms-now .timeline-node-dot,
+.timeline-ms-next .timeline-node-dot {
+  animation: timelineNodePulse 1.8s ease-in-out infinite;
+}
+@keyframes timelineNodePulse {
+  0%, 100% { box-shadow: 0 0 6px var(--node-color); }
+  50% { box-shadow: 0 0 14px var(--node-color); }
+}
+
+/* Cards hanging below the axis */
+.timeline-cards {
+  position: relative;
+  min-height: 72px;
+  margin-top: 6px;
+}
+.timeline-card {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 168px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--bg-elevated) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  border-top: 2px solid var(--node-color, var(--text-tertiary));
+}
+.timeline-card::before,
+.timeline-card::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-color: color-mix(in srgb, var(--node-color, var(--blue)) 55%, transparent);
+  border-style: solid;
+  pointer-events: none;
+}
+.timeline-card::before { bottom: -1px; left: -1px; border-width: 0 0 1.5px 1.5px; }
+.timeline-card::after { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+
+.timeline-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+.timeline-card-date {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-bright);
+}
+.timeline-card-text {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* Edge-cases: if two cards are very close, they'll overlap. Stagger with
+   :nth-child offsets. Lightweight solution that works for our 4-item set. */
+.timeline-card:nth-child(2n) { top: 96px; }
+.timeline-cards { min-height: 168px; }
+
+/* Drop a vertical tether from axis to each card for clarity */
+.timeline-card::before { content: ''; }
+.timeline-card-tether {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  width: 1px;
+  height: 10px;
+  background: color-mix(in srgb, var(--node-color, var(--border)) 60%, transparent);
+  transform: translateX(-0.5px);
+}
+
+@media (max-width: 760px) {
+  .timeline-card { width: 46vw; font-size: 11px; }
+  .timeline-card:nth-child(2n) { top: 88px; }
+  .timeline-cards { min-height: 180px; }
+}

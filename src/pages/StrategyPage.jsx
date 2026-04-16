@@ -136,13 +136,58 @@ function Q2HeroSummary({ onOpenNode }) {
       </div>
 
       <div className="strategy-section-label">Milestones · Q2 Horizon</div>
-      <div className="strategy-milestones">
-        {milestones.map((m, i) => (
-          <div key={i} className={`strategy-milestone strategy-ms-${m.status}`}>
-            <div className="strategy-ms-label">
-              {m.label.toUpperCase()} <Countdown label={m.label} />
+      <Timeline start={Q2_START} end={Q2_END} now={now} milestones={milestones} />
+    </div>
+  )
+}
+
+function Timeline({ start, end, now, milestones }) {
+  const span = Math.max(1, daysBetween(start, end))
+  const nowPct = Math.max(0, Math.min(100, (daysBetween(start, now) / span) * 100))
+
+  const items = milestones.map(m => {
+    const d = parseMilestoneDate(m.label)
+    const pct = d ? Math.max(0, Math.min(100, (daysBetween(start, d) / span) * 100)) : 0
+    return { ...m, date: d, pct }
+  })
+
+  const fmt = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()
+
+  return (
+    <div className="timeline">
+      <div className="timeline-ribbon">
+        <span className="timeline-ribbon-end">{fmt(start)}</span>
+        <span className="timeline-ribbon-spacer" />
+        <span className="timeline-ribbon-now" style={{ left: `${nowPct}%` }}>
+          <span className="hud-led hud-led-green" /> NOW
+        </span>
+        <span className="timeline-ribbon-end timeline-ribbon-end-right">{fmt(end)}</span>
+      </div>
+
+      <div className="timeline-axis">
+        <div className="timeline-axis-line" />
+        <div className="timeline-axis-fill" style={{ width: `${nowPct}%` }} />
+        <div className="timeline-now-marker" style={{ left: `${nowPct}%` }} />
+
+        {items.map((m, i) => (
+          <div
+            key={i}
+            className={`timeline-node timeline-ms-${m.status}`}
+            style={{ left: `${m.pct}%` }}
+          >
+            <span className="timeline-node-dot" />
+          </div>
+        ))}
+      </div>
+
+      <div className="timeline-cards">
+        {items.map((m, i) => (
+          <div key={i} className={`timeline-card timeline-ms-${m.status}`} style={{ left: `${m.pct}%` }}>
+            <div className="timeline-card-head">
+              <span className="timeline-card-date">{m.label.toUpperCase()}</span>
+              <Countdown label={m.label} />
             </div>
-            <div className="strategy-ms-text">{m.text}</div>
+            <div className="timeline-card-text">{m.text}</div>
           </div>
         ))}
       </div>
