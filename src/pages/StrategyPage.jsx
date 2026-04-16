@@ -69,10 +69,56 @@ function Q2HeroSummary({ onOpenNode }) {
     { n: '03', title: 'Kracked Labs', accent: '#a78bfa', nodeId: 'kracked-labs', bullet: 'No new ventures. Portfolio standardised. Rick drafts Q3 health review.', led: 'blue' },
   ]
   const milestones = [
-    { label: 'Apr 22', text: 'Itachi live — CEO can ask the vault', status: 'now' },
-    { label: 'Apr 30', text: 'Internal Claw OS live + first Sniper agent dry-run', status: 'next' },
-    { label: 'May 31', text: 'Pitch deck v1 · Consultation SKU packaged · First proposal out', status: 'later' },
-    { label: 'Jun 30', text: '2 signed consultations · 1 workshop booked · 1 bespoke in pipeline', status: 'later' },
+    {
+      label: 'Apr 22',
+      title: 'Itachi live',
+      text: 'CEO can ask the vault',
+      status: 'now',
+      owner: 'Core team',
+      details: [
+        'Itachi chat endpoint wired to vault',
+        'Grounded answers with citations',
+        'Pending Approvals card stub on Mission Control',
+      ],
+    },
+    {
+      label: 'Apr 30',
+      title: 'Internal Claw OS live',
+      text: 'First Sniper agent dry-run',
+      status: 'next',
+      owner: 'Danial + core',
+      details: [
+        'CEO-only daily-update form + approve-to-commit pipeline',
+        'First Claw OS agent (Sniper) dry-run on Projects & Tenders',
+        '1–2 seed sources drafting tender notes into Deals/',
+        'Human + agent updates flow through same Pending Approvals card',
+      ],
+    },
+    {
+      label: 'May 31',
+      title: 'Pitch deck v1',
+      text: 'Consultation SKU packaged · First proposal out',
+      status: 'later',
+      owner: 'Danial',
+      details: [
+        'Claw OS pitch deck v1 drafted',
+        'Consultation SKU (scope + pricing) packaged',
+        'First paid proposal sent to a warm lead',
+      ],
+    },
+    {
+      label: 'Jun 30',
+      title: 'Q2 close',
+      text: '2 signed consultations · 1 workshop booked · 1 bespoke in pipeline',
+      status: 'later',
+      owner: 'Danial',
+      details: [
+        '2 signed consultations',
+        '1 workshop booked',
+        '1 bespoke deployment in pipeline',
+        'Q3 roadmap drafted by Rick',
+      ],
+    },
   ]
 
   const now = new Date()
@@ -151,6 +197,10 @@ function Timeline({ start, end, now, milestones }) {
     return { ...m, date: d, pct }
   })
 
+  const defaultIdx = Math.max(0, items.findIndex(m => m.date && m.date >= now))
+  const [activeIdx, setActiveIdx] = useState(defaultIdx === -1 ? 0 : defaultIdx)
+  const active = items[activeIdx]
+
   const fmt = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()
 
   return (
@@ -159,7 +209,7 @@ function Timeline({ start, end, now, milestones }) {
         <span className="timeline-ribbon-end">{fmt(start)}</span>
         <span className="timeline-ribbon-spacer" />
         <span className="timeline-ribbon-now" style={{ left: `${nowPct}%` }}>
-          <span className="hud-led hud-led-green" /> NOW
+          <span className="hud-led hud-led-green" /> NOW · {daysBetween(start, now)}D ELAPSED
         </span>
         <span className="timeline-ribbon-end timeline-ribbon-end-right">{fmt(end)}</span>
       </div>
@@ -170,27 +220,76 @@ function Timeline({ start, end, now, milestones }) {
         <div className="timeline-now-marker" style={{ left: `${nowPct}%` }} />
 
         {items.map((m, i) => (
-          <div
+          <button
             key={i}
-            className={`timeline-node timeline-ms-${m.status}`}
+            type="button"
+            className={`timeline-node timeline-ms-${m.status}${i === activeIdx ? ' is-active' : ''}`}
             style={{ left: `${m.pct}%` }}
+            onClick={() => setActiveIdx(i)}
+            title={m.title}
           >
             <span className="timeline-node-dot" />
-          </div>
+          </button>
         ))}
       </div>
 
-      <div className="timeline-cards">
+      <div className="timeline-chips">
         {items.map((m, i) => (
-          <div key={i} className={`timeline-card timeline-ms-${m.status}`} style={{ left: `${m.pct}%` }}>
-            <div className="timeline-card-head">
-              <span className="timeline-card-date">{m.label.toUpperCase()}</span>
-              <Countdown label={m.label} />
-            </div>
-            <div className="timeline-card-text">{m.text}</div>
-          </div>
+          <button
+            key={i}
+            type="button"
+            className={`timeline-chip timeline-ms-${m.status}${i === activeIdx ? ' is-active' : ''}`}
+            style={{ left: `${m.pct}%` }}
+            onClick={() => setActiveIdx(i)}
+          >
+            <span className="timeline-chip-date">{m.label.toUpperCase()}</span>
+            <Countdown label={m.label} />
+            <span className="timeline-chip-title">{m.title}</span>
+          </button>
         ))}
       </div>
+
+      {active && (
+        <div className={`timeline-detail timeline-ms-${active.status}`}>
+          <div className="timeline-detail-head">
+            <div className="timeline-detail-head-left">
+              <span className={`hud-led hud-led-${active.status === 'now' ? 'green' : active.status === 'next' ? 'amber' : 'blue'} ${active.status === 'later' ? 'hud-led-static' : ''}`} />
+              <span className="hud-codename">MILESTONE {String(activeIdx + 1).padStart(2, '0')} // {active.label.toUpperCase()}</span>
+              <Countdown label={active.label} />
+            </div>
+            <div className="timeline-detail-nav">
+              <button
+                type="button"
+                className="timeline-detail-navbtn"
+                onClick={() => setActiveIdx(i => Math.max(0, i - 1))}
+                disabled={activeIdx === 0}
+                aria-label="Previous milestone"
+              >←</button>
+              <span className="timeline-detail-counter">{activeIdx + 1} / {items.length}</span>
+              <button
+                type="button"
+                className="timeline-detail-navbtn"
+                onClick={() => setActiveIdx(i => Math.min(items.length - 1, i + 1))}
+                disabled={activeIdx === items.length - 1}
+                aria-label="Next milestone"
+              >→</button>
+            </div>
+          </div>
+          <h4 className="timeline-detail-title">{active.title}</h4>
+          <p className="timeline-detail-text">{active.text}</p>
+          {active.details && active.details.length > 0 && (
+            <ul className="timeline-detail-list">
+              {active.details.map((d, i) => <li key={i}>{d}</li>)}
+            </ul>
+          )}
+          {active.owner && (
+            <div className="timeline-detail-owner">
+              <span className="timeline-detail-owner-label">OWNER</span>
+              <span className="timeline-detail-owner-value">{active.owner}</span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }

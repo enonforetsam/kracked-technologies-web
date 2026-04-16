@@ -4520,75 +4520,208 @@ a:hover {
   50% { box-shadow: 0 0 14px var(--node-color); }
 }
 
-/* Cards hanging below the axis */
-.timeline-cards {
-  position: relative;
-  min-height: 72px;
-  margin-top: 6px;
+/* Nodes become buttons — bigger hit area, subtle hover */
+.timeline-node {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
 }
-.timeline-card {
+.timeline-node:hover .timeline-node-dot,
+.timeline-node.is-active .timeline-node-dot {
+  transform: scale(1.25);
+  box-shadow: 0 0 14px var(--node-color, var(--blue));
+}
+.timeline-node.is-active .timeline-node-dot {
+  background: var(--node-color, var(--blue));
+}
+.timeline-node-dot { transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s; }
+
+/* Chips: one-row strip below the axis with date / countdown / title */
+.timeline-chips {
+  position: relative;
+  height: 46px;
+  margin-top: 2px;
+}
+.timeline-chip {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
-  width: 168px;
-  padding: 8px 10px;
-  border-radius: 4px;
-  background: color-mix(in srgb, var(--bg-elevated) 55%, transparent);
-  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
-  border-top: 2px solid var(--node-color, var(--text-tertiary));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-secondary);
+  border-radius: 3px;
+  transition: background 0.15s ease, box-shadow 0.2s ease, color 0.15s ease;
+  white-space: nowrap;
+  max-width: 150px;
 }
-.timeline-card::before,
-.timeline-card::after {
+.timeline-chip::before {
   content: '';
   position: absolute;
-  width: 7px;
-  height: 7px;
+  top: -8px;
+  left: 50%;
+  width: 1px;
+  height: 8px;
+  background: color-mix(in srgb, var(--node-color, var(--border)) 60%, transparent);
+  transform: translateX(-0.5px);
+}
+.timeline-chip:hover {
+  color: var(--text-bright);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--node-color, var(--blue)) 25%, transparent),
+              0 4px 14px color-mix(in srgb, var(--node-color, var(--blue)) 15%, transparent);
+}
+.timeline-chip.is-active {
+  background: color-mix(in srgb, var(--node-color, var(--blue)) 12%, transparent);
+  color: var(--text-bright);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--node-color, var(--blue)) 40%, transparent);
+}
+.timeline-chip-date {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-bright);
+}
+.timeline-chip-title {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
+.timeline-chip.is-active .timeline-chip-title { color: var(--text-bright); }
+/* Hide countdown inside chip to keep row clean — it shows in expanded detail */
+.timeline-chip .strategy-ms-countdown {
+  font-size: 9px;
+  padding: 0 5px;
+}
+
+/* Expanded detail panel below the timeline — single card, switchable */
+.timeline-detail {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: color-mix(in srgb, var(--bg-elevated) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-left: 3px solid var(--node-color, var(--blue));
+  border-radius: 4px;
+  position: relative;
+  animation: timelineDetailIn 0.22s ease-out;
+}
+@keyframes timelineDetailIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.timeline-detail::before,
+.timeline-detail::after {
+  content: '';
+  position: absolute;
+  width: 9px;
+  height: 9px;
   border-color: color-mix(in srgb, var(--node-color, var(--blue)) 55%, transparent);
   border-style: solid;
   pointer-events: none;
 }
-.timeline-card::before { bottom: -1px; left: -1px; border-width: 0 0 1.5px 1.5px; }
-.timeline-card::after { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+.timeline-detail::before { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
+.timeline-detail::after { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
 
-.timeline-card-head {
+.timeline-detail-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.timeline-detail-head-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.timeline-detail-head-left .hud-codename { margin-bottom: 0; }
+
+.timeline-detail-nav {
+  display: flex;
+  align-items: center;
   gap: 6px;
-  margin-bottom: 4px;
 }
-.timeline-card-date {
-  font-family: var(--font-mono);
-  font-size: 10.5px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+.timeline-detail-navbtn {
+  width: 26px;
+  height: 22px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  border-radius: 3px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.18s, color 0.15s;
+  line-height: 1;
+}
+.timeline-detail-navbtn:hover:not(:disabled) {
   color: var(--text-bright);
+  background: color-mix(in srgb, var(--blue) 10%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--blue) 25%, transparent);
 }
-.timeline-card-text {
-  font-size: 11.5px;
-  line-height: 1.45;
+.timeline-detail-navbtn:disabled { opacity: 0.35; cursor: not-allowed; }
+.timeline-detail-counter {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+}
+
+.timeline-detail-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--text-bright);
+  letter-spacing: -0.01em;
+}
+.timeline-detail-text {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+.timeline-detail-list {
+  margin: 6px 0 10px;
+  padding-left: 18px;
+  font-size: 12.5px;
+  line-height: 1.55;
   color: var(--text-secondary);
 }
-
-/* Edge-cases: if two cards are very close, they'll overlap. Stagger with
-   :nth-child offsets. Lightweight solution that works for our 4-item set. */
-.timeline-card:nth-child(2n) { top: 96px; }
-.timeline-cards { min-height: 168px; }
-
-/* Drop a vertical tether from axis to each card for clarity */
-.timeline-card::before { content: ''; }
-.timeline-card-tether {
-  position: absolute;
-  left: 50%;
-  top: -10px;
-  width: 1px;
-  height: 10px;
-  background: color-mix(in srgb, var(--node-color, var(--border)) 60%, transparent);
-  transform: translateX(-0.5px);
+.timeline-detail-list li { margin-bottom: 2px; }
+.timeline-detail-list li::marker { color: var(--node-color, var(--blue)); }
+.timeline-detail-owner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed color-mix(in srgb, var(--border) 60%, transparent);
+}
+.timeline-detail-owner-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+}
+.timeline-detail-owner-value {
+  font-size: 12px;
+  color: var(--text-bright);
 }
 
 @media (max-width: 760px) {
-  .timeline-card { width: 46vw; font-size: 11px; }
-  .timeline-card:nth-child(2n) { top: 88px; }
-  .timeline-cards { min-height: 180px; }
+  .timeline-chip { max-width: 120px; padding: 4px 6px; }
+  .timeline-chip-title { font-size: 10.5px; }
+  .timeline-detail-head { flex-wrap: wrap; }
 }
