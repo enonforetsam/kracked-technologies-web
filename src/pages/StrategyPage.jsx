@@ -63,7 +63,7 @@ function Countdown({ label }) {
 }
 
 function Q2HeroSummary({ onOpenNode }) {
-  const parentOp = { codename: 'OP // PARENT-01', title: 'Projects, Tenders & Claw OS Sales', accent: '#ef4444', nodeId: 'kracked-technologies', bullet: 'Run at Kracked Technologies parent level — project work, tender wins, and Claw OS consultation / workshop / bespoke sold as one unified outbound motion.' }
+  const parentOp = { codename: 'OP // PARENT-01', title: 'Projects, Tenders & Kracked OS Sales', accent: '#ef4444', nodeId: 'kracked-technologies', bullet: 'Run at Kracked Technologies parent level — project work, tender wins, and Kracked OS consultation / workshop / bespoke sold as one unified outbound motion.' }
   const pillars = [
     { n: '01', title: 'Kracked Devs', accent: '#22d3ee', nodeId: 'kracked-devs', bullet: 'Community + Recruitment arm. AI skill scorecards, Recruiter agent, Featured Listings.', led: 'green' },
     { n: '02', title: 'KD Academy', accent: '#e879f9', nodeId: 'kd-academy', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.', led: 'amber' },
@@ -84,13 +84,13 @@ function Q2HeroSummary({ onOpenNode }) {
     },
     {
       label: 'Apr 30',
-      title: 'Internal Claw OS live',
+      title: 'Internal Kracked OS live',
       text: 'First Sniper agent dry-run',
       status: 'next',
       owner: 'Danial + core',
       details: [
         'CEO-only daily-update form + approve-to-commit pipeline',
-        'First Claw OS agent (Sniper) dry-run on Projects & Tenders',
+        'First Kracked OS agent (Sniper) dry-run on Projects & Tenders',
         '1–2 seed sources drafting tender notes into Deals/',
         'Human + agent updates flow through same Pending Approvals card',
       ],
@@ -102,7 +102,7 @@ function Q2HeroSummary({ onOpenNode }) {
       status: 'later',
       owner: 'Danial',
       details: [
-        'Claw OS pitch deck v1 drafted',
+        'Kracked OS pitch deck v1 drafted',
         'Consultation SKU (scope + pricing) packaged',
         'First paid proposal sent to a warm lead',
       ],
@@ -142,7 +142,7 @@ function Q2HeroSummary({ onOpenNode }) {
         </span>
       </div>
 
-      <h1 className="strategy-thesis">Build Claw OS, sell Claw OS, feed the funnel.</h1>
+      <h1 className="strategy-thesis">Build Kracked OS, sell Kracked OS, feed the funnel.</h1>
       <p className="strategy-subthesis">AI company brain — <em>infra before growth</em>.</p>
 
       <div className="strategy-section-label">Parent motion · Kracked Technologies</div>
@@ -420,7 +420,7 @@ export default function StrategyPage({ graph }) {
       <PageHeader
         eyebrow="Q2 2026 · 11 WEEKS · APR 15 → JUN 30"
         title="Strategy"
-        subtitle="Build Claw OS, sell Claw OS, feed the funnel. The quarterly plan driving every pillar."
+        subtitle="Build Kracked OS, sell Kracked OS, feed the funnel. The quarterly plan driving every pillar."
         visual="strategy"
       />
       <Q2HeroSummary onOpenNode={openSidebar} />

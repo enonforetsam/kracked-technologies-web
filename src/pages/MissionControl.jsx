@@ -332,7 +332,7 @@ function ArticleModal({ node, graph, onClose, onOpen, trail = [], onJumpTrail })
 }
 
 function Q2PlanSummary({ strategies, openNode }) {
-  const parentOp = { title: 'Projects, Tenders & Claw OS Sales', accent: '#ef4444', bullet: 'Run at the Kracked Technologies parent level: project work, tender wins, and Claw OS consultation / workshop / bespoke — one unified outbound.' }
+  const parentOp = { title: 'Projects, Tenders & Kracked OS Sales', accent: '#ef4444', bullet: 'Run at the Kracked Technologies parent level: project work, tender wins, and Kracked OS consultation / workshop / bespoke — one unified outbound.' }
   const pillars = [
     { n: 1, title: 'Kracked Devs', accent: '#3b82f6', bullet: 'Community + Recruitment arm. AI skill scorecards, Recruiter agent, Featured Listings. MYR 15k Q2 target.' },
     { n: 2, title: 'KD Academy', accent: '#be185d', bullet: '12 Vibe Coding 101 sessions · 3–5 paid tutors · 3× Discord growth. Top of every funnel.' },
@@ -340,7 +340,7 @@ function Q2PlanSummary({ strategies, openNode }) {
   ]
   const milestones = [
     { label: 'Apr 22', text: 'Itachi live — CEO can ask the vault', status: 'now' },
-    { label: 'Apr 30', text: 'Internal Claw OS live + first Sniper agent dry-run', status: 'next' },
+    { label: 'Apr 30', text: 'Internal Kracked OS live + first Sniper agent dry-run', status: 'next' },
     { label: 'May 31', text: 'Pitch deck v1 · Consultation SKU packaged · First proposal out', status: 'later' },
     { label: 'Jun 30', text: '2 signed consultations · 1 workshop booked · 1 bespoke in pipeline', status: 'later' },
   ]
@@ -366,7 +366,7 @@ function Q2PlanSummary({ strategies, openNode }) {
               <span>APR 15 → JUN 30</span>
             </span>
           </div>
-          <h3 className="q2plan-thesis">Build Claw OS, sell Claw OS, feed the funnel.</h3>
+          <h3 className="q2plan-thesis">Build Kracked OS, sell Kracked OS, feed the funnel.</h3>
           <p className="q2plan-subthesis">AI company brain — <em>infra before growth</em>.</p>
         </div>
         <div className="q2plan-docs">
