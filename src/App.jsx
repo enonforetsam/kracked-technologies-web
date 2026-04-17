@@ -159,7 +159,7 @@ function InfoModal({ onClose }) {
 export default function App() {
   const [graph, setGraph] = useState(null)
   const [showInfo, setShowInfo] = useState(false)
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('emerald')
   const [showSettings, setShowSettings] = useState(false)
 
   useEffect(() => {

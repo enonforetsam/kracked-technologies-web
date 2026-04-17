@@ -91,28 +91,28 @@
 
 /* Emerald Terminal */
 [data-theme="emerald"] {
-  --text: #b8e6c8;
-  --text-bright: #d4fce0;
-  --text-secondary: #5a8a6e;
-  --text-tertiary: #385746;
-  --bg: #060f0a;
-  --bg-surface: #0c1a12;
-  --bg-elevated: #14251a;
-  --blue: #34d399;
-  --blue-pressed: #10b981;
-  --accent: #f59e0b;
-  --success: #22c55e;
-  --slate: #5a8a6e;
-  --placeholder: #385746;
-  --border: #1a3525;
-  --ring: #142a1e;
-  --glow-blue: 0 0 20px rgba(52, 211, 153, 0.3);
-  --glow-pink: 0 0 20px rgba(245, 158, 11, 0.3);
-  --glow-purple: 0 0 20px rgba(110, 231, 183, 0.3);
-  --graph-bg: #060f0a;
-  --graph-link: 52, 211, 153;
-  --graph-label: #b8e6c8;
-  --grid-color: 52, 211, 153;
+  --text: #a8dbb8;
+  --text-bright: #c8fcd8;
+  --text-secondary: #4a7a5e;
+  --text-tertiary: #2d4a38;
+  --bg: #030a06;
+  --bg-surface: #081410;
+  --bg-elevated: #0e1f16;
+  --blue: #00ff88;
+  --blue-pressed: #00cc6a;
+  --accent: #00ff88;
+  --success: #00ff88;
+  --slate: #4a7a5e;
+  --placeholder: #2d4a38;
+  --border: #143822;
+  --ring: #102a1a;
+  --glow-blue: 0 0 22px rgba(0, 255, 136, 0.35);
+  --glow-pink: 0 0 18px rgba(0, 255, 136, 0.2);
+  --glow-purple: 0 0 18px rgba(0, 255, 136, 0.2);
+  --graph-bg: #030a06;
+  --graph-link: 0, 255, 136;
+  --graph-label: #a8dbb8;
+  --grid-color: 0, 255, 136;
 }
 
 /* Sunset */
@@ -4886,4 +4886,154 @@ a:hover {
   .vision-sidebar { border-right: none; border-bottom: 1px solid var(--border); max-height: 180px; }
   .vision-head-chapter { display: none; }
   .vision-fullscreen { width: 100vw; height: 100vh; border-radius: 0; }
+}
+
+/* ==========================================================================
+   EMERALD MATRIX — light Matrix rain + CRT-style enhancements
+   Only activates on [data-theme="emerald"].
+   ========================================================================== */
+
+/* Matrix rain background — columns of fading characters */
+[data-theme="emerald"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 22px,
+      rgba(0, 255, 136, 0.018) 22px,
+      rgba(0, 255, 136, 0.018) 23px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 18px,
+      rgba(0, 255, 136, 0.012) 18px,
+      rgba(0, 255, 136, 0.012) 19px
+    );
+  animation: matrixScroll 12s linear infinite;
+}
+@keyframes matrixScroll {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 -440px, 0 0; }
+}
+
+/* Override scanline to be greener and more visible */
+[data-theme="emerald"] body::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    rgba(0, 255, 136, 0.02) 2px,
+    rgba(0, 255, 136, 0.02) 3px
+  ) !important;
+  mix-blend-mode: screen !important;
+}
+
+/* Subtle green CRT glow on the whole page */
+[data-theme="emerald"] #root {
+  position: relative;
+  z-index: 1;
+}
+[data-theme="emerald"] .mc-inner,
+[data-theme="emerald"] .strategy-page,
+[data-theme="emerald"] .vision-page,
+[data-theme="emerald"] .article-page {
+  text-shadow: 0 0 1px rgba(0, 255, 136, 0.1);
+}
+
+/* Green accent glows on panels */
+[data-theme="emerald"] .mc-card:hover,
+[data-theme="emerald"] .mc-collapsible:hover,
+[data-theme="emerald"] .mc-list-row:hover,
+[data-theme="emerald"] .strategy-pillar-btn:hover,
+[data-theme="emerald"] .mc-whatif-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(0, 255, 136, 0.2),
+    0 10px 30px rgba(0, 255, 136, 0.08),
+    inset 0 1px 0 rgba(0, 255, 136, 0.05) !important;
+}
+
+/* Mode nav active tab — green underglow */
+[data-theme="emerald"] .mode-nav-tab-active {
+  box-shadow: inset 0 -1px 0 #00ff88, 0 0 14px rgba(0, 255, 136, 0.2) !important;
+}
+[data-theme="emerald"] .mode-nav-tab:hover {
+  background: rgba(0, 255, 136, 0.06) !important;
+  box-shadow: 0 0 0 1px rgba(0, 255, 136, 0.15);
+}
+
+/* Links glow green */
+[data-theme="emerald"] a {
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.25);
+}
+[data-theme="emerald"] a:hover {
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.45);
+}
+
+/* Metric values — green glow */
+[data-theme="emerald"] .mc-metric-value {
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
+}
+
+/* Timeline NOW marker — match the emerald green */
+[data-theme="emerald"] .timeline-now-marker {
+  background: linear-gradient(to bottom, transparent 0%, #00ff88 20%, #00ff88 80%, transparent 100%) !important;
+  box-shadow: 0 0 12px #00ff88 !important;
+}
+[data-theme="emerald"] .timeline-ribbon-now {
+  background: rgba(0, 255, 136, 0.12) !important;
+  border-color: rgba(0, 255, 136, 0.5) !important;
+  color: #00ff88 !important;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+/* Strategy thesis headline glow */
+[data-theme="emerald"] .strategy-thesis,
+[data-theme="emerald"] .q2plan-thesis {
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+}
+
+/* Corner brackets brighter */
+[data-theme="emerald"] .mc-card::before,
+[data-theme="emerald"] .mc-card::after,
+[data-theme="emerald"] .mc-collapsible::before,
+[data-theme="emerald"] .mc-collapsible::after,
+[data-theme="emerald"] .mc-metrics::before,
+[data-theme="emerald"] .mc-metrics::after,
+[data-theme="emerald"] .vision-reader::before,
+[data-theme="emerald"] .vision-reader::after {
+  border-color: rgba(0, 255, 136, 0.5) !important;
+}
+
+/* LED dots — all default to emerald green */
+[data-theme="emerald"] .hud-led { --hud-led-color: #00ff88; }
+[data-theme="emerald"] .hud-led-green { --hud-led-color: #00ff88; }
+[data-theme="emerald"] .hud-led-blue { --hud-led-color: #00ff88; }
+
+/* Revenue value, countdown pills — green not blue */
+[data-theme="emerald"] .mc-revenue-value,
+[data-theme="emerald"] .strategy-ms-countdown {
+  color: #00ff88 !important;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
+}
+[data-theme="emerald"] .strategy-ms-countdown {
+  border-color: rgba(0, 255, 136, 0.4) !important;
+  background: rgba(0, 255, 136, 0.08) !important;
+}
+
+/* Mono labels — slight green tint */
+[data-theme="emerald"] .hud-ribbon,
+[data-theme="emerald"] .hud-codename,
+[data-theme="emerald"] .mc-card-head-title,
+[data-theme="emerald"] .mc-metric-label {
+  color: #4a7a5e !important;
+}
+[data-theme="emerald"] .hud-ribbon-hot {
+  color: #00ff88 !important;
+  text-shadow: 0 0 6px rgba(0, 255, 136, 0.35);
 }
