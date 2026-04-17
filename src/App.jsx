@@ -46,11 +46,23 @@ function ModeNav() {
     <nav className="mode-nav">
       <Link to="/" className="mode-nav-brand">Kracked Technologies</Link>
       <div className="mode-nav-tabs">
-        <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
+        <Link to="/vision" className={`mode-nav-tab ${path.startsWith('/vision') ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
           </svg>
-          Control
+          Vision
+        </Link>
+        <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
+          </svg>
+          Strategy
+        </Link>
+        <Link to="/competitors" className={`mode-nav-tab ${path.startsWith('/competitors') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/>
+          </svg>
+          Operators
         </Link>
         <Link to="/graph" className={`mode-nav-tab ${path === '/graph' ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -65,23 +77,11 @@ function ModeNav() {
           </svg>
           Wiki
         </Link>
-        <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
+        <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
           </svg>
-          Strategy
-        </Link>
-        <Link to="/vision" className={`mode-nav-tab ${path.startsWith('/vision') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-          Vision
-        </Link>
-        <Link to="/competitors" className={`mode-nav-tab ${path.startsWith('/competitors') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/>
-          </svg>
-          Operators
+          Control
         </Link>
       </div>
       <div className="mode-nav-right">

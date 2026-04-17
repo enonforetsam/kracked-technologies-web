@@ -52,7 +52,7 @@ function parseChapters(content) {
   const body = content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n+/, '').trim()
   const lines = body.split('\n')
   const chapters = []
-  let current = { title: 'Preamble', body: [] }
+  let current = { title: 'Overview', body: [] }
   for (const line of lines) {
     const m = line.match(/^##\s+(.+?)\s*$/)
     if (m) {
