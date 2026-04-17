@@ -130,11 +130,13 @@ export default function VisionPage({ graph }) {
         </aside>
 
         <div className="vision-main">
-          <div
-            ref={bodyRef}
-            className="article-body vision-chapter"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div ref={bodyRef} className="article-body vision-chapter">
+            <div className="vision-chapter-header">
+              <span className="vision-chapter-eyebrow">Chapter {String(idx + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}</span>
+              <h1 className="vision-chapter-heading">{current.title}</h1>
+            </div>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
 
           <div className="vision-nav">
             <button

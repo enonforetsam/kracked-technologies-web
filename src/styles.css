@@ -3629,6 +3629,30 @@ a:hover {
 
 :root {
   --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
+  --font-heading: 'Bricolage Grotesque', 'Geist', 'Inter', -apple-system, system-ui, sans-serif;
+}
+
+h1, h2, h3,
+.strategy-thesis,
+.strategy-doc-head h2,
+.vision-chapter-heading,
+.mc-modal-title,
+.mc-title,
+.q2plan-thesis,
+.page-header-title,
+.home-hero-title,
+.info-modal-header h2,
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.mc-whatif-head .mc-card-head-title,
+.vision-head-title {
+  font-family: var(--font-heading);
+  font-feature-settings: "ss01", "ss02";
+  letter-spacing: -0.02em;
+}
+:root {
+  --font-heading-noop: 1;
   --hud-bracket: 10px;
   --hud-bracket-width: 1.5px;
 }
@@ -4830,6 +4854,31 @@ a:hover {
   flex-direction: column;
   min-height: 520px;
 }
+.vision-chapter-header {
+  margin: -4px 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.vision-chapter-eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 8px;
+}
+.vision-chapter-heading {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-bright);
+}
+@media (max-width: 720px) {
+  .vision-chapter-heading { font-size: 24px; }
+}
 .vision-chapter {
   padding: 22px 32px 18px;
   font-size: 14.5px;
@@ -5055,9 +5104,9 @@ a:hover {
   margin-bottom: 4px;
 }
 .page-header-title {
-  font-family: 'Instrument Serif', 'Geist', serif;
+  font-family: var(--font-heading);
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.05;
   margin: 0;
   color: var(--text-bright);
@@ -5080,4 +5129,192 @@ a:hover {
 @media (max-width: 760px) {
   .page-header-visual { display: none; }
   .page-header-title { font-size: 30px; }
+}
+
+/* ==========================================================================
+   EMERALD — deeper green palette + dark-green hover states + kill yellow
+   Overrides the yellow inherited from What If reader on Vision/What If pages.
+   ========================================================================== */
+
+/* Yellow progress segments → emerald spectrum */
+[data-theme="emerald"] .mc-whatif-progress-seg {
+  background: rgba(5, 150, 105, 0.12) !important;
+}
+[data-theme="emerald"] .mc-whatif-progress-seg:hover {
+  background: rgba(4, 120, 87, 0.45) !important;
+}
+[data-theme="emerald"] .mc-whatif-progress-seg.is-done {
+  background: rgba(5, 150, 105, 0.55) !important;
+}
+[data-theme="emerald"] .mc-whatif-progress-seg.is-current {
+  background: #065f46 !important;
+}
+
+/* TOC active item — dark green instead of yellow */
+[data-theme="emerald"] .mc-whatif-toc-item.is-active {
+  background: color-mix(in srgb, #059669 12%, transparent) !important;
+  color: #065f46 !important;
+  border-left-color: #047857 !important;
+}
+[data-theme="emerald"] .mc-whatif-toc-item:hover {
+  background: color-mix(in srgb, #059669 7%, transparent) !important;
+  color: #052e1a !important;
+}
+
+/* What If / Vision card accent — emerald not yellow */
+[data-theme="emerald"] .mc-whatif-card {
+  --hud-accent: #059669 !important;
+}
+
+/* Chapter-body blockquote, hr — emerald */
+[data-theme="emerald"] .mc-whatif-chapter blockquote,
+[data-theme="emerald"] .vision-chapter blockquote {
+  border-left-color: #047857 !important;
+}
+[data-theme="emerald"] .mc-whatif-chapter hr,
+[data-theme="emerald"] .vision-chapter hr {
+  border-top-color: rgba(5, 150, 105, 0.3) !important;
+}
+
+/* Controls (fullscreen / minimize / close buttons) */
+[data-theme="emerald"] .mc-whatif-ctrl:hover {
+  background: rgba(4, 120, 87, 0.1) !important;
+  border-color: #047857 !important;
+  color: #065f46 !important;
+}
+
+/* Navigation buttons (Previous / Next) — dark green */
+[data-theme="emerald"] .mc-whatif-navbtn {
+  color: #065f46;
+}
+[data-theme="emerald"] .mc-whatif-navbtn:hover:not(:disabled) {
+  background: color-mix(in srgb, #047857 8%, transparent) !important;
+  border-color: #047857 !important;
+  color: #064e3b !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 120, 87, 0.3),
+    0 4px 14px rgba(4, 120, 87, 0.15);
+}
+
+/* PRIMARY Next button — solid dark green */
+[data-theme="emerald"] .mc-whatif-navbtn-primary,
+[data-theme="emerald"] .mc-whatif-navbtn-primary[style] {
+  background: #047857 !important;
+  border-color: #065f46 !important;
+  color: #ffffff !important;
+}
+[data-theme="emerald"] .mc-whatif-navbtn-primary:hover:not(:disabled) {
+  background: #065f46 !important;
+  border-color: #064e3b !important;
+  color: #ffffff !important;
+  box-shadow:
+    0 0 0 1px rgba(6, 95, 70, 0.4),
+    0 6px 18px rgba(4, 120, 87, 0.25) !important;
+}
+
+/* ==========================================================================
+   Global emerald hover tuning — darker green on every interactive panel
+   ========================================================================== */
+
+[data-theme="emerald"] .mc-card:hover,
+[data-theme="emerald"] .mc-collapsible:hover,
+[data-theme="emerald"] .mc-whatif-card:hover,
+[data-theme="emerald"] .mc-metric.clickable:hover {
+  box-shadow:
+    0 0 0 1px rgba(4, 120, 87, 0.35),
+    0 12px 32px rgba(4, 120, 87, 0.1) !important;
+}
+
+[data-theme="emerald"] .mc-list-row:hover {
+  background: rgba(4, 120, 87, 0.07) !important;
+  box-shadow: inset 0 0 0 1px rgba(4, 120, 87, 0.22) !important;
+}
+
+[data-theme="emerald"] .strategy-pillar-btn:hover {
+  background: rgba(4, 120, 87, 0.1) !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 120, 87, 0.4),
+    0 10px 28px rgba(4, 120, 87, 0.15) !important;
+}
+
+/* Mode nav tabs — darker green hover */
+[data-theme="emerald"] .mode-nav-tab:hover {
+  background: rgba(4, 120, 87, 0.09) !important;
+  color: #052e1a !important;
+}
+[data-theme="emerald"] .mode-nav-tab-active {
+  background: rgba(5, 150, 105, 0.16) !important;
+  color: #052e1a !important;
+}
+
+/* Links — darker green on hover */
+[data-theme="emerald"] a:hover {
+  color: #065f46 !important;
+}
+
+/* Strategy sidebar buttons */
+[data-theme="emerald"] .strategy-sidebar-open:hover,
+[data-theme="emerald"] .strategy-sidebar-neighbor:hover,
+[data-theme="emerald"] .q2plan-doc:hover {
+  background: rgba(4, 120, 87, 0.1) !important;
+  border-color: #047857 !important;
+  color: #065f46 !important;
+  box-shadow:
+    0 0 0 1px rgba(4, 120, 87, 0.3),
+    0 4px 14px rgba(4, 120, 87, 0.15) !important;
+}
+
+/* Timeline chip hover / active — darker green */
+[data-theme="emerald"] .timeline-chip:hover {
+  box-shadow:
+    0 0 0 1px rgba(4, 120, 87, 0.35),
+    0 4px 14px rgba(4, 120, 87, 0.15) !important;
+  color: #052e1a !important;
+}
+[data-theme="emerald"] .timeline-chip.is-active {
+  background: rgba(5, 150, 105, 0.14) !important;
+  color: #065f46 !important;
+  box-shadow: 0 0 0 1px rgba(4, 120, 87, 0.5) !important;
+}
+
+/* Timeline detail nav buttons */
+[data-theme="emerald"] .timeline-detail-navbtn:hover:not(:disabled) {
+  background: rgba(4, 120, 87, 0.1) !important;
+  border-color: #047857 !important;
+  color: #065f46 !important;
+  box-shadow: 0 0 0 1px rgba(4, 120, 87, 0.3) !important;
+}
+
+/* Vision per-chapter header (rendered above each chapter body) */
+.vision-chapter-header {
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+}
+.vision-chapter-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 2px 8px;
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.vision-chapter-heading {
+  font-family: 'Bricolage Grotesque', 'Geist', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 4px 0 0;
+  color: var(--text-bright);
+  letter-spacing: -0.02em;
+}
+
+[data-theme="emerald"] .vision-chapter-eyebrow {
+  color: #2e6b4b !important;
+  border-color: rgba(5, 150, 105, 0.3) !important;
 }
