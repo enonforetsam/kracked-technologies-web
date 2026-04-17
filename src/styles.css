@@ -91,28 +91,28 @@
 
 /* Emerald Terminal */
 [data-theme="emerald"] {
-  --text: #a8dbb8;
-  --text-bright: #c8fcd8;
-  --text-secondary: #4a7a5e;
-  --text-tertiary: #2d4a38;
-  --bg: #030a06;
-  --bg-surface: #081410;
-  --bg-elevated: #0e1f16;
-  --blue: #00ff88;
-  --blue-pressed: #00cc6a;
-  --accent: #00ff88;
-  --success: #00ff88;
-  --slate: #4a7a5e;
-  --placeholder: #2d4a38;
-  --border: #143822;
-  --ring: #102a1a;
-  --glow-blue: 0 0 22px rgba(0, 255, 136, 0.35);
-  --glow-pink: 0 0 18px rgba(0, 255, 136, 0.2);
-  --glow-purple: 0 0 18px rgba(0, 255, 136, 0.2);
-  --graph-bg: #030a06;
-  --graph-link: 0, 255, 136;
-  --graph-label: #a8dbb8;
-  --grid-color: 0, 255, 136;
+  --text: #0a3d24;
+  --text-bright: #052e1a;
+  --text-secondary: #2e6b4b;
+  --text-tertiary: #6b9b80;
+  --bg: #f5fbf7;
+  --bg-surface: #ecf7f0;
+  --bg-elevated: #e0f0e6;
+  --blue: #059669;
+  --blue-pressed: #047857;
+  --accent: #059669;
+  --success: #10b981;
+  --slate: #2e6b4b;
+  --placeholder: #6b9b80;
+  --border: #c5e4d2;
+  --ring: #d4ebdb;
+  --glow-blue: 0 0 16px rgba(5, 150, 105, 0.15);
+  --glow-pink: 0 0 14px rgba(5, 150, 105, 0.12);
+  --glow-purple: 0 0 14px rgba(5, 150, 105, 0.12);
+  --graph-bg: #f5fbf7;
+  --graph-link: 5, 150, 105;
+  --graph-label: #052e1a;
+  --grid-color: 5, 150, 105;
 }
 
 /* Sunset */
@@ -144,7 +144,8 @@
 /* === BASE === */
 
 body {
-  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  font-family: 'Geist', 'Inter', -apple-system, system-ui, sans-serif;
+  font-feature-settings: 'ss01', 'cv01', 'cv11';
   color: var(--text);
   background: var(--bg);
   line-height: 1.5;
@@ -4889,11 +4890,15 @@ a:hover {
 }
 
 /* ==========================================================================
-   EMERALD MATRIX — light Matrix rain + CRT-style enhancements
-   Only activates on [data-theme="emerald"].
+   EMERALD (LIGHT) — Matrix light-mode theme
+   Cream/mint background with deep forest accents. No scanlines, no neon.
+   Subtle grid backdrop carries the "light matrix" feel without noise.
    ========================================================================== */
 
-/* Matrix rain background — columns of fading characters */
+/* No dark-mode scanlines on emerald */
+[data-theme="emerald"] body::after { display: none !important; }
+
+/* Subtle grid backdrop — light-mode matrix */
 [data-theme="emerald"] body::before {
   content: '';
   position: fixed;
@@ -4901,104 +4906,37 @@ a:hover {
   pointer-events: none;
   z-index: 0;
   background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent 0,
-      transparent 22px,
-      rgba(0, 255, 136, 0.018) 22px,
-      rgba(0, 255, 136, 0.018) 23px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 18px,
-      rgba(0, 255, 136, 0.012) 18px,
-      rgba(0, 255, 136, 0.012) 19px
-    );
-  animation: matrixScroll 12s linear infinite;
-}
-@keyframes matrixScroll {
-  from { background-position: 0 0, 0 0; }
-  to { background-position: 0 -440px, 0 0; }
+    linear-gradient(rgba(5, 150, 105, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(5, 150, 105, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
 }
 
-/* Override scanline to be greener and more visible */
-[data-theme="emerald"] body::after {
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 2px,
-    rgba(0, 255, 136, 0.02) 2px,
-    rgba(0, 255, 136, 0.02) 3px
-  ) !important;
-  mix-blend-mode: screen !important;
-}
-
-/* Subtle green CRT glow on the whole page */
-[data-theme="emerald"] #root {
-  position: relative;
-  z-index: 1;
-}
-[data-theme="emerald"] .mc-inner,
-[data-theme="emerald"] .strategy-page,
-[data-theme="emerald"] .vision-page,
-[data-theme="emerald"] .article-page {
-  text-shadow: 0 0 1px rgba(0, 255, 136, 0.1);
-}
-
-/* Green accent glows on panels */
+/* Panel hover — faint forest glow */
 [data-theme="emerald"] .mc-card:hover,
 [data-theme="emerald"] .mc-collapsible:hover,
 [data-theme="emerald"] .mc-list-row:hover,
 [data-theme="emerald"] .strategy-pillar-btn:hover,
 [data-theme="emerald"] .mc-whatif-card:hover {
   box-shadow:
-    0 0 0 1px rgba(0, 255, 136, 0.2),
-    0 10px 30px rgba(0, 255, 136, 0.08),
-    inset 0 1px 0 rgba(0, 255, 136, 0.05) !important;
+    0 0 0 1px rgba(5, 150, 105, 0.25),
+    0 10px 30px rgba(5, 150, 105, 0.08) !important;
 }
 
-/* Mode nav active tab — green underglow */
-[data-theme="emerald"] .mode-nav-tab-active {
-  box-shadow: inset 0 -1px 0 #00ff88, 0 0 14px rgba(0, 255, 136, 0.2) !important;
-}
-[data-theme="emerald"] .mode-nav-tab:hover {
-  background: rgba(0, 255, 136, 0.06) !important;
-  box-shadow: 0 0 0 1px rgba(0, 255, 136, 0.15);
-}
-
-/* Links glow green */
-[data-theme="emerald"] a {
-  text-shadow: 0 0 6px rgba(0, 255, 136, 0.25);
-}
-[data-theme="emerald"] a:hover {
-  text-shadow: 0 0 10px rgba(0, 255, 136, 0.45);
-}
-
-/* Metric values — green glow */
-[data-theme="emerald"] .mc-metric-value {
-  text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
-}
-
-/* Timeline NOW marker — match the emerald green */
+/* Timeline NOW marker — emerald not neon */
 [data-theme="emerald"] .timeline-now-marker {
-  background: linear-gradient(to bottom, transparent 0%, #00ff88 20%, #00ff88 80%, transparent 100%) !important;
-  box-shadow: 0 0 12px #00ff88 !important;
+  background: linear-gradient(to bottom, transparent 0%, #059669 20%, #059669 80%, transparent 100%) !important;
+  box-shadow: 0 0 8px rgba(5, 150, 105, 0.35) !important;
 }
 [data-theme="emerald"] .timeline-ribbon-now {
-  background: rgba(0, 255, 136, 0.12) !important;
-  border-color: rgba(0, 255, 136, 0.5) !important;
-  color: #00ff88 !important;
-  text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: rgba(5, 150, 105, 0.5) !important;
+  color: #047857 !important;
+  text-shadow: none;
 }
 
-/* Strategy thesis headline glow */
-[data-theme="emerald"] .strategy-thesis,
-[data-theme="emerald"] .q2plan-thesis {
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
-}
-
-/* Corner brackets brighter */
+/* Corner brackets slightly deeper */
 [data-theme="emerald"] .mc-card::before,
 [data-theme="emerald"] .mc-card::after,
 [data-theme="emerald"] .mc-collapsible::before,
@@ -5007,33 +4945,139 @@ a:hover {
 [data-theme="emerald"] .mc-metrics::after,
 [data-theme="emerald"] .vision-reader::before,
 [data-theme="emerald"] .vision-reader::after {
-  border-color: rgba(0, 255, 136, 0.5) !important;
+  border-color: rgba(5, 150, 105, 0.45) !important;
 }
 
-/* LED dots — all default to emerald green */
-[data-theme="emerald"] .hud-led { --hud-led-color: #00ff88; }
-[data-theme="emerald"] .hud-led-green { --hud-led-color: #00ff88; }
-[data-theme="emerald"] .hud-led-blue { --hud-led-color: #00ff88; }
+/* LED dots — emerald spectrum */
+[data-theme="emerald"] .hud-led { --hud-led-color: #059669; }
+[data-theme="emerald"] .hud-led-green { --hud-led-color: #10b981; }
+[data-theme="emerald"] .hud-led-blue { --hud-led-color: #059669; }
+[data-theme="emerald"] .hud-led-amber { --hud-led-color: #d97706; }
+[data-theme="emerald"] .hud-led-red { --hud-led-color: #dc2626; }
 
-/* Revenue value, countdown pills — green not blue */
+/* Countdowns, revenue value — deep emerald */
 [data-theme="emerald"] .mc-revenue-value,
 [data-theme="emerald"] .strategy-ms-countdown {
-  color: #00ff88 !important;
-  text-shadow: 0 0 6px rgba(0, 255, 136, 0.3);
+  color: #047857 !important;
+  text-shadow: none;
 }
 [data-theme="emerald"] .strategy-ms-countdown {
-  border-color: rgba(0, 255, 136, 0.4) !important;
-  background: rgba(0, 255, 136, 0.08) !important;
+  border-color: rgba(5, 150, 105, 0.4) !important;
+  background: rgba(16, 185, 129, 0.08) !important;
 }
 
-/* Mono labels — slight green tint */
+/* Mono labels — muted forest */
 [data-theme="emerald"] .hud-ribbon,
 [data-theme="emerald"] .hud-codename,
 [data-theme="emerald"] .mc-card-head-title,
 [data-theme="emerald"] .mc-metric-label {
-  color: #4a7a5e !important;
+  color: #2e6b4b !important;
 }
 [data-theme="emerald"] .hud-ribbon-hot {
-  color: #00ff88 !important;
-  text-shadow: 0 0 6px rgba(0, 255, 136, 0.35);
+  color: #047857 !important;
+  text-shadow: none;
+}
+
+/* Metric values — deep forest */
+[data-theme="emerald"] .mc-metric-value {
+  color: #052e1a !important;
+}
+
+/* Thesis headlines — no glow in light mode */
+[data-theme="emerald"] .strategy-thesis,
+[data-theme="emerald"] .q2plan-thesis {
+  text-shadow: none;
+}
+
+/* ==========================================================================
+   NAV TABS — simplified hover + active (no underglow accent)
+   ========================================================================== */
+
+.mode-nav-tab {
+  background: transparent !important;
+  border-radius: 6px;
+  padding: 6px 12px !important;
+  transition: background 0.15s ease, color 0.15s ease;
+  box-shadow: none !important;
+  color: var(--text-secondary);
+}
+.mode-nav-tab:hover {
+  background: color-mix(in srgb, var(--blue) 7%, transparent) !important;
+  color: var(--text-bright) !important;
+  box-shadow: none !important;
+}
+.mode-nav-tab-active {
+  background: color-mix(in srgb, var(--blue) 12%, transparent) !important;
+  color: var(--text-bright) !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   PAGE HEADERS — title + decorative SVG on every page
+   ========================================================================== */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  margin-bottom: 12px;
+  background: color-mix(in srgb, var(--bg-elevated) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.page-header::before,
+.page-header::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: color-mix(in srgb, var(--blue) 55%, transparent);
+  border-style: solid;
+  pointer-events: none;
+}
+.page-header::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+.page-header::after { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
+
+.page-header-text { flex: 1; min-width: 0; }
+.page-header-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.page-header-title {
+  font-family: 'Instrument Serif', 'Geist', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0;
+  color: var(--text-bright);
+  letter-spacing: -0.01em;
+}
+.page-header-subtitle {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  margin: 4px 0 0;
+  max-width: 640px;
+}
+.page-header-visual {
+  flex-shrink: 0;
+  width: 120px;
+  height: 100px;
+  color: var(--blue);
+  opacity: 0.85;
+}
+
+@media (max-width: 760px) {
+  .page-header-visual { display: none; }
+  .page-header-title { font-size: 30px; }
 }

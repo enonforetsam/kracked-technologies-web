@@ -2,6 +2,7 @@ import { useState, useCallback, useRef, useMemo, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
+import PageHeader from '../components/PageHeader'
 
 const CARD_ACCENTS = {
   deals: '#3b82f6',
@@ -461,10 +462,12 @@ export default function MissionControl({ graph }) {
       </div>
 
       <div className="mc-inner">
-        <div className="mc-header">
-          <h1 className="mc-title">Mission Control</h1>
-          <p className="mc-subtitle">Last sync · {new Date(graph.meta.syncedAt).toLocaleDateString()}</p>
-        </div>
+        <PageHeader
+          eyebrow={`LAST SYNC · ${new Date(graph.meta.syncedAt).toLocaleDateString().toUpperCase()}`}
+          title="Mission Control"
+          subtitle="Live operational view of Kracked Technologies — every deal, venture, agent, and milestone in one place."
+          visual="control"
+        />
 
         {(d.thisWeek || (d.strategies && d.strategies.length > 0)) && (
           <div className="mc-card glass mc-card-wide">

@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { marked } from 'marked'
+import PageHeader from '../components/PageHeader'
 
 function slugifyHeading(text) {
   return 'h-' + text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 60)
@@ -416,6 +417,12 @@ export default function StrategyPage({ graph }) {
 
   return (
     <div className="strategy-page">
+      <PageHeader
+        eyebrow="Q2 2026 · 11 WEEKS · APR 15 → JUN 30"
+        title="Strategy"
+        subtitle="Build Claw OS, sell Claw OS, feed the funnel. The quarterly plan driving every pillar."
+        visual="strategy"
+      />
       <Q2HeroSummary onOpenNode={openSidebar} />
 
       {strategies.length > 0 && (

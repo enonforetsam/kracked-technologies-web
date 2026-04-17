@@ -1,5 +1,6 @@
 import { useState, useRef, useMemo, useEffect } from 'react'
 import { marked } from 'marked'
+import PageHeader from '../components/PageHeader'
 
 function renderContent(content, nodes) {
   let html = content
@@ -164,5 +165,15 @@ export default function VisionPage({ graph }) {
     )
   }
 
-  return <div className="vision-page">{reader}</div>
+  return (
+    <div className="vision-page">
+      <PageHeader
+        eyebrow="WHITEPAPER · APRIL 2026"
+        title="The Kracked Vision"
+        subtitle="A digital city for Malaysian builders. Free entry, AI-native education, earning layer, venture studio. Built in Malaysia, for Malaysia."
+        visual="vision"
+      />
+      {reader}
+    </div>
+  )
 }
