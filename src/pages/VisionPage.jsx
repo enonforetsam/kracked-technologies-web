@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useMemo, useEffect } from 'react'
+import { useState, useRef, useMemo, useEffect } from 'react'
 import { marked } from 'marked'
 
 function renderContent(content, nodes) {
@@ -15,41 +15,25 @@ function renderContent(content, nodes) {
 }
 
 function parseChapters(content) {
-  const body = content.replace(/^---[\s\S]*?---\s*/m, '').replace(/^#[^\n]*\n+/, '').trim()
-  const preambleEnd = body.search(/\n---\n/)
+  const body = content.replace(/^#[^\n]*\n+/, '').trim()
+  const lines = body.split('\n')
   const chapters = []
+  let current = { title: 'Preamble', body: [] }
 
-  if (preambleEnd > 0) {
-    const pre = body.slice(0, preambleEnd).trim()
-    if (pre) chapters.push({ title: 'Preamble', body: pre })
-  }
-
-  const sections = body.split(/\n---\n/).filter(Boolean)
-  for (const section of sections) {
-    const lines = section.trim().split('\n')
-    const h2 = lines.findIndex(l => /^##\s/.test(l))
-    if (h2 >= 0) {
-      const title = lines[h2].replace(/^##\s+/, '').trim()
-      const rest = lines.slice(h2 + 1).join('\n').trim()
-      if (rest) chapters.push({ title, body: rest })
-    } else if (chapters.length === 0) {
-      chapters.push({ title: 'Preamble', body: section.trim() })
-    }
-  }
-
-  if (chapters.length === 0) {
-    const lines = body.split('\n')
-    let current = { title: 'Introduction', body: [] }
-    for (const line of lines) {
-      const m = line.match(/^##\s+(.+?)\s*$/)
-      if (m) {
-        if (current.body.some(l => l.trim())) chapters.push({ title: current.title, body: current.body.join('\n').trim() })
-        current = { title: m[1], body: [] }
-      } else {
-        current.body.push(line)
+  for (const line of lines) {
+    if (/^---\s*$/.test(line)) continue
+    const m = line.match(/^##\s+(.+?)\s*$/)
+    if (m) {
+      if (current.body.some(l => l.trim())) {
+        chapters.push({ title: current.title, body: current.body.join('\n').trim() })
       }
+      current = { title: m[1].replace(/\*\*/g, ''), body: [] }
+    } else {
+      current.body.push(line)
     }
-    if (current.body.some(l => l.trim())) chapters.push({ title: current.title, body: current.body.join('\n').trim() })
+  }
+  if (current.body.some(l => l.trim())) {
+    chapters.push({ title: current.title, body: current.body.join('\n').trim() })
   }
 
   return chapters
