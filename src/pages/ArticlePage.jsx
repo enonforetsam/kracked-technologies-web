@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom'
 import { marked } from 'marked'
 import ForceGraph2D from 'react-force-graph-2d'
 import { CATEGORY_COLORS } from '../App'
+import PageHeader from '../components/PageHeader'
 
 function renderContent(content, nodes) {
   let html = content.replace(/^#[^\n]*\n/, '')
@@ -97,32 +98,17 @@ export default function ArticlePage({ graph }) {
     <div ref={pageRef} className={`article-page ${visible ? 'article-slide-in' : 'article-slide-start'}`}>
       <div className="article-content">
         <nav className="article-breadcrumb">
-          <Link to="/" className="breadcrumb-link">Wiki</Link>
+          <Link to="/wiki" className="breadcrumb-link">Wiki</Link>
           <span className="breadcrumb-sep">/</span>
           <span className="breadcrumb-link breadcrumb-category">{node.category}</span>
           <span className="breadcrumb-sep">/</span>
           <span className="breadcrumb-current">{node.name}</span>
         </nav>
-        <h1>{node.name}</h1>
-        <div className="article-meta">
-          <span
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 6,
-              padding: '2px 10px',
-              borderRadius: 20,
-              fontSize: 12,
-              fontWeight: 500,
-              background: (CATEGORY_COLORS[node.category] || '#5b76fe') + '1a',
-              color: CATEGORY_COLORS[node.category] || '#5b76fe',
-            }}
-          >
-            {node.category}
-          </span>
-          <span>{node.connections} connections</span>
-          <span>{node.wordCount}w</span>
-        </div>
+        <PageHeader
+          eyebrow={`${node.category.toUpperCase()} · ${node.connections} CONNECTIONS · ${node.wordCount}W`}
+          title={node.name}
+          visual="wiki"
+        />
         <div
           className="article-body"
           dangerouslySetInnerHTML={{ __html: html }}

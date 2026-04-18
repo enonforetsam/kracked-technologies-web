@@ -5318,3 +5318,149 @@ h1, h2, h3,
   color: #2e6b4b !important;
   border-color: rgba(5, 150, 105, 0.3) !important;
 }
+
+/* ==========================================================================
+   PAGE CONTAINER CONSISTENCY
+   Every page gets the same outer padding + max-width + vertical stacking.
+   Matches the Mission Control / Strategy layout so tabs feel uniform.
+   ========================================================================== */
+
+.mc-inner,
+.strategy-page,
+.vision-page,
+.competitors-page,
+.article-page {
+  padding: 14px 22px 24px !important;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Graph page is full-bleed for the graph itself — keep tight padding */
+.graph-page {
+  padding: 14px 22px 0 !important;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.graph-page .graph-header { margin-top: 8px; }
+
+/* Wiki category cards — align with strategy pillar density */
+.home-concept-grid {
+  padding: 10px 14px 14px !important;
+  gap: 10px !important;
+}
+.home-concept-card {
+  padding: 12px 14px !important;
+  border-radius: 4px !important;
+  text-align: left;
+  background: color-mix(in srgb, var(--bg-elevated) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.18s ease, transform 0.15s ease;
+}
+.home-concept-card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--border) 70%, transparent) !important;
+}
+.home-concept-name {
+  font-family: 'Geist', sans-serif;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: var(--text-bright);
+  margin: 0 !important;
+  letter-spacing: -0.005em;
+}
+.home-concept-connections {
+  font-family: var(--font-mono);
+  font-size: 10px !important;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+.home-concept-desc {
+  font-size: 12px !important;
+  color: var(--text-secondary);
+  margin-top: 4px !important;
+  line-height: 1.5 !important;
+}
+
+/* Featured card on Wiki — sharper typography */
+.home-featured-body {
+  padding: 14px 18px 16px !important;
+}
+.home-featured-title {
+  font-family: 'Bricolage Grotesque', 'Geist', sans-serif;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin: 0 0 6px !important;
+  letter-spacing: -0.015em;
+  color: var(--text-bright);
+}
+.home-featured-excerpt {
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: var(--text-secondary);
+  margin-bottom: 10px !important;
+}
+.home-featured-meta {
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+/* Competitors page panel body */
+.competitors-panel .competitors-body {
+  padding: 22px 32px 26px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.competitors-panel .competitors-body h2 {
+  font-family: 'Bricolage Grotesque', 'Geist', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 24px 0 8px;
+  padding-top: 16px;
+  border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  letter-spacing: -0.015em;
+  color: var(--text-bright);
+}
+.competitors-panel .competitors-body h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.competitors-panel .competitors-body h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 18px 0 6px;
+  color: var(--text-bright);
+}
+.competitors-panel .competitors-body table {
+  width: 100%;
+  font-size: 13px;
+  margin: 10px 0;
+  border-collapse: collapse;
+}
+.competitors-panel .competitors-body th {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 8px 10px;
+  color: var(--text-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+.competitors-panel .competitors-body td {
+  padding: 8px 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  vertical-align: top;
+}
+
+/* Article page breadcrumb sits above PageHeader — tighter spacing */
+.article-page .article-breadcrumb { margin-bottom: 4px; }
+.article-page .article-content .page-header { margin-bottom: 16px; }
+
+/* Home featured card doesn't need the big page-header's extra margin */
+.mc-inner > .page-header { margin-bottom: 0; }

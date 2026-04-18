@@ -9,6 +9,7 @@ import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPa
 import { forceCollide } from 'd3'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
+import PageHeader from '../components/PageHeader'
 
 function getExcerpt(content, len = 160) {
   return content
@@ -448,7 +449,12 @@ export default function GraphPage({ graph }) {
 
   return (
     <div className="graph-page">
-      {/* Header */}
+      <PageHeader
+        eyebrow={`${graph.meta.totalConcepts} NODES · ${graph.meta.totalConnections} CONNECTIONS`}
+        title="Graph"
+        subtitle="Every concept in the vault, visualised. Search, filter, or click a node to read its content."
+        visual="graph"
+      />
       <div className="graph-header">
         <div className="view-switcher">
           {[

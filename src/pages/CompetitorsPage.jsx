@@ -31,11 +31,13 @@ export default function CompetitorsPage({ graph }) {
       />
 
       {node ? (
-        <div className="competitors-body article-body" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="mc-card glass mc-card-wide competitors-panel">
+          <div className="competitors-body article-body" dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
       ) : (
-        <p style={{ padding: 40, textAlign: 'center', color: 'var(--text-tertiary)' }}>
-          Competitors document not found in vault.
-        </p>
+        <div className="mc-card glass mc-card-wide" style={{ padding: 40, textAlign: 'center' }}>
+          <p style={{ color: 'var(--text-tertiary)' }}>Competitors document not found in vault.</p>
+        </div>
       )}
     </div>
   )

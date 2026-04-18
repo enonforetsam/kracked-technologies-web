@@ -1,8 +1,8 @@
 # Kracked Technologies — Design System
 
-The visual language of Mission Control. Cyberpunk mission-brief HUD: compact,
-data-dense, operator-grade. This doc is the source of truth — edit it when
-conventions change, and update the CSS to match.
+The visual language of Mission Control. Light-emerald HUD: compact, data-dense,
+operator-grade. This doc is the source of truth — edit it when conventions
+change, and update the CSS to match.
 
 ---
 
@@ -13,17 +13,22 @@ conventions change, and update the CSS to match.
 2. **One panel language everywhere.** Every major box uses the HUD panel
    treatment — square-ish 4px radius, hairline border, L-shaped corner
    brackets in the panel's accent color.
-3. **Mono for data, Inter for prose.** JetBrains Mono on anything numeric,
-   technical, or label-shaped (metric values, timestamps, codenames, status
-   text, KV keys). Inter on anything meant to be read as sentences.
-4. **Hover = faint glow, never blue outline.** Hover states emit a low-opacity
-   accent glow via `box-shadow`. Borders stay stable. Saves the user's visual
-   cortex from sudden border-color flashes.
-5. **LEDs for status, countdowns for dates.** A pulsing colored dot beats a
+3. **Every page starts with a `<PageHeader>`.** Eyebrow (mono, uppercase) +
+   serif title + subtitle + inline SVG visual. No ad-hoc `<h1>` blocks.
+4. **Mono for data, Geist for prose, serif for titles.** JetBrains Mono on
+   anything numeric, technical, or label-shaped. Geist for body text.
+   Instrument Serif for top-of-page titles. Bricolage Grotesque for chapter
+   / section display headings.
+5. **Hover = faint accent glow, never a border swap.** Hover states emit a
+   low-opacity glow via `box-shadow`. Borders stay stable. Emerald theme
+   uses deep forest greens on hover (`#047857`, `#065f46`).
+6. **LEDs for status, countdowns for dates.** A pulsing colored dot beats a
    text label. `T-7d` beats "soon".
-6. **Dark-first, light as fallback.** The system was designed for dark
-   themes (cyberpunk, midnight, emerald, sunset). Light mode uses the same
-   structure but without glows/scanlines.
+7. **Light-emerald primary, dark themes as alternates.** The default theme
+   is light emerald with a subtle mint grid backdrop. Cyberpunk, midnight,
+   sunset remain available via the settings picker.
+8. **Tabs are simple.** Pill-background hover + active — no underglows,
+   no accent bars on the side.
 
 ---
 
@@ -78,6 +83,42 @@ conventions change, and update the CSS to match.
 
 ---
 
+## Page structure (every tab follows this)
+
+```jsx
+<div className="xxx-page">
+  <PageHeader
+    eyebrow="MONO · UPPERCASE · METADATA"
+    title="Page Title"
+    subtitle="One-sentence description of what this page is for."
+    visual="control | strategy | vision | graph | wiki | competitors"
+  />
+
+  {/* Page content as mc-card panels */}
+  <div className="mc-card glass mc-card-wide">
+    ...
+  </div>
+</div>
+```
+
+Rules:
+- **Every tab uses `<PageHeader>`.** No ad-hoc page titles.
+- **Content goes in `.mc-card glass`** panels. Never render raw prose at the
+  page level — always inside a bracketed container.
+- **Use `.mc-card-wide`** when the panel should span full width.
+- **Consistent page padding:** 14px top, 22px sides, 24px bottom, max-width
+  1280px, centered. Enforced globally via `.mc-inner, .strategy-page,
+  .vision-page, .competitors-page, .article-page`.
+
+## Components
+
+| Component | Purpose |
+|---|---|
+| `<PageHeader>` | Top of every page. Accepts `eyebrow`, `title`, `subtitle`, `visual` |
+| `<WhatIfReader>` / `<VisionPage>` | Chapter-by-chapter long-form reader |
+| `<CardHeader>` | Small card header (icon + title + count) |
+| `<StatusDot>` | Colored dot indicating a deal/venture status |
+
 ## HUD primitive classes
 
 All defined at the end of `styles.css`. Reusable site-wide — compose onto
@@ -124,6 +165,17 @@ the metric ribbon, the What If reader, modal bodies — follows:
 
 Applied globally via the `.mc-card`, `.mc-collapsible`, `.strategy-pillar`,
 `.mc-metrics`, `.mc-whatif-card` overrides at the bottom of `styles.css`.
+
+### Per-page checklist
+
+When adding a new page:
+1. Create `src/pages/XxxPage.jsx`
+2. Import `PageHeader` from `../components/PageHeader`
+3. Render `<PageHeader>` as the first child of the page root `<div>`
+4. Wrap body content in `.mc-card glass mc-card-wide` panels
+5. Register the route in `App.jsx`
+6. Add a nav tab with a 16×16 SVG icon matching the existing style
+7. Add a `visual` entry in `PageHeader.jsx`'s `VISUALS` object if new
 
 ---
 

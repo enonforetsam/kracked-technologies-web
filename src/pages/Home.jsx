@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import { marked } from 'marked'
 import { CATEGORY_COLORS } from '../App'
+import PageHeader from '../components/PageHeader'
 
 function getExcerpt(content, len = 120) {
   return content
@@ -145,10 +146,12 @@ export default function Home({ graph }) {
       </div>
 
       <div className="mc-inner">
-        <div className="mc-header">
-          <h1 className="mc-title">Wiki</h1>
-          <p className="mc-subtitle">{graph.meta.totalConcepts} concepts · {graph.meta.totalConnections} connections</p>
-        </div>
+        <PageHeader
+          eyebrow={`${graph.meta.totalConcepts} CONCEPTS · ${graph.meta.totalConnections} CONNECTIONS`}
+          title="Wiki"
+          subtitle="Every note in the vault, browsable by category. Click a card to read; click a connection to follow the graph."
+          visual="wiki"
+        />
 
         {/* Metric strip: category counts */}
         <div className="mc-metrics">
