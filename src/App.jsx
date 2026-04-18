@@ -7,6 +7,7 @@ import MissionControl from './pages/MissionControl'
 import StrategyPage from './pages/StrategyPage'
 import VisionPage from './pages/VisionPage'
 import CompetitorsPage from './pages/CompetitorsPage'
+import KampungPage from './pages/KampungPage'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -82,6 +83,13 @@ function ModeNav() {
             <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
           </svg>
           Control
+        </Link>
+        <Link to="/kampung" className={`mode-nav-tab ${path.startsWith('/kampung') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+          </svg>
+          Kampung
         </Link>
       </div>
       <div className="mode-nav-right">
@@ -206,6 +214,7 @@ export default function App() {
               <Route path="/strategy" element={<StrategyPage graph={graph} />} />
               <Route path="/vision" element={<VisionPage graph={graph} />} />
               <Route path="/competitors" element={<CompetitorsPage graph={graph} />} />
+              <Route path="/kampung" element={<KampungPage graph={graph} />} />
               <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
             </Routes>
           </div>

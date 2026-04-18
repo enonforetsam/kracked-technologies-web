@@ -91,6 +91,29 @@ const VISUALS = {
       <text x="60" y="90" fontFamily="monospace" fontSize="7" fill="currentColor" textAnchor="middle" opacity="0.5">MALAYSIA</text>
     </svg>
   ),
+  kampung: (
+    <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
+      {/* Hexagonal mesh — kampung as connected nodes */}
+      <polygon points="30,20 42,27 42,41 30,48 18,41 18,27" opacity="0.6" />
+      <polygon points="60,20 72,27 72,41 60,48 48,41 48,27" />
+      <polygon points="90,20 102,27 102,41 90,48 78,41 78,27" opacity="0.6" />
+      <polygon points="45,50 57,57 57,71 45,78 33,71 33,57" opacity="0.75" />
+      <polygon points="75,50 87,57 87,71 75,78 63,71 63,57" opacity="0.75" />
+      {/* Connecting lines */}
+      <line x1="42" y1="34" x2="48" y2="34" opacity="0.5" />
+      <line x1="72" y1="34" x2="78" y2="34" opacity="0.5" />
+      <line x1="42" y1="41" x2="45" y2="50" opacity="0.5" />
+      <line x1="57" y1="50" x2="60" y2="48" opacity="0.5" />
+      <line x1="75" y1="50" x2="72" y2="48" opacity="0.5" />
+      <line x1="87" y1="57" x2="90" y2="48" opacity="0.5" />
+      {/* Central node — the treasury / heart */}
+      <circle cx="60" cy="34" r="3" fill="currentColor" />
+      <circle cx="30" cy="34" r="2" fill="currentColor" opacity="0.7" />
+      <circle cx="90" cy="34" r="2" fill="currentColor" opacity="0.7" />
+      <circle cx="45" cy="64" r="2" fill="currentColor" opacity="0.6" />
+      <circle cx="75" cy="64" r="2" fill="currentColor" opacity="0.6" />
+    </svg>
+  ),
 }
 
 export default function PageHeader({ eyebrow, title, subtitle, visual }) {
