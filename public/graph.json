@@ -345,7 +345,7 @@
         "What If"
       ],
       "path": "The Kracked Vision.md",
-      "connections": 46
+      "connections": 48
     },
     {
       "id": "the-kracked-kampung",
@@ -398,7 +398,36 @@
       "type": "whitepaper",
       "status": "proposal",
       "owner": "danial",
-      "connections": 20
+      "connections": 21
+    },
+    {
+      "id": "partnerships",
+      "name": "Partnerships",
+      "category": "Root",
+      "dataset": "mission",
+      "content": "\n# Partnerships\n\nWho we collaborate with, what each collaboration looks like, and what it is not.\n\nKracked Technologies partners narrowly and deliberately. The filter is values, not logos. Every partnership must strengthen the mission of building AI literacy and builder capability for Malaysians, by Malaysians. If it does not, there is no deal to be made.\n\nThis page is the source of truth for who we work with, who we are talking to, and what to say when someone asks how they can get involved.\n\n---\n\n## Philosophy\n\nThe Kampung is not a franchise, a chapter, or a local outpost of any foreign project. Partnership at the Kracked level is relationship-first, values-first, transactional second.\n\nThree filters:\n\n1. **Authentic Malaysian.** Built in Malaysia, for Malaysia, by Malaysians or the Malaysian diaspora who still think of themselves as Malaysian.\n2. **Mission-aligned.** They believe in making AI building accessible, not extracting from the people we serve.\n3. **Capacity to deliver.** Can they actually help us reach builders, ship projects, train trainers, unblock policy, or fund outcomes. Logos alone are not a partnership.\n\nIf the three filters all pass, the partnership surface is wide. If any one fails, it is a no.\n\n---\n\n## What We Offer Partners\n\n- **Community access.** 1,190+ registered developers on krackeddevs.com, 800 Discord members, 9 guilds across technical domains.\n- **Education infrastructure.** Vibe 101 sessions (live and recorded), specialised tracks (planned), ambassador network, HRD Corp-claimable workshop pathway.\n- **Venture studio pipeline.** Seven ventures live or in development. Founders actively shipping.\n- **Agent infrastructure.** Kracked OS as a deployable product. Partners can deploy it internally or for their own constituents.\n- **Government alignment.** Advisory board with MyDIGITAL, Cradle, MAF connections. Credibility with MDEC, MRANTI, HRD Corp.\n- **Content and showcase distribution.** Every partner event can feed the Showcase. Every Showcase project feeds recruitment. Every recruitment feeds the community.\n\n---\n\n## What We Look For in a Partner\n\n- A real audience or constituency we are not already serving.\n- Capacity to host, teach, fund, or distribute at a scale we cannot reach alone.\n- Willingness to show up for repeated sessions, not a single handshake photo.\n- Cultural fit. Partners who want Malaysia to remain Malaysian.\n- Clarity on what they want from the collaboration. Vague asks are a red flag.\n\n---\n\n## Partner Categories\n\n### 1. Community Partners\n\nMalaysian developer and builder communities already active on the ground.\n\n**What the collab looks like:**\n- Co-hosted Vibe 101 sessions, one per state per quarter\n- Cross-posted Showcase features\n- Joint meetups that feed both memberships\n- Ambassador exchange: our ambassadors co-organise their events, their organisers co-host our sessions\n\n**Examples of the fit profile:** TechTamu, JuniorDev MY, GDG KL / Penang chapters, Malaysian PyData, university coding clubs, state-level builder meetups.\n\n### 2. Educational Partners\n\nMalaysian universities, polytechnics, TVET schools, and private training institutions.\n\n**What the collab looks like:**\n- MOU-backed Vibe Coding modules embedded in undergraduate electives\n- TVET integration as a formal \"AI-Native Building\" competency\n- Internship pipeline from the university into Kracked Labs ventures\n- Co-branded certifications claimable via HRD Corp for corporate learners\n- Faculty access to the Kracked OS agent layer as a research object\n\n**Examples of the fit profile:** UKM, UTM, USM, MMU, Taylor's University, Monash Malaysia, IIUM, TVET providers under MARA and HRD Corp.\n\n### 3. Government and Policy Partners\n\nEntities whose mandate overlaps with builder development and digital economy.\n\n**What the collab looks like:**\n- Kracked Devs referenced as a talent pool in MyDIGITAL programmes\n- Cradle CIP Spark and Accelerate pathway for Labs ventures\n- HRD Corp-claimable workshop certification\n- MDEC Malaysia Digital status for Kracked Technologies\n- State digital office partnerships for statewide Vibe 101 rollouts\n- MRANTI cohort hosting and demo days\n\n**Examples of the fit profile:** MDEC, MyDIGITAL Corporation, Cradle Fund, HRD Corp, MRANTI, MIGHT, state digital / innovation offices.\n\n### 4. Industry and Corporate Partners\n\nMalaysian GLCs, mid-market corporates, and SMEs.\n\n**What the collab looks like:**\n- Sponsored bounties on the Bounty Board, scoped to real internal problems\n- Corporate Vibe 101 training, HRD Corp-claimable\n- Kracked OS SME deployments, maintained by local Kracked Devs\n- Featured job listings on the Job Board for verified hiring companies\n- Dev-for-hire pilots at zero agency fees\n\n**Examples of the fit profile:** PETRONAS Digital, TNB, Telekom Malaysia, Maybank, CIMB, Axiata, PNB portfolio companies, Bursa-listed mid-caps running digital transformation.\n\n### 5. Faith and Cultural Partners\n\nInstitutions rooted in Malaysia's communities where the ethic of service and non-extraction is already lived.\n\n**What the collab looks like:**\n- Mosque management associations adopting Masjid OS (a Kracked Labs venture)\n- Tamil, Chinese, and indigenous community associations hosting Vibe 101 events for their youth\n- Faith-aligned SME onboarding clinics in partnership with local religious councils\n- Islamic finance institution conversations about token compliance (long horizon)\n\n**Examples of the fit profile:** JAKIM-linked mosque networks, Malaysian Hindu Sangam, Malaysian Tamil Association, Chinese clan associations, Dayak and indigenous community councils.\n\n### 6. Media Partners\n\nTech and mainstream Malaysian media that amplify builder stories.\n\n**What the collab looks like:**\n- Regular features on Kracked Labs launches and Showcase projects\n- Vibe 101 cohort coverage during launch cycles\n- Co-produced content explaining AI-native building to a mainstream audience\n- Podcast appearances, founder spotlights, newsletter embeds\n\n**Examples of the fit profile:** Tech in Asia Malaysia, Vulcan Post, The Star tech desk, Malay Mail, BFM 89.9, SoyaCincau, TechNave.\n\n### 7. Diaspora Partners\n\nMalaysian builders abroad who want to contribute back.\n\n**What the collab looks like:**\n- Remote cohort teaching slots on Vibe 101 and specialised tracks\n- Labs mentorship and investment intros from Malaysians in SG, SF, London\n- Reverse-brain-drain pathways: Labs offers, ambassador-at-large roles\n- Content partnerships: diaspora founders share playbooks to the community\n\n**Examples of the fit profile:** Malaysian tech workers at Meta, Google, Stripe, ByteDance, GovTech Singapore. Malaysians in YC batches. Malaysian VCs abroad.\n\n---\n\n## Warm Network — Current Connections\n\nConcrete partnerships we are already in conversation with. Each entry lists status, the nature of the collaboration, and the next step.\n\n### TechTamu\n\n**Who they are.** A monthly Malaysian tech community meetup series. Brings together founders, developers, and curious minds to share practical business insights without sales pitches. Runs out of Agmo Space in Cyberjaya. Seven editions held to date. Core ethic: \"long-term games with long-term people.\" Practical sharing over inspiration, consistent relationship-building across the Malaysian tech ecosystem.\n\n**Fit.** Strong. TechTamu's audience is exactly Kracked's Kracked Devs target. Their philosophy of authentic, repeated presence maps cleanly onto the Vibe 101 weekly rhythm.\n\n**What the collab looks like:**\n- Kracked co-hosts a TechTamu edition focused on vibe coding and AI-native building\n- TechTamu regulars get Vibe 101 access and are invited to speak as practitioners\n- Cross-promotion between Discord servers, newsletter cross-posts\n- TechTamu cohort graduates funneled into Kracked Labs as founder candidates\n\n**Status.** Warm contact. Relationship exists. No formal collaboration yet.\n\n**Next step.** Propose a co-hosted TechTamu edition as a pilot. Confirm who at TechTamu is the primary contact and run a 30-minute scoping call.\n\n### Gig Ventures\n\n**Who they are.** Current warm network connection. Details to confirm with CEO.\n\n**Fit.** To be scoped. Likely candidates: venture-builder partnership, founder pipeline, sponsored bounty partner.\n\n**What the collab looks like (proposed):**\n- Shared deal flow between Gig Ventures and Kracked Labs at the idea-validation stage\n- Ventures that do not fit Labs get referred to Gig Ventures, and vice versa\n- Cross-syndication on early-stage rounds\n- Joint showcases and demo days\n\n**Status.** Warm contact. Relationship exists.\n\n**Next step.** Confirm specific collaboration scope with CEO. Document capabilities each side brings.\n\n---\n\n## What We Do Not Partner With\n\nNamed explicitly so we do not lose time evaluating bad fits.\n\n- **Foreign network-state franchises.** We are not a chapter, franchise, or Malaysian outpost of any overseas project. Mechanism inspiration is welcome. Alignment on execution is not available.\n- **Extractive VCs.** Kampung token emission is zero VC allocation. The Labs equity structure is already set at up to 10% for hands-on support. No external funds buying in at the ecosystem level.\n- **Entities looking to privatise the commons.** Platforms, publishers, or corporates wanting exclusive rights to the Showcase, the Job Board, or the community data are a hard no.\n- **Grant-seekers posing as partners.** Institutions asking for free access to the community in exchange for vague \"future benefits\" are not partnerships. They are procurement.\n- **Anyone whose vision of Malaysia requires Malaysia to be less Malaysian.** Projects that want to replace cultural context with imported norms do not pass the filter.\n\n---\n\n## How to Propose a Partnership\n\n1. Read [[The Kracked Vision]] first. If the mission does not resonate, the conversation will be short.\n2. Identify which partner category you fall under (community, education, government, industry, faith, media, diaspora).\n3. Send a one-page proposal to hello@krackeddevs.com with: who you are, your constituency, one concrete joint initiative you want to run in the next 90 days, and what you need from Kracked to make it happen.\n4. We reply within two weeks with a yes, a no, or a scoping call.\n\nShort proposals get faster responses than long ones. Concrete pilots beat abstract MOUs. Show up for the repeat session, not just the launch event.\n\n---\n\n## Related\n\n- [[The Kracked Vision]] — the operational whitepaper\n- [[The Kracked Kampung]] — the speculative on-chain paper\n- [[Competitors]] — adjacent operators in the Malaysian landscape\n- [[Kracked Technologies]] — the parent entity partners sign with\n- [[Advisory Board]] — individuals already contributing guidance\n",
+      "wordCount": 1577,
+      "links": [
+        "the-kracked-vision",
+        "the-kracked-vision",
+        "the-kracked-kampung",
+        "competitors",
+        "kracked-technologies",
+        "advisory-board"
+      ],
+      "linkNames": [
+        "The Kracked Vision",
+        "The Kracked Vision",
+        "The Kracked Kampung",
+        "Competitors",
+        "Kracked Technologies",
+        "Advisory Board"
+      ],
+      "path": "Partnerships.md",
+      "type": "partnerships",
+      "status": "live",
+      "owner": "danial",
+      "connections": 6
     },
     {
       "id": "kracked-technologies",
@@ -440,7 +469,7 @@
         "What If"
       ],
       "path": "Kracked Technologies.md",
-      "connections": 47
+      "connections": 48
     },
     {
       "id": "competitors",
@@ -471,7 +500,7 @@
       "type": "competitors",
       "status": "live",
       "owner": "danial",
-      "connections": 17
+      "connections": 18
     },
     {
       "id": "capabilities",
@@ -1422,7 +1451,7 @@
         "Kracked Labs"
       ],
       "path": "Ecosystem/Advisory Board.md",
-      "connections": 25
+      "connections": 26
     },
     {
       "id": "showcase",
@@ -3176,6 +3205,30 @@
     {
       "source": "the-kracked-kampung",
       "target": "competitors"
+    },
+    {
+      "source": "partnerships",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "partnerships",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "partnerships",
+      "target": "the-kracked-kampung"
+    },
+    {
+      "source": "partnerships",
+      "target": "competitors"
+    },
+    {
+      "source": "partnerships",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "partnerships",
+      "target": "advisory-board"
     },
     {
       "source": "kracked-technologies",
@@ -5301,14 +5354,14 @@
       }
     ],
     "graph": {
-      "mission": 62,
+      "mission": 63,
       "research": 22,
-      "total": 84
+      "total": 85
     }
   },
   "meta": {
-    "totalConcepts": 84,
-    "totalConnections": 646,
+    "totalConcepts": 85,
+    "totalConnections": 652,
     "categories": [
       "Root",
       "Strategy",
@@ -5327,6 +5380,6 @@
       "Gov Funding",
       "Startup"
     ],
-    "syncedAt": "2026-04-18T02:50:18.737Z"
+    "syncedAt": "2026-04-18T03:01:35.562Z"
   }
 }

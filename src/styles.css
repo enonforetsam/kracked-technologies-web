@@ -2532,10 +2532,12 @@ a:hover {
 .strategy-sidebar {
   position: fixed;
   top: 0; right: 0; bottom: 0;
-  width: min(480px, 92vw);
-  background: var(--bg-card);
+  width: min(760px, 96vw);
+  background: var(--bg) !important;
   border-left: 1px solid var(--border);
-  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.25);
+  box-shadow: -24px 0 80px rgba(0, 0, 0, 0.55);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -4421,7 +4423,8 @@ h1, h2, h3,
   font-size: 10px;
   letter-spacing: 0.12em;
   color: var(--text-tertiary);
-  height: 18px;
+  min-height: 22px;
+  padding-top: 18px;
   margin-bottom: 6px;
 }
 .timeline-ribbon-end {
@@ -4443,6 +4446,12 @@ h1, h2, h3,
   gap: 4px;
   font-size: 9.5px;
   font-weight: 600;
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: color-mix(in srgb, #10b981 14%, var(--bg));
+  border: 1px solid color-mix(in srgb, #10b981 35%, transparent);
+  color: var(--text-bright);
   letter-spacing: 0.14em;
   padding: 1px 7px;
   border-radius: 999px;
@@ -4574,28 +4583,28 @@ h1, h2, h3,
 /* Chips: one-row strip below the axis with date / countdown / title */
 .timeline-chips {
   position: relative;
-  height: 46px;
+  height: 30px;
   margin-top: 2px;
+  padding: 0 32px;
 }
 .timeline-chip {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
   padding: 4px 8px;
   background: transparent;
   border: none;
   cursor: pointer;
   font-family: inherit;
   color: var(--text-secondary);
-  border-radius: 3px;
+  border-radius: 4px;
   transition: background 0.15s ease, box-shadow 0.2s ease, color 0.15s ease;
   white-space: nowrap;
-  max-width: 150px;
 }
+.timeline-chip-title { display: none; }
 .timeline-chip::before {
   content: '';
   position: absolute;

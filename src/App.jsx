@@ -8,6 +8,7 @@ import StrategyPage from './pages/StrategyPage'
 import VisionPage from './pages/VisionPage'
 import CompetitorsPage from './pages/CompetitorsPage'
 import KampungPage from './pages/KampungPage'
+import PartnershipsPage from './pages/PartnershipsPage'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -71,6 +72,12 @@ function ModeNav() {
             <circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/>
           </svg>
           Operators
+        </Link>
+        <Link to="/partnerships" className={`mode-nav-tab ${path.startsWith('/partnerships') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          Partnerships
         </Link>
         <Link to="/graph" className={`mode-nav-tab ${path === '/graph' ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -215,6 +222,7 @@ export default function App() {
               <Route path="/vision" element={<VisionPage graph={graph} />} />
               <Route path="/competitors" element={<CompetitorsPage graph={graph} />} />
               <Route path="/kampung" element={<KampungPage graph={graph} />} />
+              <Route path="/partnerships" element={<PartnershipsPage graph={graph} />} />
               <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
             </Routes>
           </div>

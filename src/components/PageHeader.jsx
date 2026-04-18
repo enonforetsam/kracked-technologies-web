@@ -91,6 +91,25 @@ const VISUALS = {
       <text x="60" y="90" fontFamily="monospace" fontSize="7" fill="currentColor" textAnchor="middle" opacity="0.5">MALAYSIA</text>
     </svg>
   ),
+  partnerships: (
+    <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
+      {/* Two interlocking rings representing shared values */}
+      <circle cx="45" cy="50" r="22" />
+      <circle cx="75" cy="50" r="22" opacity="0.7" />
+      {/* Handshake / bridge between them */}
+      <line x1="45" y1="50" x2="75" y2="50" strokeDasharray="2 2" opacity="0.5" />
+      <circle cx="60" cy="50" r="3" fill="currentColor" />
+      {/* Satellite nodes around — partners */}
+      <circle cx="20" cy="28" r="2.5" fill="currentColor" opacity="0.7" />
+      <circle cx="100" cy="28" r="2.5" fill="currentColor" opacity="0.7" />
+      <circle cx="20" cy="72" r="2.5" fill="currentColor" opacity="0.55" />
+      <circle cx="100" cy="72" r="2.5" fill="currentColor" opacity="0.55" />
+      <line x1="23" y1="30" x2="45" y2="50" opacity="0.35" />
+      <line x1="97" y1="30" x2="75" y2="50" opacity="0.35" />
+      <line x1="23" y1="70" x2="45" y2="50" opacity="0.3" />
+      <line x1="97" y1="70" x2="75" y2="50" opacity="0.3" />
+    </svg>
+  ),
   kampung: (
     <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
       {/* Hexagonal mesh — kampung as connected nodes */}

@@ -209,7 +209,7 @@ function Timeline({ start, end, now, milestones }) {
       <div className="timeline-ribbon">
         <span className="timeline-ribbon-end">{fmt(start)}</span>
         <span className="timeline-ribbon-spacer" />
-        <span className="timeline-ribbon-now" style={{ left: `${nowPct}%` }}>
+        <span className="timeline-ribbon-now" style={{ left: `${Math.max(14, Math.min(86, nowPct))}%` }}>
           <span className="hud-led hud-led-green" /> NOW · {daysBetween(start, now)}D ELAPSED
         </span>
         <span className="timeline-ribbon-end timeline-ribbon-end-right">{fmt(end)}</span>
