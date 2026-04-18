@@ -78,7 +78,7 @@ export default function KampungPage({ graph }) {
       <div className="vision-head">
         <div className="vision-head-left">
           <span className="hud-led hud-led-blue" />
-          <span className="vision-head-title">The Kampung</span>
+          <span className="vision-head-title">Kampung Economics</span>
           <span className="vision-head-chapter">{current.title}</span>
         </div>
         <div className="vision-head-controls">
@@ -165,8 +165,8 @@ export default function KampungPage({ graph }) {
     <div className="vision-page">
       <PageHeader
         eyebrow="WHITE PAPER · PROPOSAL · APRIL 2026"
-        title="The Kracked Kampung"
-        subtitle="A self-sustaining on-chain builder ecosystem. Network School as reference, Malaysia as home. Proposal, not commitment."
+        title="Kampung Economics"
+        subtitle="A self-sustaining on-chain builder economy. The Kracked Kampung, tokenised. Network School as reference, Malaysia as home. Proposal, not commitment."
         visual="kampung"
       />
       {reader}

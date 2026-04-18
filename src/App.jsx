@@ -53,6 +53,13 @@ function ModeNav() {
           </svg>
           Vision
         </Link>
+        <Link to="/kampung" className={`mode-nav-tab ${path.startsWith('/kampung') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+          </svg>
+          Kampung Economics
+        </Link>
         <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
@@ -83,13 +90,6 @@ function ModeNav() {
             <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
           </svg>
           Control
-        </Link>
-        <Link to="/kampung" className={`mode-nav-tab ${path.startsWith('/kampung') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
-            <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
-          </svg>
-          Kampung
         </Link>
       </div>
       <div className="mode-nav-right">
