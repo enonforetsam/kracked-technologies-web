@@ -2218,13 +2218,20 @@ a:hover {
 /* Dark themes glass */
 [data-theme="cyberpunk"] .glass,
 [data-theme="midnight"] .glass,
-[data-theme="emerald"] .glass,
 [data-theme="sunset"] .glass {
   background: color-mix(in srgb, var(--bg-surface) 55%, transparent);
   box-shadow:
     0 1px 0 color-mix(in srgb, white 8%, transparent) inset,
     0 8px 24px -8px rgba(0, 0, 0, 0.4),
     0 2px 8px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Light emerald — no drop shadow, no glass blur. Just a hairline panel. */
+[data-theme="emerald"] .glass {
+  background: color-mix(in srgb, var(--bg-elevated) 50%, transparent);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
 }
 
 /* Header */
