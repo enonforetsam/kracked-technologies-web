@@ -5,11 +5,12 @@
       "name": "_MOC",
       "category": "Root",
       "dataset": "mission",
-      "content": "\n# Map of Content\n\nCanonical index of this vault. Start here when navigating by hand; the graph view handles discovery.\n\n## Core\n\n- [[Kracked Technologies]] — the parent entity\n- [[The Kracked Vision]] — the whitepaper: digital city, user journey, revenue model, traction\n- [[Competitors]] — landscape of Malaysian operators in adjacent spaces + structural advantages\n- [[This Week]] — current weekly focus (drives the Mission Control \"This Week\" card)\n- [[What If]] — the Kracked Digital State thesis (speculative, long-horizon)\n- [[Capabilities]] — machine-readable profile of what we deliver (Sniper scores against this)\n\n## Strategy\n\n- [[Q2 2026]] — current quarter plan\n- [[Kracked OS - Pitch Deck|Kracked OS Pitch Deck]]\n- [[Job Portal Monetisation]]\n\n## The three pillars\n\n- [[Kracked Devs]] — community + recruitment\n- [[KD Academy]] — education + workshops + ambassadors\n- [[Kracked Labs]] — venture studio\n\n## Agents (Kracked OS runtime)\n\n- [[Alfred]] — CEO chief of staff\n- [[Itachi]] — vault query endpoint\n- [[Sniper]] — tenders & contracts hunter\n- [[Rick]] — Labs portfolio operator\n- [[Xavier]] — Academy education lead\n- [[Scout]] — external research agent\n\n## Deals (active pipeline)\n\n- [[DEY - Short Circuit Works]]\n- [[MDEC MDLR - Rapide Telecom]]\n- [[MISI x KDA - IX Telecom]]\n- [[Taylor BookaSlot - Taylors Uni]]\n\n## Ventures\n\nLive + in-development products under [[Kracked Labs]]:\n- [[Portfolio]] — master list\n- [[Pipeline]] — idea queue\n- [[cofounders]], [[rotican.ai]], [[JomQR]], [[MYpeta]], [[Burhan]], [[JomKopi]], [[Masjid OS]]\n\nMeta (strategy for the ventures arm):\n- [[Venture Playbook]], [[Revenue Model]], [[Growth & Marketing]], [[Market Landscape]]\n\n## Advisors\n\n- [[Advisory Board]] — the roster\n- [[Azlan Ismail]], [[Faiz Hassan]], [[Surenthiran Krishnan|Major Dr. Surenthiran Krishnan]]\n\n## Platform (Kracked Devs features)\n\n- [[Bounty Board]], [[Job Board]], [[Showcase]], [[Leaderboard]]\n- [[Guild System]], [[Events]], [[News Feed]]\n\n## Internal systems\n\n- [[Company Brain - Architecture]] — full design for the Kracked OS infrastructure\n- [[Daily Update System]] + [[Daily Update System - Plan]] — ingestion layer\n\n## Research\n\n- [[Research]] — overview\n- [[AI Native Education]], [[Defence Tech]], [[Malaysia Data Center Boom]], [[Open Source Strategy]], [[SEA Expansion]]\n\n## People\n\n- [[Team]] — core roster\n\n## Folder layout\n\n```\n/                         root notes: Kracked Technologies, The Kracked Vision, Competitors,\n                          This Week, What If, Capabilities, _MOC\n/Strategy                 quarterly plans and strategic docs\n/Ecosystem                the three pillars + Advisory Board + Tenders\n/Ecosystem/KD Academy     academy-specific operational notes\n/Agents                   agent personas (Alfred, Sniper, Rick, Xavier, Scout, Itachi)\n/Advisors                 individual advisor profiles\n/Deals                    active tender / contract pipeline\n/Platform                 Kracked Devs website features + internal system briefs\n/Projects                 products & projects, roadmap\n/Research                 exploration notes\n/Team                     team roster\n/Ventures                 live + pipeline ventures + venture-arm meta docs\n```\n\n## Conventions\n\n- **Frontmatter `type`** tags note class (`agent`, `advisor`, `venture`, `tender`, `strategy`, `capabilities`, `index`).\n- **Status lines** — most top-level notes include a `## Status` section extracted by sync.mjs.\n- **Wikilinks** — use `[[Note Name]]` or `[[slug|Display Text]]` for renames.\n- **Every agent proposes, never writes** — all structural edits go through [[Alfred]]'s approval layer before committing to the vault.\n",
-      "wordCount": 500,
+      "content": "\n# Map of Content\n\nCanonical index of this vault. Start here when navigating by hand; the graph view handles discovery.\n\n## Core\n\n- [[Kracked Technologies]] — the parent entity\n- [[The Kracked Vision]] — the whitepaper: Kracked Kampung, user journey, revenue model, traction\n- [[The Kracked Kampung]] — brainstorm: a self-sustaining on-chain version, Network School as reference\n- [[Competitors]] — landscape of Malaysian operators in adjacent spaces + structural advantages\n- [[This Week]] — current weekly focus (drives the Mission Control \"This Week\" card)\n- [[What If]] — the Kracked Digital State thesis (speculative, long-horizon)\n- [[Capabilities]] — machine-readable profile of what we deliver (Sniper scores against this)\n\n## Strategy\n\n- [[Q2 2026]] — current quarter plan\n- [[Kracked OS - Pitch Deck|Kracked OS Pitch Deck]]\n- [[Job Portal Monetisation]]\n\n## The three pillars\n\n- [[Kracked Devs]] — community + recruitment\n- [[KD Academy]] — education + workshops + ambassadors\n- [[Kracked Labs]] — venture studio\n\n## Agents (Kracked OS runtime)\n\n- [[Alfred]] — CEO chief of staff\n- [[Itachi]] — vault query endpoint\n- [[Sniper]] — tenders & contracts hunter\n- [[Rick]] — Labs portfolio operator\n- [[Xavier]] — Academy education lead\n- [[Scout]] — external research agent\n\n## Deals (active pipeline)\n\n- [[DEY - Short Circuit Works]]\n- [[MDEC MDLR - Rapide Telecom]]\n- [[MISI x KDA - IX Telecom]]\n- [[Taylor BookaSlot - Taylors Uni]]\n\n## Ventures\n\nLive + in-development products under [[Kracked Labs]]:\n- [[Portfolio]] — master list\n- [[Pipeline]] — idea queue\n- [[cofounders]], [[rotican.ai]], [[JomQR]], [[MYpeta]], [[Burhan]], [[JomKopi]], [[Masjid OS]]\n\nMeta (strategy for the ventures arm):\n- [[Venture Playbook]], [[Revenue Model]], [[Growth & Marketing]], [[Market Landscape]]\n\n## Advisors\n\n- [[Advisory Board]] — the roster\n- [[Azlan Ismail]], [[Faiz Hassan]], [[Surenthiran Krishnan|Major Dr. Surenthiran Krishnan]]\n\n## Platform (Kracked Devs features)\n\n- [[Bounty Board]], [[Job Board]], [[Showcase]], [[Leaderboard]]\n- [[Guild System]], [[Events]], [[News Feed]]\n\n## Internal systems\n\n- [[Company Brain - Architecture]] — full design for the Kracked OS infrastructure\n- [[Daily Update System]] + [[Daily Update System - Plan]] — ingestion layer\n\n## Research\n\n- [[Research]] — overview\n- [[AI Native Education]], [[Defence Tech]], [[Malaysia Data Center Boom]], [[Open Source Strategy]], [[SEA Expansion]]\n\n## People\n\n- [[Team]] — core roster\n\n## Folder layout\n\n```\n/                         root notes: Kracked Technologies, The Kracked Vision, Competitors,\n                          This Week, What If, Capabilities, _MOC\n/Strategy                 quarterly plans and strategic docs\n/Ecosystem                the three pillars + Advisory Board + Tenders\n/Ecosystem/KD Academy     academy-specific operational notes\n/Agents                   agent personas (Alfred, Sniper, Rick, Xavier, Scout, Itachi)\n/Advisors                 individual advisor profiles\n/Deals                    active tender / contract pipeline\n/Platform                 Kracked Devs website features + internal system briefs\n/Projects                 products & projects, roadmap\n/Research                 exploration notes\n/Team                     team roster\n/Ventures                 live + pipeline ventures + venture-arm meta docs\n```\n\n## Conventions\n\n- **Frontmatter `type`** tags note class (`agent`, `advisor`, `venture`, `tender`, `strategy`, `capabilities`, `index`).\n- **Status lines** — most top-level notes include a `## Status` section extracted by sync.mjs.\n- **Wikilinks** — use `[[Note Name]]` or `[[slug|Display Text]]` for renames.\n- **Every agent proposes, never writes** — all structural edits go through [[Alfred]]'s approval layer before committing to the vault.\n",
+      "wordCount": 514,
       "links": [
         "kracked-technologies",
         "the-kracked-vision",
+        "the-kracked-kampung",
         "competitors",
         "this-week",
         "what-if",
@@ -72,6 +73,7 @@
       "linkNames": [
         "Kracked Technologies",
         "The Kracked Vision",
+        "The Kracked Kampung",
         "Competitors",
         "This Week",
         "What If",
@@ -133,7 +135,7 @@
       ],
       "path": "_MOC.md",
       "type": "index",
-      "connections": 58
+      "connections": 59
     },
     {
       "id": "what-if",
@@ -225,7 +227,7 @@
         "Research"
       ],
       "path": "What If.md",
-      "connections": 42
+      "connections": 43
     },
     {
       "id": "this-week",
@@ -333,7 +335,72 @@
         "What If"
       ],
       "path": "The Kracked Vision.md",
-      "connections": 37
+      "connections": 41
+    },
+    {
+      "id": "the-kracked-kampung",
+      "name": "The Kracked Kampung",
+      "category": "Root",
+      "dataset": "mission",
+      "content": "\n# The Kracked Kampung\n\n> **Speculative. This is a brainstorm, not a roadmap.** A stress-test of what a self-sustaining, partially on-chain version of [[Kracked Technologies]] could look like — inspired by Balaji Srinivasan's Network School model, adapted to Malaysia and to what we already have.\n\nThe goal of this note: answer one question concretely. *If Kracked were designed to run without needing permanent grants, VC money, or corporate subsidy — what would it look like?*\n\nA kampung, not a corporation. But a kampung with tokens, a treasury, and a ledger.\n\n---\n\n## Why this is worth thinking about\n\nNetwork School (Balaji's project, curiously co-located in Forest City, Johor) proved something: a small, mission-aligned community can bootstrap an economy on top of a membership + token + real-world presence stack. Cohort tuition funds the school. Graduates get tokens tied to reputation. Real-world meetups compound the online network. The whole thing is designed to not need external capital once it's running.\n\nKracked already has every ingredient for this except the on-chain layer:\n\n- **Community** — 1,190+ registered devs, 800 Discord members, 9 guilds\n- **Curriculum** — Vibe 101, specialised tracks (planned)\n- **Earning layer** — [[Bounty Board]], [[Job Board]], upcoming Kracked OS SME deployments\n- **Ventures** — 7 Labs companies in the [[Portfolio]]\n- **Agent infrastructure** — [[Alfred]], [[Sniper]], [[Rick]], [[Xavier]], [[Scout]], [[Itachi]]\n- **Physical presence intent** — per [[The Kracked Vision]] 12-month plan, HQ in every state\n\nAdding a token layer + a treasury + on-chain reputation would make the loop self-closing. Every action inside the kampung becomes credit-generating. Every credit compounds back into the kampung.\n\n---\n\n## The components\n\n### 1. The passport — soulbound reputation NFT\n\nEvery member gets a non-transferable NFT minted to their wallet on entry to [[Kracked Devs]].\n\n- **Cannot be sold.** Reputation is earned, not bought.\n- **Carries history.** Vibe 101 completion, bounty payouts, shipped projects, guild contributions, Labs involvement — all written to the token metadata.\n- **Three tiers** matching the current funnel:\n  - **Resident** — signed up, completed Vibe 101 basics\n  - **Citizen** — shipped ≥3 projects or completed a specialised track\n  - **Founder-Citizen** — shipped a Labs venture or served as a trainer\n- **Voting weight** scales with tier, not wallet balance. Money does not buy governance.\n\nThis is the Kracked equivalent of Network School's graduation badge — but forkable, portable, and verifiable on-chain.\n\n### 2. $KRAK — the utility token\n\nA token earned by contribution, spent inside the kampung, rarely on a CEX.\n\n**Earning sources:**\n- Completing a Vibe 101 module\n- Shipping a project to [[Showcase]]\n- Completing a bounty from [[Bounty Board]]\n- Teaching a specialised track (per-seat-filled payout)\n- Deploying Kracked OS to an SME (settlement cut)\n- Referring a member who completes Vibe 101\n\n**Spending sources:**\n- Pay for specialised track enrolment\n- Sponsor a bounty\n- Unlock Labs portfolio access (preview Labs pitches before public launch)\n- Buy Kracked OS SME deployments (for learners who want to install to their own family business)\n- Stake on another member's bounty (collateral pool, earn yield on completion)\n\n**Emission:** 40% to community reputation (ongoing airdrop over 4–5 years), 25% Labs equity-linked vesting, 15% Academy graduation rewards, 10% CEO-controlled strategic treasury, 10% core team (4-year vest, 1-year cliff). **Zero VC allocation.**\n\n**Critical rule:** do not launch $KRAK until there is real throughput to index. Token before product-market-fit is how every prior attempt failed. My rule of thumb: ≥RM 5M/year in on-chain-settleable transactions before mint.\n\n### 3. The treasury\n\nA DAO-adjacent multisig that holds:\n\n- Token emission reserves\n- Labs venture equity tokenised (10% cuts from [[Kracked Labs]] converted to on-chain claims over time)\n- Revenue share from SME Kracked OS deployments\n- Sponsored bounty pool\n- Government grant capital (Cradle, MDEC Malaysia Digital) when received — held transparently\n\n**Controlled by:** CEO + 4 Founder-Citizens elected annually by quadratic vote. Treasury transactions published on-chain. Bounty funding, ambassador stipends, and venture infrastructure spend go through it.\n\n### 4. The bounty market on-chain\n\nThe existing [[Bounty Board]], but every payout settles in $KRAK (convertible to MYR at the treasury rate, or held).\n\n- **Stakable bounties.** Sponsors lock $KRAK up-front. Solvers claim on verified submission. Disputes go to a rotating juror pool drawn from Citizen-tier and above.\n- **Reputation-weighted.** Claim priority on high-value bounties is gated by on-chain reputation score. New members complete entry-level bounties first.\n- **Programmable rules.** \"This bounty requires a Specialised Track badge in Mobile Dev to claim.\" Enforced by contract, not by moderators.\n\nThis turns the Bounty Board from a Supabase table into a programmable labour market. Same tagline (0% fees to devs), new mechanism.\n\n### 5. Kracked OS SME deployments as on-chain gig economy\n\nThe SME spiral from [[The Kracked Vision]] (community deploys Kracked OS to Malaysian SMEs, earns recurring fees) becomes the treasury's biggest sustainable revenue source.\n\n- SME pays monthly subscription in MYR. Treasury converts a cut to $KRAK for the deploying Kracked Dev.\n- Dev's reputation NFT gets a +1 \"deployment\" credit. Future SME leads go first to devs with the highest deployment reputation.\n- Treasury retains a percentage (say 15–20%) to fund the bounty pool and pay for platform infrastructure.\n\nSupply: Kracked Devs. Demand: 1.2M Malaysian SMEs. Mechanism: $KRAK flows through the treasury and redistributes.\n\n### 6. Labs venture tokenisation\n\nKracked already takes up to 10% equity in [[Kracked Labs]] ventures. On-chain, this equity can be mirrored as venture-specific tokens held by the treasury — and, over time, partially distributed to the $KRAK holder community as revenue-sharing claims.\n\n- When a Labs venture generates revenue, a share flows to the treasury.\n- Some of that share is used to buy back and burn $KRAK, concentrating value in the community.\n- Token holders effectively become beneficial owners of the Kracked portfolio without ever filing paperwork as equity holders.\n\n### 7. Governance\n\n**Not a full DAO.** We stay operator-led. But three classes of decision go on-chain:\n\n- **Treasury allocation above a threshold** (e.g. >RM 50k committed) — quadratic vote among Citizens + Founder-Citizens\n- **New citizenship tier criteria** — same\n- **Major partnership / policy changes** — same\n\nEverything else stays with the CEO and core team. Avoids DAO-voter-apathy failure mode while still making the big decisions transparent.\n\n### 8. Physical kampung counterparts\n\nNetwork School's real-world presence in Forest City is the model. Ours:\n\n- **HQ in every Malaysian state** (12-month vision) — co-working + meetup + Vibe 101 session space\n- **Attendance logged** on-chain via QR check-in → reputation NFT gets a \"physical presence\" attribute\n- **Rotating cohort residencies** — a 4-week builder village where 20 Labs-track members co-live and ship, funded by treasury, culminating in an investor demo day\n- **SME onboarding clinics** — monthly events where local SMEs walk in and get Kracked OS set up by local Citizens, on-site\n\nOnline reputation + physical proof-of-attendance compound. The kampung is not just a website.\n\n---\n\n## Why Malaysia specifically makes this work\n\n- **Islamic finance compatibility.** A utility token that represents real work and real revenue (not speculation) is structurally more shariah-compliant than most cryptocurrencies. Opens the Islamic finance and takaful investor base — which is huge in Malaysia and chronically under-served by Western crypto projects.\n- **Government alignment.** MDEC's digital asset framework is maturing. Bank Negara has sandbox pathways. The policy environment is more permissive than most SEA countries.\n- **Diaspora pull.** Malaysian developers working abroad (SG, AU, UK, US) could earn $KRAK remotely by contributing, then return to teach or build. Token-bridged reverse brain drain.\n- **Network School is already here.** Forest City is in Johor. Cross-pollination with Balaji's people is realistic. Partnership > competition.\n\n---\n\n## The risks (honest)\n\n- **Regulatory.** Securities Commission Malaysia has specific rules on token offerings. A token designed for utility + reputation might still trip securities definitions. Legal review is a hard prerequisite.\n- **Cultural.** \"Crypto\" has a bad name in Malaysia because of scams and rug-pulls. Positioning matters. Must lead with \"kampung membership card that unlocks real things,\" not \"token with a chart.\"\n- **Execution.** Adding an on-chain layer to an already-ambitious three-pillar ecosystem risks overextending. The smart order: nail the loop off-chain first, then tokenise the parts that are clearly working.\n- **Decentralisation theatre.** DAOs that pretend to be decentralised but route every decision back to the founder are worse than just being honest about who's in charge. Kracked's model is \"operator-led with transparent treasury\" — not a DAO.\n- **Token-first failure.** Most on-chain communities die because they launched the token before the economy. Kracked does the opposite: launch token only when there is ≥RM 5M annual throughput to index. Possibly 2027–2028, not 2026.\n\n---\n\n## The order of operations\n\nIf we ever go this direction, the sequence matters.\n\n1. **Now → 2027.** Ship the off-chain loop. Hit the [[The Kracked Vision]] 12-month targets. No token talk externally.\n2. **2027.** Launch soulbound reputation NFTs quietly. No token yet. Just a portable credential showing Vibe 101 completion, bounty payouts, shipped projects. Low risk, high optionality.\n3. **2028.** If throughput justifies it, launch $KRAK as a utility token indexed to real activity already happening. Start with bounty settlement. Expand gradually.\n4. **2029+.** Governance layer, Labs venture tokenisation, physical kampung chapters per state, on-chain SME deployment settlement.\n\nThis is a 5-year path. The point of writing it now is to make sure every near-term decision keeps the option alive, not to commit to it.\n\n---\n\n## Decisions this unlocks\n\nEven if we never launch $KRAK, writing this brainstorm unlocks near-term decisions:\n\n- **Ambassador KPI structure** — tie ambassador payouts to something trackable on-chain-compatible from day one (sessions run, attendees, completions), not vague \"community work\"\n- **Bounty payout tracking** — start logging bounty payouts in a format that would port to an on-chain ledger later (amount, recipient wallet address if they have one, verification source)\n- **Showcase verification** — every shipped project gets a hash/verifiable artifact, so if we ever mint reputation, there's historical data to migrate\n- **Government positioning** — frame Kracked to MDEC / Cradle as \"a self-sustaining ecosystem that may eventually use on-chain settlement\" — gets us into the Malaysia Digital Asset conversations early\n- **SME deployment billing** — design the billing flow so fees can be programmatically split between dev / treasury / platform, whether off-chain or on-chain\n\n---\n\n## What would actually kill it\n\n- **A government ban on digital assets.** Malaysia could follow Indonesia or the Philippines and constrain the entire token space. Hedge: non-token version of every mechanic still works (reputation becomes a verified credential, treasury becomes a Sdn Bhd, bounty pool becomes a bank account).\n- **Losing the community before we get there.** Discord stagnation. Labs ventures fail. Academy doesn't scale trainers. Without the real economy, the on-chain layer is cosmetic.\n- **Betting too early.** Building the token stack in 2026 when we have RM 2,550 in bounty payouts would be absurd. The loop has to earn the upgrade.\n\n---\n\n## Related\n\n- [[The Kracked Vision]] — the whitepaper this sits alongside\n- [[What If]] — the Kracked Digital State thesis (adjacent, more political)\n- [[Revenue Model]] — how the off-chain version makes money\n- [[Kracked Technologies]] — the parent entity\n- [[Competitors]] — landscape analysis (Network School not in the table — we're not competing with them, and alignment is possible)\n",
+      "wordCount": 1871,
+      "links": [
+        "kracked-technologies",
+        "bounty-board",
+        "job-board",
+        "portfolio",
+        "alfred",
+        "sniper",
+        "rick",
+        "xavier",
+        "scout",
+        "itachi",
+        "the-kracked-vision",
+        "kracked-devs",
+        "showcase",
+        "bounty-board",
+        "kracked-labs",
+        "bounty-board",
+        "the-kracked-vision",
+        "kracked-labs",
+        "the-kracked-vision",
+        "the-kracked-vision",
+        "what-if",
+        "revenue-model",
+        "kracked-technologies",
+        "competitors"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Bounty Board",
+        "Job Board",
+        "Portfolio",
+        "Alfred",
+        "Sniper",
+        "Rick",
+        "Xavier",
+        "Scout",
+        "Itachi",
+        "The Kracked Vision",
+        "Kracked Devs",
+        "Showcase",
+        "Bounty Board",
+        "Kracked Labs",
+        "Bounty Board",
+        "The Kracked Vision",
+        "Kracked Labs",
+        "The Kracked Vision",
+        "The Kracked Vision",
+        "What If",
+        "Revenue Model",
+        "Kracked Technologies",
+        "Competitors"
+      ],
+      "path": "The Kracked Kampung.md",
+      "type": "brainstorm",
+      "status": "speculative",
+      "owner": "danial",
+      "connections": 25
     },
     {
       "id": "kracked-technologies",
@@ -375,7 +442,7 @@
         "What If"
       ],
       "path": "Kracked Technologies.md",
-      "connections": 46
+      "connections": 48
     },
     {
       "id": "competitors",
@@ -406,7 +473,7 @@
       "type": "competitors",
       "status": "live",
       "owner": "danial",
-      "connections": 16
+      "connections": 17
     },
     {
       "id": "capabilities",
@@ -448,6 +515,317 @@
       "status": "draft",
       "owner": "danial",
       "connections": 16
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "category": "Team",
+      "dataset": "mission",
+      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Core Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | Founder & CEO |\n| Muhaimin | Chief Technology Officer (CTO) |\n| Muhammad Fadli Bin Md Khalid | Chief Development Officer |\n| Adam Alias | Community Lead |\n| Zarul | Academy Lead |\n| Unies | Software Engineer |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Operations\n\n| Name | Role |\n|------|------|\n| Iroh | Payroll & Accounts |\n\n## Engineering\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Ijam | KD Academy Operations |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 registered developers on krackeddevs.com\n- 800 Discord members\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
+      "wordCount": 364,
+      "links": [
+        "kracked-technologies",
+        "mypeta",
+        "leaderboard",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "MYpeta",
+        "Leaderboard",
+        "Kracked Labs"
+      ],
+      "path": "Team/Team.md",
+      "connections": 7
+    },
+    {
+      "id": "rotican-ai",
+      "name": "rotican.ai",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# rotican.ai\n\nAI-powered web app builder. Describe it, ship it. Built by KD Team.\n\n**Website:** https://rotican.ai\n\n## What It Does\n\nGenerate working applications by describing your idea in natural language. No setup, no deployment, no coding required.\n\n## Features\n\n### Build Mode\n- Natural language app generation via text prompts\n- Idea wizard with categories: games, websites, tools, trackers, creative, personal\n- Multi-axis customization\n- Preset suggestions for rapid creation\n\n### Chat Mode\n- Brainstorming conversations without app creation\n- Free-form exploration and ideation\n\n### Community & Sharing\n- Explore and discover apps built by others\n- Remix existing apps\n- Public app publishing\n- User profiles with app portfolios\n- GitHub sync for code export\n\n## Tech Stack\n\n- Next.js, React\n- Geist UI design system\n\n## Localization\n\n- English and Malay (BM)\n\n## Pricing\n\n- Freemium with daily message limits\n- Auth-gated features (likes, remixing)\n\n## Status\n\n- Stage: Live\n- Built by: [[Portfolio]] (KD Team)\n",
+      "wordCount": 158,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/rotican.ai.md",
+      "connections": 7
+    },
+    {
+      "id": "cofounders",
+      "name": "cofounders",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# cofounders\n\n\nCurated co-founder matching platform for Malaysian startup founders. Built by KD Team.\n\n**Website:** https://cofounders.my\n\n## What It Does\n\nConnects serious founders building startups in Malaysia. Vetted directory — every application is reviewed to keep the room focused and high-signal.\n\n- No investors, recruiters, or non-builders\n- Browse profiles filtered by location, category, and stage\n- Specify your startup and desired co-founder type\n\n## How It Works\n\n1. Apply and describe your venture + co-founder needs\n2. Get reviewed by the team\n3. Browse vetted profiles and connect\n\n## Stats\n\n- 151 founders\n- 15 states covered\n- 13 categories (SaaS, FinTech, HealthTech, Hardware/IoT, Commerce, Education, Legal, HR, etc.)\n- Stages: Idea → MVP → Beta → Revenue → Scaling\n\n## Status\n\n- Stage: Live\n- Built by: [[Portfolio]] (KD Team)\n",
+      "wordCount": 132,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/cofounders.md",
+      "connections": 13
+    },
+    {
+      "id": "venture-playbook",
+      "name": "Venture Playbook",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Venture Playbook\n\nHow [[Kracked Labs]] builds ventures.\n\n## The Model\n\nKracked Labs is a **venture builder**, not an accelerator. The difference:\n- **Accelerator**: Takes existing startups, helps them grow\n- **Venture builder**: Creates startups from scratch with internal/community teams\n\nWe build alongside builders. The team provides product direction, design, distribution, and support. Builders bring energy, code, and domain knowledge.\n\n## Two Tracks\n\n### KD Team Ventures\nBuilt and operated by the core team. These are strategic bets for the ecosystem.\n- Team has full ownership and direction\n- See [[Portfolio]] for full list\n\n### KD Member Ventures\nBuilt by community members with Labs support. Community-originated ideas.\n- Members bring the idea and build\n- Labs provides guidance, early users, and platform support\n- See [[Portfolio]] for full list\n\n## How We Pick What to Build\n\n1. **Malaysian problem** — Does it solve something specific to Malaysia?\n2. **Fast to ship** — Can v1 be built in weeks, not months?\n3. **Community leverage** — Can KD's 1,190 devs be early users or builders?\n4. **Revenue path** — Is there a clear way to make money or grow users?\n5. **AI-native** — Can AI make this 10x faster or better to build?\n\n## Build Process\n\n1. **Idea → Validation** — Is anyone else doing this? Would people use it? Quick research, community poll\n2. **Prototype** — Ship v1 in 1–2 weeks using vibe coding and AI tools\n3. **Community launch** — Launch to Kracked Devs community first for feedback\n4. **Iterate** — Fix what's broken, double down on what works\n5. **Grow** — If traction, invest more time and resources\n\n## Metrics That Matter\n\n- **Time to v1**: Under 2 weeks\n- **First 100 users**: Under 30 days\n- **Revenue or retention signal**: Under 90 days\n- Kill fast if no signal. Double down if there is.\n\n## Tools We Use\n\n- AI coding tools (Cursor, Claude, Replit) for fast prototyping\n- Rotican.ai for quick app generation\n- Supabase for backend\n- Vercel / Burhan for hosting\n- Kracked Devs platform for distribution\n",
+      "wordCount": 342,
+      "links": [
+        "kracked-labs",
+        "portfolio",
+        "portfolio"
+      ],
+      "linkNames": [
+        "Kracked Labs",
+        "Portfolio",
+        "Portfolio"
+      ],
+      "path": "Ventures/Venture Playbook.md",
+      "connections": 10
+    },
+    {
+      "id": "revenue-model",
+      "name": "Revenue Model",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "\n# Revenue Model\n\nHow [[Kracked Technologies]] makes money across its three pillars.\n\n## Kracked Devs (Community Platform)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Company job postings | Paid listings or commission per hire | Planned |\n| Sponsored bounties | Companies fund bounties, KD takes cut | Planned |\n| Company directory | Premium listings for visibility | Planned |\n| Talent marketplace | Commission on developer placements (0% currently, upsell to premium) | Future |\n\nCurrent messaging is **0% fees** to attract companies. The play is volume first, monetize later with premium tiers.\n\n## KD Academy (Education)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Workshops | Paid workshops for intensive sessions | Planned |\n| Corporate training | B2B training packages for companies | Planned |\n| University partnerships | Co-branded programs with fees | Planned |\n| Certifications | Paid certification paths | Future |\n\n## Kracked Labs (Venture Builder)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Venture equity | Own equity in ventures built | Active |\n| SaaS revenue | Revenue from live products (rotican.ai, cofounders.my) | Early |\n| Exit/acquisition | Long-term play on successful ventures | Future |\n\n## Government Funding (Non-dilutive)\n\n| Source | Amount | Status |\n|--------|--------|--------|\n| Cradle CIP Spark | Up to RM 150K | To apply |\n| Cradle CIP Accelerate | Up to RM 500K | To apply |\n| MDEC Malaysia Digital status | Tax incentives (0–10%) | To apply |\n| PENJANA Kapital | VC co-investment | Future |\n\n## Financial Targets\n\n| Phase | Timeline | Target |\n|-------|----------|--------|\n| Phase 1 | By Feb 2026 | RM 30–50K in bounties distributed |\n| Phase 2 | By end 2026 | RM 200K+ in bounties |\n| Profitability | Year 2 | Break even |\n| Self-sustaining | Year 3 | Revenue exceeds costs |\n",
+      "wordCount": 321,
+      "links": [
+        "kracked-technologies"
+      ],
+      "linkNames": [
+        "Kracked Technologies"
+      ],
+      "path": "Ventures/Revenue Model.md",
+      "type": "revenue-model",
+      "next_milestone": "Marketplace",
+      "next_milestone_detail": "on Kracked Devs",
+      "connections": 7
+    },
+    {
+      "id": "portfolio",
+      "name": "Portfolio",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Portfolio\n\nAll ventures built under [[Kracked Labs]]. Split between KD Team (internal) and KD Members (community).\n\n## KD Team (Internal)\n\n| Venture | What It Is | Status |\n|---------|-----------|--------|\n| [[cofounders|cofounders.my]] | Co-founder matching for Malaysian founders | Live — 151 founders, 15 states |\n| [[rotican.ai]] | AI-powered web app builder | Live — freemium |\n| [[JomQR]] | Malaysian Linktree + QR code bank | In development |\n| [[MYpeta]] | OSINT / data visualization for Malaysia's tech ecosystem | In development |\n| [[Burhan]] | Malaysian Vercel — hosting for local builders | In development |\n\n## KD Members (Community)\n\n| Venture | What It Is | Status |\n|---------|-----------|--------|\n| [[JomKopi]] | Map of all coffee shops in Malaysia | In development |\n| [[Masjid OS]] | Unified digital OS for all mosques in Malaysia | In development |\n\n## Portfolio Themes\n\nThe ventures cluster around a few patterns:\n- **Malaysian infrastructure** — Building the local versions of global tools (Burhan = Vercel, JomQR = Linktree, cofounders.my = YC Co-founder Matching)\n- **OSINT & data** — Making Malaysian data accessible and useful (MYpeta)\n- **Community verticals** — Products for specific Malaysian communities (JomKopi for coffee culture, Masjid OS for mosques)\n- **AI-native tools** — Products built with AI at the core (rotican.ai)\n\n## What Makes a Kracked Labs Venture\n\n- Solves a Malaysian problem\n- Can be built and shipped fast\n- Has a path to revenue or community adoption\n- Leverages the KD community for early users and feedback\n",
+      "wordCount": 256,
+      "links": [
+        "kracked-labs",
+        "cofounders",
+        "rotican-ai",
+        "jomqr",
+        "mypeta",
+        "burhan",
+        "jomkopi",
+        "masjid-os"
+      ],
+      "linkNames": [
+        "Kracked Labs",
+        "cofounders",
+        "rotican.ai",
+        "JomQR",
+        "MYpeta",
+        "Burhan",
+        "JomKopi",
+        "Masjid OS"
+      ],
+      "path": "Ventures/Portfolio.md",
+      "connections": 26
+    },
+    {
+      "id": "pipeline",
+      "name": "Pipeline",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Pipeline\n\nIdeas under evaluation and upcoming priorities for [[Kracked Labs]]. See [[Portfolio]] for all current ventures.\n\n## Under Consideration\n\nIdeas that have come up but haven't been greenlit yet. Evaluate against the [[Venture Playbook]] criteria.\n\n| Idea | Category | Notes |\n|------|----------|-------|\n| Malaysian Upwork | Freelance marketplace | Localized freelancer platform for MY market |\n| KD Jobs App | Mobile job board | Mobile-first version of the Job Board |\n| Startup Directory MY | Database | Malaysian startup database (like Crunchbase for MY) |\n| Gov Tech Toolkit | Government | Suite of tools for government bounties (queue, complaints, permits) |\n| BM AI Tutor | Education | AI tutor that teaches coding in Bahasa Malaysia |\n| Dev Salary Tracker MY | Data | Transparent salary data for Malaysian developers (like NodeFlair for MY) |\n\n## Priorities\n\n### Now (Q2 2026)\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Rotican.ai — add templates, improve generation quality\n\n### Next (Q3 2026)\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty\n- University partnership pilot (1–2 universities)\n\n### Later (Q4 2026+)\n- Masjid OS v1\n- Revenue features on Kracked Devs (premium job posts, sponsored bounties)\n- KD Academy workshop series launch\n- Government grant applications (Cradle, MDEC)\n",
+      "wordCount": 221,
+      "links": [
+        "kracked-labs",
+        "portfolio",
+        "venture-playbook"
+      ],
+      "linkNames": [
+        "Kracked Labs",
+        "Portfolio",
+        "Venture Playbook"
+      ],
+      "path": "Ventures/Pipeline.md",
+      "connections": 8
+    },
+    {
+      "id": "masjid-os",
+      "name": "Masjid OS",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Masjid OS\n\nAn operating system built for all mosques in Malaysia. Built by KD Members.\n\n## What It Does\n\nUnified digital OS for mosques — giving every masjid in Malaysia a standard digital platform to run on.\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Members)\n",
+      "wordCount": 57,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/Masjid OS.md",
+      "connections": 8
+    },
+    {
+      "id": "market-landscape",
+      "name": "Market Landscape",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Market Landscape\n\nThe Malaysian tech ecosystem that [[Kracked Labs]] operates in.\n\n## Developer Population\n\n- 200,000–300,000 software developers in Malaysia\n- 30,000–40,000 CS/IT graduates annually\n- Top languages: JavaScript, Python, Java\n- Growing GitHub and Stack Overflow presence (top 30 globally)\n\n## The Talent Problem\n\n- **50,000+ junior devs** seeking first jobs\n- **40% of tech positions** remain unfilled\n- Fresh graduates lack real-world project experience\n- Training costs RM 10K–20K — barrier for low-income families\n- Government bootcamps show 20–50% completion rates with poor employment outcomes\n\nThis is the exact gap Kracked Devs and KD Academy are filling.\n\n## Startup Funding\n\n- VC funding in Malaysia: ~USD 300–500M annually (recovering post-2022 contraction)\n- Key VCs: Khazanah, MAVCAP, Cradle Fund, 500 Global, Gobi Partners, Monk's Hill, Vynn Capital, RHL Ventures, Kairous Capital\n- Government grants available:\n  - Cradle CIP Spark: up to RM 150K (early-stage)\n  - Cradle CIP Accelerate: up to RM 500K (growth-stage)\n  - MTDC for technology commercialization\n\n## Government Digital Initiatives\n\n### Malaysia Digital (MDEC)\n- Tax incentives (0–10% for up to 10 years) for qualifying tech companies\n- DE Rantau digital nomad program\n- Global Tech Hub initiative\n- #mydigitalmaker education movement\n\n### MyDIGITAL Blueprint\n- Target: 22.6% digital economy contribution to GDP\n- Malaysia AI Roadmap (AI-MAP)\n\n### Data Center Boom (2024–2026)\nMassive investments reshaping Malaysia's position:\n- Microsoft, Google, AWS, Oracle, ByteDance\n- Tens of billions USD committed\n- Making Malaysia a key ASEAN infrastructure hub\n\n### Key Government Agencies\n| Agency | Role |\n|--------|------|\n| MDEC | Digital economy corporation — grants, status, programs |\n| Cradle Fund | Startup grants and equity funding |\n| MaGIC | Startup support, accelerator programs |\n| MAVCAP | Government-linked VC |\n| PENJANA Kapital | Fund-of-funds catalyzing VC investment |\n| KKMM | Ministry of Communications and Digital |\n\n## The Opportunity\n\n1. **Data center boom** creates demand for Malaysian developers\n2. **Government actively funding** digital economy growth\n3. **AI/vibe coding** education space is unoccupied locally\n4. **30K+ annual graduates** need better pathways than traditional bootcamps\n5. **SEA positioning** — Malaysia as a bridge between Singapore cost and Indonesia scale\n",
+      "wordCount": 356,
+      "links": [
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Labs"
+      ],
+      "path": "Ventures/Market Landscape.md",
+      "connections": 8
+    },
+    {
+      "id": "mypeta",
+      "name": "MYpeta",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# MYpeta\n\nOSINT tool for Malaysia's tech ecosystem. Live map of people, jobs, news, events, and companies. Built by KD Team.\n\n**Website:** https://mypeta.ai\n\n## What It Does\n\nOSINT-first platform focusing on people in tech in Malaysia. Live, interactive map with real-time data across the Malaysian tech landscape.\n\n## Features\n\n- Live map of Malaysia with real-time updates\n- People in tech — discover who's building what, where\n- Jobs — live job postings mapped across states\n- News — tech news relevant to Malaysia\n- Events — upcoming events on the map\n- Companies — discover tech companies by location\n- State-level data visualization (population, income, crime, water, household expenditure)\n\n## Tech Stack\n\n- Next.js\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Team)\n",
+      "wordCount": 127,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/MYpeta.md",
+      "connections": 9
+    },
+    {
+      "id": "jomqr",
+      "name": "JomQR",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# JomQR\n\nMalaysian Linktree + QR code bank. Share links, share QR codes in person. Built by KD Team.\n\n**Website:** https://jomqr.my\n\n## What It Does\n\n- Link-in-bio tool like Linktree, but Malaysian-built\n- QR code focus — acts as a personal bank of QR codes for sharing in person\n- Combine your digital presence with real-world sharing\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Team)\n",
+      "wordCount": 76,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/JomQR.md",
+      "connections": 8
+    },
+    {
+      "id": "jomkopi",
+      "name": "JomKopi",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# JomKopi\n\nMap of all coffee shops in Malaysia. Go coffee hunting. Built by KD Members.\n\n## What It Does\n\n- Interactive map of coffee shops across Malaysia\n- Discover new spots, plan coffee hunts\n- Community-driven — people contribute and explore together\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Members)\n",
+      "wordCount": 62,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/JomKopi.md",
+      "connections": 7
+    },
+    {
+      "id": "growth-marketing",
+      "name": "Growth & Marketing",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Growth & Marketing\n\nGrowth strategy for [[Kracked Labs]], Kracked Devs, and KD Academy.\n\n## Core Channels\n\n### Telegram (Primary)\nTelegram is the dominant messaging platform for Malaysian devs. Must be Telegram-native.\n- Community group for builders\n- Announcement channel for bounties, events, launches\n- Bot integrations for leaderboard, notifications\n\n### Twitter/X\nGrowing among the \"builder\" demographic. Build-in-public content performs well.\n- Ship updates from ventures\n- @krackeddevs account — dev tips, bounty announcements, community wins\n- Founders' personal accounts for thought leadership\n\n### TikTok / Short-form Video\n\"Code-tok\" is a real channel in SEA. Malay-language tech content is massively underserved.\n- Vibe coding tutorials in Bahasa Malaysia\n- \"Build X in Y hours with AI\" content format\n- Behind-the-scenes of Kracked Labs ventures\n\n### YouTube\nLong-form tutorials remain a key discovery channel.\n- Full vibe coding workshops\n- Venture build logs\n- Malaysian tech ecosystem breakdowns\n\n### LinkedIn\nStrong for professional developer content in Malaysia.\n- Government partnership announcements\n- Hiring from the community\n- Venture milestones\n\n### Facebook Groups\nStill highly relevant in Malaysia unlike Western markets.\n- Cross-post to dev communities (10K-100K member groups)\n- Event promotion\n\n## Growth Strategies\n\n### 1. University Pipeline\nMalaysia produces 30,000+ CS graduates annually. Most are underserved by existing communities.\n- Tech talks at UM, USM, UTM, MMU, APU, Sunway\n- Campus hackathons co-branded with KD\n- Ambassador program through KD Academy\n- Free workshops — hook is \"build and ship your first product in a day\"\n\n### 2. Bahasa Malaysia Content Moat\nAlmost no competitors produce quality tech/AI content in Malay. This is defensible.\n- BM tutorials on vibe coding\n- BM bounty descriptions and guides\n- Opens up the non-English-speaking developer market (huge in Malaysia)\n\n### 3. Build-in-Public\nEvery [[Kracked Labs]] venture should be built publicly.\n- Weekly updates on Twitter\n- Monthly blog posts on progress\n- Community can follow along and contribute\n\n### 4. Government Partnerships\nActive government appetite for this type of community. See Kracked Devs government page.\n- MDEC Malaysia Digital status — tax incentives\n- Cradle CIP Spark Grant (up to RM 150K) and CIP Accelerate (up to RM 500K)\n- MaGIC accelerator alignment\n- PENJANA Kapital for VC co-investment\n\n### 5. Events\n- **Krackathons** — Quarterly hackathons with real prizes (proven: RM 5K pool for Q1 2026)\n- **Meetups** — Monthly in KL, expand to Penang and JB\n- **Workshops** — Deep-dives on vibe coding, specific stacks\n- Co-sponsor with Wild Digital, DevFest KL, PyCon MY\n\n### 6. Corporate Sponsorship Pipeline\nCompanies like Grab, Petronas Digital, Maybank, CIMB actively sponsor dev communities for hiring access.\n- Offer companies access to verified talent via Kracked Devs\n- Sponsored bounties — companies post bounties, community builds\n- Job board upsell\n\n### 7. Referral & Selectivity\nCurated communities have perceived higher value in SEA.\n- Invite-only tiers for [[Kracked Labs]] ventures\n- Referral bonuses (points on Leaderboard)\n- \"Top 5% of applicants\" messaging for companies\n\n## Metrics to Track\n\n| Metric | Current | Target (End 2026) |\n|--------|---------|-------------------|\n| Platform members | 1,190 | 5,000 |\n| Active monthly users | — | 1,500 |\n| Bounties paid (RM) | 2,550 | 200,000 |\n| Ventures shipped | 2 live | 5 live |\n| Events held | 2 | 12 |\n| University partnerships | 0 | 5 |\n| Corporate sponsors | 0 | 5 |\n",
+      "wordCount": 563,
+      "links": [
+        "kracked-labs",
+        "kracked-labs",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Labs",
+        "Kracked Labs",
+        "Kracked Labs"
+      ],
+      "path": "Ventures/Growth & Marketing.md",
+      "connections": 8
+    },
+    {
+      "id": "burhan",
+      "name": "Burhan",
+      "category": "Ventures",
+      "dataset": "mission",
+      "content": "# Burhan\n\nMalaysian Vercel. Built by KD Team and KD Members together.\n\n## What It Does\n\n-\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage:\n- Built by: [[Portfolio]] (KD Team + KD Members)\n",
+      "wordCount": 37,
+      "links": [
+        "portfolio"
+      ],
+      "linkNames": [
+        "Portfolio"
+      ],
+      "path": "Ventures/Burhan.md",
+      "connections": 6
+    },
+    {
+      "id": "roadmap",
+      "name": "Roadmap",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
+      "wordCount": 111,
+      "links": [
+        "pipeline",
+        "portfolio",
+        "bounty-board"
+      ],
+      "linkNames": [
+        "Pipeline",
+        "Portfolio",
+        "Bounty Board"
+      ],
+      "path": "Projects/Roadmap.md",
+      "connections": 4
+    },
+    {
+      "id": "products-projects",
+      "name": "Products & Projects",
+      "category": "Projects",
+      "dataset": "mission",
+      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
+      "wordCount": 105,
+      "links": [
+        "kracked-technologies",
+        "bounty-board",
+        "job-board",
+        "leaderboard",
+        "guild-system",
+        "showcase",
+        "events",
+        "news-feed",
+        "portfolio"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Bounty Board",
+        "Job Board",
+        "Leaderboard",
+        "Guild System",
+        "Showcase",
+        "Events",
+        "News Feed",
+        "Portfolio"
+      ],
+      "path": "Projects/Products & Projects.md",
+      "connections": 11
     },
     {
       "id": "q2-2026",
@@ -648,56 +1026,102 @@
       "connections": 19
     },
     {
-      "id": "team",
-      "name": "Team",
-      "category": "Team",
+      "id": "tenders-and-contracts",
+      "name": "Tenders and Contracts",
+      "category": "Ecosystem",
       "dataset": "mission",
-      "content": "# Team\n\nThe people behind [[Kracked Technologies]].\n\n## Core Leadership\n\n| Name | Role |\n|------|------|\n| Danial Hadi Bin Alias | Founder & CEO |\n| Muhaimin | Chief Technology Officer (CTO) |\n| Muhammad Fadli Bin Md Khalid | Chief Development Officer |\n| Adam Alias | Community Lead |\n| Zarul | Academy Lead |\n| Unies | Software Engineer |\n\nEveryone reports to Danial and Muhaimin. Muhaimin reports to Danial.\n\n## Operations\n\n| Name | Role |\n|------|------|\n| Iroh | Payroll & Accounts |\n\n## Engineering\n| Ammar | Full Stack Software Developer |\n| Syafiq | QA Engineer |\n| Moon | Junior Software Engineer |\n\n## Research & Policy\n\n| Name | Role |\n|------|------|\n| Sheikh Irfan | Researcher + Analysis + Policy |\n| Natasha | Research + Analysis + Policy |\n\n## Design\n\n| Name | Role |\n|------|------|\n| Muhammad Hanif Danial Bin Mohd Nasri | Graphic Designer |\n| Jesrina | UI/UX Designer |\n\n## Data\n\n| Name | Role |\n|------|------|\n| Fikrah | Data Analyst |\n\n## Community & Education\n\n| Name | Role |\n|------|------|\n| Ijam | KD Academy Operations |\n\n## Ambassadors (Contract)\n\nReport to Adam.\n\n| Name | Region |\n|------|--------|\n| Shafwan | Penang |\n| Ajwad Kiroro | Kedah |\n| Nizam | Sabah |\n\n## MyPeta Team (Contract)\n\nContractors dedicated to [[MYpeta]].\n\n| Name | Role |\n|------|------|\n| Akmal | Junior Software Engineer |\n| Akmar | Software Developer |\n| Hafeez | Data Lead |\n\n## Marketing Interns (Contract)\n\n5 interns producing video content (5 videos/week target).\n\n## Community\n\n- 1,190 registered developers on krackeddevs.com\n- 800 Discord members\n- 9 guilds (including KD Team guild)\n- Discord: https://discord.gg/ThkRctzyRE\n\n## Top Community Members\n\nActive contributors on the [[Leaderboard]]:\n\n| Member | Points |\n|--------|--------|\n| jinbei | 1,725 |\n| 4kmal | 1,310 |\n| marot.js | 1,305 |\n\n## Notable Builders\n\nMembers building ventures through [[Kracked Labs]]:\n\n| Builder | Venture |\n|---------|---------|\n| Fadli Khalid | SenseInvoice |\n| Safwan Hakim | Festivent, AI Resume Screening, AI Job Matching |\n| Ahmad Adha | VisualAlgo, Resume Match Checker |\n",
-      "wordCount": 364,
+      "content": "\n# Tenders and Contracts\n\nThe outbound revenue operation of [[Kracked Technologies]], run at the parent level (not a sub-pillar). Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Sniper]], under CEO approval. Sits alongside (not inside) the three pillars: [[Kracked Devs]], [[KD Academy]], [[Kracked Labs]].\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this runs at the parent level\n\nProjects and tenders are cross-pillar by nature — the other three cash in through this operation:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — booked through this operation.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- [[Kracked Devs]]' recruitment arm can be bundled into bigger contracts (e.g. \"we'll deliver this project AND staff your internal team\").\n- Every tender we bid on is signed under **Kracked Technologies** regardless of which pillar delivers, so it makes sense to run outbound at the parent level.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
+      "wordCount": 456,
       "links": [
         "kracked-technologies",
-        "mypeta",
-        "leaderboard",
-        "kracked-labs"
+        "sniper",
+        "kracked-devs",
+        "kd-academy",
+        "kracked-labs",
+        "sniper",
+        "this-week",
+        "kd-academy",
+        "kracked-labs",
+        "kracked-devs",
+        "alfred",
+        "sniper",
+        "kracked-technologies",
+        "sniper",
+        "alfred",
+        "this-week"
       ],
       "linkNames": [
         "Kracked Technologies",
-        "MYpeta",
-        "Leaderboard",
-        "Kracked Labs"
+        "Sniper",
+        "Kracked Devs",
+        "KD Academy",
+        "Kracked Labs",
+        "Sniper",
+        "This Week",
+        "KD Academy",
+        "Kracked Labs",
+        "Kracked Devs",
+        "Alfred",
+        "Sniper",
+        "Kracked Technologies",
+        "Sniper",
+        "Alfred",
+        "This Week"
       ],
-      "path": "Team/Team.md",
-      "connections": 7
+      "path": "Ecosystem/Tenders and Contracts.md",
+      "type": "pillar",
+      "status": "In development",
+      "owner": "danial",
+      "connections": 20
     },
     {
-      "id": "roadmap",
-      "name": "Roadmap",
-      "category": "Projects",
+      "id": "kracked-labs",
+      "name": "Kracked Labs",
+      "category": "Ecosystem",
       "dataset": "mission",
-      "content": "# Roadmap\n\nSee also: [[Pipeline]] for Kracked Labs venture priorities and [[Portfolio]] for all ventures.\n\n## Now (Q2 2026)\n\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Improve Rotican.ai generation quality + templates\n- Launch KD Academy workshop pilot\n- Run Krackathon Q2\n\n## Next (Q3 2026)\n\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty on [[Bounty Board]]\n- University partnership pilot (1–2 universities)\n- Kracked Devs premium job postings\n\n## Later (Q4 2026+)\n\n- Masjid OS v1\n- Revenue features across Kracked Devs\n- KD Academy full workshop series\n- Government grant applications (Cradle, MDEC)\n- 5,000 platform members target\n",
-      "wordCount": 111,
-      "links": [
-        "pipeline",
-        "portfolio",
-        "bounty-board"
-      ],
-      "linkNames": [
-        "Pipeline",
-        "Portfolio",
-        "Bounty Board"
-      ],
-      "path": "Projects/Roadmap.md",
-      "connections": 4
-    },
-    {
-      "id": "products-projects",
-      "name": "Products & Projects",
-      "category": "Projects",
-      "dataset": "mission",
-      "content": "# Products & Projects\n\nAll products and projects across the [[Kracked Technologies]] ecosystem.\n\n## Kracked Devs (Platform)\n\n- [[Bounty Board]] — RM rewards for technical work\n- [[Job Board]] — 979 tech jobs across Malaysia\n- [[Leaderboard]] — Points-based ranking\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — 30+ community projects\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated daily tech news\n\n## KD Academy (Education)\n\n- Builder Syllabus — Vibe coding curriculum\n- Ambassador Program — Peer educator network\n- Workshops — Hands-on sessions (planned)\n\n## Kracked Labs (Ventures)\n\nSee [[Portfolio]] for all ventures (2 live, 5 in development).\n",
-      "wordCount": 105,
+      "content": "# Kracked Labs\n\nThe venture studio arm of [[Kracked Technologies]]. Where real builders ship startups, with the KD team acting as venture studio operators.\n\n## Key Pages\n\n- [[Portfolio]] — All ventures, live and in development\n- [[Venture Playbook]] — How we pick, build, and ship ventures\n- [[Competitors]] — Landscape analysis of dev communities, venture builders, and AI education in Malaysia/SEA\n- [[Growth & Marketing]] — Growth strategy across channels\n- [[Market Landscape]] — Malaysian tech ecosystem, funding, government initiatives\n- [[Revenue Model]] — How we make money across all three pillars\n- [[Pipeline]] — Ideas under evaluation and roadmap\n\n## Model — Venture Studio\n\nKracked Labs operates as a **venture studio**, not an accelerator. The difference: accelerators give advice and a demo day. Labs provides hands-on operational support.\n\n**What Labs provides:**\n- **Technical support** — shared stack (Supabase, Vercel, CI/CD, design systems)\n- **Marketing and growth** — go-to-market strategy, positioning, launch support\n- **Community distribution** — 800+ Discord members and 1,190+ registered devs as beta testers\n- **Agent support** — [[Rick]] monitors portfolio health; [[Xavier]] routes talent from Academy graduates\n- **Operational backbone** — billing, legal templates, domain management, pitch preparation\n\n**In return, Kracked takes up to 10% equity in the venture.** Negotiated per venture based on level of support. The goal is to get founders as ready as possible, not to extract maximum ownership.\n\n**Entry criteria:** must have demonstrated shipping ability — [[Showcase]] projects, bounty completions, or guild standing. The industrial district has a gate.\n\n**Two tracks:**\n- **KD Team ventures** — built and operated by the core Kracked team\n- **KD Member ventures** — built by community members, supported by the ecosystem\n\nAll ventures listed under [[Portfolio]].\n\n## Status\n\n- Stage: Active\n",
+      "wordCount": 286,
       "links": [
         "kracked-technologies",
+        "portfolio",
+        "venture-playbook",
+        "competitors",
+        "growth-marketing",
+        "market-landscape",
+        "revenue-model",
+        "pipeline",
+        "rick",
+        "xavier",
+        "showcase",
+        "portfolio"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Portfolio",
+        "Venture Playbook",
+        "Competitors",
+        "Growth & Marketing",
+        "Market Landscape",
+        "Revenue Model",
+        "Pipeline",
+        "Rick",
+        "Xavier",
+        "Showcase",
+        "Portfolio"
+      ],
+      "path": "Ecosystem/Kracked Labs.md",
+      "connections": 55
+    },
+    {
+      "id": "kracked-devs",
+      "name": "Kracked Devs",
+      "category": "Ecosystem",
+      "dataset": "mission",
+      "content": "# Kracked Devs\n\nThe community platform of [[Kracked Technologies]]. A nexus for high-performance developers building the future of technical excellence in Southeast Asia.\n\n**Website:** https://krackeddevs.com\n\n**Tagline:** \"A community for Malaysian developers who love to push boundaries.\"\n**Manifesto:** \"Built in Malaysia, for Malaysia.\"\n\n## Purpose\n\nThe front door for anyone in the ecosystem. Routes people based on who they are:\n- **Developers** → Learn, earn, build portfolio through real projects\n- **Companies** → Access verified talent, scale dev teams faster\n- **Government** → Self-sustaining ecosystem solving talent gaps\n- **Learners** → [[KD Academy]]\n- **Builders** → Kracked Labs\n\n## Platform Features\n\n- [[Bounty Board]] — Developers earn RM rewards for completing technical work\n- [[Job Board]] — 979 jobs across Malaysia (KL, Selangor, Penang, Johor)\n- [[Leaderboard]] — Points-based ranking system\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — Portfolio platform for completed projects (30+ projects)\n- Developer Directory — Browse developers across Malaysia (/members)\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated tech news in real-time\n- Community Poll — Members vote on next bounty priorities (/code/bounty)\n\n## Monetisation\n\nJob Portal is the first revenue wedge. See [[Job Portal Monetisation]] — AI-driven outbound ([[Sniper]]-style Recruiter agent) brings companies in; developers sign up and build portfolios via Showcase + Bounty Board before applying. Revenue paths: Featured Listings → Sponsored Bounties → Premium Company accounts → opt-in Placement Fees.\n\n## For Companies\n\nPost a project → Get applications from vetted developers → Choose → Done.\n\n| Aspect | Traditional | KrackedDevs |\n|--------|-------------|-------------|\n| Cost | 20-30% agency fees | 0% fees |\n| Vetting | Resume scanning | Real project history & verified GitHub |\n| Speed | Weeks to months | 48-hour shortlist |\n| Flexibility | Long contracts | Direct relationship, scalable |\n\n- Top 5% of applicants\n- Contact: hello@krackeddevs.com\n\n## For Government\n\nSelf-sustaining ecosystem requiring **zero public funding** to address Malaysia's tech talent crisis.\n\n**The Problem:**\n- 50,000+ junior devs seeking first jobs while 40% of tech positions unfilled\n- Fresh graduates lack real-world experience\n- Training costs RM10K-20K, barriers for low-income families\n- Government bootcamps show 20-50% completion rates\n\n**What We Seek (Not Funding):**\n- Official recognition and program alignment\n- Visibility through government credibility\n- Pilot participation from GLCs\n- Integration with university programs\n\n**Aligned with:** Malaysia Digital Economy Blueprint 2021-2030\n\n**Targets:**\n| Phase | Timeline | Target |\n|-------|----------|--------|\n| Phase 1 | By Feb 2026 | 500 active members, RM30-50K in bounties |\n| Phase 2 | By end 2026 | RM200K+ in bounties |\n| Phase 3 | By 2028 | 10,000+ active members |\n| Goal | Year 2 | Profitable |\n| Goal | Year 3 | Self-sustaining |\n\n## Community Stats\n\n- 1,190 registered developers on krackeddevs.com\n- 800 Discord members\n- RM 2,550+ total payouts\n- 979 job listings\n- 30+ showcase projects\n- 9 guilds\n- 2 events held\n\n## Recruitment Model\n\nThe recruitment layer runs in parallel inside the ecosystem — not as a separate product. Developers sign up, create a profile, add projects to their portfolio. Companies post jobs. Matching happens through verified build history and GitHub activity, not just resumes.\n\n- **For developers:** free. Always. Build your profile, add projects, get matched.\n- **For companies:** 0% fees currently (volume-first strategy). Future revenue via featured listings, priority placement, and placement commissions.\n- **Differentiator:** Kracked's top applicants have demonstrated shipping ability through [[Showcase]], [[Bounty Board]] completions, and [[Leaderboard]] standing — not just interview performance.\n\n## Key Pages\n\n| Page | Path |\n|------|------|\n| Home | / |\n| Command Center | /dashboard |\n| Manifesto | /about |\n| Showcase | /showcase |\n| Developer Directory | /members |\n| Guild Directory | /guilds |\n| Events | /events |\n| News | /news |\n| Changelog | /changelog |\n| For Companies | /for-company |\n| Company Directory | /companies |\n| Job Board | /jobs |\n| Bounty Board | /code/bounty |\n| For Government | /for-government |\n| Leaderboard | /leaderboard |\n| Map | /map |\n\n## Socials\n\n- Discord: https://discord.gg/ThkRctzyRE\n- Twitter/X: @krackeddevs\n- TikTok: @krackeddevs\n- Email: hello@krackeddevs.com\n\n## Tech Stack\n\n- Next.js (React)\n- Supabase (auth, database, storage)\n- Geist design system\n- Real-time socket support\n\n## Status\n\n- Version: BETA v2.0\n- Stage: Live\n",
+      "wordCount": 722,
+      "links": [
+        "kracked-technologies",
+        "kd-academy",
         "bounty-board",
         "job-board",
         "leaderboard",
@@ -705,10 +1129,15 @@
         "showcase",
         "events",
         "news-feed",
-        "portfolio"
+        "job-portal-monetisation",
+        "sniper",
+        "showcase",
+        "bounty-board",
+        "leaderboard"
       ],
       "linkNames": [
         "Kracked Technologies",
+        "KD Academy",
         "Bounty Board",
         "Job Board",
         "Leaderboard",
@@ -716,10 +1145,50 @@
         "Showcase",
         "Events",
         "News Feed",
-        "Portfolio"
+        "Job Portal Monetisation",
+        "Sniper",
+        "Showcase",
+        "Bounty Board",
+        "Leaderboard"
       ],
-      "path": "Projects/Products & Projects.md",
-      "connections": 11
+      "path": "Ecosystem/Kracked Devs.md",
+      "connections": 48
+    },
+    {
+      "id": "advisory-board",
+      "name": "Advisory Board",
+      "category": "Ecosystem",
+      "dataset": "mission",
+      "content": "# Advisory Board\n\nThe advisory board for [[Kracked Technologies]]. A group of experienced individuals providing strategic guidance across the ecosystem — [[Kracked Devs]], [[KD Academy]], and [[Kracked Labs]].\n\n## Status\n\nCurrently being formed. Initial advisors onboarded across government, VC, and AI/defence.\n\n## Advisors\n\n| Name | Domain | Role / Background |\n|------|--------|-------------------|\n| **[[Azlan Ismail]]** | Government & Policy | MyDigital (Malaysia's digital economy initiative under EPU) |\n| **[[Faiz Hassan]]** | VC & Startup Ecosystem | Assistant Manager — Technology & Innovation at Cradle Fund (since May 2023). Involved in MYStartup Startup Perks and MYStartup Tech Talent Program. Based in KL (hybrid). |\n| **[[Surenthiran Krishnan|Major Dr. Surenthiran Krishnan]]** | AI & Defence Tech | Malaysian Army (Tentera Darat Malaysia). Holds a PhD in AI. Bridges military/government and deep tech expertise. |\n\n## Advisory Areas\n\n- **Government & Policy** — Navigation of public sector partnerships, grants, regulatory landscape (Azlan Ismail)\n- **VC & Funding** — Cradle applications, startup ecosystem access, MYStartup programs (Faiz Hassan)\n- **AI & Deep Tech** — AI strategy, defence/government AI applications, research credibility (Dr. Surenthiran)\n- **Education & Talent** — Curriculum design, university partnerships, workforce development\n- **Community & Ecosystem** — Developer ecosystem building, regional expansion (Singapore, Indonesia)\n\n## Planning & Strategy\n\n### Advisor Pipeline\n\n| Name | Domain | Status | Next Step |\n|------|--------|--------|-----------|\n| Azlan Ismail | Government & Policy | Onboarded | Define engagement cadence; align on MyDigital program participation |\n| Faiz Hassan | VC & Startup Ecosystem | Onboarded | Discuss Cradle CIP Spark application strategy |\n| Major Dr. Surenthiran Krishnan | AI & Defence Tech | Onboarded | Explore defence-tech use cases and AI research collaboration |\n| *(University/Education lead)* | Education & Talent | Identifying | Target CS faculty deans — UKM, UTM, USM, or MMU. Key for [[KD Academy]] pipeline |\n| *(SEA regional figure)* | Regional Expansion | Identifying | Singapore or Indonesia tech ecosystem connector for [[cofounders|cofounders.my]] expansion |\n\n### Coverage Gaps\n\n| Domain | Status | Why It Matters |\n|--------|--------|----------------|\n| Government & Policy | Covered (Azlan) | MyDigital alignment, GLC pilot access |\n| VC & Funding | Covered (Faiz) | Cradle grants, MYStartup programs |\n| AI & Deep Tech | Covered (Dr. Surenthiran) | Technical credibility, research angle |\n| Education & Talent | Open | 30K CS graduates/year; university MOUs for KD Academy |\n| Regional / SEA | Open | cofounders.my expanding to Singapore & Indonesia |\n| Industry / Corporate | Open | Corporate sponsors, B2B training clients for Academy |\n\n### Engagement Tracker\n\n| Advisor | Last Check-in | Frequency | Active Initiatives |\n|---------|---------------|-----------|-------------------|\n| Azlan Ismail | — | TBD | — |\n| Faiz Hassan | — | TBD | — |\n| Dr. Surenthiran | — | TBD | — |\n\n### Ideas & Actions\n\n- [ ] Set up quarterly advisory roundtable (all advisors together, not just 1:1)\n- [ ] Prepare a one-pager per advisor showing what Kracked needs from their domain\n- [ ] Leverage Faiz's position to get early feedback on Cradle CIP application before formal submission\n- [ ] Explore if Azlan can connect Kracked to MyDigital programs (e.g. digital economy grants, GLC partnerships)\n- [ ] Discuss with Dr. Surenthiran potential for a defence/gov AI venture under [[Kracked Labs]]\n- [ ] Identify and approach a university partner — aim for 1 MOU by Q3 2026\n- [ ] Identify a Singapore-based tech figure for SEA advisory (cofounders.my expansion)\n- [ ] Consider formalizing advisory terms once 5+ advisors are active (light agreement, no equity yet)\n\n## What We Look For\n\n- Domain expertise relevant to Kracked's pillars\n- Network and credibility in Malaysian tech, government, or education\n- Willingness to engage regularly (not just a title)\n- Alignment with the builder-first, Malaysia-first mission\n\n## Structure\n\n- Informal advisory relationships (no board seats or equity commitments yet)\n- Regular check-ins with CEO and leadership\n- Advisors may be invited to mentor ventures under [[Kracked Labs]]\n",
+      "wordCount": 672,
+      "links": [
+        "kracked-technologies",
+        "kracked-devs",
+        "kd-academy",
+        "kracked-labs",
+        "azlan-ismail",
+        "faiz-hassan",
+        "surenthiran-krishnan",
+        "kd-academy",
+        "cofounders",
+        "kracked-labs",
+        "kracked-labs"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Kracked Devs",
+        "KD Academy",
+        "Kracked Labs",
+        "Azlan Ismail",
+        "Faiz Hassan",
+        "Surenthiran Krishnan",
+        "KD Academy",
+        "cofounders",
+        "Kracked Labs",
+        "Kracked Labs"
+      ],
+      "path": "Ecosystem/Advisory Board.md",
+      "connections": 25
     },
     {
       "id": "sea-expansion",
@@ -958,408 +1427,6 @@
       "connections": 11
     },
     {
-      "id": "rotican-ai",
-      "name": "rotican.ai",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# rotican.ai\n\nAI-powered web app builder. Describe it, ship it. Built by KD Team.\n\n**Website:** https://rotican.ai\n\n## What It Does\n\nGenerate working applications by describing your idea in natural language. No setup, no deployment, no coding required.\n\n## Features\n\n### Build Mode\n- Natural language app generation via text prompts\n- Idea wizard with categories: games, websites, tools, trackers, creative, personal\n- Multi-axis customization\n- Preset suggestions for rapid creation\n\n### Chat Mode\n- Brainstorming conversations without app creation\n- Free-form exploration and ideation\n\n### Community & Sharing\n- Explore and discover apps built by others\n- Remix existing apps\n- Public app publishing\n- User profiles with app portfolios\n- GitHub sync for code export\n\n## Tech Stack\n\n- Next.js, React\n- Geist UI design system\n\n## Localization\n\n- English and Malay (BM)\n\n## Pricing\n\n- Freemium with daily message limits\n- Auth-gated features (likes, remixing)\n\n## Status\n\n- Stage: Live\n- Built by: [[Portfolio]] (KD Team)\n",
-      "wordCount": 158,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/rotican.ai.md",
-      "connections": 7
-    },
-    {
-      "id": "cofounders",
-      "name": "cofounders",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# cofounders\n\n\nCurated co-founder matching platform for Malaysian startup founders. Built by KD Team.\n\n**Website:** https://cofounders.my\n\n## What It Does\n\nConnects serious founders building startups in Malaysia. Vetted directory — every application is reviewed to keep the room focused and high-signal.\n\n- No investors, recruiters, or non-builders\n- Browse profiles filtered by location, category, and stage\n- Specify your startup and desired co-founder type\n\n## How It Works\n\n1. Apply and describe your venture + co-founder needs\n2. Get reviewed by the team\n3. Browse vetted profiles and connect\n\n## Stats\n\n- 151 founders\n- 15 states covered\n- 13 categories (SaaS, FinTech, HealthTech, Hardware/IoT, Commerce, Education, Legal, HR, etc.)\n- Stages: Idea → MVP → Beta → Revenue → Scaling\n\n## Status\n\n- Stage: Live\n- Built by: [[Portfolio]] (KD Team)\n",
-      "wordCount": 132,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/cofounders.md",
-      "connections": 13
-    },
-    {
-      "id": "venture-playbook",
-      "name": "Venture Playbook",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Venture Playbook\n\nHow [[Kracked Labs]] builds ventures.\n\n## The Model\n\nKracked Labs is a **venture builder**, not an accelerator. The difference:\n- **Accelerator**: Takes existing startups, helps them grow\n- **Venture builder**: Creates startups from scratch with internal/community teams\n\nWe build alongside builders. The team provides product direction, design, distribution, and support. Builders bring energy, code, and domain knowledge.\n\n## Two Tracks\n\n### KD Team Ventures\nBuilt and operated by the core team. These are strategic bets for the ecosystem.\n- Team has full ownership and direction\n- See [[Portfolio]] for full list\n\n### KD Member Ventures\nBuilt by community members with Labs support. Community-originated ideas.\n- Members bring the idea and build\n- Labs provides guidance, early users, and platform support\n- See [[Portfolio]] for full list\n\n## How We Pick What to Build\n\n1. **Malaysian problem** — Does it solve something specific to Malaysia?\n2. **Fast to ship** — Can v1 be built in weeks, not months?\n3. **Community leverage** — Can KD's 1,190 devs be early users or builders?\n4. **Revenue path** — Is there a clear way to make money or grow users?\n5. **AI-native** — Can AI make this 10x faster or better to build?\n\n## Build Process\n\n1. **Idea → Validation** — Is anyone else doing this? Would people use it? Quick research, community poll\n2. **Prototype** — Ship v1 in 1–2 weeks using vibe coding and AI tools\n3. **Community launch** — Launch to Kracked Devs community first for feedback\n4. **Iterate** — Fix what's broken, double down on what works\n5. **Grow** — If traction, invest more time and resources\n\n## Metrics That Matter\n\n- **Time to v1**: Under 2 weeks\n- **First 100 users**: Under 30 days\n- **Revenue or retention signal**: Under 90 days\n- Kill fast if no signal. Double down if there is.\n\n## Tools We Use\n\n- AI coding tools (Cursor, Claude, Replit) for fast prototyping\n- Rotican.ai for quick app generation\n- Supabase for backend\n- Vercel / Burhan for hosting\n- Kracked Devs platform for distribution\n",
-      "wordCount": 342,
-      "links": [
-        "kracked-labs",
-        "portfolio",
-        "portfolio"
-      ],
-      "linkNames": [
-        "Kracked Labs",
-        "Portfolio",
-        "Portfolio"
-      ],
-      "path": "Ventures/Venture Playbook.md",
-      "connections": 10
-    },
-    {
-      "id": "revenue-model",
-      "name": "Revenue Model",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "\n# Revenue Model\n\nHow [[Kracked Technologies]] makes money across its three pillars.\n\n## Kracked Devs (Community Platform)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Company job postings | Paid listings or commission per hire | Planned |\n| Sponsored bounties | Companies fund bounties, KD takes cut | Planned |\n| Company directory | Premium listings for visibility | Planned |\n| Talent marketplace | Commission on developer placements (0% currently, upsell to premium) | Future |\n\nCurrent messaging is **0% fees** to attract companies. The play is volume first, monetize later with premium tiers.\n\n## KD Academy (Education)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Workshops | Paid workshops for intensive sessions | Planned |\n| Corporate training | B2B training packages for companies | Planned |\n| University partnerships | Co-branded programs with fees | Planned |\n| Certifications | Paid certification paths | Future |\n\n## Kracked Labs (Venture Builder)\n\n| Revenue Stream | Model | Status |\n|---------------|-------|--------|\n| Venture equity | Own equity in ventures built | Active |\n| SaaS revenue | Revenue from live products (rotican.ai, cofounders.my) | Early |\n| Exit/acquisition | Long-term play on successful ventures | Future |\n\n## Government Funding (Non-dilutive)\n\n| Source | Amount | Status |\n|--------|--------|--------|\n| Cradle CIP Spark | Up to RM 150K | To apply |\n| Cradle CIP Accelerate | Up to RM 500K | To apply |\n| MDEC Malaysia Digital status | Tax incentives (0–10%) | To apply |\n| PENJANA Kapital | VC co-investment | Future |\n\n## Financial Targets\n\n| Phase | Timeline | Target |\n|-------|----------|--------|\n| Phase 1 | By Feb 2026 | RM 30–50K in bounties distributed |\n| Phase 2 | By end 2026 | RM 200K+ in bounties |\n| Profitability | Year 2 | Break even |\n| Self-sustaining | Year 3 | Revenue exceeds costs |\n",
-      "wordCount": 321,
-      "links": [
-        "kracked-technologies"
-      ],
-      "linkNames": [
-        "Kracked Technologies"
-      ],
-      "path": "Ventures/Revenue Model.md",
-      "type": "revenue-model",
-      "next_milestone": "Marketplace",
-      "next_milestone_detail": "on Kracked Devs",
-      "connections": 6
-    },
-    {
-      "id": "portfolio",
-      "name": "Portfolio",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Portfolio\n\nAll ventures built under [[Kracked Labs]]. Split between KD Team (internal) and KD Members (community).\n\n## KD Team (Internal)\n\n| Venture | What It Is | Status |\n|---------|-----------|--------|\n| [[cofounders|cofounders.my]] | Co-founder matching for Malaysian founders | Live — 151 founders, 15 states |\n| [[rotican.ai]] | AI-powered web app builder | Live — freemium |\n| [[JomQR]] | Malaysian Linktree + QR code bank | In development |\n| [[MYpeta]] | OSINT / data visualization for Malaysia's tech ecosystem | In development |\n| [[Burhan]] | Malaysian Vercel — hosting for local builders | In development |\n\n## KD Members (Community)\n\n| Venture | What It Is | Status |\n|---------|-----------|--------|\n| [[JomKopi]] | Map of all coffee shops in Malaysia | In development |\n| [[Masjid OS]] | Unified digital OS for all mosques in Malaysia | In development |\n\n## Portfolio Themes\n\nThe ventures cluster around a few patterns:\n- **Malaysian infrastructure** — Building the local versions of global tools (Burhan = Vercel, JomQR = Linktree, cofounders.my = YC Co-founder Matching)\n- **OSINT & data** — Making Malaysian data accessible and useful (MYpeta)\n- **Community verticals** — Products for specific Malaysian communities (JomKopi for coffee culture, Masjid OS for mosques)\n- **AI-native tools** — Products built with AI at the core (rotican.ai)\n\n## What Makes a Kracked Labs Venture\n\n- Solves a Malaysian problem\n- Can be built and shipped fast\n- Has a path to revenue or community adoption\n- Leverages the KD community for early users and feedback\n",
-      "wordCount": 256,
-      "links": [
-        "kracked-labs",
-        "cofounders",
-        "rotican-ai",
-        "jomqr",
-        "mypeta",
-        "burhan",
-        "jomkopi",
-        "masjid-os"
-      ],
-      "linkNames": [
-        "Kracked Labs",
-        "cofounders",
-        "rotican.ai",
-        "JomQR",
-        "MYpeta",
-        "Burhan",
-        "JomKopi",
-        "Masjid OS"
-      ],
-      "path": "Ventures/Portfolio.md",
-      "connections": 25
-    },
-    {
-      "id": "pipeline",
-      "name": "Pipeline",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Pipeline\n\nIdeas under evaluation and upcoming priorities for [[Kracked Labs]]. See [[Portfolio]] for all current ventures.\n\n## Under Consideration\n\nIdeas that have come up but haven't been greenlit yet. Evaluate against the [[Venture Playbook]] criteria.\n\n| Idea | Category | Notes |\n|------|----------|-------|\n| Malaysian Upwork | Freelance marketplace | Localized freelancer platform for MY market |\n| KD Jobs App | Mobile job board | Mobile-first version of the Job Board |\n| Startup Directory MY | Database | Malaysian startup database (like Crunchbase for MY) |\n| Gov Tech Toolkit | Government | Suite of tools for government bounties (queue, complaints, permits) |\n| BM AI Tutor | Education | AI tutor that teaches coding in Bahasa Malaysia |\n| Dev Salary Tracker MY | Data | Transparent salary data for Malaysian developers (like NodeFlair for MY) |\n\n## Priorities\n\n### Now (Q2 2026)\n- Ship JomQR v1\n- Ship MYpeta v1\n- Grow cofounders.my to 300 founders\n- Rotican.ai — add templates, improve generation quality\n\n### Next (Q3 2026)\n- Burhan alpha launch\n- JomKopi v1\n- First corporate-sponsored bounty\n- University partnership pilot (1–2 universities)\n\n### Later (Q4 2026+)\n- Masjid OS v1\n- Revenue features on Kracked Devs (premium job posts, sponsored bounties)\n- KD Academy workshop series launch\n- Government grant applications (Cradle, MDEC)\n",
-      "wordCount": 221,
-      "links": [
-        "kracked-labs",
-        "portfolio",
-        "venture-playbook"
-      ],
-      "linkNames": [
-        "Kracked Labs",
-        "Portfolio",
-        "Venture Playbook"
-      ],
-      "path": "Ventures/Pipeline.md",
-      "connections": 8
-    },
-    {
-      "id": "masjid-os",
-      "name": "Masjid OS",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Masjid OS\n\nAn operating system built for all mosques in Malaysia. Built by KD Members.\n\n## What It Does\n\nUnified digital OS for mosques — giving every masjid in Malaysia a standard digital platform to run on.\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Members)\n",
-      "wordCount": 57,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/Masjid OS.md",
-      "connections": 8
-    },
-    {
-      "id": "market-landscape",
-      "name": "Market Landscape",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Market Landscape\n\nThe Malaysian tech ecosystem that [[Kracked Labs]] operates in.\n\n## Developer Population\n\n- 200,000–300,000 software developers in Malaysia\n- 30,000–40,000 CS/IT graduates annually\n- Top languages: JavaScript, Python, Java\n- Growing GitHub and Stack Overflow presence (top 30 globally)\n\n## The Talent Problem\n\n- **50,000+ junior devs** seeking first jobs\n- **40% of tech positions** remain unfilled\n- Fresh graduates lack real-world project experience\n- Training costs RM 10K–20K — barrier for low-income families\n- Government bootcamps show 20–50% completion rates with poor employment outcomes\n\nThis is the exact gap Kracked Devs and KD Academy are filling.\n\n## Startup Funding\n\n- VC funding in Malaysia: ~USD 300–500M annually (recovering post-2022 contraction)\n- Key VCs: Khazanah, MAVCAP, Cradle Fund, 500 Global, Gobi Partners, Monk's Hill, Vynn Capital, RHL Ventures, Kairous Capital\n- Government grants available:\n  - Cradle CIP Spark: up to RM 150K (early-stage)\n  - Cradle CIP Accelerate: up to RM 500K (growth-stage)\n  - MTDC for technology commercialization\n\n## Government Digital Initiatives\n\n### Malaysia Digital (MDEC)\n- Tax incentives (0–10% for up to 10 years) for qualifying tech companies\n- DE Rantau digital nomad program\n- Global Tech Hub initiative\n- #mydigitalmaker education movement\n\n### MyDIGITAL Blueprint\n- Target: 22.6% digital economy contribution to GDP\n- Malaysia AI Roadmap (AI-MAP)\n\n### Data Center Boom (2024–2026)\nMassive investments reshaping Malaysia's position:\n- Microsoft, Google, AWS, Oracle, ByteDance\n- Tens of billions USD committed\n- Making Malaysia a key ASEAN infrastructure hub\n\n### Key Government Agencies\n| Agency | Role |\n|--------|------|\n| MDEC | Digital economy corporation — grants, status, programs |\n| Cradle Fund | Startup grants and equity funding |\n| MaGIC | Startup support, accelerator programs |\n| MAVCAP | Government-linked VC |\n| PENJANA Kapital | Fund-of-funds catalyzing VC investment |\n| KKMM | Ministry of Communications and Digital |\n\n## The Opportunity\n\n1. **Data center boom** creates demand for Malaysian developers\n2. **Government actively funding** digital economy growth\n3. **AI/vibe coding** education space is unoccupied locally\n4. **30K+ annual graduates** need better pathways than traditional bootcamps\n5. **SEA positioning** — Malaysia as a bridge between Singapore cost and Indonesia scale\n",
-      "wordCount": 356,
-      "links": [
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Labs"
-      ],
-      "path": "Ventures/Market Landscape.md",
-      "connections": 8
-    },
-    {
-      "id": "mypeta",
-      "name": "MYpeta",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# MYpeta\n\nOSINT tool for Malaysia's tech ecosystem. Live map of people, jobs, news, events, and companies. Built by KD Team.\n\n**Website:** https://mypeta.ai\n\n## What It Does\n\nOSINT-first platform focusing on people in tech in Malaysia. Live, interactive map with real-time data across the Malaysian tech landscape.\n\n## Features\n\n- Live map of Malaysia with real-time updates\n- People in tech — discover who's building what, where\n- Jobs — live job postings mapped across states\n- News — tech news relevant to Malaysia\n- Events — upcoming events on the map\n- Companies — discover tech companies by location\n- State-level data visualization (population, income, crime, water, household expenditure)\n\n## Tech Stack\n\n- Next.js\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Team)\n",
-      "wordCount": 127,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/MYpeta.md",
-      "connections": 9
-    },
-    {
-      "id": "jomqr",
-      "name": "JomQR",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# JomQR\n\nMalaysian Linktree + QR code bank. Share links, share QR codes in person. Built by KD Team.\n\n**Website:** https://jomqr.my\n\n## What It Does\n\n- Link-in-bio tool like Linktree, but Malaysian-built\n- QR code focus — acts as a personal bank of QR codes for sharing in person\n- Combine your digital presence with real-world sharing\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Team)\n",
-      "wordCount": 76,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/JomQR.md",
-      "connections": 8
-    },
-    {
-      "id": "jomkopi",
-      "name": "JomKopi",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# JomKopi\n\nMap of all coffee shops in Malaysia. Go coffee hunting. Built by KD Members.\n\n## What It Does\n\n- Interactive map of coffee shops across Malaysia\n- Discover new spots, plan coffee hunts\n- Community-driven — people contribute and explore together\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage: In development\n- Built by: [[Portfolio]] (KD Members)\n",
-      "wordCount": 62,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/JomKopi.md",
-      "connections": 7
-    },
-    {
-      "id": "growth-marketing",
-      "name": "Growth & Marketing",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Growth & Marketing\n\nGrowth strategy for [[Kracked Labs]], Kracked Devs, and KD Academy.\n\n## Core Channels\n\n### Telegram (Primary)\nTelegram is the dominant messaging platform for Malaysian devs. Must be Telegram-native.\n- Community group for builders\n- Announcement channel for bounties, events, launches\n- Bot integrations for leaderboard, notifications\n\n### Twitter/X\nGrowing among the \"builder\" demographic. Build-in-public content performs well.\n- Ship updates from ventures\n- @krackeddevs account — dev tips, bounty announcements, community wins\n- Founders' personal accounts for thought leadership\n\n### TikTok / Short-form Video\n\"Code-tok\" is a real channel in SEA. Malay-language tech content is massively underserved.\n- Vibe coding tutorials in Bahasa Malaysia\n- \"Build X in Y hours with AI\" content format\n- Behind-the-scenes of Kracked Labs ventures\n\n### YouTube\nLong-form tutorials remain a key discovery channel.\n- Full vibe coding workshops\n- Venture build logs\n- Malaysian tech ecosystem breakdowns\n\n### LinkedIn\nStrong for professional developer content in Malaysia.\n- Government partnership announcements\n- Hiring from the community\n- Venture milestones\n\n### Facebook Groups\nStill highly relevant in Malaysia unlike Western markets.\n- Cross-post to dev communities (10K-100K member groups)\n- Event promotion\n\n## Growth Strategies\n\n### 1. University Pipeline\nMalaysia produces 30,000+ CS graduates annually. Most are underserved by existing communities.\n- Tech talks at UM, USM, UTM, MMU, APU, Sunway\n- Campus hackathons co-branded with KD\n- Ambassador program through KD Academy\n- Free workshops — hook is \"build and ship your first product in a day\"\n\n### 2. Bahasa Malaysia Content Moat\nAlmost no competitors produce quality tech/AI content in Malay. This is defensible.\n- BM tutorials on vibe coding\n- BM bounty descriptions and guides\n- Opens up the non-English-speaking developer market (huge in Malaysia)\n\n### 3. Build-in-Public\nEvery [[Kracked Labs]] venture should be built publicly.\n- Weekly updates on Twitter\n- Monthly blog posts on progress\n- Community can follow along and contribute\n\n### 4. Government Partnerships\nActive government appetite for this type of community. See Kracked Devs government page.\n- MDEC Malaysia Digital status — tax incentives\n- Cradle CIP Spark Grant (up to RM 150K) and CIP Accelerate (up to RM 500K)\n- MaGIC accelerator alignment\n- PENJANA Kapital for VC co-investment\n\n### 5. Events\n- **Krackathons** — Quarterly hackathons with real prizes (proven: RM 5K pool for Q1 2026)\n- **Meetups** — Monthly in KL, expand to Penang and JB\n- **Workshops** — Deep-dives on vibe coding, specific stacks\n- Co-sponsor with Wild Digital, DevFest KL, PyCon MY\n\n### 6. Corporate Sponsorship Pipeline\nCompanies like Grab, Petronas Digital, Maybank, CIMB actively sponsor dev communities for hiring access.\n- Offer companies access to verified talent via Kracked Devs\n- Sponsored bounties — companies post bounties, community builds\n- Job board upsell\n\n### 7. Referral & Selectivity\nCurated communities have perceived higher value in SEA.\n- Invite-only tiers for [[Kracked Labs]] ventures\n- Referral bonuses (points on Leaderboard)\n- \"Top 5% of applicants\" messaging for companies\n\n## Metrics to Track\n\n| Metric | Current | Target (End 2026) |\n|--------|---------|-------------------|\n| Platform members | 1,190 | 5,000 |\n| Active monthly users | — | 1,500 |\n| Bounties paid (RM) | 2,550 | 200,000 |\n| Ventures shipped | 2 live | 5 live |\n| Events held | 2 | 12 |\n| University partnerships | 0 | 5 |\n| Corporate sponsors | 0 | 5 |\n",
-      "wordCount": 563,
-      "links": [
-        "kracked-labs",
-        "kracked-labs",
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Labs",
-        "Kracked Labs",
-        "Kracked Labs"
-      ],
-      "path": "Ventures/Growth & Marketing.md",
-      "connections": 8
-    },
-    {
-      "id": "burhan",
-      "name": "Burhan",
-      "category": "Ventures",
-      "dataset": "mission",
-      "content": "# Burhan\n\nMalaysian Vercel. Built by KD Team and KD Members together.\n\n## What It Does\n\n-\n\n## Features\n\n-\n\n## Tech Stack\n\n-\n\n## Status\n\n- Stage:\n- Built by: [[Portfolio]] (KD Team + KD Members)\n",
-      "wordCount": 37,
-      "links": [
-        "portfolio"
-      ],
-      "linkNames": [
-        "Portfolio"
-      ],
-      "path": "Ventures/Burhan.md",
-      "connections": 6
-    },
-    {
-      "id": "tenders-and-contracts",
-      "name": "Tenders and Contracts",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "\n# Tenders and Contracts\n\nThe outbound revenue operation of [[Kracked Technologies]], run at the parent level (not a sub-pillar). Where we win government, corporate, and institutional contracts — directly, or by partnering with main contractors and GLC primes.\n\nRun by [[Sniper]], under CEO approval. Sits alongside (not inside) the three pillars: [[Kracked Devs]], [[KD Academy]], [[Kracked Labs]].\n\n## What lives here\n\n- **Opportunities** — live tenders, RFPs, grants, and programme calls we're tracking or bidding on. Stored as notes in `Deals/` with `type: tender` frontmatter.\n- **Contractors** — main contractors, system integrators, GLCs, and primes we could sub under, partner with, or compete against. Stored in `Contractors/`.\n- **Contacts** — named points of contact inside contractors, agencies, and procurement teams. Cross-linked from contractor notes and aggregated in `Contractors/Contacts.md`.\n- **Capabilities** — the machine-readable profile Sniper uses to score fit (planned: `Capabilities.md`).\n\n## How it works\n\n1. [[Sniper]] scans procurement portals (MyProcurement, ePerolehan, MRANTI, MDEC, Cradle, corporate RFP feeds) daily.\n2. Each opportunity is scored against Kracked's capability profile and the current [[This Week]] focus.\n3. Shortlisted tenders are drafted into `Deals/` with structured frontmatter (deadline, value, fit score, source URL).\n4. Drafts land on the **Pending Approvals** card in Mission Control — CEO approves, edits, or rejects.\n5. Approved tenders become live entries in the Mission Control **Tenders & Contracts** card.\n6. In parallel, Sniper keeps the contractor and contact registry current — enriching from public sources, cross-linking when new tenders involve known contractors.\n\n## Why this runs at the parent level\n\nProjects and tenders are cross-pillar by nature — the other three cash in through this operation:\n\n- [[KD Academy]] monetises its training via workshops for government, military, and corporate clients — booked through this operation.\n- [[Kracked Labs]] ventures can be funded or seeded by gov/grant contracts won here.\n- [[Kracked Devs]]' recruitment arm can be bundled into bigger contracts (e.g. \"we'll deliver this project AND staff your internal team\").\n- Every tender we bid on is signed under **Kracked Technologies** regardless of which pillar delivers, so it makes sense to run outbound at the parent level.\n\n## Governance\n\n- Nothing commits to the vault without CEO approval (the same Approval Layer [[Alfred]] uses).\n- All outreach (emails, LinkedIn messages) is drafted by Sniper but only sent after CEO sign-off.\n- Every bid decision, contractor addition, and contact update lands in the vault's git history — that's the audit trail.\n\n## Current status\n\n- Pillar defined, [[Sniper]] spec drafted.\n- Next steps: seed 10–15 primes into `Contractors/`, confirm day-one source list, write `Capabilities.md`.\n\n## Related\n\n- [[Kracked Technologies]] — parent\n- [[Sniper]] — the agent running this pillar\n- [[Alfred]] — shares the approval + retrieval infrastructure\n- [[This Week]] — drives tender prioritisation\n",
-      "wordCount": 456,
-      "links": [
-        "kracked-technologies",
-        "sniper",
-        "kracked-devs",
-        "kd-academy",
-        "kracked-labs",
-        "sniper",
-        "this-week",
-        "kd-academy",
-        "kracked-labs",
-        "kracked-devs",
-        "alfred",
-        "sniper",
-        "kracked-technologies",
-        "sniper",
-        "alfred",
-        "this-week"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Sniper",
-        "Kracked Devs",
-        "KD Academy",
-        "Kracked Labs",
-        "Sniper",
-        "This Week",
-        "KD Academy",
-        "Kracked Labs",
-        "Kracked Devs",
-        "Alfred",
-        "Sniper",
-        "Kracked Technologies",
-        "Sniper",
-        "Alfred",
-        "This Week"
-      ],
-      "path": "Ecosystem/Tenders and Contracts.md",
-      "type": "pillar",
-      "status": "In development",
-      "owner": "danial",
-      "connections": 20
-    },
-    {
-      "id": "kracked-labs",
-      "name": "Kracked Labs",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "# Kracked Labs\n\nThe venture studio arm of [[Kracked Technologies]]. Where real builders ship startups, with the KD team acting as venture studio operators.\n\n## Key Pages\n\n- [[Portfolio]] — All ventures, live and in development\n- [[Venture Playbook]] — How we pick, build, and ship ventures\n- [[Competitors]] — Landscape analysis of dev communities, venture builders, and AI education in Malaysia/SEA\n- [[Growth & Marketing]] — Growth strategy across channels\n- [[Market Landscape]] — Malaysian tech ecosystem, funding, government initiatives\n- [[Revenue Model]] — How we make money across all three pillars\n- [[Pipeline]] — Ideas under evaluation and roadmap\n\n## Model — Venture Studio\n\nKracked Labs operates as a **venture studio**, not an accelerator. The difference: accelerators give advice and a demo day. Labs provides hands-on operational support.\n\n**What Labs provides:**\n- **Technical support** — shared stack (Supabase, Vercel, CI/CD, design systems)\n- **Marketing and growth** — go-to-market strategy, positioning, launch support\n- **Community distribution** — 800+ Discord members and 1,190+ registered devs as beta testers\n- **Agent support** — [[Rick]] monitors portfolio health; [[Xavier]] routes talent from Academy graduates\n- **Operational backbone** — billing, legal templates, domain management, pitch preparation\n\n**In return, Kracked takes up to 10% equity in the venture.** Negotiated per venture based on level of support. The goal is to get founders as ready as possible, not to extract maximum ownership.\n\n**Entry criteria:** must have demonstrated shipping ability — [[Showcase]] projects, bounty completions, or guild standing. The industrial district has a gate.\n\n**Two tracks:**\n- **KD Team ventures** — built and operated by the core Kracked team\n- **KD Member ventures** — built by community members, supported by the ecosystem\n\nAll ventures listed under [[Portfolio]].\n\n## Status\n\n- Stage: Active\n",
-      "wordCount": 286,
-      "links": [
-        "kracked-technologies",
-        "portfolio",
-        "venture-playbook",
-        "competitors",
-        "growth-marketing",
-        "market-landscape",
-        "revenue-model",
-        "pipeline",
-        "rick",
-        "xavier",
-        "showcase",
-        "portfolio"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Portfolio",
-        "Venture Playbook",
-        "Competitors",
-        "Growth & Marketing",
-        "Market Landscape",
-        "Revenue Model",
-        "Pipeline",
-        "Rick",
-        "Xavier",
-        "Showcase",
-        "Portfolio"
-      ],
-      "path": "Ecosystem/Kracked Labs.md",
-      "connections": 53
-    },
-    {
-      "id": "kracked-devs",
-      "name": "Kracked Devs",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "# Kracked Devs\n\nThe community platform of [[Kracked Technologies]]. A nexus for high-performance developers building the future of technical excellence in Southeast Asia.\n\n**Website:** https://krackeddevs.com\n\n**Tagline:** \"A community for Malaysian developers who love to push boundaries.\"\n**Manifesto:** \"Built in Malaysia, for Malaysia.\"\n\n## Purpose\n\nThe front door for anyone in the ecosystem. Routes people based on who they are:\n- **Developers** → Learn, earn, build portfolio through real projects\n- **Companies** → Access verified talent, scale dev teams faster\n- **Government** → Self-sustaining ecosystem solving talent gaps\n- **Learners** → [[KD Academy]]\n- **Builders** → Kracked Labs\n\n## Platform Features\n\n- [[Bounty Board]] — Developers earn RM rewards for completing technical work\n- [[Job Board]] — 979 jobs across Malaysia (KL, Selangor, Penang, Johor)\n- [[Leaderboard]] — Points-based ranking system\n- [[Guild System]] — 9 community guilds\n- [[Showcase]] — Portfolio platform for completed projects (30+ projects)\n- Developer Directory — Browse developers across Malaysia (/members)\n- [[Events]] — Hackathons, meetups, workshops\n- [[News Feed]] — AI-curated tech news in real-time\n- Community Poll — Members vote on next bounty priorities (/code/bounty)\n\n## Monetisation\n\nJob Portal is the first revenue wedge. See [[Job Portal Monetisation]] — AI-driven outbound ([[Sniper]]-style Recruiter agent) brings companies in; developers sign up and build portfolios via Showcase + Bounty Board before applying. Revenue paths: Featured Listings → Sponsored Bounties → Premium Company accounts → opt-in Placement Fees.\n\n## For Companies\n\nPost a project → Get applications from vetted developers → Choose → Done.\n\n| Aspect | Traditional | KrackedDevs |\n|--------|-------------|-------------|\n| Cost | 20-30% agency fees | 0% fees |\n| Vetting | Resume scanning | Real project history & verified GitHub |\n| Speed | Weeks to months | 48-hour shortlist |\n| Flexibility | Long contracts | Direct relationship, scalable |\n\n- Top 5% of applicants\n- Contact: hello@krackeddevs.com\n\n## For Government\n\nSelf-sustaining ecosystem requiring **zero public funding** to address Malaysia's tech talent crisis.\n\n**The Problem:**\n- 50,000+ junior devs seeking first jobs while 40% of tech positions unfilled\n- Fresh graduates lack real-world experience\n- Training costs RM10K-20K, barriers for low-income families\n- Government bootcamps show 20-50% completion rates\n\n**What We Seek (Not Funding):**\n- Official recognition and program alignment\n- Visibility through government credibility\n- Pilot participation from GLCs\n- Integration with university programs\n\n**Aligned with:** Malaysia Digital Economy Blueprint 2021-2030\n\n**Targets:**\n| Phase | Timeline | Target |\n|-------|----------|--------|\n| Phase 1 | By Feb 2026 | 500 active members, RM30-50K in bounties |\n| Phase 2 | By end 2026 | RM200K+ in bounties |\n| Phase 3 | By 2028 | 10,000+ active members |\n| Goal | Year 2 | Profitable |\n| Goal | Year 3 | Self-sustaining |\n\n## Community Stats\n\n- 1,190 registered developers on krackeddevs.com\n- 800 Discord members\n- RM 2,550+ total payouts\n- 979 job listings\n- 30+ showcase projects\n- 9 guilds\n- 2 events held\n\n## Recruitment Model\n\nThe recruitment layer runs in parallel inside the ecosystem — not as a separate product. Developers sign up, create a profile, add projects to their portfolio. Companies post jobs. Matching happens through verified build history and GitHub activity, not just resumes.\n\n- **For developers:** free. Always. Build your profile, add projects, get matched.\n- **For companies:** 0% fees currently (volume-first strategy). Future revenue via featured listings, priority placement, and placement commissions.\n- **Differentiator:** Kracked's top applicants have demonstrated shipping ability through [[Showcase]], [[Bounty Board]] completions, and [[Leaderboard]] standing — not just interview performance.\n\n## Key Pages\n\n| Page | Path |\n|------|------|\n| Home | / |\n| Command Center | /dashboard |\n| Manifesto | /about |\n| Showcase | /showcase |\n| Developer Directory | /members |\n| Guild Directory | /guilds |\n| Events | /events |\n| News | /news |\n| Changelog | /changelog |\n| For Companies | /for-company |\n| Company Directory | /companies |\n| Job Board | /jobs |\n| Bounty Board | /code/bounty |\n| For Government | /for-government |\n| Leaderboard | /leaderboard |\n| Map | /map |\n\n## Socials\n\n- Discord: https://discord.gg/ThkRctzyRE\n- Twitter/X: @krackeddevs\n- TikTok: @krackeddevs\n- Email: hello@krackeddevs.com\n\n## Tech Stack\n\n- Next.js (React)\n- Supabase (auth, database, storage)\n- Geist design system\n- Real-time socket support\n\n## Status\n\n- Version: BETA v2.0\n- Stage: Live\n",
-      "wordCount": 722,
-      "links": [
-        "kracked-technologies",
-        "kd-academy",
-        "bounty-board",
-        "job-board",
-        "leaderboard",
-        "guild-system",
-        "showcase",
-        "events",
-        "news-feed",
-        "job-portal-monetisation",
-        "sniper",
-        "showcase",
-        "bounty-board",
-        "leaderboard"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "KD Academy",
-        "Bounty Board",
-        "Job Board",
-        "Leaderboard",
-        "Guild System",
-        "Showcase",
-        "Events",
-        "News Feed",
-        "Job Portal Monetisation",
-        "Sniper",
-        "Showcase",
-        "Bounty Board",
-        "Leaderboard"
-      ],
-      "path": "Ecosystem/Kracked Devs.md",
-      "connections": 47
-    },
-    {
-      "id": "advisory-board",
-      "name": "Advisory Board",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "# Advisory Board\n\nThe advisory board for [[Kracked Technologies]]. A group of experienced individuals providing strategic guidance across the ecosystem — [[Kracked Devs]], [[KD Academy]], and [[Kracked Labs]].\n\n## Status\n\nCurrently being formed. Initial advisors onboarded across government, VC, and AI/defence.\n\n## Advisors\n\n| Name | Domain | Role / Background |\n|------|--------|-------------------|\n| **[[Azlan Ismail]]** | Government & Policy | MyDigital (Malaysia's digital economy initiative under EPU) |\n| **[[Faiz Hassan]]** | VC & Startup Ecosystem | Assistant Manager — Technology & Innovation at Cradle Fund (since May 2023). Involved in MYStartup Startup Perks and MYStartup Tech Talent Program. Based in KL (hybrid). |\n| **[[Surenthiran Krishnan|Major Dr. Surenthiran Krishnan]]** | AI & Defence Tech | Malaysian Army (Tentera Darat Malaysia). Holds a PhD in AI. Bridges military/government and deep tech expertise. |\n\n## Advisory Areas\n\n- **Government & Policy** — Navigation of public sector partnerships, grants, regulatory landscape (Azlan Ismail)\n- **VC & Funding** — Cradle applications, startup ecosystem access, MYStartup programs (Faiz Hassan)\n- **AI & Deep Tech** — AI strategy, defence/government AI applications, research credibility (Dr. Surenthiran)\n- **Education & Talent** — Curriculum design, university partnerships, workforce development\n- **Community & Ecosystem** — Developer ecosystem building, regional expansion (Singapore, Indonesia)\n\n## Planning & Strategy\n\n### Advisor Pipeline\n\n| Name | Domain | Status | Next Step |\n|------|--------|--------|-----------|\n| Azlan Ismail | Government & Policy | Onboarded | Define engagement cadence; align on MyDigital program participation |\n| Faiz Hassan | VC & Startup Ecosystem | Onboarded | Discuss Cradle CIP Spark application strategy |\n| Major Dr. Surenthiran Krishnan | AI & Defence Tech | Onboarded | Explore defence-tech use cases and AI research collaboration |\n| *(University/Education lead)* | Education & Talent | Identifying | Target CS faculty deans — UKM, UTM, USM, or MMU. Key for [[KD Academy]] pipeline |\n| *(SEA regional figure)* | Regional Expansion | Identifying | Singapore or Indonesia tech ecosystem connector for [[cofounders|cofounders.my]] expansion |\n\n### Coverage Gaps\n\n| Domain | Status | Why It Matters |\n|--------|--------|----------------|\n| Government & Policy | Covered (Azlan) | MyDigital alignment, GLC pilot access |\n| VC & Funding | Covered (Faiz) | Cradle grants, MYStartup programs |\n| AI & Deep Tech | Covered (Dr. Surenthiran) | Technical credibility, research angle |\n| Education & Talent | Open | 30K CS graduates/year; university MOUs for KD Academy |\n| Regional / SEA | Open | cofounders.my expanding to Singapore & Indonesia |\n| Industry / Corporate | Open | Corporate sponsors, B2B training clients for Academy |\n\n### Engagement Tracker\n\n| Advisor | Last Check-in | Frequency | Active Initiatives |\n|---------|---------------|-----------|-------------------|\n| Azlan Ismail | — | TBD | — |\n| Faiz Hassan | — | TBD | — |\n| Dr. Surenthiran | — | TBD | — |\n\n### Ideas & Actions\n\n- [ ] Set up quarterly advisory roundtable (all advisors together, not just 1:1)\n- [ ] Prepare a one-pager per advisor showing what Kracked needs from their domain\n- [ ] Leverage Faiz's position to get early feedback on Cradle CIP application before formal submission\n- [ ] Explore if Azlan can connect Kracked to MyDigital programs (e.g. digital economy grants, GLC partnerships)\n- [ ] Discuss with Dr. Surenthiran potential for a defence/gov AI venture under [[Kracked Labs]]\n- [ ] Identify and approach a university partner — aim for 1 MOU by Q3 2026\n- [ ] Identify a Singapore-based tech figure for SEA advisory (cofounders.my expansion)\n- [ ] Consider formalizing advisory terms once 5+ advisors are active (light agreement, no equity yet)\n\n## What We Look For\n\n- Domain expertise relevant to Kracked's pillars\n- Network and credibility in Malaysian tech, government, or education\n- Willingness to engage regularly (not just a title)\n- Alignment with the builder-first, Malaysia-first mission\n\n## Structure\n\n- Informal advisory relationships (no board seats or equity commitments yet)\n- Regular check-ins with CEO and leadership\n- Advisors may be invited to mentor ventures under [[Kracked Labs]]\n",
-      "wordCount": 672,
-      "links": [
-        "kracked-technologies",
-        "kracked-devs",
-        "kd-academy",
-        "kracked-labs",
-        "azlan-ismail",
-        "faiz-hassan",
-        "surenthiran-krishnan",
-        "kd-academy",
-        "cofounders",
-        "kracked-labs",
-        "kracked-labs"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Kracked Devs",
-        "KD Academy",
-        "Kracked Labs",
-        "Azlan Ismail",
-        "Faiz Hassan",
-        "Surenthiran Krishnan",
-        "KD Academy",
-        "cofounders",
-        "Kracked Labs",
-        "Kracked Labs"
-      ],
-      "path": "Ecosystem/Advisory Board.md",
-      "connections": 25
-    },
-    {
       "id": "showcase",
       "name": "Showcase",
       "category": "Platform",
@@ -1373,7 +1440,7 @@
         "Kracked Devs"
       ],
       "path": "Platform/Showcase.md",
-      "connections": 11
+      "connections": 12
     },
     {
       "id": "news-feed",
@@ -1421,7 +1488,7 @@
         "Kracked Devs"
       ],
       "path": "Platform/Job Board.md",
-      "connections": 9
+      "connections": 10
     },
     {
       "id": "guild-system",
@@ -1507,7 +1574,59 @@
         "Kracked Devs"
       ],
       "path": "Platform/Bounty Board.md",
-      "connections": 16
+      "connections": 19
+    },
+    {
+      "id": "taylor-bookaslot-taylors-uni",
+      "name": "Taylor BookaSlot - Taylors Uni",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# Taylor BookaSlot — Taylors Uni\n\n## Status: Awaiting Decision\n\n## Details\n\n- **Client**: Taylors University\n- **Project**: BookaSlot\n- **Stage**: Waiting on higher-ups decision\n- **Next**: Follow-up sent, awaiting response\n\n## Notes\n\n- Already followed up (as of 2026-04-14)\n- Decision depends on university leadership\n",
+      "wordCount": 46,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/Taylor BookaSlot - Taylors Uni.md",
+      "connections": 2
+    },
+    {
+      "id": "misi-x-kda-ix-telecom",
+      "name": "MISI x KDA - IX Telecom",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# MISI x KDA — IX Telecom\n\n## Status: In Progress\n\n## Details\n\n- **Client**: IX Telecom\n- **Project**: MISI x [[KD Academy]]\n- **Stage**: Proposal ready, need 2nd briefing with CEO\n- **Next**: Meeting likely next week (per CEO's staff)\n\n## Notes\n\n- IX Telecom CEO seems busy (as of 2026-04-14)\n- Need to incorporate his concerns from 1st briefing into proposal\n",
+      "wordCount": 63,
+      "links": [
+        "kd-academy"
+      ],
+      "linkNames": [
+        "KD Academy"
+      ],
+      "path": "Deals/MISI x KDA - IX Telecom.md",
+      "connections": 2
+    },
+    {
+      "id": "mdec-mdlr-rapide-telecom",
+      "name": "MDEC MDLR - Rapide Telecom",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# MDEC MDLR — Rapide Telecom\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Rapide Telecom\n- **Program**: MDEC MDLR\n- **Stage**: Final sign-off pending\n- **Next**: Kick-off meeting after sign-off\n\n## Notes\n\n- Daily follow-up with client (as of 2026-04-14)\n- Project director tracking this actively\n",
+      "wordCount": 47,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/MDEC MDLR - Rapide Telecom.md",
+      "connections": 1
+    },
+    {
+      "id": "dey-short-circuit-works",
+      "name": "DEY - Short Circuit Works",
+      "category": "Deals",
+      "dataset": "mission",
+      "content": "# DEY — Short Circuit Works\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Short Circuit Works\n- **Project**: DEY\n- **Stage**: Final sign-off pending\n- **Next**: Contacted company to hasten, stuck on client response\n\n## Notes\n\n- Client response is the bottleneck (as of 2026-04-14)\n",
+      "wordCount": 46,
+      "links": [],
+      "linkNames": [],
+      "path": "Deals/DEY - Short Circuit Works.md",
+      "connections": 1
     },
     {
       "id": "surenthiran-krishnan",
@@ -1606,78 +1725,6 @@
       "connections": 10
     },
     {
-      "id": "kd-academy",
-      "name": "KD Academy",
-      "category": "Ecosystem",
-      "dataset": "mission",
-      "content": "# KD Academy\n\nMalaysia's builder-first education system. Transforms digital consumers into AI technical builders.\n\n**Website:** https://academy.krackeddevs.com\n**Motto:** \"NECB: Now Everyone Can Build\"\n**Philosophy:** \"Ship small, publish early.\"\n**Founded:** December 2025\n**Lead:** Zarul (Academy Lead)\n\n## Vibe 101 — The Foundation\n\nWeekly free sessions that take a complete beginner to their first shipped product. The core progression:\n\n| Session | Focus | Outcome |\n|---|---|---|\n| 1 | Introduction to AI | Understand what AI can and cannot do. First conversation with a model (Claude, Gemini, ChatGPT). Demystification. |\n| 2 | Setting up the vibe coding environment | Install toolkit, connect to AI model, run first AI-assisted build. Working dev environment. |\n| 3 | Prompting and building | Learn to describe what you want. Build a first mini website or app. Ship something functional to a real URL. |\n\n**By sessions 1–3, a participant should be able to make their own functional basic web app.** Not a tutorial clone — their own idea, built with AI.\n\n## Specialised Tracks (planned)\n\nTaught by practitioners from the community, not career instructors. Planned areas:\n- AI-native product development\n- Full-stack web (React, Supabase, Next.js)\n- Mobile development\n- Data and OSINT\n- DevOps and deployment\n- UI/UX for builders\n\n**Current status:** potential trainers have been identified within the community — experienced builders already teaching informally. Formalisation needed: document what each can teach, structure curriculum, begin scheduling.\n\nThe snowball model: as Vibe 101 graduates accumulate, the pool of potential trainers grows. Every graduate is a future instructor.\n\n## Structure\n\n- **Vibe 101** — free weekly intro sessions (YouTube + Discord live)\n- **Specialised tracks** — paid workshops taught by community practitioners (planned)\n- **Ambassadors** — distributed network across Malaysian states, peer educators\n- **Research** — research initiatives, methodology documentation\n\n## Status\n\n- Stage: In development (subpages still being built)\n- Platform: academy.krackeddevs.com\n\n## Operational snapshot\n\n| Field | Value |\n|---|---|\n| TVET | Slides ready, 2nd meeting pending |\n| Ambassadors | 4 onboarded, KPIs tracking |\n| Active cohorts | Vibe Coding 101 (live YouTube series) |\n| Paid tutors | 0 (target: 3–5 by end Q2 2026) |\n\n## Related\n\n- [[Kracked Technologies]]\n- [[Xavier]] — the agent that runs Academy operations\n- [[Q2 2026]] — current quarter plan for Academy\n",
-      "wordCount": 381,
-      "links": [
-        "kracked-technologies",
-        "xavier",
-        "q2-2026"
-      ],
-      "linkNames": [
-        "Kracked Technologies",
-        "Xavier",
-        "Q2 2026"
-      ],
-      "path": "Ecosystem/KD Academy/KD Academy.md",
-      "connections": 32
-    },
-    {
-      "id": "taylor-bookaslot-taylors-uni",
-      "name": "Taylor BookaSlot - Taylors Uni",
-      "category": "Deals",
-      "dataset": "mission",
-      "content": "# Taylor BookaSlot — Taylors Uni\n\n## Status: Awaiting Decision\n\n## Details\n\n- **Client**: Taylors University\n- **Project**: BookaSlot\n- **Stage**: Waiting on higher-ups decision\n- **Next**: Follow-up sent, awaiting response\n\n## Notes\n\n- Already followed up (as of 2026-04-14)\n- Decision depends on university leadership\n",
-      "wordCount": 46,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/Taylor BookaSlot - Taylors Uni.md",
-      "connections": 2
-    },
-    {
-      "id": "misi-x-kda-ix-telecom",
-      "name": "MISI x KDA - IX Telecom",
-      "category": "Deals",
-      "dataset": "mission",
-      "content": "# MISI x KDA — IX Telecom\n\n## Status: In Progress\n\n## Details\n\n- **Client**: IX Telecom\n- **Project**: MISI x [[KD Academy]]\n- **Stage**: Proposal ready, need 2nd briefing with CEO\n- **Next**: Meeting likely next week (per CEO's staff)\n\n## Notes\n\n- IX Telecom CEO seems busy (as of 2026-04-14)\n- Need to incorporate his concerns from 1st briefing into proposal\n",
-      "wordCount": 63,
-      "links": [
-        "kd-academy"
-      ],
-      "linkNames": [
-        "KD Academy"
-      ],
-      "path": "Deals/MISI x KDA - IX Telecom.md",
-      "connections": 2
-    },
-    {
-      "id": "mdec-mdlr-rapide-telecom",
-      "name": "MDEC MDLR - Rapide Telecom",
-      "category": "Deals",
-      "dataset": "mission",
-      "content": "# MDEC MDLR — Rapide Telecom\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Rapide Telecom\n- **Program**: MDEC MDLR\n- **Stage**: Final sign-off pending\n- **Next**: Kick-off meeting after sign-off\n\n## Notes\n\n- Daily follow-up with client (as of 2026-04-14)\n- Project director tracking this actively\n",
-      "wordCount": 47,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/MDEC MDLR - Rapide Telecom.md",
-      "connections": 1
-    },
-    {
-      "id": "dey-short-circuit-works",
-      "name": "DEY - Short Circuit Works",
-      "category": "Deals",
-      "dataset": "mission",
-      "content": "# DEY — Short Circuit Works\n\n## Status: Awaiting Sign-off\n\n## Details\n\n- **Client**: Short Circuit Works\n- **Project**: DEY\n- **Stage**: Final sign-off pending\n- **Next**: Contacted company to hasten, stuck on client response\n\n## Notes\n\n- Client response is the bottleneck (as of 2026-04-14)\n",
-      "wordCount": 46,
-      "links": [],
-      "linkNames": [],
-      "path": "Deals/DEY - Short Circuit Works.md",
-      "connections": 1
-    },
-    {
       "id": "xavier",
       "name": "Xavier",
       "category": "Agents",
@@ -1740,7 +1787,7 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 39
+      "connections": 40
     },
     {
       "id": "sniper",
@@ -1775,7 +1822,7 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 55
+      "connections": 56
     },
     {
       "id": "scout",
@@ -1826,7 +1873,7 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 25
+      "connections": 26
     },
     {
       "id": "rick",
@@ -1903,7 +1950,7 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 49
+      "connections": 50
     },
     {
       "id": "readme",
@@ -1983,7 +2030,7 @@
       "status": "planning",
       "owner": "danial",
       "role": "master",
-      "connections": 22
+      "connections": 23
     },
     {
       "id": "alfred",
@@ -2014,7 +2061,27 @@
       "type": "agent",
       "status": "planning",
       "owner": "danial",
-      "connections": 38
+      "connections": 39
+    },
+    {
+      "id": "kd-academy",
+      "name": "KD Academy",
+      "category": "Ecosystem",
+      "dataset": "mission",
+      "content": "# KD Academy\n\nMalaysia's builder-first education system. Transforms digital consumers into AI technical builders.\n\n**Website:** https://academy.krackeddevs.com\n**Motto:** \"NECB: Now Everyone Can Build\"\n**Philosophy:** \"Ship small, publish early.\"\n**Founded:** December 2025\n**Lead:** Zarul (Academy Lead)\n\n## Vibe 101 — The Foundation\n\nWeekly free sessions that take a complete beginner to their first shipped product. The core progression:\n\n| Session | Focus | Outcome |\n|---|---|---|\n| 1 | Introduction to AI | Understand what AI can and cannot do. First conversation with a model (Claude, Gemini, ChatGPT). Demystification. |\n| 2 | Setting up the vibe coding environment | Install toolkit, connect to AI model, run first AI-assisted build. Working dev environment. |\n| 3 | Prompting and building | Learn to describe what you want. Build a first mini website or app. Ship something functional to a real URL. |\n\n**By sessions 1–3, a participant should be able to make their own functional basic web app.** Not a tutorial clone — their own idea, built with AI.\n\n## Specialised Tracks (planned)\n\nTaught by practitioners from the community, not career instructors. Planned areas:\n- AI-native product development\n- Full-stack web (React, Supabase, Next.js)\n- Mobile development\n- Data and OSINT\n- DevOps and deployment\n- UI/UX for builders\n\n**Current status:** potential trainers have been identified within the community — experienced builders already teaching informally. Formalisation needed: document what each can teach, structure curriculum, begin scheduling.\n\nThe snowball model: as Vibe 101 graduates accumulate, the pool of potential trainers grows. Every graduate is a future instructor.\n\n## Structure\n\n- **Vibe 101** — free weekly intro sessions (YouTube + Discord live)\n- **Specialised tracks** — paid workshops taught by community practitioners (planned)\n- **Ambassadors** — distributed network across Malaysian states, peer educators\n- **Research** — research initiatives, methodology documentation\n\n## Status\n\n- Stage: In development (subpages still being built)\n- Platform: academy.krackeddevs.com\n\n## Operational snapshot\n\n| Field | Value |\n|---|---|\n| TVET | Slides ready, 2nd meeting pending |\n| Ambassadors | 4 onboarded, KPIs tracking |\n| Active cohorts | Vibe Coding 101 (live YouTube series) |\n| Paid tutors | 0 (target: 3–5 by end Q2 2026) |\n\n## Related\n\n- [[Kracked Technologies]]\n- [[Xavier]] — the agent that runs Academy operations\n- [[Q2 2026]] — current quarter plan for Academy\n",
+      "wordCount": 381,
+      "links": [
+        "kracked-technologies",
+        "xavier",
+        "q2-2026"
+      ],
+      "linkNames": [
+        "Kracked Technologies",
+        "Xavier",
+        "Q2 2026"
+      ],
+      "path": "Ecosystem/KD Academy/KD Academy.md",
+      "connections": 32
     },
     {
       "id": "vynn-capital",
@@ -2479,6 +2546,10 @@
     {
       "source": "moc",
       "target": "the-kracked-vision"
+    },
+    {
+      "source": "moc",
+      "target": "the-kracked-kampung"
     },
     {
       "source": "moc",
@@ -3021,6 +3092,102 @@
       "target": "what-if"
     },
     {
+      "source": "the-kracked-kampung",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "bounty-board"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "job-board"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "portfolio"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "alfred"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "sniper"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "rick"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "xavier"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "scout"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "itachi"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "showcase"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "bounty-board"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "bounty-board"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "the-kracked-vision"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "what-if"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "revenue-model"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "the-kracked-kampung",
+      "target": "competitors"
+    },
+    {
       "source": "kracked-technologies",
       "target": "the-kracked-vision"
     },
@@ -3151,6 +3318,174 @@
     {
       "source": "capabilities",
       "target": "revenue-model"
+    },
+    {
+      "source": "team",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "team",
+      "target": "mypeta"
+    },
+    {
+      "source": "team",
+      "target": "leaderboard"
+    },
+    {
+      "source": "team",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "rotican-ai",
+      "target": "portfolio"
+    },
+    {
+      "source": "cofounders",
+      "target": "portfolio"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "portfolio"
+    },
+    {
+      "source": "venture-playbook",
+      "target": "portfolio"
+    },
+    {
+      "source": "revenue-model",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "portfolio",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "portfolio",
+      "target": "cofounders"
+    },
+    {
+      "source": "portfolio",
+      "target": "rotican-ai"
+    },
+    {
+      "source": "portfolio",
+      "target": "jomqr"
+    },
+    {
+      "source": "portfolio",
+      "target": "mypeta"
+    },
+    {
+      "source": "portfolio",
+      "target": "burhan"
+    },
+    {
+      "source": "portfolio",
+      "target": "jomkopi"
+    },
+    {
+      "source": "portfolio",
+      "target": "masjid-os"
+    },
+    {
+      "source": "pipeline",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "pipeline",
+      "target": "portfolio"
+    },
+    {
+      "source": "pipeline",
+      "target": "venture-playbook"
+    },
+    {
+      "source": "masjid-os",
+      "target": "portfolio"
+    },
+    {
+      "source": "market-landscape",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "mypeta",
+      "target": "portfolio"
+    },
+    {
+      "source": "jomqr",
+      "target": "portfolio"
+    },
+    {
+      "source": "jomkopi",
+      "target": "portfolio"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "growth-marketing",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "burhan",
+      "target": "portfolio"
+    },
+    {
+      "source": "roadmap",
+      "target": "pipeline"
+    },
+    {
+      "source": "roadmap",
+      "target": "portfolio"
+    },
+    {
+      "source": "roadmap",
+      "target": "bounty-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "products-projects",
+      "target": "bounty-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "job-board"
+    },
+    {
+      "source": "products-projects",
+      "target": "leaderboard"
+    },
+    {
+      "source": "products-projects",
+      "target": "guild-system"
+    },
+    {
+      "source": "products-projects",
+      "target": "showcase"
+    },
+    {
+      "source": "products-projects",
+      "target": "events"
+    },
+    {
+      "source": "products-projects",
+      "target": "news-feed"
+    },
+    {
+      "source": "products-projects",
+      "target": "portfolio"
     },
     {
       "source": "q2-2026",
@@ -3437,68 +3772,216 @@
       "target": "company-brain-architecture"
     },
     {
-      "source": "team",
+      "source": "tenders-and-contracts",
       "target": "kracked-technologies"
     },
     {
-      "source": "team",
-      "target": "mypeta"
+      "source": "tenders-and-contracts",
+      "target": "sniper"
     },
     {
-      "source": "team",
-      "target": "leaderboard"
+      "source": "tenders-and-contracts",
+      "target": "kracked-devs"
     },
     {
-      "source": "team",
+      "source": "tenders-and-contracts",
+      "target": "kd-academy"
+    },
+    {
+      "source": "tenders-and-contracts",
       "target": "kracked-labs"
     },
     {
-      "source": "roadmap",
-      "target": "pipeline"
+      "source": "tenders-and-contracts",
+      "target": "sniper"
     },
     {
-      "source": "roadmap",
-      "target": "portfolio"
+      "source": "tenders-and-contracts",
+      "target": "this-week"
     },
     {
-      "source": "roadmap",
-      "target": "bounty-board"
+      "source": "tenders-and-contracts",
+      "target": "kd-academy"
     },
     {
-      "source": "products-projects",
+      "source": "tenders-and-contracts",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "alfred"
+    },
+    {
+      "source": "tenders-and-contracts",
+      "target": "sniper"
+    },
+    {
+      "source": "tenders-and-contracts",
       "target": "kracked-technologies"
     },
     {
-      "source": "products-projects",
-      "target": "bounty-board"
+      "source": "tenders-and-contracts",
+      "target": "sniper"
     },
     {
-      "source": "products-projects",
-      "target": "job-board"
+      "source": "tenders-and-contracts",
+      "target": "alfred"
     },
     {
-      "source": "products-projects",
-      "target": "leaderboard"
+      "source": "tenders-and-contracts",
+      "target": "this-week"
     },
     {
-      "source": "products-projects",
-      "target": "guild-system"
+      "source": "kracked-labs",
+      "target": "kracked-technologies"
     },
     {
-      "source": "products-projects",
+      "source": "kracked-labs",
+      "target": "portfolio"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "venture-playbook"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "competitors"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "growth-marketing"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "market-landscape"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "revenue-model"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "pipeline"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "rick"
+    },
+    {
+      "source": "kracked-labs",
+      "target": "xavier"
+    },
+    {
+      "source": "kracked-labs",
       "target": "showcase"
     },
     {
-      "source": "products-projects",
+      "source": "kracked-labs",
+      "target": "portfolio"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "kd-academy"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "bounty-board"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "job-board"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "leaderboard"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "guild-system"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "showcase"
+    },
+    {
+      "source": "kracked-devs",
       "target": "events"
     },
     {
-      "source": "products-projects",
+      "source": "kracked-devs",
       "target": "news-feed"
     },
     {
-      "source": "products-projects",
-      "target": "portfolio"
+      "source": "kracked-devs",
+      "target": "job-portal-monetisation"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "sniper"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "showcase"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "bounty-board"
+    },
+    {
+      "source": "kracked-devs",
+      "target": "leaderboard"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-devs"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kd-academy"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "advisory-board",
+      "target": "azlan-ismail"
+    },
+    {
+      "source": "advisory-board",
+      "target": "faiz-hassan"
+    },
+    {
+      "source": "advisory-board",
+      "target": "surenthiran-krishnan"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kd-academy"
+    },
+    {
+      "source": "advisory-board",
+      "target": "cofounders"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "advisory-board",
+      "target": "kracked-labs"
     },
     {
       "source": "sea-expansion",
@@ -3805,322 +4288,6 @@
       "target": "competitors"
     },
     {
-      "source": "rotican-ai",
-      "target": "portfolio"
-    },
-    {
-      "source": "cofounders",
-      "target": "portfolio"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "portfolio"
-    },
-    {
-      "source": "venture-playbook",
-      "target": "portfolio"
-    },
-    {
-      "source": "revenue-model",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "portfolio",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "portfolio",
-      "target": "cofounders"
-    },
-    {
-      "source": "portfolio",
-      "target": "rotican-ai"
-    },
-    {
-      "source": "portfolio",
-      "target": "jomqr"
-    },
-    {
-      "source": "portfolio",
-      "target": "mypeta"
-    },
-    {
-      "source": "portfolio",
-      "target": "burhan"
-    },
-    {
-      "source": "portfolio",
-      "target": "jomkopi"
-    },
-    {
-      "source": "portfolio",
-      "target": "masjid-os"
-    },
-    {
-      "source": "pipeline",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "pipeline",
-      "target": "portfolio"
-    },
-    {
-      "source": "pipeline",
-      "target": "venture-playbook"
-    },
-    {
-      "source": "masjid-os",
-      "target": "portfolio"
-    },
-    {
-      "source": "market-landscape",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "mypeta",
-      "target": "portfolio"
-    },
-    {
-      "source": "jomqr",
-      "target": "portfolio"
-    },
-    {
-      "source": "jomkopi",
-      "target": "portfolio"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "growth-marketing",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "burhan",
-      "target": "portfolio"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "sniper"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-devs"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kd-academy"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "sniper"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "this-week"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kd-academy"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-devs"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "alfred"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "sniper"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "sniper"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "alfred"
-    },
-    {
-      "source": "tenders-and-contracts",
-      "target": "this-week"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "portfolio"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "venture-playbook"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "competitors"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "growth-marketing"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "market-landscape"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "revenue-model"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "pipeline"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "rick"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "xavier"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "showcase"
-    },
-    {
-      "source": "kracked-labs",
-      "target": "portfolio"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "kd-academy"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "bounty-board"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "job-board"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "leaderboard"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "guild-system"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "showcase"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "events"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "news-feed"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "job-portal-monetisation"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "sniper"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "showcase"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "bounty-board"
-    },
-    {
-      "source": "kracked-devs",
-      "target": "leaderboard"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kracked-devs"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kd-academy"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "advisory-board",
-      "target": "azlan-ismail"
-    },
-    {
-      "source": "advisory-board",
-      "target": "faiz-hassan"
-    },
-    {
-      "source": "advisory-board",
-      "target": "surenthiran-krishnan"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kd-academy"
-    },
-    {
-      "source": "advisory-board",
-      "target": "cofounders"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "advisory-board",
-      "target": "kracked-labs"
-    },
-    {
       "source": "showcase",
       "target": "kracked-devs"
     },
@@ -4153,88 +4320,76 @@
       "target": "kracked-devs"
     },
     {
-      "source": "surenthiran-krishnan",
-      "target": "advisory-board"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "defence-tech"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "advisory-board"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "defence-tech"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "kracked-labs"
-    },
-    {
-      "source": "surenthiran-krishnan",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "faiz-hassan",
-      "target": "revenue-model"
-    },
-    {
-      "source": "faiz-hassan",
-      "target": "kd-academy"
-    },
-    {
-      "source": "faiz-hassan",
-      "target": "advisory-board"
-    },
-    {
-      "source": "faiz-hassan",
-      "target": "revenue-model"
-    },
-    {
-      "source": "faiz-hassan",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "azlan-ismail",
-      "target": "sniper"
-    },
-    {
-      "source": "azlan-ismail",
-      "target": "advisory-board"
-    },
-    {
-      "source": "azlan-ismail",
-      "target": "sniper"
-    },
-    {
-      "source": "azlan-ismail",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "kd-academy",
-      "target": "kracked-technologies"
-    },
-    {
-      "source": "kd-academy",
-      "target": "xavier"
-    },
-    {
-      "source": "kd-academy",
-      "target": "q2-2026"
-    },
-    {
       "source": "misi-x-kda-ix-telecom",
       "target": "kd-academy"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "defence-tech"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "defence-tech"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-labs"
+    },
+    {
+      "source": "surenthiran-krishnan",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "revenue-model"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "kd-academy"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "advisory-board"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "revenue-model"
+    },
+    {
+      "source": "faiz-hassan",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "sniper"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "advisory-board"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "sniper"
+    },
+    {
+      "source": "azlan-ismail",
+      "target": "kracked-technologies"
     },
     {
       "source": "xavier",
@@ -4679,6 +4834,18 @@
     {
       "source": "alfred",
       "target": "kracked-technologies"
+    },
+    {
+      "source": "kd-academy",
+      "target": "kracked-technologies"
+    },
+    {
+      "source": "kd-academy",
+      "target": "xavier"
+    },
+    {
+      "source": "kd-academy",
+      "target": "q2-2026"
     },
     {
       "source": "vynn-capital",
@@ -5144,25 +5311,25 @@
       }
     ],
     "graph": {
-      "mission": 61,
+      "mission": 62,
       "research": 22,
-      "total": 83
+      "total": 84
     }
   },
   "meta": {
-    "totalConcepts": 83,
-    "totalConnections": 623,
+    "totalConcepts": 84,
+    "totalConnections": 648,
     "categories": [
       "Root",
-      "Strategy",
       "Team",
-      "Projects",
-      "Research",
       "Ventures",
+      "Projects",
+      "Strategy",
       "Ecosystem",
+      "Research",
       "Platform",
-      "Advisors",
       "Deals",
+      "Advisors",
       "Agents",
       "Venture Capital",
       "Accelerator",
@@ -5170,6 +5337,6 @@
       "Gov Funding",
       "Startup"
     ],
-    "syncedAt": "2026-04-17T14:14:52.513Z"
+    "syncedAt": "2026-04-18T02:18:10.314Z"
   }
 }
