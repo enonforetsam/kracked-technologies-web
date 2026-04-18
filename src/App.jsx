@@ -9,6 +9,7 @@ import VisionPage from './pages/VisionPage'
 import CompetitorsPage from './pages/CompetitorsPage'
 import KampungPage from './pages/KampungPage'
 import PartnershipsPage from './pages/PartnershipsPage'
+import KrackedOSPage from './pages/KrackedOSPage'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -60,6 +61,20 @@ function ModeNav() {
             <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
           </svg>
           Kampung Economics
+        </Link>
+        <Link to="/kracked-os" className={`mode-nav-tab ${path.startsWith('/kracked-os') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="12" cy="3" r="1.5" fill="currentColor"/>
+            <circle cx="12" cy="21" r="1.5" fill="currentColor"/>
+            <circle cx="3" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="21" cy="12" r="1.5" fill="currentColor"/>
+            <line x1="12" y1="8" x2="12" y2="4.5"/>
+            <line x1="12" y1="16" x2="12" y2="19.5"/>
+            <line x1="8" y1="12" x2="4.5" y2="12"/>
+            <line x1="16" y1="12" x2="19.5" y2="12"/>
+          </svg>
+          Kracked OS
         </Link>
         <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -223,6 +238,7 @@ export default function App() {
               <Route path="/competitors" element={<CompetitorsPage graph={graph} />} />
               <Route path="/kampung" element={<KampungPage graph={graph} />} />
               <Route path="/partnerships" element={<PartnershipsPage graph={graph} />} />
+              <Route path="/kracked-os" element={<KrackedOSPage graph={graph} />} />
               <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
             </Routes>
           </div>

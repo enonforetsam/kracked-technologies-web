@@ -91,6 +91,30 @@ const VISUALS = {
       <text x="60" y="90" fontFamily="monospace" fontSize="7" fill="currentColor" textAnchor="middle" opacity="0.5">MALAYSIA</text>
     </svg>
   ),
+  krackedos: (
+    <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
+      {/* Central brain / core */}
+      <circle cx="60" cy="50" r="10" />
+      <circle cx="60" cy="50" r="4" fill="currentColor" />
+      {/* Six agent nodes around */}
+      <circle cx="60" cy="18" r="5" />
+      <circle cx="88" cy="34" r="5" />
+      <circle cx="88" cy="66" r="5" />
+      <circle cx="60" cy="82" r="5" />
+      <circle cx="32" cy="66" r="5" />
+      <circle cx="32" cy="34" r="5" />
+      {/* Connecting lines — agent-to-core */}
+      <line x1="60" y1="23" x2="60" y2="40" opacity="0.5" />
+      <line x1="83" y1="36" x2="69" y2="45" opacity="0.5" />
+      <line x1="83" y1="64" x2="69" y2="55" opacity="0.5" />
+      <line x1="60" y1="77" x2="60" y2="60" opacity="0.5" />
+      <line x1="37" y1="64" x2="51" y2="55" opacity="0.5" />
+      <line x1="37" y1="36" x2="51" y2="45" opacity="0.5" />
+      {/* Human operator — paired with one agent */}
+      <circle cx="104" cy="34" r="2.5" fill="currentColor" opacity="0.65" />
+      <line x1="92" y1="34" x2="102" y2="34" strokeDasharray="1.5 1.5" opacity="0.55" />
+    </svg>
+  ),
   partnerships: (
     <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
       {/* Two interlocking rings representing shared values */}
