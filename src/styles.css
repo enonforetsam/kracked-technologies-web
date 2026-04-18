@@ -5464,3 +5464,62 @@ h1, h2, h3,
 
 /* Home featured card doesn't need the big page-header's extra margin */
 .mc-inner > .page-header { margin-bottom: 0; }
+
+/* ==========================================================================
+   WIKI POLISH — kill the colored halos on metric strip, clean up cards
+   ========================================================================== */
+
+/* Remove the ::before gradient line that was creating colored halos
+   around each metric (each metric had a unique --accent). Replace with
+   a tiny dot on clickable metrics as subtle category indicator. */
+.mc-metric::before { display: none !important; }
+
+/* Let the metrics strip wrap naturally when there are >5 items (Wiki) */
+.mc-metrics {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)) !important;
+  gap: 0 !important;
+  overflow: hidden;
+}
+.mc-metric {
+  padding: 8px 14px !important;
+  background: transparent !important;
+  border: none !important;
+  border-right: 1px solid color-mix(in srgb, var(--border) 50%, transparent) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 40%, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  position: relative;
+}
+.mc-metric:hover {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--blue) 18%, transparent) !important;
+  background: color-mix(in srgb, var(--blue) 4%, transparent) !important;
+  transform: none !important;
+}
+
+/* Subtle category-color dot in the corner of clickable Wiki metrics */
+.mc-metric.clickable::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* Kill .glass backdrop-filter noise on metrics (it adds a blurred halo) */
+.mc-metric.glass,
+.mc-metrics.glass {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Wiki page — ensure background mesh blobs don't bleed into metric area */
+.mc .mc-mesh { opacity: 0.25 !important; }
+[data-theme="emerald"] .mc .mc-mesh { opacity: 0.15 !important; }
+
+/* Wiki featured card — mute the icon halo */
+.home-featured-body { background: transparent !important; }
