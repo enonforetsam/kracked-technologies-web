@@ -13,7 +13,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-const VAULT_DIR = path.resolve(process.cwd(), '..', 'kracked-vault')
+const VAULT_DIR = path.resolve(process.cwd(), '..', 'Danials Lab')
 const RESEARCH_DIR = path.resolve(process.cwd(), '..', 'Obsidian Gov', 'Gov Malaysia', 'wiki', 'ecosystem')
 const OUT_FILE = path.resolve(process.cwd(), 'public', 'graph.json')
 
@@ -28,9 +28,17 @@ function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
+// Known project-folder wrappers (inside /Projects/). When a file lives deeper
+// than the project root, use the sub-folder as its category so the graph keeps
+// colouring by type (Strategy, Ventures, Ecosystem…) rather than collapsing
+// everything under one project.
+const PROJECT_WRAPPERS = new Set(['Kracked Technologies', 'Kracked Kampung', 'Founder OS', 'Kampung Economics'])
 function getCategoryFromPath(relPath) {
-  const parts = relPath.split(path.sep)
-  return parts.length > 1 ? parts[0] : 'Root'
+  const parts = relPath.split(path.sep).filter(Boolean)
+  if (parts[0] === 'Projects') parts.shift() // strip /Projects/ prefix
+  if (parts.length <= 1) return 'Root'
+  if (PROJECT_WRAPPERS.has(parts[0]) && parts.length > 2) return parts[1]
+  return parts[0]
 }
 
 function extractStatus(content) {
@@ -142,6 +150,38 @@ function buildDashboard(nodes) {
       }
     })
 
+  // Lab projects — each manifest in Lab/projects/ becomes a queryable lens over the vault
+  const globToRegex = (g) => {
+    const escaped = g.replace(/[.+^${}()|[\]\\]/g, '\\$&')
+    const re = escaped.replace(/\*\*/g, '§§').replace(/\*/g, '[^/]*').replace(/§§/g, '.*')
+    return new RegExp('^' + re + '$')
+  }
+  const labProjectNodes = nodes.filter(n => n.path && n.path.startsWith('Lab/projects/') && !n.path.endsWith('README.md'))
+  const labProjects = labProjectNodes.map(n => {
+    const inc = Array.isArray(n.includes) ? n.includes : []
+    const exc = Array.isArray(n.excludes) ? n.excludes : []
+    const includeRes = inc.map(globToRegex)
+    const excludeRes = exc.map(globToRegex)
+    const fileIds = nodes
+      .filter(fn => fn.path)
+      .filter(fn => includeRes.some(r => r.test(fn.path)))
+      .filter(fn => !excludeRes.some(r => r.test(fn.path)))
+      .filter(fn => fn.private !== true)
+      .map(fn => fn.id)
+    return {
+      id: n.id,
+      name: n.name || n.id,
+      status: n.status || 'active',
+      accent: n.accent || '#a855f7',
+      cover: n.cover || null,
+      agents: Array.isArray(n.agents) ? n.agents : [],
+      includes: inc,
+      excludes: exc,
+      fileCount: fileIds.length,
+      fileIds,
+    }
+  })
+
   // Graph stats
   const missionNodes = nodes.filter(n => n.dataset === 'mission')
   const researchNodes = nodes.filter(n => n.dataset === 'research')
@@ -157,6 +197,7 @@ function buildDashboard(nodes) {
     thisWeek,
     whatIf,
     agents,
+    labProjects,
     strategies: nodes
       .filter(n => n.category === 'Strategy')
       .map(n => {

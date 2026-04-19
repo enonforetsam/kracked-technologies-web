@@ -1,7 +1,7 @@
 {
-  "name": "kracked-technologies",
-  "version": "1.0.0",
-  "description": "",
+  "name": "founder-os",
+  "version": "0.1.0",
+  "description": "Founder OS — a system and digital brain for founders. Local-first, AI-native, open source.",
   "main": "index.js",
   "scripts": {
     "sync": "node scripts/sync.mjs",

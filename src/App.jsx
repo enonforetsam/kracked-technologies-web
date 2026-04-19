@@ -10,6 +10,8 @@ import CompetitorsPage from './pages/CompetitorsPage'
 import KampungPage from './pages/KampungPage'
 import PartnershipsPage from './pages/PartnershipsPage'
 import KrackedOSPage from './pages/KrackedOSPage'
+import KrackedHostingPage from './pages/KrackedHostingPage'
+import LabPage from './pages/LabPage'
 
 const CATEGORY_COLORS = {
   Ecosystem: '#00f0ff',
@@ -47,8 +49,20 @@ function ModeNav() {
 
   return (
     <nav className="mode-nav">
-      <Link to="/" className="mode-nav-brand">Kracked Technologies</Link>
+      <Link to="/" className="mode-nav-brand">Danial's Lab</Link>
       <div className="mode-nav-tabs">
+        <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 2v7l-5 9a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4l-5-9V2"/><line x1="9" y1="2" x2="15" y2="2"/><line x1="7" y1="14" x2="17" y2="14"/>
+          </svg>
+          Lab
+        </Link>
+        <Link to="/kracked" className={`mode-nav-tab ${path.startsWith('/kracked') && !path.startsWith('/kracked-os') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+          Kracked
+        </Link>
         <Link to="/vision" className={`mode-nav-tab ${path.startsWith('/vision') ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
@@ -75,6 +89,15 @@ function ModeNav() {
             <line x1="16" y1="12" x2="19.5" y2="12"/>
           </svg>
           Kracked OS
+        </Link>
+        <Link to="/hosting" className={`mode-nav-tab ${path.startsWith('/hosting') ? 'mode-nav-tab-active' : ''}`}>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <ellipse cx="12" cy="12" rx="10" ry="4"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <line x1="12" y1="2" x2="12" y2="22"/>
+          </svg>
+          Hosting
         </Link>
         <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -106,12 +129,6 @@ function ModeNav() {
             <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
           </svg>
           Wiki
-        </Link>
-        <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
-          </svg>
-          Control
         </Link>
       </div>
       <div className="mode-nav-right">
@@ -230,7 +247,8 @@ export default function App() {
           <ModeNav />
           <div className="app-content">
             <Routes>
-              <Route path="/" element={<MissionControl graph={graph} />} />
+              <Route path="/" element={<LabPage graph={graph} />} />
+              <Route path="/kracked" element={<MissionControl graph={graph} />} />
               <Route path="/graph" element={<GraphPage graph={graph} />} />
               <Route path="/wiki" element={<Home graph={graph} />} />
               <Route path="/strategy" element={<StrategyPage graph={graph} />} />
@@ -239,6 +257,8 @@ export default function App() {
               <Route path="/kampung" element={<KampungPage graph={graph} />} />
               <Route path="/partnerships" element={<PartnershipsPage graph={graph} />} />
               <Route path="/kracked-os" element={<KrackedOSPage graph={graph} />} />
+              <Route path="/hosting" element={<KrackedHostingPage graph={graph} />} />
+              <Route path="/lab" element={<LabPage graph={graph} />} />
               <Route path="/article/:id" element={<ArticlePage graph={graph} />} />
             </Routes>
           </div>

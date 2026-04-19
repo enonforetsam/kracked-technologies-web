@@ -91,6 +91,32 @@ const VISUALS = {
       <text x="60" y="90" fontFamily="monospace" fontSize="7" fill="currentColor" textAnchor="middle" opacity="0.5">MALAYSIA</text>
     </svg>
   ),
+  hosting: (
+    <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
+      {/* Globe with latitude/longitude */}
+      <circle cx="60" cy="50" r="32" />
+      <ellipse cx="60" cy="50" rx="32" ry="14" opacity="0.6" />
+      <line x1="28" y1="50" x2="92" y2="50" opacity="0.5" />
+      <line x1="60" y1="18" x2="60" y2="82" opacity="0.5" />
+      {/* Distributed nodes around the globe */}
+      <circle cx="22" cy="26" r="3" fill="currentColor" opacity="0.8" />
+      <circle cx="98" cy="26" r="3" fill="currentColor" opacity="0.8" />
+      <circle cx="22" cy="74" r="3" fill="currentColor" opacity="0.65" />
+      <circle cx="98" cy="74" r="3" fill="currentColor" opacity="0.65" />
+      <circle cx="60" cy="8" r="2.5" fill="currentColor" opacity="0.7" />
+      <circle cx="60" cy="92" r="2.5" fill="currentColor" opacity="0.7" />
+      {/* Edge connections */}
+      <line x1="25" y1="28" x2="38" y2="40" strokeDasharray="2 2" opacity="0.45" />
+      <line x1="95" y1="28" x2="82" y2="40" strokeDasharray="2 2" opacity="0.45" />
+      <line x1="25" y1="72" x2="38" y2="60" strokeDasharray="2 2" opacity="0.45" />
+      <line x1="95" y1="72" x2="82" y2="60" strokeDasharray="2 2" opacity="0.45" />
+      <line x1="60" y1="11" x2="60" y2="18" strokeDasharray="1.5 1.5" opacity="0.4" />
+      <line x1="60" y1="89" x2="60" y2="82" strokeDasharray="1.5 1.5" opacity="0.4" />
+      {/* Pulsing core */}
+      <circle cx="60" cy="50" r="6" fill="currentColor" />
+      <circle cx="60" cy="50" r="10" opacity="0.3" />
+    </svg>
+  ),
   krackedos: (
     <svg viewBox="0 0 120 100" fill="none" stroke="currentColor" strokeWidth="1.2">
       {/* Central brain / core */}
