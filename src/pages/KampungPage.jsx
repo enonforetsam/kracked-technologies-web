@@ -39,7 +39,7 @@ function parseChapters(content) {
 }
 
 export default function KampungPage({ graph }) {
-  const node = graph.nodes.find(n => n.id === 'the-kracked-kampung')
+  const node = graph.nodes.find(n => n.id === 'the-kracked-ai-campus')
   const [idx, setIdx] = useState(0)
   const [fullscreen, setFullscreen] = useState(false)
   const bodyRef = useRef(null)
@@ -65,7 +65,7 @@ export default function KampungPage({ graph }) {
   if (!node || total === 0) {
     return (
       <div className="vision-page" style={{ padding: 40, textAlign: 'center' }}>
-        <p style={{ color: 'var(--text-tertiary)' }}>Kampung white paper not found in vault.</p>
+        <p style={{ color: 'var(--text-tertiary)' }}>AI Campus white paper not found in vault.</p>
       </div>
     )
   }
@@ -78,7 +78,7 @@ export default function KampungPage({ graph }) {
       <div className="vision-head">
         <div className="vision-head-left">
           <span className="hud-led hud-led-blue" />
-          <span className="vision-head-title">Kampung Economics</span>
+          <span className="vision-head-title">Kracked AI Campus</span>
           <span className="vision-head-chapter">{current.title}</span>
         </div>
         <div className="vision-head-controls">
@@ -165,8 +165,8 @@ export default function KampungPage({ graph }) {
     <div className="vision-page">
       <PageHeader
         eyebrow="WHITE PAPER · PROPOSAL · APRIL 2026"
-        title="Kampung Economics"
-        subtitle="A self-sustaining on-chain builder economy. The Kracked Kampung, tokenised. Network School as reference, Malaysia as home. Proposal, not commitment."
+        title="Kracked AI Campus"
+        subtitle="A self-sustaining on-chain builder economy. The Kracked AI Campus, tokenised. Network School as reference, Malaysia as home. Proposal, not commitment."
         visual="kampung"
       />
       {reader}

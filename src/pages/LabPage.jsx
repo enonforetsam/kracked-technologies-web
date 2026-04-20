@@ -1,47 +1,106 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import ForceGraph2D from 'react-force-graph-2d'
 
-const LAB_OWNER = "Danial's Lab"
+const LAB_OWNER = "The Master Lab"
+const LAB_BOOT = Date.now()
+
+function formatUptime(ms) {
+  const s = Math.floor(ms / 1000)
+  const h = String(Math.floor(s / 3600)).padStart(2, '0')
+  const m = String(Math.floor((s % 3600) / 60)).padStart(2, '0')
+  const sec = String(s % 60).padStart(2, '0')
+  return `${h}:${m}:${sec}`
+}
+
+function useTypewriter(text, speed = 45) {
+  const [out, setOut] = useState('')
+  useEffect(() => {
+    setOut('')
+    let i = 0
+    const t = setInterval(() => {
+      i++
+      setOut(text.slice(0, i))
+      if (i >= text.length) clearInterval(t)
+    }, speed)
+    return () => clearInterval(t)
+  }, [text, speed])
+  return out
+}
+
+function LabHeadline({ text }) {
+  const typed = useTypewriter(text, 60)
+  return <span>{typed}<span className="lab-cursor lab-cursor-bar">▊</span></span>
+}
+
+function TerminalStrip() {
+  const [uptime, setUptime] = useState('00:00:00')
+  useEffect(() => {
+    const t = setInterval(() => setUptime(formatUptime(Date.now() - LAB_BOOT)), 1000)
+    return () => clearInterval(t)
+  }, [])
+  const date = useMemo(() => new Date().toISOString().slice(0, 10), [])
+  return (
+    <div className="lab-terminal">
+      <div className="lab-terminal-section">
+        <span className="lab-terminal-dot lab-terminal-dot-amber" />
+        <span>☤ SYS::LAB</span>
+      </div>
+      <span className="lab-terminal-sep" />
+      <div className="lab-terminal-section"><span>HOST::LOCAL</span></div>
+      <span className="lab-terminal-sep" />
+      <div className="lab-terminal-section"><span>AUTH::DANIAL</span></div>
+      <span className="lab-terminal-sep" />
+      <div className="lab-terminal-section"><span>DATE::{date}</span></div>
+      <span className="lab-terminal-sep lab-terminal-sep-flex" />
+      <div className="lab-terminal-section lab-terminal-section-right">
+        <span>UPTIME::{uptime}</span>
+        <span className="lab-terminal-cursor">▊</span>
+      </div>
+    </div>
+  )
+}
 
 const EXPERIMENTS = [
   {
     id: 'kracked-technologies',
     name: 'Kracked Technologies',
     tag: 'COMPANY',
-    accent: '#3b82f6',
-    summary: 'The Kracked Digital Kampung — community, academy, labs. Mission Control, strategy, agents, ventures, deals, and everything the team ships under Kracked.',
+    accent: '#DD8E35',
+    summary: 'Everything you are building — community, academy, labs, ventures, deals, strategy, vision, the AI campus.',
     siteUrl: '/#/kracked',
     siteLabel: 'Open Mission Control',
     kind: 'company',
   },
   {
-    id: 'kracked-kampung',
-    name: 'Kracked Kampung',
-    tag: 'PUBLIC VISION',
-    accent: '#eab308',
-    summary: 'For Malaysians, by Malaysians. The public whitepaper, the long-arc thesis, the Digital Kampung.',
-    siteUrl: '/#/vision',
-    siteLabel: 'Read the Vision',
-    kind: 'narrative',
+    id: 'notes',
+    name: 'Notes + Ideas',
+    tag: 'CAPTURE',
+    accent: '#C98F3B',
+    summary: 'Inbox for half-thoughts and ideas. Syncs to the vault diary when Kracked OS is wired.',
+    siteUrl: '/#/',
+    siteLabel: 'Open inbox',
+    kind: 'experiment',
   },
   {
-    id: 'founder-os',
-    name: 'Founder OS',
-    tag: 'OPEN SOURCE',
-    accent: '#a855f7',
-    summary: 'The tool running this Lab. Local-first, AI-native digital brain for founders. GitHub release pending.',
-    siteUrl: '/#/article/founder-os-positioning',
-    siteLabel: 'Read the positioning',
+    id: 'my-network',
+    name: 'My Network',
+    tag: 'PEOPLE',
+    accent: '#B8752D',
+    summary: 'People around you — advisors, team, partners, founder-friends. Warm contacts and who they know.',
+    siteUrl: '/#/article/my-network',
+    siteLabel: 'Browse network',
     kind: 'tool',
   },
   {
-    id: 'kampung-economics',
-    name: 'Kampung Economics',
-    tag: 'EXPERIMENT',
-    accent: '#22d3ee',
-    summary: 'Economic model underneath Kracked — bounties, ventures, workshops, placement fees — structured so the free layer stays free.',
-    siteUrl: '/#/kampung',
-    siteLabel: 'Enter workspace',
-    kind: 'experiment',
+    id: 'agents-skills',
+    name: 'Agents + Skills',
+    tag: 'RUNTIME',
+    accent: '#9B6522',
+    summary: 'The AI runtime — agent specs you can invoke, skills you can run. Scoped per project.',
+    siteUrl: '/#/article/agents',
+    siteLabel: 'Open runtime',
+    kind: 'narrative',
   },
 ]
 
@@ -120,14 +179,34 @@ function useLocalStorage(key, initial) {
   return [value, setValue]
 }
 
-function ExperimentCard({ experiment, onOpen }) {
+function BracketCorners() {
+  return (
+    <>
+      <span className="lab-bracket lab-bracket-tl" />
+      <span className="lab-bracket lab-bracket-tr" />
+      <span className="lab-bracket lab-bracket-bl" />
+      <span className="lab-bracket lab-bracket-br" />
+    </>
+  )
+}
+
+function ExperimentCard({ experiment, onOpen, index }) {
   const art = ARTWORK[experiment.kind]?.(experiment.accent, experiment.id) || ARTWORK.experiment(experiment.accent, experiment.id)
   return (
-    <button className="lab-card" style={{ '--accent': experiment.accent }} onClick={() => onOpen(experiment)}>
-      <div className="lab-card-cover">{art}</div>
+    <button className="lab-card" style={{ '--accent': experiment.accent, animationDelay: `${index * 60}ms` }} onClick={() => onOpen(experiment)}>
+      <BracketCorners />
+      <div className="lab-card-cover">
+        {art}
+        <div className="lab-card-scan" aria-hidden />
+        <div className="lab-card-cover-chrome">
+          <span className="lab-card-cover-chrome-id">ID::{String(index).padStart(3, '0')}</span>
+          <span className="lab-card-cover-chrome-dot" />
+        </div>
+      </div>
       <div className="lab-card-body">
         <div className="lab-card-tag">{experiment.tag}</div>
         <h3 className="lab-card-name">{experiment.name}</h3>
+        <div className="lab-card-open-hint">OPEN →</div>
       </div>
     </button>
   )
@@ -161,6 +240,7 @@ function ExperimentModal({ experiment, onClose }) {
   return (
     <div className="lab-modal-overlay" onClick={onClose}>
       <div className="lab-modal" style={{ '--accent': experiment.accent }} onClick={e => e.stopPropagation()}>
+        <BracketCorners />
         <button className="lab-modal-close" onClick={onClose} aria-label="Close">×</button>
 
         <div className="lab-modal-head">
@@ -278,16 +358,117 @@ function Inbox() {
   )
 }
 
-export default function LabPage() {
+function LabGraph({ graph }) {
+  const containerRef = useRef(null)
+  const fgRef = useRef(null)
+  const navigate = useNavigate()
+  const [dims, setDims] = useState({ w: 800, h: 520 })
+  const [hovered, setHovered] = useState(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    const ro = new ResizeObserver(entries => {
+      const r = entries[0].contentRect
+      setDims({ w: Math.floor(r.width), h: 520 })
+    })
+    ro.observe(containerRef.current)
+    return () => ro.disconnect()
+  }, [])
+
+  const data = useMemo(() => {
+    const nodeIds = new Set(graph.nodes.map(n => n.id))
+    return {
+      nodes: graph.nodes.map(n => ({ id: n.id, name: n.name, category: n.category, connections: n.connections || 0 })),
+      links: graph.edges.filter(e => nodeIds.has(e.source) && nodeIds.has(e.target)).map(e => ({ source: e.source, target: e.target })),
+    }
+  }, [graph])
+
+  const nodeStyle = useCallback((node) => {
+    const isHot = hovered === node.id
+    const r = Math.max(2.2, Math.min(7.5, 2.2 + Math.sqrt(node.connections || 1) * 0.9))
+    return { r, color: isHot ? '#E8A54C' : '#DD8E35', label: node.name }
+  }, [hovered])
+
+  const paintNode = useCallback((node, ctx, globalScale) => {
+    const { r, color, label } = nodeStyle(node)
+    ctx.beginPath()
+    ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false)
+    ctx.fillStyle = color
+    ctx.shadowColor = color
+    ctx.shadowBlur = hovered === node.id ? 16 : 4
+    ctx.fill()
+    ctx.shadowBlur = 0
+    if (hovered === node.id) {
+      ctx.font = `${12 / globalScale}px var(--font-mono)`
+      ctx.fillStyle = '#F6F1E7'
+      ctx.textAlign = 'center'
+      ctx.fillText(label, node.x, node.y - r - 6 / globalScale)
+    }
+  }, [hovered, nodeStyle])
+
+  return (
+    <div className="lab-graph">
+      <div className="lab-graph-head">
+        <div className="lab-graph-eyebrow">
+          <span className="hud-led hud-led-amber" />
+          VAULT::GRAPH
+        </div>
+        <div className="lab-graph-meta">{data.nodes.length} nodes · {data.links.length} edges</div>
+      </div>
+      <div ref={containerRef} className="lab-graph-canvas-wrap">
+        <ForceGraph2D
+          ref={fgRef}
+          graphData={data}
+          width={dims.w}
+          height={dims.h}
+          backgroundColor="transparent"
+          nodeRelSize={3}
+          nodeCanvasObject={paintNode}
+          nodePointerAreaPaint={(node, color, ctx) => {
+            const { r } = nodeStyle(node)
+            ctx.beginPath()
+            ctx.arc(node.x, node.y, r + 3, 0, 2 * Math.PI, false)
+            ctx.fillStyle = color
+            ctx.fill()
+          }}
+          linkColor={() => 'rgba(221, 142, 53, 0.28)'}
+          linkWidth={0.5}
+          cooldownTicks={140}
+          onEngineStop={() => fgRef.current?.zoomToFit(600, 40)}
+          onNodeHover={(node) => setHovered(node ? node.id : null)}
+          onNodeClick={(node) => navigate(`/article/${node.id}`)}
+          enableZoomInteraction={true}
+          enablePanInteraction={true}
+        />
+        <div className="lab-graph-legend">
+          <span>CLICK::OPEN</span>
+          <span>·</span>
+          <span>DRAG::PAN</span>
+          <span>·</span>
+          <span>SCROLL::ZOOM</span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default function LabPage({ graph }) {
   const [activeExperiment, setActiveExperiment] = useState(null)
 
   return (
     <div className="lab-page lab-page-v2">
+      <TerminalStrip />
+
       <header className="lab-headline">
-        <div>
-          <div className="lab-headline-eyebrow"><span className="hud-led hud-led-green" /> YOUR LAB · LOCAL</div>
-          <h1 className="lab-headline-title">{LAB_OWNER}</h1>
-          <p className="lab-headline-sub">A gallery of what you're building. Click an experiment to note, plan, and enter.</p>
+        <BracketCorners />
+        <div className="lab-headline-inner">
+          <div className="lab-headline-topline">
+            <span className="lab-headline-mark">☤</span>
+            <span className="lab-headline-coords">N 03° 07' 58" · E 101° 39' 23"</span>
+          </div>
+          <h1 className="lab-headline-title"><LabHeadline text={LAB_OWNER} /></h1>
+          <p className="lab-headline-sub">{useTypewriter('A gallery of what you are building. Click an experiment to note, plan, and enter.', 14)}<span className="lab-cursor">_</span></p>
+          <div className="lab-headline-foot">v0.10 · LOCAL INSTANCE · MIT · 2026</div>
         </div>
       </header>
 
@@ -298,8 +479,10 @@ export default function LabPage() {
         <div className="lab-section-hint">Tap any card for notes + to-dos.</div>
       </div>
       <div className="lab-gallery-v2">
-        {EXPERIMENTS.map(e => <ExperimentCard key={e.id} experiment={e} onOpen={setActiveExperiment} />)}
+        {EXPERIMENTS.map((e, i) => <ExperimentCard key={e.id} experiment={e} onOpen={setActiveExperiment} index={i + 1} />)}
       </div>
+
+      {graph && graph.nodes && <LabGraph graph={graph} />}
 
       {activeExperiment && <ExperimentModal experiment={activeExperiment} onClose={() => setActiveExperiment(null)} />}
     </div>

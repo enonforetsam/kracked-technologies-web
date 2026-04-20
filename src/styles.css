@@ -5542,7 +5542,7 @@ h1, h2, h3,
 
 
 /* ==========================================================================
-   My Lab — Founder OS
+   The Master Lab — Founder OS
    Museum gallery of project lenses, onboarding panel, hero.
    ========================================================================== */
 .lab-page {
@@ -6418,4 +6418,572 @@ h1, h2, h3,
 @media (max-width: 640px) {
   .lab-headline-title { font-size: 36px; }
   .lab-inbox-date { width: 80px; font-size: 9px; }
+}
+
+/* ==========================================================================
+   Lab — futuristic tuning (terminal strip, bracket corners, scan lines, glitch)
+   ========================================================================== */
+
+/* Terminal status strip */
+.lab-terminal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  margin-bottom: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.lab-terminal-section {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.lab-terminal-section-right { color: var(--text-bright); }
+.lab-terminal-sep {
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background: var(--border);
+}
+.lab-terminal-sep-flex { flex: 1; background: transparent; }
+.lab-terminal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.lab-terminal-dot-green {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+  animation: labTermDot 1.6s ease-in-out infinite;
+}
+@keyframes labTermDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px #10b981; }
+  50% { opacity: 0.55; box-shadow: 0 0 12px #10b981; }
+}
+.lab-terminal-cursor {
+  display: inline-block;
+  color: #10b981;
+  animation: labCursorBlink 1s steps(2) infinite;
+  margin-left: 4px;
+}
+
+@media (max-width: 720px) {
+  .lab-terminal { font-size: 9px; gap: 6px; padding: 6px 10px; letter-spacing: 0.1em; }
+  .lab-terminal-section { gap: 4px; }
+}
+
+/* Bracket corners — reusable frame decoration */
+.lab-card, .lab-modal, .lab-headline {
+  position: relative;
+}
+.lab-bracket {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  z-index: 3;
+}
+.lab-bracket::before, .lab-bracket::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  color: color-mix(in srgb, var(--accent, #a855f7) 75%, var(--text-bright));
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.lab-bracket::before { width: 100%; height: 1.5px; }
+.lab-bracket::after  { width: 1.5px; height: 100%; }
+.lab-bracket-tl { top: 6px; left: 6px; }
+.lab-bracket-tl::before { top: 0; left: 0; }
+.lab-bracket-tl::after  { top: 0; left: 0; }
+.lab-bracket-tr { top: 6px; right: 6px; }
+.lab-bracket-tr::before { top: 0; right: 0; }
+.lab-bracket-tr::after  { top: 0; right: 0; }
+.lab-bracket-bl { bottom: 6px; left: 6px; }
+.lab-bracket-bl::before { bottom: 0; left: 0; }
+.lab-bracket-bl::after  { bottom: 0; left: 0; }
+.lab-bracket-br { bottom: 6px; right: 6px; }
+.lab-bracket-br::before { bottom: 0; right: 0; }
+.lab-bracket-br::after  { bottom: 0; right: 0; }
+.lab-card:hover .lab-bracket::before,
+.lab-card:hover .lab-bracket::after { opacity: 1; }
+
+/* Hero upgrades */
+.lab-headline {
+  padding: 32px 28px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, #a855f7 8%, var(--bg-elevated)) 0%,
+      color-mix(in srgb, var(--bg) 90%, transparent) 100%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 2px, color-mix(in srgb, var(--text) 3%, transparent) 2px, color-mix(in srgb, var(--text) 3%, transparent) 3px);
+  position: relative;
+  overflow: hidden;
+}
+.lab-headline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 90% 10%, color-mix(in srgb, #a855f7 18%, transparent) 0%, transparent 50%);
+  pointer-events: none;
+}
+.lab-headline-inner { position: relative; z-index: 1; }
+.lab-headline-coords {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  margin-bottom: 14px;
+  opacity: 0.75;
+}
+.lab-cursor {
+  display: inline-block;
+  color: #10b981;
+  margin-left: 2px;
+  animation: labCursorBlink 1s steps(2) infinite;
+}
+.lab-cursor-bar {
+  color: color-mix(in srgb, var(--text-bright) 80%, #a855f7);
+}
+@keyframes labCursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+/* Card scan lines + chrome bar */
+.lab-card-cover {
+  position: relative;
+  overflow: hidden;
+}
+.lab-card-scan {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 3px,
+    color-mix(in srgb, #000 18%, transparent) 3px,
+    color-mix(in srgb, #000 18%, transparent) 4px
+  );
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+.lab-card-cover-chrome {
+  position: absolute;
+  top: 8px; left: 10px; right: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 2;
+}
+.lab-card-cover-chrome-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  animation: labTermDot 1.6s ease-in-out infinite;
+}
+
+/* Card reveal animation + glitch on hover */
+.lab-gallery-v2 .lab-card {
+  animation: labCardIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes labCardIn {
+  from { opacity: 0; transform: translateY(12px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.lab-gallery-v2 .lab-card:hover .lab-card-cover svg {
+  animation: labCoverFlicker 0.6s steps(3) 1;
+}
+@keyframes labCoverFlicker {
+  0%   { opacity: 1; filter: brightness(1); }
+  15%  { opacity: 0.75; filter: brightness(1.4) saturate(1.3); }
+  30%  { opacity: 1; filter: brightness(1); }
+  45%  { opacity: 0.85; filter: brightness(1.2) hue-rotate(6deg); }
+  100% { opacity: 1; filter: brightness(1); }
+}
+
+/* Card open-hint */
+.lab-card-open-hint {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-top: 4px;
+  opacity: 0.6;
+  transition: opacity 0.15s, letter-spacing 0.2s;
+}
+.lab-card:hover .lab-card-open-hint { opacity: 1; letter-spacing: 0.22em; }
+
+/* Dashed chase on active card hover */
+.lab-gallery-v2 .lab-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--accent), var(--accent)) no-repeat left top / 0% 1px,
+    linear-gradient(90deg, var(--accent), var(--accent)) no-repeat right bottom / 0% 1px,
+    linear-gradient(180deg, var(--accent), var(--accent)) no-repeat right top / 1px 0%,
+    linear-gradient(180deg, var(--accent), var(--accent)) no-repeat left bottom / 1px 0%;
+  transition: background-size 0.5s ease-out;
+  opacity: 0.8;
+}
+.lab-gallery-v2 .lab-card:hover::after {
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+}
+
+/* Headline title uses the heading font with tighter tracking in this context */
+.lab-headline-title {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1;
+  margin: 0 0 12px;
+  min-height: 1em;
+  background: linear-gradient(90deg, var(--text-bright) 0%, color-mix(in srgb, #a855f7 70%, var(--text-bright)) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lab-headline-sub {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.78;
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .lab-headline-title { font-size: 36px; }
+  .lab-headline { padding: 22px 18px; }
+}
+
+/* ==========================================================================
+   Lab — Nous/Hermes aesthetic overhaul
+   Warm cream + amber + editorial spacing. Flat, quiet, confident.
+   ========================================================================== */
+
+:root {
+  --nous-amber: #DD8E35;
+  --nous-amber-deep: #B8752D;
+  --nous-amber-light: #E8A54C;
+  --nous-cream: #F6F1E7;
+  --nous-cream-deep: #EDE4CF;
+  --nous-ink: #1a1612;
+  --nous-ink-soft: #3a332b;
+}
+
+/* Dark theme treatment (default) */
+.lab-page-v2 {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--nous-amber) 6%, transparent) 0%, transparent 45%),
+    radial-gradient(circle at 85% 100%, color-mix(in srgb, var(--nous-amber-deep) 5%, transparent) 0%, transparent 50%),
+    var(--bg);
+}
+
+/* Terminal strip — amber dot, serif mono hybrid */
+.lab-terminal {
+  background: color-mix(in srgb, var(--nous-amber) 4%, var(--bg-surface));
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 22%, var(--border));
+  color: color-mix(in srgb, var(--nous-amber) 70%, var(--text));
+}
+.lab-terminal-dot-amber {
+  background: var(--nous-amber);
+  box-shadow: 0 0 8px var(--nous-amber);
+  animation: labTermDot 2s ease-in-out infinite;
+}
+@keyframes labTermDot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 4px var(--nous-amber); }
+  50% { opacity: 0.55; box-shadow: 0 0 14px var(--nous-amber); }
+}
+.lab-terminal-cursor { color: var(--nous-amber); }
+.lab-terminal-section-right { color: color-mix(in srgb, var(--nous-amber) 80%, var(--text-bright)); }
+
+/* Hero — editorial, caduceus mark, amber accents */
+.lab-headline {
+  padding: 48px 36px 44px;
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 20%, var(--border));
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--nous-amber) 4%, var(--bg-elevated)) 0%,
+      color-mix(in srgb, var(--bg) 95%, transparent) 100%);
+}
+.lab-headline::before { display: none; }
+.lab-headline-topline {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: color-mix(in srgb, var(--nous-amber) 85%, var(--text-secondary));
+  text-transform: uppercase;
+}
+.lab-headline-mark {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--nous-amber);
+  text-shadow: 0 0 24px color-mix(in srgb, var(--nous-amber) 50%, transparent);
+  line-height: 1;
+}
+.lab-headline-coords {
+  padding: 3px 10px;
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 30%, transparent);
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--nous-amber) 6%, transparent);
+}
+.lab-headline-title {
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  line-height: 0.98;
+  margin: 0 0 16px;
+  color: var(--text-bright);
+  background: linear-gradient(90deg,
+    var(--text-bright) 0%,
+    color-mix(in srgb, var(--nous-amber) 55%, var(--text-bright)) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lab-headline-sub {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  margin: 0 0 28px;
+  max-width: 620px;
+}
+.lab-cursor { color: var(--nous-amber); }
+.lab-cursor-bar { color: var(--nous-amber); }
+.lab-headline-foot {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding-top: 18px;
+  border-top: 1px dashed color-mix(in srgb, var(--border) 70%, transparent);
+}
+
+/* Experiment cards — flat, amber ring on hover, minimal scan */
+.lab-gallery-v2 .lab-card {
+  background: color-mix(in srgb, var(--nous-amber) 1.5%, var(--bg-surface));
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 12%, var(--border));
+  border-radius: 8px;
+}
+.lab-gallery-v2 .lab-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--nous-amber));
+  background: color-mix(in srgb, var(--accent) 3%, var(--bg-surface));
+  box-shadow: 0 18px 48px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.lab-card-scan {
+  opacity: 0.22;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 4px,
+    color-mix(in srgb, #000 14%, transparent) 4px,
+    color-mix(in srgb, #000 14%, transparent) 5px
+  );
+}
+
+.lab-card-cover-chrome {
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+}
+.lab-card-tag { letter-spacing: 0.22em; }
+.lab-card-open-hint { letter-spacing: 0.24em; }
+
+/* Bracket corners — thinner, amber default */
+.lab-bracket::before, .lab-bracket::after {
+  color: color-mix(in srgb, var(--accent, var(--nous-amber)) 85%, var(--text-bright));
+}
+.lab-bracket::before { height: 1px; }
+.lab-bracket::after  { width: 1px; }
+
+/* Inbox — cream-hint tint */
+.lab-inbox {
+  background: color-mix(in srgb, var(--nous-amber) 2%, var(--bg-surface));
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 14%, var(--border));
+  border-radius: 10px;
+}
+.lab-inbox-count {
+  background: color-mix(in srgb, var(--nous-amber) 10%, transparent);
+  color: var(--nous-amber);
+}
+.lab-inbox-input button {
+  background: var(--nous-amber);
+}
+.lab-inbox-input button:hover:not(:disabled) { background: var(--nous-amber-deep); }
+.lab-inbox-input input:focus { border-color: var(--nous-amber); }
+
+/* Section labels — all-caps amber tint */
+.lab-section-label {
+  color: color-mix(in srgb, var(--nous-amber) 55%, var(--text-tertiary));
+  letter-spacing: 0.24em;
+}
+
+/* Modal — amber ring, flatter feel */
+.lab-modal {
+  border: 1px solid color-mix(in srgb, var(--accent, var(--nous-amber)) 45%, var(--border));
+  border-radius: 10px;
+}
+.lab-modal-head {
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--accent, var(--nous-amber)) 8%, transparent) 0%,
+    transparent 100%);
+}
+.lab-modal-tag { letter-spacing: 0.24em; }
+
+@media (max-width: 720px) {
+  .lab-headline { padding: 30px 22px; }
+  .lab-headline-title { font-size: 40px; letter-spacing: -1px; }
+}
+
+/* Vault graph (embedded at bottom of Lab page) */
+.lab-graph {
+  margin-top: 32px;
+  background: color-mix(in srgb, var(--nous-amber) 2%, var(--bg-surface));
+  border: 1px solid color-mix(in srgb, var(--nous-amber) 16%, var(--border));
+  border-radius: 10px;
+  overflow: hidden;
+}
+.lab-graph-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid color-mix(in srgb, var(--nous-amber) 14%, var(--border));
+  background: color-mix(in srgb, var(--nous-amber) 3%, transparent);
+}
+.lab-graph-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: color-mix(in srgb, var(--nous-amber) 85%, var(--text));
+}
+.lab-graph-meta {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+}
+.lab-graph-canvas-wrap {
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--nous-amber) 5%, transparent) 0%, transparent 70%),
+    var(--bg);
+  height: 520px;
+  overflow: hidden;
+}
+.lab-graph-canvas-wrap canvas { display: block; }
+.lab-graph-legend {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  display: flex;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  color: color-mix(in srgb, var(--nous-amber) 60%, var(--text-tertiary));
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   UNIVERSAL UI TOKENS — readable type scale, spacing, width caps
+   Applied across all pages. See /Lab/UI Rules.md in vault for usage rules.
+   ========================================================================== */
+
+:root {
+  /* Type scale — readable by default, display sizes capped for screens */
+  --fs-display: clamp(36px, 5.4vw, 64px);   /* hero titles only, once per page */
+  --fs-h1: clamp(28px, 3.8vw, 44px);        /* main page titles */
+  --fs-h2: clamp(22px, 2.6vw, 30px);        /* section titles */
+  --fs-h3: clamp(18px, 2vw, 22px);          /* sub-sections */
+  --fs-lead: clamp(17px, 1.5vw, 19px);      /* lead paragraph / deck */
+  --fs-body: 16px;                           /* default body */
+  --fs-body-sm: 14.5px;                      /* small body */
+  --fs-caption: 13px;                        /* captions, meta */
+  --fs-label: 11px;                          /* mono labels, eyebrows */
+  --fs-micro: 10px;                          /* tiny tags */
+
+  /* Line heights */
+  --lh-tight: 1.12;       /* display headings */
+  --lh-snug: 1.28;        /* h2 / h3 */
+  --lh-default: 1.5;      /* UI text, buttons */
+  --lh-body: 1.6;          /* paragraphs */
+  --lh-relaxed: 1.72;      /* long-form reading */
+
+  /* Spacing scale — never use arbitrary px, always a token */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+
+  /* Readability width caps */
+  --w-display: 18ch;      /* display headings should be narrow */
+  --w-lead: 54ch;         /* lead / deck text */
+  --w-text: 68ch;         /* body reading column */
+  --w-wide: 1100px;       /* page max-width */
+
+  /* Weights — used sparingly */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+}
+
+/* Baseline normalisation */
+.page-lead {
+  font-family: var(--font-display, 'Ovo', serif);
+  font-style: italic;
+  font-size: var(--fs-lead);
+  line-height: var(--lh-body);
+  color: var(--text-secondary, var(--fg-soft));
+  max-width: var(--w-lead);
+}
+
+.page-label {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: var(--fs-label);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-tertiary, var(--fg-mute));
 }

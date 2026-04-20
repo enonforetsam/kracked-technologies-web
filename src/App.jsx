@@ -11,6 +11,8 @@ import KampungPage from './pages/KampungPage'
 import PartnershipsPage from './pages/PartnershipsPage'
 import KrackedOSPage from './pages/KrackedOSPage'
 import KrackedHostingPage from './pages/KrackedHostingPage'
+import BusinessDevelopmentPage from './pages/BusinessDevelopmentPage'
+import PitchPage from './pages/PitchPage'
 import LabPage from './pages/LabPage'
 
 const CATEGORY_COLORS = {
@@ -42,95 +44,117 @@ const ThemeContext = createContext()
 export function useTheme() { return useContext(ThemeContext) }
 export { THEMES }
 
+const LAB_ROUTES = ['/', '/graph', '/wiki', '/pitch']
+const KRACKED_ROUTES = ['/kracked', '/strategy', '/vision', '/kampung', '/kracked-os', '/hosting', '/partnerships', '/competitors', '/bd']
+
+function isKrackedContext(path) {
+  return KRACKED_ROUTES.some(r => path === r || path.startsWith(r + '/'))
+}
+
+function LabTabs({ path }) {
+  const mk = (to, label, svg) => (
+    <Link key={to} to={to} className={`mode-nav-tab ${path === to ? 'mode-nav-tab-active' : ''}`}>{svg}{label}</Link>
+  )
+  return (
+    <>
+      {mk('/', 'Gallery',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 2v7l-5 9a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4l-5-9V2"/><line x1="9" y1="2" x2="15" y2="2"/><line x1="7" y1="14" x2="17" y2="14"/>
+        </svg>
+      )}
+      {mk('/graph', 'Graph',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
+          <line x1="12" y1="10" x2="5" y2="8"/><line x1="12" y1="10" x2="19" y2="8"/><line x1="12" y1="14" x2="5" y2="16"/><line x1="12" y1="14" x2="19" y2="16"/>
+        </svg>
+      )}
+      {mk('/wiki', 'Wiki',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+        </svg>
+      )}
+      {mk('/pitch', 'Pitch',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>
+        </svg>
+      )}
+    </>
+  )
+}
+
+function KrackedTabs({ path }) {
+  const active = (to, custom) => (custom ?? path.startsWith(to))
+  const mk = (to, label, svg, custom) => (
+    <Link key={to} to={to} className={`mode-nav-tab ${active(to, custom) ? 'mode-nav-tab-active' : ''}`}>{svg}{label}</Link>
+  )
+  return (
+    <>
+      {mk('/kracked', 'Control',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+        </svg>,
+        path.startsWith('/kracked') && !path.startsWith('/kracked-os')
+      )}
+      {mk('/strategy', 'Strategy',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
+        </svg>
+      )}
+      {mk('/vision', 'Vision',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+        </svg>
+      )}
+      {mk('/kampung', 'AI Campus',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+        </svg>
+      )}
+      {mk('/bd', 'Business Dev',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2l4 8 8 1-6 6 2 8-8-4-8 4 2-8-6-6 8-1z"/>
+        </svg>
+      )}
+      {mk('/kracked-os', 'Kracked OS',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="4"/><circle cx="12" cy="3" r="1.5" fill="currentColor"/><circle cx="12" cy="21" r="1.5" fill="currentColor"/><circle cx="3" cy="12" r="1.5" fill="currentColor"/><circle cx="21" cy="12" r="1.5" fill="currentColor"/>
+          <line x1="12" y1="8" x2="12" y2="4.5"/><line x1="12" y1="16" x2="12" y2="19.5"/><line x1="8" y1="12" x2="4.5" y2="12"/><line x1="16" y1="12" x2="19.5" y2="12"/>
+        </svg>
+      )}
+      {mk('/hosting', 'Hosting',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="10" ry="4"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/>
+        </svg>
+      )}
+      {mk('/competitors', 'Operators',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/>
+        </svg>
+      )}
+      {mk('/partnerships', 'Partnerships',
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      )}
+    </>
+  )
+}
+
 function ModeNav() {
   const location = useLocation()
   const path = location.pathname
   const { theme, setTheme, showSettings, setShowSettings } = useTheme()
+  const kracked = isKrackedContext(path)
+  const brandLabel = kracked ? 'Kracked Technologies' : 'The Master Lab'
+  const brandTo = kracked ? '/kracked' : '/'
 
   return (
-    <nav className="mode-nav">
-      <Link to="/" className="mode-nav-brand">Danial's Lab</Link>
+    <nav className={`mode-nav ${kracked ? 'mode-nav-kracked' : 'mode-nav-lab'}`}>
+      <Link to={brandTo} className="mode-nav-brand">{brandLabel}</Link>
       <div className="mode-nav-tabs">
-        <Link to="/" className={`mode-nav-tab ${path === '/' ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M9 2v7l-5 9a3 3 0 0 0 3 4h10a3 3 0 0 0 3-4l-5-9V2"/><line x1="9" y1="2" x2="15" y2="2"/><line x1="7" y1="14" x2="17" y2="14"/>
-          </svg>
-          Lab
-        </Link>
-        <Link to="/kracked" className={`mode-nav-tab ${path.startsWith('/kracked') && !path.startsWith('/kracked-os') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
-          </svg>
-          Kracked
-        </Link>
-        <Link to="/vision" className={`mode-nav-tab ${path.startsWith('/vision') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-          </svg>
-          Vision
-        </Link>
-        <Link to="/kampung" className={`mode-nav-tab ${path.startsWith('/kampung') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
-            <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
-          </svg>
-          Kampung Economics
-        </Link>
-        <Link to="/kracked-os" className={`mode-nav-tab ${path.startsWith('/kracked-os') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="12" cy="3" r="1.5" fill="currentColor"/>
-            <circle cx="12" cy="21" r="1.5" fill="currentColor"/>
-            <circle cx="3" cy="12" r="1.5" fill="currentColor"/>
-            <circle cx="21" cy="12" r="1.5" fill="currentColor"/>
-            <line x1="12" y1="8" x2="12" y2="4.5"/>
-            <line x1="12" y1="16" x2="12" y2="19.5"/>
-            <line x1="8" y1="12" x2="4.5" y2="12"/>
-            <line x1="16" y1="12" x2="19.5" y2="12"/>
-          </svg>
-          Kracked OS
-        </Link>
-        <Link to="/hosting" className={`mode-nav-tab ${path.startsWith('/hosting') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <ellipse cx="12" cy="12" rx="10" ry="4"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <line x1="12" y1="2" x2="12" y2="22"/>
-          </svg>
-          Hosting
-        </Link>
-        <Link to="/strategy" className={`mode-nav-tab ${path.startsWith('/strategy') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"/>
-          </svg>
-          Strategy
-        </Link>
-        <Link to="/competitors" className={`mode-nav-tab ${path.startsWith('/competitors') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/>
-          </svg>
-          Operators
-        </Link>
-        <Link to="/partnerships" className={`mode-nav-tab ${path.startsWith('/partnerships') ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          Partnerships
-        </Link>
-        <Link to="/graph" className={`mode-nav-tab ${path === '/graph' ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <circle cx="12" cy="12" r="2"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
-            <line x1="12" y1="10" x2="5" y2="8"/><line x1="12" y1="10" x2="19" y2="8"/><line x1="12" y1="14" x2="5" y2="16"/><line x1="12" y1="14" x2="19" y2="16"/>
-          </svg>
-          Graph
-        </Link>
-        <Link to="/wiki" className={`mode-nav-tab ${path === '/wiki' ? 'mode-nav-tab-active' : ''}`}>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
-          </svg>
-          Wiki
-        </Link>
+        {kracked ? <KrackedTabs path={path} /> : <LabTabs path={path} />}
       </div>
+
       <div className="mode-nav-right">
         <button
           className="mode-nav-settings"
@@ -256,6 +280,8 @@ export default function App() {
               <Route path="/competitors" element={<CompetitorsPage graph={graph} />} />
               <Route path="/kampung" element={<KampungPage graph={graph} />} />
               <Route path="/partnerships" element={<PartnershipsPage graph={graph} />} />
+              <Route path="/bd" element={<BusinessDevelopmentPage graph={graph} />} />
+              <Route path="/pitch" element={<PitchPage graph={graph} />} />
               <Route path="/kracked-os" element={<KrackedOSPage graph={graph} />} />
               <Route path="/hosting" element={<KrackedHostingPage graph={graph} />} />
               <Route path="/lab" element={<LabPage graph={graph} />} />

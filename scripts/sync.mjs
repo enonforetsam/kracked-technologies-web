@@ -13,7 +13,7 @@ if (fs.existsSync(envPath)) {
   }
 }
 
-const VAULT_DIR = path.resolve(process.cwd(), '..', 'Danials Lab')
+const VAULT_DIR = path.resolve(process.cwd(), '..', 'The Master Lab')
 const RESEARCH_DIR = path.resolve(process.cwd(), '..', 'Obsidian Gov', 'Gov Malaysia', 'wiki', 'ecosystem')
 const OUT_FILE = path.resolve(process.cwd(), 'public', 'graph.json')
 
@@ -28,14 +28,13 @@ function slugify(name) {
   return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
-// Known project-folder wrappers (inside /Projects/). When a file lives deeper
-// than the project root, use the sub-folder as its category so the graph keeps
-// colouring by type (Strategy, Ventures, Ecosystem…) rather than collapsing
-// everything under one project.
-const PROJECT_WRAPPERS = new Set(['Kracked Technologies', 'Kracked Kampung', 'Founder OS', 'Kampung Economics'])
+// Kracked Technologies wraps the whole company tree. When a file lives
+// deeper than its root, use the sub-folder as its category so the graph
+// keeps colouring by type (Strategy, Ventures, Ecosystem…) rather than
+// collapsing everything under one project.
+const PROJECT_WRAPPERS = new Set(['Kracked Technologies'])
 function getCategoryFromPath(relPath) {
   const parts = relPath.split(path.sep).filter(Boolean)
-  if (parts[0] === 'Projects') parts.shift() // strip /Projects/ prefix
   if (parts.length <= 1) return 'Root'
   if (PROJECT_WRAPPERS.has(parts[0]) && parts.length > 2) return parts[1]
   return parts[0]

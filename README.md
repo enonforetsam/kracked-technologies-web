@@ -8,7 +8,7 @@ Founder OS is the open-source user interface for your own local knowledge vault.
 
 The first working instance of Founder OS was built at Kracked Technologies and is used to run the company. This repository will be extracted from that private instance and published as a neutral, generic app anyone can clone.
 
-**Internal note:** this repository is currently the live Kracked instance (*Danial's Lab*). The public **Founder OS** release will be a stripped, neutral fork. See [this walkthrough](#walkthrough) for the plan.
+**Internal note:** this repository is currently the live Kracked instance (*The Master Lab*). The public **Founder OS** release will be a stripped, neutral fork. See [this walkthrough](#walkthrough) for the plan.
 
 ## The core idea
 
